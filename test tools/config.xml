@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>20</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers>
+    <hudson.triggers.TimerTrigger>
+      <spec># MINUTE (0-59), HOUR (0-23), DAY (1-31), MONTH (1-12), DAY OF THE WEEK (0-6)
+H 12 13 3,6,9,12 *
+# will run quarterly - 4x per annum</spec>
+    </hudson.triggers.TimerTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>#ls -lt /usr/bin/p*
+#ls -lt /usr/bin/php5.6
+
+#ls -lt /html/eol_php_code/tmp/
+#ls -lt /html/eol_php_code/tmp/cache2/
+
+
+#php5.6 -v
+#php -v
+#which php
+
+#wget --help
+#cd /html/FreshData &amp;&amp; php app/testx.php
+#cd /html/FreshData/TSV_files &amp;&amp; touch eli.txt
+#wget --tries=3 -O /html/FreshData/TSV_files/cha.tsv &quot;http://editors.eol.org/test.tsv&quot;
+#wget --tries=3 -O /html/FreshData/TSV_files/5b6d8474-fcb4-5e16-b5cf-8f8a9a502fc3.tsv &quot;http://api.effechecka.org/occurrences.tsv?taxonSelector=aphaenogaster picea|aphaenogaster fulva|aphaenogaster rudis&amp;traitSelector=&amp;wktString=POLYGON ((-138.8671875 44, -138.8671875 70, -47.8125 70, -47.8125 44, -138.8671875 44))&quot; 2&gt;&amp;1
+#curl --help
+
+#php -m
+#php5.6 -m
+
+#which php5.6
+#which sudo
+php5.6 -i
+#gzip --help
+
+#which zip
+#zip -v
+#php5.6 -v
+#php --info
+
+#which gzip
+#which mkdir
+
+#which mysql</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>
