@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>10</numToKeep>
+        <numToKeep>5</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -64,12 +64,41 @@
 
 #which mysql
 
-
-which file
+#which file #OK
 #which gunzip #OK
 #which unzip #OK
 #which convert #not OK
 #which tar #OK
+
+#which rm OK
+#which curl OK
+
+# get public IP... OK
+# wget http://ipecho.net/plain -O - -q ; echo
+
+#mysql:3306 --version
+
+#which mysql:3306
+
+#which gzip OK
+#which zip OK
+
+#which mysql OK
+
+#mysql --version OK
+
+#mysql -u root
+
+#which mysql
+#mysql --version
+
+
+#mysql -h mysql -uroot -pEolRocks! #OK
+
+#mysql -h 172.17.0.2 -uroot -pEolRocks! #OK
+
+
+mysql -h 172.17.0.2 -uroot -pEolRocks! &amp;&amp; show databases;
 </command>
     </hudson.tasks.Shell>
   </builders>

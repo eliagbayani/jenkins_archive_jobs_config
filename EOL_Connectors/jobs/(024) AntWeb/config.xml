@@ -17,7 +17,7 @@ http://eol.org/content_partners/6/resources/24</description>
 #or start build at midnight, every Saturday:
 #    59 23 * * 6
 #every first of every month between 2:00 a.m. - 02:30 a.m. :
-H(0-30) 2 1 * *
+H(0-30) 1 1 * *
 
 #or start build at midnight, every Saturday:
 #H 23 * * 6
