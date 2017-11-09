@@ -98,8 +98,9 @@
 #mysql -h 172.17.0.2 -uroot -pEolRocks! #OK
 
 
-mysql -h 172.17.0.2 -uroot -pEolRocks! &amp;&amp; show databases;
-</command>
+#mysql -h 172.17.0.2 -uroot -pEolRocks! &amp;&amp; show databases;
+
+which gzip</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

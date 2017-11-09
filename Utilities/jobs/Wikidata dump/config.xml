@@ -18,21 +18,15 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers>
-    <hudson.triggers.TimerTrigger>
-      <spec># https://stackoverflow.com/questions/7000251/how-schedule-build-in-jenkins
-# MINUTE (0-59), HOUR (0-23), DAY (1-31), MONTH (1-12), DAY OF THE WEEK (0-6)
-
-H 14 24 1-12 *
-# monthly 24th of the month @ 2 PM</spec>
-    </hudson.triggers.TimerTrigger>
-  </triggers>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
-php5.6 freedata_usgs.php jenkins
+      <command># working OK
+
+#cd /extra/dumps/wikidata
+#wget -c https://dumps.wikimedia.org/wikidatawiki/entities/latest-all.json.gz
+#gunzip -fk latest-all.json.gz #k means keep, don&apos;t delete orig file
 </command>
     </hudson.tasks.Shell>
   </builders>
