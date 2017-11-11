@@ -22,11 +22,18 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command># working OK
+      <command>cd /html/eol_php_code/update_resources/connectors
 
-#cd /extra/dumps/wikidata
-#wget -c https://dumps.wikimedia.org/wikidatawiki/entities/latest-all.json.gz
-#gunzip -fk latest-all.json.gz #k means keep, don&apos;t delete orig file
+#step 2: initially six connectors to cache, then one connector to finalize
+
+php5.6 wikidata.php jenkins save_all_media_filenames 1 100000
+#php5.6 wikidata.php jenkins save_all_media_filenames 100000 200000
+#php5.6 wikidata.php jenkins save_all_media_filenames 200000 300000
+#php5.6 wikidata.php jenkins save_all_media_filenames 300000 1130000 #inc 830000
+#php5.6 wikidata.php jenkins save_all_media_filenames 1130000 1960000 #inc 830000
+#php5.6 wikidata.php jenkins save_all_media_filenames 1960000 2500000 #all remaining
+
+
 </command>
     </hudson.tasks.Shell>
   </builders>
