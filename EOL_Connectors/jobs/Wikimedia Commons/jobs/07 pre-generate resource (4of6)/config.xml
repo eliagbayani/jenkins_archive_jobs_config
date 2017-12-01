@@ -24,15 +24,14 @@
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-#step 2: initially six connectors to cache, then one connector to finalize
+#step 4: initially six (6) connectors
 
-#php5.6 wikidata.php jenkins save_all_media_filenames 1 300000
-#php5.6 wikidata.php jenkins save_all_media_filenames 300000 600000
-php5.6 wikidata.php jenkins save_all_media_filenames 600000 900000 3of6
-#php5.6 wikidata.php jenkins save_all_media_filenames 900000 1400000 #inc 500000
-#php5.6 wikidata.php jenkins save_all_media_filenames 1400000 1900000 #inc 500000
-#php5.6 wikidata.php jenkins save_all_media_filenames 1900000 2500000 #all remaining
-
+#php5.6 wikidata.php jenkins generate_resource 1 300000 1of6
+#php5.6 wikidata.php jenkins generate_resource 300000 600000 2of6
+#php5.6 wikidata.php jenkins generate_resource 600000 900000 3of6
+php5.6 wikidata.php jenkins generate_resource 900000 1400000 4of6 #inc 500000
+#php5.6 wikidata.php jenkins generate_resource 1400000 1900000 5of6 #inc 500000
+#php5.6 wikidata.php jenkins generate_resource 1900000 2500000 6of6 #all remaining
 </command>
     </hudson.tasks.Shell>
   </builders>

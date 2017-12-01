@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>http://www.eol.org/content_partners/2/resources/42</description>
+  <description>http://www.eol.org/content_partners/36/resources/108&#xd;
+https://opendata.eol.org/dataset/usda_plants/resource/aca53f69-b18a-40b9-adbc-34ff282874ea</description>
   <keepDependencies>false</keepDependencies>
   <properties/>
   <scm class="hudson.scm.NullSCM"/>
@@ -11,7 +12,7 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
     <hudson.triggers.TimerTrigger>
-      <spec>H H 13 3,6,9,12 *</spec>
+      <spec></spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
@@ -19,7 +20,7 @@
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-php5.6 42.php jenkins
+php5.6 108.php jenkins
 </command>
     </hudson.tasks.Shell>
   </builders>

@@ -22,17 +22,18 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
+      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
+cd /html/eol_php_code/update_resources/connectors
+#php5.6 wikipedia.php jenkins en #English
+#---------------------
+#initially six (6) connectors
 
-#step 2: initially six connectors to cache, then one connector to finalize
-
-#php5.6 wikidata.php jenkins save_all_media_filenames 1 300000
-#php5.6 wikidata.php jenkins save_all_media_filenames 300000 600000
-php5.6 wikidata.php jenkins save_all_media_filenames 600000 900000 3of6
-#php5.6 wikidata.php jenkins save_all_media_filenames 900000 1400000 #inc 500000
-#php5.6 wikidata.php jenkins save_all_media_filenames 1400000 1900000 #inc 500000
-#php5.6 wikidata.php jenkins save_all_media_filenames 1900000 2500000 #all remaining
-
+#php5.6 wikipedia.php jenkins en generate_resource 1 416666 1of6
+php5.6 wikipedia.php jenkins en generate_resource 416666 833332 2of6
+#php5.6 wikipedia.php jenkins en generate_resource 833332 1249998 3of6
+#php5.6 wikipedia.php jenkins en generate_resource 1249998 1666664 4of6
+#php5.6 wikipedia.php jenkins en generate_resource 1666664 2083330 5of6
+#php5.6 wikipedia.php jenkins en generate_resource 2083330 2500000 6of6 #all remaining
 </command>
     </hudson.tasks.Shell>
   </builders>

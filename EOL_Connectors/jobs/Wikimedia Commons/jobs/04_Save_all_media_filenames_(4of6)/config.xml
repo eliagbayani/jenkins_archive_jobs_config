@@ -26,14 +26,12 @@
 
 #step 2: initially six connectors to cache, then one connector to finalize
 
-#php5.6 wikidata.php jenkins save_all_media_filenames 1 100000
-#php5.6 wikidata.php jenkins save_all_media_filenames 100000 200000
-#php5.6 wikidata.php jenkins save_all_media_filenames 200000 300000
-php5.6 wikidata.php jenkins save_all_media_filenames 300000 1130000 #inc 830000
-#php5.6 wikidata.php jenkins save_all_media_filenames 1130000 1960000 #inc 830000
-#php5.6 wikidata.php jenkins save_all_media_filenames 1960000 2500000 #all remaining
-
-
+#php5.6 wikidata.php jenkins save_all_media_filenames 1 300000
+#php5.6 wikidata.php jenkins save_all_media_filenames 300000 600000
+#php5.6 wikidata.php jenkins save_all_media_filenames 600000 900000
+php5.6 wikidata.php jenkins save_all_media_filenames 900000 1400000 4of6 #inc 500000
+#php5.6 wikidata.php jenkins save_all_media_filenames 1400000 1900000 #inc 500000
+#php5.6 wikidata.php jenkins save_all_media_filenames 1900000 2500000 #all remaining
 </command>
     </hudson.tasks.Shell>
   </builders>

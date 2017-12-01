@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>5</numToKeep>
+        <numToKeep>3</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -22,18 +22,25 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
+      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
+cd /html/eol_php_code/update_resources/connectors
+#php5.6 wikipedia.php jenkins en #English
+#---------------------
+#initially six (6) connectors
 
-#step 3: just one connector
-#php5.6 wikidata.php jenkins create_then_fill_commons_data #OK - few hours
-
-which gzip
+echo &quot;start Wikipedia en build...&quot;
+#php5.6 wikipedia.php jenkins en generate_resource 1 416666 1of6
+#php5.6 wikipedia.php jenkins en generate_resource 416666 833332 2of6
+#php5.6 wikipedia.php jenkins en generate_resource 833332 1249998 3of6
+#php5.6 wikipedia.php jenkins en generate_resource 1249998 1666664 4of6
+#php5.6 wikipedia.php jenkins en generate_resource 1666664 2083330 5of6
+#php5.6 wikipedia.php jenkins en generate_resource 2083330 2500000 6of6 #all remaining
 </command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>07 pre-generate resource (1of6), 07 pre-generate resource (2of6), 07 pre-generate resource (3of6), 07 pre-generate resource (4of6), 07 pre-generate resource (5of6), 07 pre-generate resource (6of6)</childProjects>
+      <childProjects>Wikipedia en 1of6, Wikipedia en 2of6, Wikipedia en 3of6, Wikipedia en 4of6, Wikipedia en 5of6, Wikipedia en 6of6</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

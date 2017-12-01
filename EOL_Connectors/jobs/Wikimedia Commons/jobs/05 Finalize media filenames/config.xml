@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>5</numToKeep>
+        <numToKeep>6</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -21,7 +21,7 @@
   <triggers>
     <jenkins.triggers.ReverseBuildTrigger>
       <spec></spec>
-      <upstreamProjects>04_Save_all_media_filenames_(1of6),04_Save_all_media_filenames_(2of6),04_Save_all_media_filenames_(3of6),04_Save_all_media_filenames_(4of6),04_Save_all_media_filenames_(5of6),04_Save_all_media_filenames_(6of6)</upstreamProjects>
+      <upstreamProjects>04_Save_all_media_filenames_(1of6),04_Save_all_media_filenames_(2of6),04_Save_all_media_filenames_(3of6),04_Save_all_media_filenames_(4of6),04_Save_all_media_filenames_(5of6),04_Save_all_media_filenames_(6of6),</upstreamProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
@@ -36,8 +36,8 @@
       <command>cd /html/eol_php_code/update_resources/connectors
 
 #step 2: initially six connectors to cache, then one connector to finalize
-#php5.6 wikidata.php jenkins save_all_media_filenames 1 100000
-#php5.6 wikidata.php jenkins save_all_media_filenames 100000 200000
+#php5.6 wikidata.php jenkins save_all_media_filenames 1 xxx
+#php5.6 wikidata.php jenkins save_all_media_filenames xxx xxx
 #php5.6 wikidata.php jenkins save_all_media_filenames 200000 300000
 #php5.6 wikidata.php jenkins save_all_media_filenames 300000 1130000 #inc 830000
 #php5.6 wikidata.php jenkins save_all_media_filenames 1130000 1960000 #inc 830000

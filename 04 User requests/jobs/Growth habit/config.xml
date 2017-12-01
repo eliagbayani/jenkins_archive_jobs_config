@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>http://www.eol.org/content_partners/2/resources/42</description>
+  <description>https://eol-jira.bibalex.org/browse/DATA-1715&#xd;
+https://opendata.eol.org/organization/user-requests</description>
   <keepDependencies>false</keepDependencies>
   <properties/>
   <scm class="hudson.scm.NullSCM"/>
@@ -9,17 +10,13 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers>
-    <hudson.triggers.TimerTrigger>
-      <spec>H H 13 3,6,9,12 *</spec>
-    </hudson.triggers.TimerTrigger>
-  </triggers>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
-php5.6 42.php jenkins
+      <command>cd /html/eol_php_code/update_resources/connectors
+php5.6 eol_api_traits.php jenkins growth_habit
+
 </command>
     </hudson.tasks.Shell>
   </builders>

@@ -21,7 +21,8 @@
   <triggers>
     <hudson.triggers.TimerTrigger>
       <spec># will run every 1st day of the month at 1AM
-H H(1-1) 1 1-12 *</spec>
+H H(1-1) 1 1-12 * 
+#OK</spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
@@ -29,10 +30,10 @@ H H(1-1) 1 1-12 *</spec>
     <hudson.tasks.Shell>
       <command># working OK
 
-#cd /extra/dumps/wikidata
-#wget -c https://dumps.wikimedia.org/wikidatawiki/entities/latest-all.json.gz
-#gunzip -fk latest-all.json.gz #k means keep, don&apos;t delete orig file
-which gzip
+cd /extra/dumps/wikidata
+wget -c https://dumps.wikimedia.org/wikidatawiki/entities/latest-all.json.gz
+gunzip -fk latest-all.json.gz #k means keep, don&apos;t delete orig file
+#which gzip
 </command>
     </hudson.tasks.Shell>
   </builders>

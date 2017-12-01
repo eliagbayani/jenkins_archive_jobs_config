@@ -18,14 +18,19 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers/>
+  <triggers>
+    <hudson.triggers.TimerTrigger>
+      <spec></spec>
+    </hudson.triggers.TimerTrigger>
+  </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
+      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
+cd /html/eol_php_code/update_resources/connectors
 
-#step 4: just one connector
-php5.6 wikidata.php jenkins generate_resource #
+php5.6 wikipedia.php jenkins it #Italian
+
 </command>
     </hudson.tasks.Shell>
   </builders>
