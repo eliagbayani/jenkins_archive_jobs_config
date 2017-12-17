@@ -10,20 +10,7 @@ http://www.eol.org/content_partners/196/resources/341</description>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers>
-    <hudson.triggers.TimerTrigger>
-      <spec>#start build at midnight:
-#    @midnight
-#or start build at midnight, every Saturday:
-#    59 23 * * 6
-#every first of every month between 2:00 a.m. - 02:30 a.m. :
-#    H(0,30) 02 01 * *
-
-#or start build at midnight, every Saturday:
-#H 23 * * 6
-</spec>
-    </hudson.triggers.TimerTrigger>
-  </triggers>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
@@ -33,6 +20,16 @@ php5.6 341.php jenkins
 </command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>(0342) NMNH Fishes</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+  </publishers>
   <buildWrappers/>
 </project>

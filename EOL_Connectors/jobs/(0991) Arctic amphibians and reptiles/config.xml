@@ -19,7 +19,20 @@ https://opendata.eol.org/dataset/arctic_biodiversity</description>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers/>
+  <triggers>
+    <hudson.triggers.TimerTrigger>
+      <spec>#start build at midnight:
+#    @midnight
+#or start build at midnight, every Saturday:
+#    59 23 * * 6
+#every first of every month between 2:00 a.m. - 02:30 a.m. :
+H 01 10 * *
+
+#or start build at midnight, every Saturday:
+#H 23 * * 6
+</spec>
+    </hudson.triggers.TimerTrigger>
+  </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>

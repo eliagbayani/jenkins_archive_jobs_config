@@ -17,7 +17,7 @@ http://www.eol.org/content_partners/196/resources/120</description>
 #or start build at midnight, every Saturday:
 #    59 23 * * 6
 #every first of every month between 2:00 a.m. - 02:30 a.m. :
-#    H(0,30) 02 01 * *
+H 01 12 * *
 
 #or start build at midnight, every Saturday:
 #H 23 * * 6
@@ -33,6 +33,16 @@ php5.6 120.php jenkins
 </command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>(0176) NMNH Entomology</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+  </publishers>
   <buildWrappers/>
 </project>

@@ -26,13 +26,14 @@
 
 cd /extra/dumps/wikidata/wikimedia
 
-#works OK
-#wget -c http://dumps.wikimedia.org/commonswiki/latest/commonswiki-latest-pages-articles.xml.bz2
+#works OK:
+wget -c http://dumps.wikimedia.org/commonswiki/latest/commonswiki-latest-pages-articles.xml.bz2
 
+#works OK:
 bzip2 -dkf commonswiki-latest-pages-articles.xml.bz2
 
+#just temporary replacement:
 #which gzip
-
 </command>
     </hudson.tasks.Shell>
   </builders>

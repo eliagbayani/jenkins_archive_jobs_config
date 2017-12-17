@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description></description>
+  <description>https://opendata.eol.org/dataset/wwf2006&#xd;
+https://eol-jira.bibalex.org/browse/DATA-1727</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
@@ -24,14 +25,9 @@
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-#step 4: initially six (6) connectors
+# step 1 OK. This will process XLS from OpenData:
+php5.6 spreadsheet_2_dwca.php jenkins world_wildlife_fund
 
-#php5.6 wikidata.php jenkins generate_resource 1 200000 1of6
-php5.6 wikidata.php jenkins generate_resource 200000 520000 2of6 #inc 320000
-#php5.6 wikidata.php jenkins generate_resource 520000 840000 3of6 #inc 320000
-#php5.6 wikidata.php jenkins generate_resource 840000 1360000 4of6 #inc 520000
-#php5.6 wikidata.php jenkins generate_resource 1360000 1880000 5of6 #inc 520000
-#php5.6 wikidata.php jenkins generate_resource 1880000 2800000 6of6 #all remaining. Prev 2,500,000. Now 2.8 just to be sure.
 </command>
     </hudson.tasks.Shell>
   </builders>

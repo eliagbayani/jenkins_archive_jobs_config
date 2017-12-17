@@ -26,12 +26,12 @@
 
 #step 4: initially six (6) connectors
 
-#php5.6 wikidata.php jenkins generate_resource 1 300000 1of6
-#php5.6 wikidata.php jenkins generate_resource 300000 600000 2of6
-php5.6 wikidata.php jenkins generate_resource 600000 900000 3of6
-#php5.6 wikidata.php jenkins generate_resource 900000 1400000 4of6 #inc 500000
-#php5.6 wikidata.php jenkins generate_resource 1400000 1900000 5of6 #inc 500000
-#php5.6 wikidata.php jenkins generate_resource 1900000 2500000 6of6 #all remaining
+#php5.6 wikidata.php jenkins generate_resource 1 200000 1of6
+#php5.6 wikidata.php jenkins generate_resource 200000 520000 2of6 #inc 320000
+php5.6 wikidata.php jenkins generate_resource 520000 840000 3of6 #inc 320000
+#php5.6 wikidata.php jenkins generate_resource 840000 1360000 4of6 #inc 520000
+#php5.6 wikidata.php jenkins generate_resource 1360000 1880000 5of6 #inc 520000
+#php5.6 wikidata.php jenkins generate_resource 1880000 2800000 6of6 #all remaining. Prev 2,500,000. Now 2.8 just to be sure.
 </command>
     </hudson.tasks.Shell>
   </builders>

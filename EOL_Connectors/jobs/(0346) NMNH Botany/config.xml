@@ -1,8 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>https://opendata.eol.org/dataset/nmnh_entomology&#xd;
-http://www.eol.org/content_partners/196/resources/176</description>
+  <description></description>
   <keepDependencies>false</keepDependencies>
   <properties/>
   <scm class="hudson.scm.NullSCM"/>
@@ -16,13 +15,13 @@ http://www.eol.org/content_partners/196/resources/176</description>
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-php5.6 176.php jenkins
+php5.6 346.php jenkins
 </command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>(0341) NMNH Birds</childProjects>
+      <childProjects>(0891) NMNH type specimen data</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

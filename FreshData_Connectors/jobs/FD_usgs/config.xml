@@ -23,8 +23,12 @@
       <spec># https://stackoverflow.com/questions/7000251/how-schedule-build-in-jenkins
 # MINUTE (0-59), HOUR (0-23), DAY (1-31), MONTH (1-12), DAY OF THE WEEK (0-6)
 
-H 14 24 1-12 *
-# monthly 24th of the month @ 2 PM</spec>
+#H 14 24 1-12 *
+# monthly 24th of the month @ 2 PM
+
+#now runs daily, after reeflifesurvey
+
+</spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
