@@ -21,7 +21,7 @@
   <triggers>
     <jenkins.triggers.ReverseBuildTrigger>
       <spec></spec>
-      <upstreamProjects>Wikipedia en 1of6,Wikipedia en 2of6, Wikipedia en 3of6, Wikipedia en 4of6, Wikipedia en 5of6, Wikipedia en 6of6</upstreamProjects>
+      <upstreamProjects>Wikipedia en 1of6,Wikipedia en 2of6,Wikipedia en 3of6,Wikipedia en 4of6,Wikipedia en 5of6,Wikipedia en 6of6</upstreamProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
@@ -53,7 +53,7 @@ php5.6 wikipedia.php jenkins en generate_resource #
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>Wikipedia - de, Wikipedia - es, Wikipedia - fr, Wikipedia - it</childProjects>
+      <childProjects>Wikipedia - de,Wikipedia - es,Wikipedia - fr,Wikipedia - it</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

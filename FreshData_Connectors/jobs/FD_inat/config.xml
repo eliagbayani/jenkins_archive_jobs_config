@@ -27,7 +27,8 @@ H 13 * * *</spec>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
+      <command>#exit 1
+#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 php5.6 freedata_inat_supplement.php jenkins
 </command>

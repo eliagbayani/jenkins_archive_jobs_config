@@ -22,7 +22,8 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
+      <command>exit 1
+#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 #php5.6 wikipedia.php jenkins en #English
 #---------------------
@@ -40,7 +41,7 @@ echo &quot;start Wikipedia en build...&quot;
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>Wikipedia en 1of6, Wikipedia en 2of6, Wikipedia en 3of6, Wikipedia en 4of6, Wikipedia en 5of6, Wikipedia en 6of6</childProjects>
+      <childProjects>Wikipedia en 1of6,Wikipedia en 2of6,Wikipedia en 3of6,Wikipedia en 4of6,Wikipedia en 5of6,Wikipedia en 6of6</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

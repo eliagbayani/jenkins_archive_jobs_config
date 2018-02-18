@@ -100,41 +100,35 @@
 
 #mysql -h 172.17.0.2 -uroot -pEolRocks! &amp;&amp; show databases;
 
-which gzip</command>
+#which gzip
+#exit 1 #force trigger FAILURE
+
+
+
+
+# ORIG - this works OK but triggers FAILURE
+#gunzip -fk latest-all.json.gz #k means keep, don&apos;t delete orig file
+
+#let us try this: still gives FAILURE even if success
+#gzip -dfk latest-all.json.gz
+
+#another try: still gives FAILURE even if success
+#gzip -dfkq latest-all.json.gz
+
+
+#which gzip
+
+
+#cd /html/eol_php_code/applications/content_server/resources/
+#gzip -dfk /html/eol_php_code/applications/content_server/resources/eli.html.gz
+
+which gzip
+
+cd /html/eol_php_code/applications/content_server/resources/
+wget http://google.com
+</command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers>
-    <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.58">
-      <recipientList>eagbayani@eol.org, eagbayani173@gmail.com</recipientList>
-      <configuredTriggers>
-        <hudson.plugins.emailext.plugins.trigger.AlwaysTrigger>
-          <email>
-            <subject>$PROJECT_DEFAULT_SUBJECT</subject>
-            <body>$PROJECT_DEFAULT_CONTENT</body>
-            <recipientProviders>
-              <hudson.plugins.emailext.plugins.recipients.DevelopersRecipientProvider/>
-              <hudson.plugins.emailext.plugins.recipients.ListRecipientProvider/>
-            </recipientProviders>
-            <attachmentsPattern></attachmentsPattern>
-            <attachBuildLog>false</attachBuildLog>
-            <compressBuildLog>false</compressBuildLog>
-            <replyTo>$PROJECT_DEFAULT_REPLYTO</replyTo>
-            <contentType>project</contentType>
-          </email>
-        </hudson.plugins.emailext.plugins.trigger.AlwaysTrigger>
-      </configuredTriggers>
-      <contentType>both</contentType>
-      <defaultSubject>testing jenkins notification</defaultSubject>
-      <defaultContent>test email... from jenkiins</defaultContent>
-      <attachmentsPattern></attachmentsPattern>
-      <presendScript>$DEFAULT_PRESEND_SCRIPT</presendScript>
-      <postsendScript>$DEFAULT_POSTSEND_SCRIPT</postsendScript>
-      <attachBuildLog>false</attachBuildLog>
-      <compressBuildLog>false</compressBuildLog>
-      <replyTo>eagbayani@eol.org</replyTo>
-      <saveOutput>false</saveOutput>
-      <disabled>false</disabled>
-    </hudson.plugins.emailext.ExtendedEmailPublisher>
-  </publishers>
+  <publishers/>
   <buildWrappers/>
 </project>

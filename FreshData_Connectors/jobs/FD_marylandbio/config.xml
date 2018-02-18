@@ -29,7 +29,9 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
+      <command>#exit 1 #force to exit with FAILURE
+
+#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 php5.6 freedata_marylandbio.php jenkins
 </command>

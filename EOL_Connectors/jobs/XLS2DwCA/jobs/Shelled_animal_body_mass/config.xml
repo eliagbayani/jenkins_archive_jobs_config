@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description></description>
+  <description>https://opendata.eol.org/dataset/shelled-animal-body-mass&#xd;
+https://eol-jira.bibalex.org/browse/DATA-1733</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
@@ -18,32 +19,20 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers>
-    <hudson.triggers.TimerTrigger>
-      <spec></spec>
-    </hudson.triggers.TimerTrigger>
-  </triggers>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
+      <command>cd /html/eol_php_code/update_resources/connectors
 
-php5.6 wikipedia.php jenkins it #Italian
+# step 1 OK. This will process XLS from OpenData:
+php5.6 spreadsheet_2_dwca.php jenkins Shelled_animal_body_mass
 
+# step 2 OK. This will process Shelled_animal_body_mass.tar.gz from /resources/ folder.
+php5.6 dwca_utility.php jenkins Shelled_animal_body_mass
 </command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>Wikipedia - ru,Wikipedia - zh</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-        <completeBuild>true</completeBuild>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
-  </publishers>
+  <publishers/>
   <buildWrappers/>
 </project>

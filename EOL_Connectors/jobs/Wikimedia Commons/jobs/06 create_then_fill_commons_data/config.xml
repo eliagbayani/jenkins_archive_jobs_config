@@ -32,7 +32,7 @@ php5.6 wikidata.php jenkins create_then_fill_commons_data #OK - few hours
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>07 pre-generate resource (1of6), 07 pre-generate resource (2of6), 07 pre-generate resource (3of6), 07 pre-generate resource (4of6), 07 pre-generate resource (5of6), 07 pre-generate resource (6of6)</childProjects>
+      <childProjects>07 pre-generate resource (1of6),07 pre-generate resource (2of6),07 pre-generate resource (3of6),07 pre-generate resource (4of6),07 pre-generate resource (5of6),07 pre-generate resource (6of6)</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

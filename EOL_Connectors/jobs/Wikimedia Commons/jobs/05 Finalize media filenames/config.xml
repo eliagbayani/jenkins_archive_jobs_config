@@ -21,7 +21,7 @@
   <triggers>
     <jenkins.triggers.ReverseBuildTrigger>
       <spec></spec>
-      <upstreamProjects>04_Save_all_media_filenames_(1of6),04_Save_all_media_filenames_(2of6),04_Save_all_media_filenames_(3of6),04_Save_all_media_filenames_(4of6),04_Save_all_media_filenames_(5of6),04_Save_all_media_filenames_(6of6),</upstreamProjects>
+      <upstreamProjects>04_Save_all_media_filenames_(1of6),04_Save_all_media_filenames_(2of6),04_Save_all_media_filenames_(3of6),04_Save_all_media_filenames_(4of6),04_Save_all_media_filenames_(5of6),04_Save_all_media_filenames_(6of6)</upstreamProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

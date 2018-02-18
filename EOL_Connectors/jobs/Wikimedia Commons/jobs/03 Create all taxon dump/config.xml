@@ -22,7 +22,8 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
+      <command>#exit 1 #temporary forces exit with FAILURE
+cd /html/eol_php_code/update_resources/connectors
 
 #step 1: just one connector
 php5.6 wikidata.php jenkins create_all_taxon_dump #OK - few hours

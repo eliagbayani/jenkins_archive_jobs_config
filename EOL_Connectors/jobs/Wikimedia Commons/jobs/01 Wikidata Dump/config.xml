@@ -28,14 +28,32 @@ H H(1-1) 1 1-12 *
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command># working OK
-
+      <command>exit 1
+# working OK
 cd /extra/dumps/wikidata
-wget -c https://dumps.wikimedia.org/wikidatawiki/entities/latest-all.json.gz
-gunzip -fk latest-all.json.gz #k means keep, don&apos;t delete orig file
+#wget -c https://dumps.wikimedia.org/wikidatawiki/entities/latest-all.json.gz
+
+# ORIG - this works OK but triggers FAILURE
+#gunzip -fk latest-all.json.gz #k means keep, don&apos;t delete orig file
+
+#let us try this: still gives FAILURE even if success
+#gzip -dfk latest-all.json.gz
+
+#another try: still gives FAILURE even if success
+#gzip -dfkq latest-all.json.gz
+
+#another try: still FAILURE
+#gunzip -fk /extra/dumps/wikidata/latest-all.json.gz
+
+#another
+gzip -dfkq /extra/dumps/wikidata/latest-all.json.gz
+
 #which gzip
 </command>
     </hudson.tasks.Shell>
+    <sp.sd.fileoperations.FileOperationsBuilder plugin="file-operations@1.7">
+      <fileOperations/>
+    </sp.sd.fileoperations.FileOperationsBuilder>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
