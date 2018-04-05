@@ -24,8 +24,9 @@
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-php5.6 collections_generic.php jenkins 388
-
+# php5.6 collections_generic.php jenkins 554
+# php5.6 collections_generic.php jenkins
+php5.6 collections_generic.php jenkins 555
 </command>
     </hudson.tasks.Shell>
   </builders>
