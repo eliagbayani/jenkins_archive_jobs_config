@@ -22,7 +22,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>exit 1
+      <command>#exit 1
 # working OK
 
 cd /extra/dumps/wikidata/wikimedia

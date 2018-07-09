@@ -32,7 +32,11 @@
 # php5.6 generic_services.eol.org.php jenkins 98
 # php5.6 generic_services.eol.org.php jenkins
 # php5.6 generic_services.eol.org.php jenkins 20
-php5.6 generic_services.eol.org.php jenkins 365
+# php5.6 generic_services.eol.org.php jenkins 365
+# php5.6 generic_services.eol.org.php jenkins 272
+# php5.6 generic_services.eol.org.php jenkins 282
+# php5.6 generic_services.eol.org.php jenkins 334
+php5.6 generic_services.eol.org.php jenkins 658
 </command>
     </hudson.tasks.Shell>
   </builders>

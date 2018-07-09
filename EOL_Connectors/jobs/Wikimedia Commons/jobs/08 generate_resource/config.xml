@@ -37,9 +37,21 @@
 
 #step 4: just one connector
 php5.6 wikidata.php jenkins generate_resource #
+
+# normal operation is add post-build action: ../Wikipedia in different languages/Wikipedia en start
 </command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>../Wikipedia in different languages/Wikipedia en start</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+  </publishers>
   <buildWrappers/>
 </project>

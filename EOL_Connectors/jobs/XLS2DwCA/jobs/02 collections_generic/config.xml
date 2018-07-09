@@ -26,8 +26,8 @@
 
 # php5.6 collections_generic.php jenkins 554
 # php5.6 collections_generic.php jenkins
-php5.6 collections_generic.php jenkins 555
-</command>
+# php5.6 collections_generic.php jenkins 555
+php5.6 collections_generic.php jenkins 145</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
