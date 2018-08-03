@@ -122,10 +122,16 @@
 #cd /html/eol_php_code/applications/content_server/resources/
 #gzip -dfk /html/eol_php_code/applications/content_server/resources/eli.html.gz
 
-which gzip
+#which gzip
 
-cd /html/eol_php_code/applications/content_server/resources/
-wget http://google.com
+cd /html/eol_php_code/applications/content_server/
+
+cd /extra/tools_temp/
+
+
+ls -lt
+which wget
+# wget http://google.com
 </command>
     </hudson.tasks.Shell>
   </builders>
