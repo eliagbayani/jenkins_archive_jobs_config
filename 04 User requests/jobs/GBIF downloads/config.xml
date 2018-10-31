@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>5</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>### start CSV downloads ================================= worked OK
+#cd /extra/other_files/GBIF_occurrence/
+#OK
+#curl -L -o &apos;Plantae.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0004897-180730143533302.zip
+#unzip Plantae.zip
+#OK
+#curl -L -o &apos;Animalia.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0004893-180730143533302.zip
+#unzip Animalia.zip
+#OK
+#curl -L -o &apos;Other7Groups.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0005362-180730143533302.zip
+#unzip Other7Groups.zip
+
+
+### Latest as of Oct 2018
+
+### start initializing - deleting old files ==============
+
+#Remove all CSV files (.csv):
+rm -rf /extra/other_files/GBIF_occurrence/GBIF_taxa_csv_dwca/*
+
+#Remove multimedia assignments to taxon (.txt):
+rm -rf /extra/other_files/GBIF_occurrence/multimedia_gbifID/*
+
+#Remove all map data (.json)
+rm -rf /extra/map_data_dwca/*
+
+
+### start DwCA downloads ================================= worked OK
+
+#OK
+cd /extra/other_files/GBIF_occurrence/DwCA_Animalia/
+curl -L -o &apos;Animalia_DwCA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0004680-180730143533302.zip
+unzip -j Animalia_DwCA.zip multimedia.txt
+unzip -j Animalia_DwCA.zip occurrence.txt
+
+#OK
+cd /extra/other_files/GBIF_occurrence/DwCA_Plantae/
+curl -L -o &apos;Plantae_DwCA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0004688-180730143533302.zip
+unzip -j Plantae_DwCA.zip multimedia.txt
+unzip -j Plantae_DwCA.zip occurrence.txt
+
+#OK
+cd /extra/other_files/GBIF_occurrence/DwCA_Other7Groups/
+curl -L -o &apos;Other7Groups_DwcA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0005724-180730143533302.zip
+unzip -j Other7Groups_DwcA.zip multimedia.txt
+unzip -j Other7Groups_DwcA.zip occurrence.txt
+
+
+### start main program ===================================
+
+cd /html/eol_php_code/update_resources/connectors
+php5.6 gbif_georeference_dwca.php jenkins
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

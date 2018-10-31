@@ -3,12 +3,7 @@
   <actions/>
   <description></description>
   <displayName>03 EOL tools and FreshData Monitors V2 jobs</displayName>
-  <properties>
-    <org.jenkinsci.plugins.pipeline.modeldefinition.config.FolderConfig plugin="pipeline-model-definition@1.1.8">
-      <dockerLabel></dockerLabel>
-      <registry plugin="docker-commons@1.8"/>
-    </org.jenkinsci.plugins.pipeline.modeldefinition.config.FolderConfig>
-  </properties>
+  <properties/>
   <folderViews class="com.cloudbees.hudson.plugins.folder.views.DefaultFolderViewHolder">
     <views>
       <hudson.model.AllView>

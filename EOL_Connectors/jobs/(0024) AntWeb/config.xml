@@ -36,12 +36,16 @@ H(0-30) 1 15 * *
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
-php5.6 24.php jenkins
+      <command>#temporarily commented Oct 24, 2018, AntWeb API is down.
+
+exit -1
+
+#cd /html/eol_php_code/update_resources/connectors
+#php5.6 24.php jenkins
 
 #for Trait data
-cd /html/eol_php_code/update_resources/connectors
-php5.6 dwca_utility.php jenkins 24
+#cd /html/eol_php_code/update_resources/connectors
+#php5.6 dwca_utility.php jenkins 24
 </command>
     </hudson.tasks.Shell>
   </builders>
