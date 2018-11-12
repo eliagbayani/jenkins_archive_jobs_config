@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>3</numToKeep>
+        <numToKeep>5</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -22,24 +22,15 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
+      <command>### start main program ===================================
 
-php5.6 wikimedia_subsets.php jenkins
+cd /html/eol_php_code/update_resources/connectors
 
-### temporarily will not proceed with &apos;Wikipedia en start&apos;
-exit(1)</command>
+php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;save_ids_to_text_from_many_folders&quot;}&apos;
+
+wc -l /extra/map_data_dwca/final_taxon_concept_IDS.txt </command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>../Wikipedia in different languages/Wikipedia en start</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-        <completeBuild>true</completeBuild>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
-  </publishers>
+  <publishers/>
   <buildWrappers/>
 </project>

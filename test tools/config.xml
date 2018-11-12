@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
   <description></description>
@@ -124,14 +124,21 @@
 
 #which gzip
 
-cd /html/eol_php_code/applications/content_server/
+#cd /html/eol_php_code/applications/content_server/
+#cd /extra/tools_temp/
 
-cd /extra/tools_temp/
-
-
-ls -lt
-which wget
+#ls -lt
+#which wget
 # wget http://google.com
+
+
+#which chmod
+#which /bin/chmod
+#which /usr/bin/chmod
+
+## cannot access as expected
+#ls /var/www/html/cache_LiteratureEditor/
+ls /html/cache_LiteratureEditor/
 </command>
     </hudson.tasks.Shell>
   </builders>

@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
   <description></description>
@@ -26,13 +26,13 @@
 
 ### start initializing - deleting old files ==============
 
-#Remove all CSV files (.csv):
-rm -rf /extra/other_files/GBIF_occurrence/GBIF_taxa_csv_dwca/*
+###Remove all CSV files (.csv):
+##rm -rf /extra/other_files/GBIF_occurrence/GBIF_taxa_csv_dwca/*
 
-#Remove multimedia assignments to taxon (.txt):
-rm -rf /extra/other_files/GBIF_occurrence/multimedia_gbifID/*
+###Remove multimedia assignments to taxon (.txt):
+##rm -rf /extra/other_files/GBIF_occurrence/multimedia_gbifID/*
 
-#Remove all map data (.json)
+###Remove all map data (.json)
 rm -rf /extra/map_data_dwca/*
 
 
@@ -61,16 +61,6 @@ cd /extra/other_files/GBIF_occurrence/DwCA_Other7Groups/
 </command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>02 Start harvest process</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-        <completeBuild>true</completeBuild>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
-  </publishers>
+  <publishers/>
   <buildWrappers/>
 </project>
