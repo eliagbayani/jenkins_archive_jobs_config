@@ -12,16 +12,6 @@
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
     </jenkins.model.BuildDiscarderProperty>
-    <hudson.model.ParametersDefinitionProperty>
-      <parameterDefinitions>
-        <hudson.model.StringParameterDefinition>
-          <name>myShell</name>
-          <description></description>
-          <defaultValue></defaultValue>
-          <trim>false</trim>
-        </hudson.model.StringParameterDefinition>
-      </parameterDefinitions>
-    </hudson.model.ParametersDefinitionProperty>
   </properties>
   <scm class="hudson.scm.NullSCM"/>
   <canRoam>true</canRoam>
@@ -33,7 +23,8 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
-$myShell
+
+php5.6 generate_map_data_using_GBIF_csv_files.php jenkins &apos;{&quot;group&quot;:false,&quot;range&quot;:[1,519012],&quot;ctr&quot;:8}&apos;
 </command>
     </hudson.tasks.Shell>
   </builders>

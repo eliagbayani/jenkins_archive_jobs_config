@@ -1,0 +1,64 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>5</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>### start main program ===================================
+
+cd /html/eol_php_code/update_resources/connectors
+
+## works per taxon OK
+#php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;generate_map_data_using_GBIF_csv_files&quot;,&quot;sciname&quot;:&quot;Pycnogonidae&quot;,&quot;tc_id&quot;:6270}&apos;
+#php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;generate_map_data_using_GBIF_csv_files&quot;,&quot;sciname&quot;:&quot;Ailuropoda melanoleuca&quot;,&quot;tc_id&quot;:328070}&apos;
+
+
+## works but too long to run - totally will abandon
+#php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;generate_map_data_using_GBIF_csv_files&quot;}&apos;
+
+
+## normal operation OK - works OK now (NICE AUTO GENERATION!)
+php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;generate_map_data_using_GBIF_csv_files&quot;,&quot;divisor&quot;:6}&apos;
+
+
+#Last breakdown is:
+#    [0] =&gt; Array
+#            [0] =&gt; 1
+#            [1] =&gt; 173005
+#    [1] =&gt; Array
+#            [0] =&gt; 173005
+#            [1] =&gt; 346009
+#    [2] =&gt; Array
+#            [0] =&gt; 346009
+#            [1] =&gt; 519013
+
+
+##==============================================================
+## NO MORE MANUAL STEP NEEDED: 04.1, 04.2 -&gt; 04.8
+## This is to get the breakdown
+#php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;generate_map_data_using_GBIF_csv_files&quot;,&quot;divisor&quot;:3}&apos;
+## Then will apply manually to succeeding jobs 04.1, 04.2, etc.
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>
