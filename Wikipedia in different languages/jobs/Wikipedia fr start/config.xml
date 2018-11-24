@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>5</numToKeep>
+        <numToKeep>3</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -22,21 +22,26 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
-#php5.6 wikipedia.php jenkins en #English
-#---------------------
-#initially six (6) connectors
+      <command>### use this if you want to stop dead on its tracks
+#exit 1
 
-#php5.6 wikipedia.php jenkins en generate_resource 1 416666 1of6
-#php5.6 wikipedia.php jenkins en generate_resource 416666 833332 2of6
-#php5.6 wikipedia.php jenkins en generate_resource 833332 1249998 3of6
-php5.6 wikipedia.php jenkins en generate_resource 1249998 1666664 4of6
-#php5.6 wikipedia.php jenkins en generate_resource 1666664 2083330 5of6
-#php5.6 wikipedia.php jenkins en generate_resource 2083330 2500000 6of6 #all remaining
+#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
+cd /html/eol_php_code/update_resources/connectors
+
+echo &quot;start Wikipedia fr build...&quot;
 </command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>Wikipedia fr 1of6,Wikipedia fr 2of6,Wikipedia fr 3of6,Wikipedia fr 4of6,Wikipedia fr 5of6,Wikipedia fr 6of6</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+  </publishers>
   <buildWrappers/>
 </project>

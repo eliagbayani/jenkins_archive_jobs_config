@@ -22,18 +22,12 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
-#php5.6 wikipedia.php jenkins en #English
-#---------------------
-#initially six (6) connectors
+      <command>### start main program ===================================
 
-#php5.6 wikipedia.php jenkins en generate_resource 1 416666 1of6
-#php5.6 wikipedia.php jenkins en generate_resource 416666 833332 2of6
-#php5.6 wikipedia.php jenkins en generate_resource 833332 1249998 3of6
-php5.6 wikipedia.php jenkins en generate_resource 1249998 1666664 4of6
-#php5.6 wikipedia.php jenkins en generate_resource 1666664 2083330 5of6
-#php5.6 wikipedia.php jenkins en generate_resource 2083330 2500000 6of6 #all remaining
+cd /html/eol_php_code/update_resources/connectors
+
+php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;breakdown_multimedia_to_gbifID_files&quot;}&apos;
+
 </command>
     </hudson.tasks.Shell>
   </builders>

@@ -24,7 +24,12 @@
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-php5.6 generate_map_data_using_GBIF_csv_files.php jenkins &apos;{&quot;group&quot;:false,&quot;range&quot;:[1,519012],&quot;ctr&quot;:8}&apos;
+##orig
+#php5.6 generate_map_data_using_GBIF_csv_files.php jenkins &apos;{&quot;group&quot;:false,&quot;range&quot;:[1,519012],&quot;ctr&quot;:8}&apos;
+
+##just rounded max range
+php5.6 generate_map_data_using_GBIF_csv_files.php jenkins &apos;{&quot;group&quot;:false,&quot;range&quot;:[1,520000],&quot;ctr&quot;:8}&apos;
+
 </command>
     </hudson.tasks.Shell>
   </builders>

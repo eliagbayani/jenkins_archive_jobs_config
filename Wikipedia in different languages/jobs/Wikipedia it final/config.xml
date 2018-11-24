@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>5</numToKeep>
+        <numToKeep>6</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -18,25 +18,40 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers/>
+  <triggers>
+    <jenkins.triggers.ReverseBuildTrigger>
+      <spec></spec>
+      <upstreamProjects>Wikipedia it 1of6,Wikipedia it 2of6,Wikipedia it 3of6,Wikipedia it 4of6,Wikipedia it 5of6,Wikipedia it 6of6</upstreamProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </jenkins.triggers.ReverseBuildTrigger>
+  </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-#php5.6 wikipedia.php jenkins en #English
-#---------------------
-#initially six (6) connectors
 
-#php5.6 wikipedia.php jenkins en generate_resource 1 416666 1of6
-#php5.6 wikipedia.php jenkins en generate_resource 416666 833332 2of6
-#php5.6 wikipedia.php jenkins en generate_resource 833332 1249998 3of6
-php5.6 wikipedia.php jenkins en generate_resource 1249998 1666664 4of6
-#php5.6 wikipedia.php jenkins en generate_resource 1666664 2083330 5of6
-#php5.6 wikipedia.php jenkins en generate_resource 2083330 2500000 6of6 #all remaining
-</command>
+php5.6 wikipedia.php jenkins it generate_resource #
+
+### temporarily won&apos;t continue to Spanish es wikipedia
+#exit 1</command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>Wikipedia de start</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+  </publishers>
   <buildWrappers/>
 </project>

@@ -20,15 +20,16 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
     <hudson.triggers.TimerTrigger>
-      <spec># will run every 1st day of the month at 1AM
-H H(1-1) 1 1-12 * 
-#OK</spec>
+      <spec>### will run every 1st day of the month at 1AM
+### temporarily commented
+#H H(1-1) 1 1-12 * 
+###OK</spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command># temporarily commented due to hard-disk installation in eol-archive
+      <command># temporarily commented due to some reason it should not run as scheduled
 #exit 1
 
 # working OK
