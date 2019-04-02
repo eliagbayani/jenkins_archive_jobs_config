@@ -21,7 +21,7 @@
   <triggers>
     <jenkins.triggers.ReverseBuildTrigger>
       <spec></spec>
-      <upstreamProjects>07 pre-generate resource (1of6),07 pre-generate resource (2of6),07 pre-generate resource (3of6),07 pre-generate resource (4of6),07 pre-generate resource (5of6),07 pre-generate resource (6of6)</upstreamProjects>
+      <upstreamProjects>Wikipedia pt 1of6,Wikipedia pt 2of6,Wikipedia pt 3of6,Wikipedia pt 4of6,Wikipedia pt 5of6,Wikipedia pt 6of6</upstreamProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
@@ -33,19 +33,18 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
+      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
+cd /html/eol_php_code/update_resources/connectors
 
-#step 4: just one connector
-php5.6 wikidata.php jenkins generate_resource #
+php5.6 wikipedia.php jenkins pt generate_resource #
 
-
-# add this to Post-build Actions:
-# , ../Wikipedia in different languages/Wikipedia en start</command>
+### temporarily won&apos;t continue to Spanish es wikipedia
+#exit 1</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>08.5 Wikimedia Subsets</childProjects>
+      <childProjects>Wikipedia zh start</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

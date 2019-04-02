@@ -27,12 +27,12 @@
 php5.6 wikimedia_subsets.php jenkins
 
 ### temporarily will not proceed with &apos;Wikipedia en start&apos;
-exit 1</command>
+#exit 1</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>../Wikipedia in different languages/Wikipedia en start</childProjects>
+      <childProjects>08.6 Wikimedia partial</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

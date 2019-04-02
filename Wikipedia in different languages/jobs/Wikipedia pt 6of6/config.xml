@@ -1,7 +1,7 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>https://eol-jira.bibalex.org/browse/TRAM-797</description>
+  <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
@@ -22,9 +22,11 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
-php5.6 dwh_col_TRAM_797.php jenkins
+      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 
+cd /html/eol_php_code/update_resources/connectors
+
+php5.6 wikipedia.php jenkins pt generate_resource 2083330 2500000 6of6 #all remaining
 </command>
     </hudson.tasks.Shell>
   </builders>

@@ -44,7 +44,7 @@ php5.6 wikipedia.php jenkins fr generate_resource #
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>Wikipedia - zh, Wikipedia - ru, Wikipedia - pt, Wikipedia - ja, Wikipedia - ko</childProjects>
+      <childProjects>Wikipedia pt start, Wikipedia - ru, Wikipedia - ja, Wikipedia - ko</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
