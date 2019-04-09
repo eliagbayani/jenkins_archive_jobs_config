@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>3</numToKeep>
+        <numToKeep>5</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -22,21 +22,16 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
+      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
+cd /html/eol_php_code/update_resources/connectors
 
-php5.6 wikimedia_subsets.php jenkins
-
-### temporarily will not proceed with &apos;Wikipedia en start&apos;
-#exit 1
-
-### add this to &apos;Post-build Actions&apos; to cont. with Wikipedia en
-### ../Wikipedia in different languages/Wikipedia en start
-### will temporarily remove this for now.</command>
+php5.6 wikipedia.php jenkins pl generate_resource 1 416666 1of6
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>08.6 Wikimedia partial</childProjects>
+      <childProjects>Wikipedia pl final</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

@@ -21,7 +21,7 @@
   <triggers>
     <jenkins.triggers.ReverseBuildTrigger>
       <spec></spec>
-      <upstreamProjects>Wikipedia zh 1of6,Wikipedia zh 2of6,Wikipedia zh 3of6,Wikipedia zh 4of6,Wikipedia zh 5of6,Wikipedia zh 6of6, </upstreamProjects>
+      <upstreamProjects>Wikipedia zh 1of6,Wikipedia zh 2of6,Wikipedia zh 3of6,Wikipedia zh 4of6,Wikipedia zh 5of6,Wikipedia zh 6of6,</upstreamProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
