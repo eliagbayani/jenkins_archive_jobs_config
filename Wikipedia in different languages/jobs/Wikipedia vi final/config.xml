@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>3</numToKeep>
+        <numToKeep>6</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -19,35 +19,35 @@
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
-    <hudson.triggers.TimerTrigger>
-      <spec>H H(1-1) 1 2,4,6,8,10,12 *</spec>
-    </hudson.triggers.TimerTrigger>
+    <jenkins.triggers.ReverseBuildTrigger>
+      <spec></spec>
+      <upstreamProjects>Wikipedia vi 1of6,Wikipedia vi 2of6,Wikipedia vi 3of6,Wikipedia vi 4of6,Wikipedia vi 5of6,Wikipedia vi 6of6</upstreamProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </jenkins.triggers.ReverseBuildTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>### use this if you want to stop dead on its tracks
+      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
+cd /html/eol_php_code/update_resources/connectors
+
+php5.6 wikipedia.php jenkins vi generate_resource #
+
 #exit 1
 
-#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
-#php5.6 wikipedia.php jenkins en #English
-#---------------------
-#initially six (6) connectors
-
-echo &quot;start Wikipedia en build...&quot;
-#php5.6 wikipedia.php jenkins en generate_resource 1 416666 1of6
-#php5.6 wikipedia.php jenkins en generate_resource 416666 833332 2of6
-#php5.6 wikipedia.php jenkins en generate_resource 833332 1249998 3of6
-#php5.6 wikipedia.php jenkins en generate_resource 1249998 1666664 4of6
-#php5.6 wikipedia.php jenkins en generate_resource 1666664 2083330 5of6
-#php5.6 wikipedia.php jenkins en generate_resource 2083330 2500000 6of6 #all remaining
+### to start with Wikipedia XX, add this to &apos;Post-build Actions&apos;
+### Wikipedia XX start
 </command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>Wikipedia en 1of6,Wikipedia en 2of6,Wikipedia en 3of6,Wikipedia en 4of6,Wikipedia en 5of6,Wikipedia en 6of6,Wikipedia - it</childProjects>
+      <childProjects>Wikipedia - no, Wikipedia - fi, Wikipedia - ca, Wikipedia - uk, Wikipedia - tr, Wikipedia - ro, Wikipedia - cs</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

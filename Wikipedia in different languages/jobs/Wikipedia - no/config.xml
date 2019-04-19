@@ -25,7 +25,8 @@
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 
-php5.6 wikipedia.php jenkins pl generate_resource 1 416666 1of6
+php5.6 wikipedia.php jenkins no #Norwegian
+
 </command>
     </hudson.tasks.Shell>
   </builders>

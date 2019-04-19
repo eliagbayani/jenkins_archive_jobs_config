@@ -20,14 +20,12 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
     <hudson.triggers.TimerTrigger>
-      <spec>### will run every 10th day of the month at 1AM
-### temporarily commented
+      <spec>### will run every 1st day of the month at 1AM
 H H(1-1) 1 1-12 *
-#works okay but we need to run only every friday
-###OK
 
 
-#H H H 1-12 5
+
+#TODO: works okay but we need to run only every friday
 </spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
