@@ -138,8 +138,10 @@
 
 ## cannot access as expected
 #ls /var/www/html/cache_LiteratureEditor/
-ls /html/cache_LiteratureEditor/
-exit(1)</command>
+#ls /html/cache_LiteratureEditor/
+#exit(1)
+
+which cat</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
