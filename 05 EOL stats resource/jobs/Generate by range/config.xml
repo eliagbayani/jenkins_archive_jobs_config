@@ -18,27 +18,14 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers>
-    <hudson.triggers.TimerTrigger>
-      <spec># thrice a week, works OK
-#H 13 * * 0,3,6 
-
-# once a week, every Friday, works OK
-#H 13 * * 5 
-
-# twice a week, works OK
-H 13 * * 0,4 
-
-</spec>
-    </hudson.triggers.TimerTrigger>
-  </triggers>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-php5.6 freedata_usgs.php jenkins
-</command>
+## total_count is set to 1 so it does not do the finalize report.
+php5.6 eol_v3_api.php jenkins &apos;{&quot;range&quot;:[948000,953000],&quot;ctr&quot;:1,&quot;divisor&quot;:1,&quot;total_count&quot;:1}&apos;</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
