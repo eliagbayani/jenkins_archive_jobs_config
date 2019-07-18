@@ -1,7 +1,13 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description></description>
+  <description>This is the main and only 1 script to generate the EOL stats.&#xd;
+This will trigger 6 instances of the connector. The last one will proceed with finalizing the report.&#xd;
+&#xd;
+The other [Generate by range 1,2,3 &amp; 4] are only supplementary to speed up or further divide the load.&#xd;
+These are helpful indeed but not required.&#xd;
+&#xd;
+The other [Conn 1,2,3,4 &amp; 5] are those old manual means of running the connector. These can be deleted.</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>

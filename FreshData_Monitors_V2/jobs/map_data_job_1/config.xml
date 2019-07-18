@@ -33,11 +33,11 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
-#$myShell
+$myShell
 
 
 ##this is just temporary
-php5.6 generate_map_data_using_GBIF_csv_files.php jenkins &apos;{&quot;group&quot;:false,&quot;range&quot;:[1,372926],&quot;ctr&quot;:1}&apos;
+#php5.6 generate_map_data_using_GBIF_csv_files.php jenkins &apos;{&quot;group&quot;:false,&quot;range&quot;:[1,372926],&quot;ctr&quot;:1}&apos;
 </command>
     </hudson.tasks.Shell>
   </builders>

@@ -25,7 +25,7 @@
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 ## total_count is set to 1 so it does not do the finalize report.
-php5.6 eol_v3_api.php jenkins &apos;{&quot;range&quot;:[946000,947000],&quot;ctr&quot;:1,&quot;divisor&quot;:1,&quot;total_count&quot;:1}&apos;</command>
+php5.6 eol_v3_api.php jenkins &apos;{&quot;range&quot;:[944000,953000],&quot;ctr&quot;:1,&quot;divisor&quot;:1,&quot;total_count&quot;:1}&apos;</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

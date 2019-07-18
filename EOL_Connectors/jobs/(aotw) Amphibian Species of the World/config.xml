@@ -1,7 +1,7 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description></description>
+  <description>http://www.eol.org/content_partners/41/resources/33</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
@@ -24,8 +24,8 @@
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-## total_count is set to 1 so it does not do the finalize report.
-php5.6 eol_v3_api.php jenkins &apos;{&quot;range&quot;:[946000,947000],&quot;ctr&quot;:1,&quot;divisor&quot;:1,&quot;total_count&quot;:1}&apos;</command>
+php5.6 amphibians_otw.php jenkins
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
