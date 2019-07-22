@@ -34,15 +34,12 @@
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 $myShell
-
-
-##this is temporary only
-#php5.6 generate_map_data_using_GBIF_csv_files.php jenkins &apos;{&quot;group&quot;:false,&quot;range&quot;:[745851,1118776],&quot;ctr&quot;:3}&apos;</command>
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>../GBIF map data harvest/11a Generate map data for genus with descendants</childProjects>
+      <childProjects>../GBIF map data harvest/11b Generate map data for family with descendants</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
