@@ -1,7 +1,11 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>https://editors.eol.org/eol_php_code/applications/content_server/resources/listOf_order_family_genus.txt</description>
+  <description>This generates children of order, family and genus taxa.&#xd;
+This also generates the 3 taxa lists.&#xd;
+https://editors.eol.org/eol_php_code/applications/content_server/resources/listOf_genus_4maps.txt&#xd;
+https://editors.eol.org/eol_php_code/applications/content_server/resources/listOf_family_4maps.txt&#xd;
+https://editors.eol.org/eol_php_code/applications/content_server/resources/listOf_order_4maps.txt</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
@@ -27,6 +31,16 @@ php DHconn.php jenkins
 </command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>05 Generate map data</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+  </publishers>
   <buildWrappers/>
 </project>
