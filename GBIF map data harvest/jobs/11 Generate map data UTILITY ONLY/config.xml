@@ -29,9 +29,13 @@ cd /html/eol_php_code/update_resources/connectors
 
 ## works per taxon OK
 #php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;gen_map_data_forTaxa_with_children&quot;,&quot;sciname&quot;:&quot;Gadus&quot;,&quot;tc_id&quot;:46564414}&apos;
+#php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;gen_map_data_forTaxa_with_children&quot;,&quot;sciname&quot;:&quot;Gadidae&quot;,&quot;tc_id&quot;:5503}&apos;
+php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;gen_map_data_forTaxa_with_children&quot;,&quot;sciname&quot;:&quot;Gadiformes&quot;,&quot;tc_id&quot;:5496}&apos;
+
+
 ## taxon with many many children OK
 #php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;gen_map_data_forTaxa_with_children&quot;,&quot;sciname&quot;:&quot;Noctuidae&quot;,&quot;tc_id&quot;:873}&apos;
-php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;gen_map_data_forTaxa_with_children&quot;,&quot;sciname&quot;:&quot;Saurischia&quot;,&quot;tc_id&quot;:4531095}&apos;
+#php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;gen_map_data_forTaxa_with_children&quot;,&quot;sciname&quot;:&quot;Saurischia&quot;,&quot;tc_id&quot;:4531095}&apos;
 
 
 ## development only OK --- NOT to run in eol-archive

@@ -29,6 +29,9 @@ cd /html/eol_php_code/update_resources/connectors
 ## works per taxon OK
 #php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;generate_map_data_using_GBIF_csv_files&quot;,&quot;sciname&quot;:&quot;Pycnogonidae&quot;,&quot;tc_id&quot;:6270}&apos;
 #php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;generate_map_data_using_GBIF_csv_files&quot;,&quot;sciname&quot;:&quot;Ailuropoda melanoleuca&quot;,&quot;tc_id&quot;:328070}&apos;
+php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;generate_map_data_using_GBIF_csv_files&quot;,&quot;sciname&quot;:&quot;Enhydra lutris&quot;,&quot;tc_id&quot;:46559130}&apos;
+
+  
 
 
 ## works but too long to run - totally will abandon
@@ -36,7 +39,7 @@ cd /html/eol_php_code/update_resources/connectors
 
 
 ## normal operation OK - works OK now (NICE AUTO GENERATION!)
-php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;generate_map_data_using_GBIF_csv_files&quot;,&quot;divisor&quot;:6}&apos;
+#php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;generate_map_data_using_GBIF_csv_files&quot;,&quot;divisor&quot;:6}&apos;
 
 
 #Last breakdown is:
