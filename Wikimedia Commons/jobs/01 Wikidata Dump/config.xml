@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>5</numToKeep>
+        <numToKeep>2</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -38,8 +38,15 @@ H H(1-1) 1 1-12 *
 # working OK
 cd /extra/dumps/wikidata
 rm -f latest-all.json.gz
-wget -c https://dumps.wikimedia.org/wikidatawiki/entities/latest-all.json.gz
-# ORIG - this works OK but triggers FAILURE even on a successful decompression.
+
+##works ok but to verbose:
+##wget -c https://dumps.wikimedia.org/wikidatawiki/entities/latest-all.json.gz
+
+wget -c -nv https://dumps.wikimedia.org/wikidatawiki/entities/latest-all.json.gz
+## -nv means non-verbose but errors gets printed out.
+
+
+# ORIG - this works OK doesn&apos;t trigger failure anymore
 gunzip -fk latest-all.json.gz #-k means keep, don&apos;t delete orig file. -f means overwrites.
 
 

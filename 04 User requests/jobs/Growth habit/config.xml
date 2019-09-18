@@ -1,8 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
   <description>https://eol-jira.bibalex.org/browse/DATA-1715&#xd;
-https://opendata.eol.org/organization/user-requests</description>
+https://opendata.eol.org/organization/user-requests&#xd;
+&#xd;
+as of Sep 12, 2019 deleted the builds, will check connector to disable debug info</description>
   <keepDependencies>false</keepDependencies>
   <properties/>
   <scm class="hudson.scm.NullSCM"/>

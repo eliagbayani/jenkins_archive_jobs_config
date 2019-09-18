@@ -36,8 +36,7 @@
       <command>cd /html/eol_php_code/update_resources/connectors
 
 #step 4: just one connector
-php5.6 wikidata.php jenkins generate_resource #
-
+php5.6 wikidata.php jenkins generate_resource # orig
 
 # add this to Post-build Actions:
 # , ../Wikipedia in different languages/Wikipedia en start</command>

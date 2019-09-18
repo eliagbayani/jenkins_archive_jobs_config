@@ -1,7 +1,9 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>https://opendata.eol.org/dataset/plant-forms-habitat-and-distribution</description>
+  <description>https://opendata.eol.org/dataset/plant-forms-habitat-and-distribution&#xd;
+&#xd;
+Eli as of Sep 12, 2019 deleted the builds coz it is getting too much space.</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>

@@ -1,7 +1,8 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description></description>
+  <description>Eli as of Sep 12, 2019 deleted builds coz it is occupying too much space. &#xd;
+TODO: Will need to investigate the connector and remove those debug info.</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
