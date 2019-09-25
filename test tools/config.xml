@@ -141,7 +141,12 @@
 #ls /html/cache_LiteratureEditor/
 #exit(1)
 
-which cat</command>
+#which cat
+#which ffmpeg
+
+
+cd /html/eol_php_code/update_resources/connectors/
+php5.6 media_convert.php</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
