@@ -35,7 +35,9 @@ php5.6 pbdb_fresh_harvest.php jenkins
 # This will adjust newly generated 368.tar.gz. 
 # It&apos;ll remove all Aves descendants as requested.
 php5.6 remove_Aves_children_from_368.php jenkins
-</command>
+
+# This will remove bad synonyms
+php5.6 synonyms_handling.php jenkins 368_final</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
