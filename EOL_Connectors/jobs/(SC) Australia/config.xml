@@ -1,7 +1,7 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>https://eol-jira.bibalex.org/browse/DATA-1817</description>
+  <description>https://eol-jira.bibalex.org/browse/DATA-1833</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
@@ -24,7 +24,7 @@
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-php5.6 species_checklists.php jenkins
+php5.6 sc_australia.php jenkins
 </command>
     </hudson.tasks.Shell>
   </builders>
