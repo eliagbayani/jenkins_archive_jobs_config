@@ -18,13 +18,7 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers>
-    <hudson.triggers.TimerTrigger>
-      <spec># MINUTE (0-59), HOUR (0-23), DAY (1-31), MONTH (1-12), DAY OF THE WEEK (0-6)
-#H 12 13 3,6,9,12 *
-# will run quarterly - 4x per annum</spec>
-    </hudson.triggers.TimerTrigger>
-  </triggers>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
@@ -145,8 +139,13 @@
 #which ffmpeg
 
 
-cd /html/eol_php_code/update_resources/connectors/
-php5.6 media_convert.php</command>
+#cd /html/eol_php_code/update_resources/connectors/
+#php5.6 media_convert.php
+
+#exit(1)
+cd /extra/eol_php_code_tmp/
+ls -lt
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
