@@ -25,8 +25,8 @@
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 
-php5.6 wikipedia.php jenkins vo #Volupak
-
+#php5.6 wikipedia.php jenkins vo #Volupak
+## asked by Jen to ignore for now. Same with Esperanto (eo).
 </command>
     </hudson.tasks.Shell>
   </builders>

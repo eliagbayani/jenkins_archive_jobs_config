@@ -36,7 +36,8 @@ bzip2 -dkf commonswiki-latest-pages-articles.xml.bz2
 
 #just temporary replacement:
 #which gzip
-</command>
+
+#exit 1 ##force stop</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
