@@ -1,7 +1,7 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>https://eol-jira.bibalex.org/browse/DATA-1826</description>
+  <description>https://eol-jira.bibalex.org/browse/DATA-1842</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
@@ -24,9 +24,12 @@
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-php5.6 gbif_classification.php jenkins
 
-#ls -lt /extra/other_files/GBIF_backbone/Taxon.tsv</command>
+#php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:328672, &quot;sci&quot;:&quot;Panthera leo&quot;}&apos;
+#php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:695, &quot;sci&quot;:&quot;Aves&quot;}&apos;
+#php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:164, &quot;sci&quot;:&quot;Arthropoda&quot;}&apos;
+php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:1642, &quot;sci&quot;:&quot;Mammalia&quot;}&apos;
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
