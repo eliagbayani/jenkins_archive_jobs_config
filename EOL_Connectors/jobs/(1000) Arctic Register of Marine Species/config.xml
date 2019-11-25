@@ -1,8 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
   <description>http://www.eol.org/content_partners/831/resources/1000&#xd;
-https://opendata.eol.org/dataset/arctic_biodiversity</description>
+https://opendata.eol.org/dataset/arctic_biodiversity&#xd;
+&#xd;
+History:&#xd;
+In Nov 22, 2019 - https://eol-jira.bibalex.org/browse/DATA-1841</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
@@ -24,7 +27,11 @@ https://opendata.eol.org/dataset/arctic_biodiversity</description>
   <builders>
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
+##Now has 2 steps:
+#step 1: generates 1000.tar.gz
 php5.6 spreadsheet_2_dwca.php jenkins 1000
+#step 2: generates 1000_final.tar.gz
+php5.6 1000.php jenkins
 </command>
     </hudson.tasks.Shell>
   </builders>
