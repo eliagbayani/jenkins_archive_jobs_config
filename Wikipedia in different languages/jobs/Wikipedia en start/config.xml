@@ -49,7 +49,7 @@ echo &quot;start Wikipedia en build...&quot;
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>Wikipedia en 1of6,Wikipedia en 2of6,Wikipedia en 3of6,Wikipedia en 4of6,Wikipedia en 5of6,Wikipedia en 6of6,Wikipedia - it</childProjects>
+      <childProjects>Wikipedia en 1of6,Wikipedia en 2of6,Wikipedia en 3of6,Wikipedia en 4of6,Wikipedia en 5of6,Wikipedia en 6of6, taxon_wiki_per_language_stats</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

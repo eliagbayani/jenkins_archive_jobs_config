@@ -29,7 +29,8 @@ cd /html/eol_php_code/update_resources/connectors
 php5.6 wikipedia.php jenkins ast #Asturian
 
 #php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:3, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;ast&quot;}&apos;
-</command>
+
+##normally post-build: wikipedia-bg (Bulgarian)</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
