@@ -26,13 +26,16 @@
 cd /html/eol_php_code/update_resources/connectors
 
 #php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:328672, &quot;sci&quot;:&quot;Panthera leo&quot;}&apos;
-php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:695, &quot;sci&quot;:&quot;Aves&quot;}&apos;
+#php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:695, &quot;sci&quot;:&quot;Aves&quot;}&apos;
 #php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:164, &quot;sci&quot;:&quot;Arthropoda&quot;}&apos;
 #php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:1642, &quot;sci&quot;:&quot;Mammalia&quot;}&apos;
 
 ##Finished at: 8,100
 ##[https://eol.org/api/pages/1.0/695.json?details=true&amp;images_per_page=50&amp;images_page=8100]
 ##objects: 50
+
+php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:7631, &quot;sci&quot;:&quot;Chiroptera&quot;}&apos;
+#php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:747, &quot;sci&quot;:&quot;Lepidoptera&quot;}&apos;
 </command>
     </hudson.tasks.Shell>
   </builders>
