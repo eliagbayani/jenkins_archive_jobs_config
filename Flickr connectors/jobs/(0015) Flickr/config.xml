@@ -1,7 +1,7 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description></description>
+  <description>http://www.eol.org/content_partners/18/resources/15</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
@@ -20,36 +20,22 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
     <hudson.triggers.TimerTrigger>
-      <spec>## working but commented for now Aug 1, 2019
-#H H(1-1) 1 2,4,6,8,10,12 *</spec>
+      <spec>#run every month, 17th day of the month
+#H H 17 1-12 *</spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>### use this if you want to stop dead on its tracks
-#exit 1
-### temporarily stopped by Eli Nov 7, 2019.
-
-#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
+      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-#php5.6 wikipedia.php jenkins en #English
-#---------------------
-#initially six (6) connectors
-
-echo &quot;start Wikipedia en build...&quot;
-#php5.6 wikipedia.php jenkins en generate_resource 1 416666 1of6
-#php5.6 wikipedia.php jenkins en generate_resource 416666 833332 2of6
-#php5.6 wikipedia.php jenkins en generate_resource 833332 1249998 3of6
-#php5.6 wikipedia.php jenkins en generate_resource 1249998 1666664 4of6
-#php5.6 wikipedia.php jenkins en generate_resource 1666664 2083330 5of6
-#php5.6 wikipedia.php jenkins en generate_resource 2083330 2500000 6of6 #all remaining
+php5.6 15.php jenkins
 </command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>Wikipedia en 1of6,Wikipedia en 2of6,Wikipedia en 3of6,Wikipedia en 4of6,Wikipedia en 5of6,Wikipedia en 6of6,taxon_wiki_per_language_stats</childProjects>
+      <childProjects>(0544) BHL - BioDivLibrary&apos;s photostream</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
