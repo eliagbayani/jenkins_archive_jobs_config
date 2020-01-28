@@ -35,7 +35,12 @@ cd /html/eol_php_code/update_resources/connectors
 #php5.6 xml_2_dwca.php jenkins 888
 
 #php5.6 xml_2_dwca.php jenkins 6
-php5.6 xml_2_dwca.php jenkins 339
+#php5.6 xml_2_dwca.php jenkins 339
+
+#php5.6 xml_2_dwca.php jenkins 63 #INOTAXA
+php5.6 xml_2_dwca.php jenkins 116 #The Dutch Ascidians Homepage
+
+
 
 </command>
     </hudson.tasks.Shell>

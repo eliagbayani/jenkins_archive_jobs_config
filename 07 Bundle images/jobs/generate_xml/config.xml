@@ -1,14 +1,13 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>http://www.eol.org/content_partners/650/resources/707&#xd;
-</description>
+  <description>https://eol-jira.bibalex.org/browse/DATA-1845</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>5</numToKeep>
+        <numToKeep>3</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -26,9 +25,8 @@
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 
-#php5.6 spreadsheet_2_dwca.php jenkins 707 --&gt; ran already. obsolete.
-
-php5.6 707.php jenkins # --&gt; this starts with the DwCA generated above.</command>
+php5.6 taxon_image_bundles_part2.php jenkins
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

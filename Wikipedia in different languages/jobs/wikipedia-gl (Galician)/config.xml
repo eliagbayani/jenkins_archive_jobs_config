@@ -1,8 +1,7 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>http://www.eol.org/content_partners/650/resources/707&#xd;
-</description>
+  <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
@@ -26,9 +25,9 @@
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 
-#php5.6 spreadsheet_2_dwca.php jenkins 707 --&gt; ran already. obsolete.
+php5.6 wikipedia.php jenkins gl #Galician
 
-php5.6 707.php jenkins # --&gt; this starts with the DwCA generated above.</command>
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
