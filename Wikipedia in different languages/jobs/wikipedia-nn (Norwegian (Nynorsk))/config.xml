@@ -25,18 +25,14 @@
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 
-##works OK but will try MultipleConnJenkins
-#php5.6 wikipedia.php jenkins min #Minangkabau
+php5.6 wikipedia.php jenkins nn #Norwegian (Nynorsk)
 
-#working OK
-php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:3, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;min&quot;}&apos;
-
-#normally this will have post-build action to run Waray (war).</command>
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>wikipedia-bg (Bulgarian)</childProjects>
+      <childProjects>wikipedia-sk (Slovak)</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

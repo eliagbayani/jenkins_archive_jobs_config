@@ -27,19 +27,9 @@ cd /html/eol_php_code/update_resources/connectors
 
 php5.6 wikipedia.php jenkins is #Icelandic
 
-</command>
+# orig Add post-build action: wikipedia-war (Waray)</command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>wikipedia-war (Waray)</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-        <completeBuild>true</completeBuild>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
-  </publishers>
+  <publishers/>
   <buildWrappers/>
 </project>

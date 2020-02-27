@@ -25,7 +25,9 @@
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 
-php5.6 wikipedia.php jenkins de generate_resource 833332 1249998 3of6
+#php5.6 wikipedia.php jenkins de generate_resource 833332 1249998 3of6
+php5.6 wikipedia.php jenkins de generate_resource 1112000 1113000 3of6
+
 </command>
     </hudson.tasks.Shell>
   </builders>
