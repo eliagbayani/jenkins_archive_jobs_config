@@ -21,7 +21,7 @@
   <triggers>
     <hudson.triggers.TimerTrigger>
       <spec>### will run every 1st day of the month at 1AM - every 6 months
-H H(1-1) 1 4,10 *
+#H H(1-1) 20 3,9 *
 </spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
