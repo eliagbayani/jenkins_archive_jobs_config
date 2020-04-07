@@ -25,14 +25,14 @@
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 
-php5.6 wikipedia.php jenkins os #Ossetian
+php5.6 wikipedia.php jenkins wa #Walloon
 
 </command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>wikipedia-cv (Chuvash)</childProjects>
+      <childProjects>wikipedia-nah (Nahuatl)</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

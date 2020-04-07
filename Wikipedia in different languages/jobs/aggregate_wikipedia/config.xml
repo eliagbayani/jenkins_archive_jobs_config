@@ -21,9 +21,13 @@
   <triggers>
     <hudson.triggers.TimerTrigger>
       <spec># once a day of every month except December
-H 8,14 * 1-12 *
+#H 8,14 * 1-12 * 
+# 8 am and 2 pm everyday
 
-# 8 am and 2 pm everyday</spec>
+#H 14 * 1-12 *   
+# 2 pm everyday
+
+</spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
