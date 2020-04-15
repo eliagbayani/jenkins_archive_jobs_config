@@ -34,11 +34,27 @@ cd /html/eol_php_code/update_resources/connectors
 ##[https://eol.org/api/pages/1.0/695.json?details=true&amp;images_per_page=50&amp;images_page=8100]
 ##objects: 50
 
-php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:7631, &quot;sci&quot;:&quot;Chiroptera&quot;}&apos;
+#php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:7631, &quot;sci&quot;:&quot;Chiroptera&quot;}&apos;
 #php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:747, &quot;sci&quot;:&quot;Lepidoptera&quot;}&apos;
+
+#Next batch as of Apr 10, 2020: Squamata (Lizards And Snakes), Anura (Frogs And Toads), Coleoptera (Beetles), and Carnivora (Carnivores)
+php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:1704, &quot;sci&quot;:&quot;Squamata&quot;}&apos;
+#php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:1553, &quot;sci&quot;:&quot;Anura&quot;}&apos;
+#php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:345, &quot;sci&quot;:&quot;Coleoptera&quot;}&apos;
+#php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:7662, &quot;sci&quot;:&quot;Carnivora&quot;}&apos;
 </command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>run_02</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+  </publishers>
   <buildWrappers/>
 </project>

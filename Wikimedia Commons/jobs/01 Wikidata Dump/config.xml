@@ -36,14 +36,14 @@ H H(1-1) 4 1-12 *
 #exit 1
 
 ### =========================================================================
-
 cd /html/eol_php_code/applications/content_server/resources
 rm -f wikimedia_filenames_status_*.txt
 rm -f wikimedia_filenames_*.txt
 rm -f wikimedia_generation_status_*.txt
 rm -f wikipedia_debug_*.txt
 rm -f wikimedia_debug_*.txt
-
+# New (Apr 12, 2020): take note of this deletion:
+rm -f wikipedia_*.tmp
 ### =========================================================================
 
 # working OK
