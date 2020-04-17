@@ -25,14 +25,14 @@
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 
-php5.6 wikipedia.php jenkins wuu #Wu
+php5.6 wikipedia.php jenkins gn #Guarani
 
 </command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>wikipedia-ht (Haitian)</childProjects>
+      <childProjects>wikipedia-rue (Rusyn)</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
