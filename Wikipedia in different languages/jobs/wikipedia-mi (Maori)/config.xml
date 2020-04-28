@@ -32,7 +32,7 @@ php5.6 wikipedia.php jenkins mi #Maori
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>wikipedia-vls (West Flemish)</childProjects>
+      <childProjects>wikipedia-jv (Javanese)</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

@@ -32,7 +32,7 @@ php5.6 wikipedia.php jenkins jv #Javanese
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>wikipedia-an (Aragonese)</childProjects>
+      <childProjects>wikipedia-sh (Serbo-Croatian)</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
