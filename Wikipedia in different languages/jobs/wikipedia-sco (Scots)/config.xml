@@ -32,7 +32,7 @@ php5.6 wikipedia.php jenkins sco #Scots
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>wikipedia-ia (Interlingua)</childProjects>
+      <childProjects>wikipedia-ky (Kirghiz)</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

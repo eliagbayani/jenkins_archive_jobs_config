@@ -18,31 +18,33 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers/>
+  <triggers>
+    <hudson.triggers.TimerTrigger>
+      <spec># once a day on the 1st and 15th of every month except December
+H 3 * 1-12 *</spec>
+    </hudson.triggers.TimerTrigger>
+  </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
+      <command>## working OK
+cd /extra/other_files/WoRMS/
+ls -lt
+rm -f WoRMS2EoL.zip
 
-## works OK but will try to use MultipleConnJenkins
-php5.6 wikipedia.php jenkins sh #Serbo-Croatian (sh)
 
-## not set atm to run multiple connectors (set in wikipedia.php)
-#php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:1, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;sh&quot;}&apos;
+wget -nv http://www.marinespecies.org/export/eol/WoRMS2EoL.zip
+
+#wget -c -nv http://www.marinespecies.org/export/eol/WoRMS2EoL.zip
+## -nv means non-verbose but errors gets printed out.
+## -c means continue. In cases where there is incomplete download.
+
+ls -lt
+chmod 755 WoRMS2EoL.zip
+ls -lt
 </command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>wikipedia-ia (Interlingua)</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-        <completeBuild>true</completeBuild>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
-  </publishers>
+  <publishers/>
   <buildWrappers/>
 </project>
