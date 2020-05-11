@@ -27,7 +27,9 @@ cd /html/eol_php_code/update_resources/connectors
 
 php5.6 wikipedia.php jenkins udm #Udmurt
 
-</command>
+#exit 1
+
+#wikipedia-co (Corsican)</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
