@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>6</numToKeep>
+        <numToKeep>3</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -18,37 +18,21 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers>
-    <jenkins.triggers.ReverseBuildTrigger>
-      <spec></spec>
-      <upstreamProjects>Wikipedia nl 1of6,Wikipedia nl 2of6,Wikipedia nl 3of6,Wikipedia nl 4of6,Wikipedia nl 5of6,Wikipedia nl 6of6</upstreamProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-        <completeBuild>true</completeBuild>
-      </threshold>
-    </jenkins.triggers.ReverseBuildTrigger>
-  </triggers>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 
-php5.6 wikipedia.php jenkins nl generate_resource
+php5.6 wikipedia.php jenkins mg #Malagasy
 
-### temporarily stop, not continue to Post-build Actions
-#exit 1
-
-### to start with Wikipedia pl, add this to &apos;Post-build Actions&apos;
-### Wikipedia pl start
 </command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>Wikipedia pl start</childProjects>
+      <childProjects>wikipedia-rm (Romansh)</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

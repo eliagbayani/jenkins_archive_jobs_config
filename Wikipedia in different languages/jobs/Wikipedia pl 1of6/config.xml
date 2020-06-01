@@ -28,7 +28,9 @@ cd /html/eol_php_code/update_resources/connectors
 php5.6 wikipedia.php jenkins pl generate_resource 1 416666 1of6
 
 #php5.6 wikipedia_ver2.php jenkins pl generate_resource 1 416666 1of6
-</command>
+
+###temporarily commented - Build other projects
+#Wikipedia - uk</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

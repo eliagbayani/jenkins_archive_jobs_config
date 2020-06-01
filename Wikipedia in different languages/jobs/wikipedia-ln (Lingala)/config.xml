@@ -32,7 +32,7 @@ php5.6 wikipedia.php jenkins ln #Lingala
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>wikipedia-hak (Hakka)</childProjects>
+      <childProjects>wikipedia-mwl (Mirandese)</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
