@@ -1,7 +1,7 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>http://www.eol.org/content_partners/18/resources/15</description>
+  <description>https://eol-jira.bibalex.org/browse/DATA-1843</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
@@ -18,21 +18,17 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers>
-    <hudson.triggers.TimerTrigger>
-      <spec>#run every month, 17th day of the month
-#H H 17 1-12 *</spec>
-    </hudson.triggers.TimerTrigger>
-  </triggers>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-php5.6 15.php jenkins
+php5.6 bee_inventory_monitoring.php jenkins
 
-###temporarily not continue with &quot;Build other projects&quot; -&gt; (0544) BHL - BioDivLibrary&apos;s photostream
-#exit 1</command>
+###temporarily commented - Post-build Actions
+###(0015) Flickr
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

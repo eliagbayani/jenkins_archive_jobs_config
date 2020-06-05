@@ -145,7 +145,8 @@
 #exit(1)
 cd /extra/eol_php_code_tmp/
 ls -lt
-</command>
+
+php -v</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
