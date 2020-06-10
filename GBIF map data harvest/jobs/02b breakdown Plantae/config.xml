@@ -26,7 +26,9 @@
 
 cd /html/eol_php_code/update_resources/connectors
 
-php gbif_georeference_dwca.php jenkins &apos;{&quot;group&quot;:&quot;Plantae&quot;,&quot;divisor&quot;:6}&apos;</command>
+php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;group&quot;:&quot;Plantae&quot;,&quot;divisor&quot;:6}&apos;
+
+###This will open 6 Plantae jobs in: [03 EOL tools and FreshData Monitors V2 jobs]</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

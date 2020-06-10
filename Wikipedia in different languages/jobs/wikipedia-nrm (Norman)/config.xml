@@ -25,14 +25,14 @@
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 
-php5.6 wikipedia.php jenkins ltg #Latgalian
+php5.6 wikipedia.php jenkins nrm #Norman
 
 </command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>aggregate_wikipedia</childProjects>
+      <childProjects>wikipedia-rn (Kirundi)</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

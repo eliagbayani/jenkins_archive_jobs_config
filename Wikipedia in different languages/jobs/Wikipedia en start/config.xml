@@ -29,7 +29,7 @@
     <hudson.tasks.Shell>
       <command>### use this if you want to stop dead on its tracks
 exit 1
-### temporarily stopped by Eli Nov 7, 2019.
+### temporarily stopped by Eli Jun 8, 2020.
 
 #cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors

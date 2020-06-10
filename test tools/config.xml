@@ -29,8 +29,8 @@
 #ls -lt /html/eol_php_code/tmp/cache2/
 
 
-#php5.6 -v
-#php -v
+php5.6 -v
+php -v
 #which php
 
 #wget --help
@@ -143,10 +143,10 @@
 #php5.6 media_convert.php
 
 #exit(1)
-cd /extra/eol_php_code_tmp/
-ls -lt
+#cd /extra/eol_php_code_tmp/
+#ls -lt
 
-php -v</command>
+#php -v</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

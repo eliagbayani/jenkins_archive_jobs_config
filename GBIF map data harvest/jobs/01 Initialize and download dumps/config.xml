@@ -22,15 +22,15 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>### Latest as of Oct 2018
+      <command>### Latest as of Oct2018 | 8Jun2020
 
 ### start initializing - deleting old files ==============
 
 ###Remove all CSV files (.csv):
-##rm -rf /extra/other_files/GBIF_occurrence/GBIF_taxa_csv_dwca/*
+rm -rf /extra/other_files/GBIF_occurrence/GBIF_taxa_csv_dwca/*
 
 ###Remove multimedia assignments to taxon (.txt):
-##rm -rf /extra/other_files/GBIF_occurrence/multimedia_gbifID/*
+rm -rf /extra/other_files/GBIF_occurrence/multimedia_gbifID/*
 
 ###Remove all map data (.json)
 rm -rf /extra/map_data_dwca/*
@@ -40,27 +40,37 @@ rm -rf /extra/map_data_dwca/*
 
 #OK
 cd /extra/other_files/GBIF_occurrence/DwCA_Animalia/
-##rm -f Animalia_DwCA.zip
-##curl -L -o &apos;Animalia_DwCA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0012668-181003121212138.zip
-##unzip -jo Animalia_DwCA.zip multimedia.txt
-##unzip -jo Animalia_DwCA.zip occurrence.txt
+rm -f Animalia_DwCA.zip
+curl -L -o &apos;Animalia_DwCA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0081142-200221144449610.zip                                    
+unzip -jo Animalia_DwCA.zip multimedia.txt
+unzip -jo Animalia_DwCA.zip occurrence.txt
 
 #OK
 cd /extra/other_files/GBIF_occurrence/DwCA_Plantae/
-##rm -f Plantae_DwCA.zip
-##curl -L -o &apos;Plantae_DwCA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0012669-181003121212138.zip
-##unzip -jo Plantae_DwCA.zip multimedia.txt
-##unzip -jo Plantae_DwCA.zip occurrence.txt
+rm -f Plantae_DwCA.zip
+curl -L -o &apos;Plantae_DwCA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0081144-200221144449610.zip                                   
+unzip -jo Plantae_DwCA.zip multimedia.txt
+unzip -jo Plantae_DwCA.zip occurrence.txt
 
 #OK
 cd /extra/other_files/GBIF_occurrence/DwCA_Other7Groups/
-##rm -f Other7Groups_DwcA.zip
-##curl -L -o &apos;Other7Groups_DwcA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0012209-181003121212138.zip
-##unzip -jo Other7Groups_DwcA.zip multimedia.txt
-##unzip -jo Other7Groups_DwcA.zip occurrence.txt
+rm -f Other7Groups_DwcA.zip
+curl -L -o &apos;Other7Groups_DwcA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0081146-200221144449610.zip                                        
+unzip -jo Other7Groups_DwcA.zip multimedia.txt
+unzip -jo Other7Groups_DwcA.zip occurrence.txt
 </command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>02a breakdown Animalia</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+  </publishers>
   <buildWrappers/>
 </project>
