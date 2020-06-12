@@ -34,7 +34,7 @@ rm -rf /extra/other_files/GBIF_occurrence/multimedia_gbifID/*
 
 ###Remove all map data (.json)
 rm -rf /extra/map_data_dwca/*
-
+###ToDo: not * but specified files. timestamped final_taxon_concept_IDS.txt must remain.
 
 ### start DwCA downloads ================================= worked OK
 
