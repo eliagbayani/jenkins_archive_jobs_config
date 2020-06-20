@@ -39,7 +39,8 @@ cd /html/eol_php_code/update_resources/connectors
 
 
 ## normal operation OK - works OK now (NICE AUTO GENERATION!)
-php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;generate_map_data_using_GBIF_csv_files&quot;,&quot;divisor&quot;:6}&apos;
+php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;generate_map_data_using_GBIF_csv_files&quot;,&quot;divisor&quot;:10}&apos;
+## formerly just 6 divisor
 
 
 #Historical breakdown in the past for divisor = 3:
