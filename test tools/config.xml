@@ -22,15 +22,27 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#ls -lt /usr/bin/p*
+      <command>cd /html/eol_php_code/update_resources/connectors
+
+php5.6 test.php
+
+
+#ls -lt /usr/bin/p*
 #ls -lt /usr/bin/php5.6
 
 #ls -lt /html/eol_php_code/tmp/
 #ls -lt /html/eol_php_code/tmp/cache2/
 
 
-php5.6 -v
-php -v
+#php5.6 -v
+#php -v
+
+#/usr/bin/mysql -uroot -p&apos;m173!XAbc*&apos;  -e &quot;SELECT @@datadir;&quot;
+#which mysql
+#df -h
+
+#mysqld --version
+
 #which php
 
 #wget --help

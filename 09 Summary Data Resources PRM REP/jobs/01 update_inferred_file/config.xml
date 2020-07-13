@@ -1,17 +1,13 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>http://www.eol.org/content_partners/473/resources/368&#xd;
-&#xd;
-https://eol-jira.bibalex.org/browse/TRAM-746&#xd;
-https://eol-jira.bibalex.org/browse/DATA-1814&#xd;
-https://eol-jira.bibalex.org/browse/DATA-1831</description>
+  <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>3</numToKeep>
+        <numToKeep>5</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -28,21 +24,7 @@ https://eol-jira.bibalex.org/browse/DATA-1831</description>
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-
-# php5.6 368.php jenkins #OBSOLETE, use below instead. 
-
-
-# Three (3) connectors to run, one after the other - OK
-
-# OK
-php5.6 pbdb_fresh_harvest.php jenkins #this generates 368.tar.gz
-
-# This will adjust newly generated 368.tar.gz. 
-# It&apos;ll remove all Aves descendants as requested.
-php5.6 remove_Aves_children_from_368.php jenkins #this generates 368_removed_aves.tar.gz
-
-# This will remove bad synonyms
-php5.6 synonyms_handling.php jenkins 368_final #this generates 368_final.tar.gz
+php5.6 SDR_all.php jenkins &apos;{&quot;task&quot;:&quot;update_inferred_file&quot;}&apos;
 </command>
     </hudson.tasks.Shell>
   </builders>

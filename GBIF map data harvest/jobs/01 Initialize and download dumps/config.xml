@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>5</numToKeep>
+        <numToKeep>3</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -32,30 +32,40 @@ rm -rf /extra/other_files/GBIF_occurrence/GBIF_taxa_csv_dwca/*
 ###Remove multimedia assignments to taxon (.txt):
 rm -rf /extra/other_files/GBIF_occurrence/multimedia_gbifID/*
 
+###Move txt files before nuke /map_data_dwca/*
+mkdir /extra/tmp
+mv /extra/map_data_dwca/final_taxon_concept_IDS*.txt /extra/tmp/
+
 ###Remove all map data (.json)
 rm -rf /extra/map_data_dwca/*
-###ToDo: not * but specified files. timestamped final_taxon_concept_IDS.txt must remain.
+
+###Move back txt files
+mv /extra/tmp/final_taxon_concept_IDS*.txt /extra/map_data_dwca/
+
 
 ### start DwCA downloads ================================= worked OK
 
 #OK
 cd /extra/other_files/GBIF_occurrence/DwCA_Animalia/
 rm -f Animalia_DwCA.zip
-curl -L -o &apos;Animalia_DwCA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0081142-200221144449610.zip                                    
+###curl -L -o &apos;Animalia_DwCA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0081142-200221144449610.zip
+bash /var/www/html/eol_php_code/update_resources/connectors/files/GBIF/run_Animalia.sh
 unzip -jo Animalia_DwCA.zip multimedia.txt
 unzip -jo Animalia_DwCA.zip occurrence.txt
 
 #OK
 cd /extra/other_files/GBIF_occurrence/DwCA_Plantae/
 rm -f Plantae_DwCA.zip
-curl -L -o &apos;Plantae_DwCA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0081144-200221144449610.zip                                   
+###curl -L -o &apos;Plantae_DwCA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0081144-200221144449610.zip                                   
+bash /var/www/html/eol_php_code/update_resources/connectors/files/GBIF/run_Plantae.sh
 unzip -jo Plantae_DwCA.zip multimedia.txt
 unzip -jo Plantae_DwCA.zip occurrence.txt
 
 #OK
 cd /extra/other_files/GBIF_occurrence/DwCA_Other7Groups/
 rm -f Other7Groups_DwcA.zip
-curl -L -o &apos;Other7Groups_DwcA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0081146-200221144449610.zip                                        
+###curl -L -o &apos;Other7Groups_DwcA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0081146-200221144449610.zip                                        
+bash /var/www/html/eol_php_code/update_resources/connectors/files/GBIF/run_Other7Groups.sh
 unzip -jo Other7Groups_DwcA.zip multimedia.txt
 unzip -jo Other7Groups_DwcA.zip occurrence.txt
 </command>
