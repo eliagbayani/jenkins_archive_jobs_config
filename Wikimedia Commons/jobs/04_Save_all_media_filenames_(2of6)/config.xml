@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
   <description></description>
@@ -27,13 +27,13 @@
 #step 2: initially six connectors to cache, then one connector to finalize
 
 #php5.6 wikidata.php jenkins save_all_media_filenames 1 300000
-php5.6 wikidata.php jenkins save_all_media_filenames 300000 600000 2of6
+php5.6 wikidata.php jenkins save_all_media_filenames 466668 933334 2of6
 #php5.6 wikidata.php jenkins save_all_media_filenames 600000 900000
 #php5.6 wikidata.php jenkins save_all_media_filenames 900000 1400000 #inc 500000
 #php5.6 wikidata.php jenkins save_all_media_filenames 1400000 1900000 #inc 500000
 #php5.6 wikidata.php jenkins save_all_media_filenames 1900000 2500000 #all remaining
 
-</command>
+	</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
