@@ -28,8 +28,12 @@
   <builders>
     <hudson.tasks.Shell>
       <command>### use this if you want to stop dead on its tracks
-exit 1
+#exit 1
 ### temporarily stopped by Eli Jul 21, 2020.
+
+cd /html/eol_php_code/applications/content_server/resources
+rm -f wikipedia_generation_status*.txt 
+rm -r wikipedia_*.tmp
 
 #cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors

@@ -22,9 +22,13 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
+      <command>cd /extra/apps/vangelis_tagger/eol_tagger/
+#./environments_tagger ../test_text_data/ &amp;&gt; ../eol_tags/eol_tags.tsv
 
-php5.6 test.php
+yum -v
+
+#cd /html/eol_php_code/update_resources/connectors
+#php5.6 test.php
 
 
 #ls -lt /usr/bin/p*

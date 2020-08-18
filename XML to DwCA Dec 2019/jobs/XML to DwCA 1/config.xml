@@ -25,7 +25,7 @@
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 
-#php5.6 xml_2_dwca.php jenkins 20
+php5.6 xml_2_dwca.php jenkins 20
 #php5.6 xml_2_dwca.php jenkins 327
 
 #php5.6 xml_2_dwca.php jenkins TaiEOL
@@ -38,7 +38,7 @@ cd /html/eol_php_code/update_resources/connectors
 #php5.6 xml_2_dwca.php jenkins 339
 
 #php5.6 xml_2_dwca.php jenkins 63 #INOTAXA
-php5.6 xml_2_dwca.php jenkins 116 #The Dutch Ascidians Homepage
+#php5.6 xml_2_dwca.php jenkins 116 #The Dutch Ascidians Homepage
 
 
 
