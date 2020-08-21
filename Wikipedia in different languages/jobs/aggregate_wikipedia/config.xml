@@ -20,14 +20,7 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
     <hudson.triggers.TimerTrigger>
-      <spec># once a day of every month except December
-#H 8,14 * 1-12 * 
-# 8 am and 2 pm everyday
-
-#H 14 * 1-12 *   
-# 2 pm everyday
-
-</spec>
+      <spec>H H 21,22,23 1-12 *</spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
