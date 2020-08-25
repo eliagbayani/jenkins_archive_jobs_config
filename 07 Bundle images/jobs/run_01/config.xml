@@ -38,13 +38,18 @@ cd /html/eol_php_code/update_resources/connectors
 #php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:747, &quot;sci&quot;:&quot;Lepidoptera&quot;}&apos;
 
 #Next batch as of Apr 10, 2020: Squamata (Lizards And Snakes), Anura (Frogs And Toads), Coleoptera (Beetles), and Carnivora (Carnivores)
-php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:1704, &quot;sci&quot;:&quot;Squamata&quot;}&apos;
-php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:1553, &quot;sci&quot;:&quot;Anura&quot;}&apos;
-php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:345, &quot;sci&quot;:&quot;Coleoptera&quot;}&apos;
-php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:7662, &quot;sci&quot;:&quot;Carnivora&quot;}&apos;
+#php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:1704, &quot;sci&quot;:&quot;Squamata&quot;}&apos;
+#php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:1553, &quot;sci&quot;:&quot;Anura&quot;}&apos;
+#php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:345, &quot;sci&quot;:&quot;Coleoptera&quot;}&apos;
+#php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:7662, &quot;sci&quot;:&quot;Carnivora&quot;}&apos;
 
 #Next batch, first with ancestry
-#php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:282, &quot;sci&quot;:&quot;Angiosperms&quot;}&apos;</command>
+#php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:282, &quot;sci&quot;:&quot;Angiosperms&quot;}&apos;
+
+#Next batch as of Aug 24, 2020 - DATA-1861
+php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:282, &quot;sci&quot;:&quot;Angiosperms&quot;, &quot;with_limit_images_per_family_YN&quot;:1}&apos;
+
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
