@@ -25,7 +25,8 @@
       <command>cd /html/eol_php_code/update_resources/connectors
 php5.6 dwh_itis.php jenkins
 
-php5.6 synonyms_handling.php jenkins itis_2019-08-28</command>
+#php5.6 synonyms_handling.php jenkins itis_2019-08-28 #old version
+php5.6 synonyms_handling.php jenkins itis_2020-07-28 #TRAM-987</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

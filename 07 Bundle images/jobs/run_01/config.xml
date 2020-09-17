@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>3</numToKeep>
+        <numToKeep>5</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -47,7 +47,7 @@ cd /html/eol_php_code/update_resources/connectors
 #php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:282, &quot;sci&quot;:&quot;Angiosperms&quot;}&apos;
 
 #Next batch as of Aug 24, 2020 - DATA-1861
-php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:282, &quot;sci&quot;:&quot;Angiosperms&quot;, &quot;with_limit_images_per_family_YN&quot;:1}&apos;
+php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:282, &quot;sci&quot;:&quot;Angiosperms&quot;, &quot;limit_images_per_family&quot;:30}&apos;
 
 </command>
     </hudson.tasks.Shell>

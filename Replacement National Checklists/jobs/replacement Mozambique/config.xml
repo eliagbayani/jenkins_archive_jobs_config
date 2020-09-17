@@ -1,13 +1,7 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>This is the main and only 1 script to generate the EOL stats.&#xd;
-This will trigger 8 instances of the connector. The last one will proceed with finalizing the report.&#xd;
-&#xd;
-The other [Generate by range 1,2,3 &amp; 4] are only supplementary to speed up or further divide the load.&#xd;
-These are helpful indeed but not required.&#xd;
-&#xd;
-The other [Conn 1,2,3,4 &amp; 5] are those old manual means of running the connector. These can be deleted.</description>
+  <description>Not directly from DATA-1840 but same procedure went to those 3 countries in ticket and Mozambique.</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
@@ -24,21 +18,14 @@ The other [Conn 1,2,3,4 &amp; 5] are those old manual means of running the conne
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers>
-    <hudson.triggers.TimerTrigger>
-      <spec># 20th day of every month
-H H 20 1-12 *</spec>
-    </hudson.triggers.TimerTrigger>
-  </triggers>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-#php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;eol_v3_api.php&quot;, &quot;divisor&quot;:8, &quot;task&quot;:&quot;initial&quot;}&apos;
-##originally divisor set to 6
-
-gzip --help</command>
+php5.6 natl_checklist_replacement.php jenkins Mozambique
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
