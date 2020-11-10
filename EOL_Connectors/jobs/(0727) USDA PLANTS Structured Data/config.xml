@@ -37,6 +37,10 @@ H H 10 3,6,9,12 *</spec>
 
 ##this will be the new connector moving forward:
 php5.6 727.php jenkins
+#generates 727.tar.gz
+
+php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;727_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
+#generates 727_meta_recoded.tar.gz
 
 </command>
     </hudson.tasks.Shell>

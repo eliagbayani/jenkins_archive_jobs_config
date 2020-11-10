@@ -22,10 +22,13 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
+      <command>cd /html/eol_php_code/update_resources/connectors
 ###php5.6 gbif_classification.php jenkins -- obsolete
-php5.6 gbif_classification_v2.php jenkins #OK current
+#php5.6 gbif_classification_v2.php jenkins #OK current
+
+php5.6 gbif_classification_DATA_1868.php jenkins
+# input is gbif_classification_without_ancestry.tar.gz
+# generates gbif_classification_final.tar.gz
 </command>
     </hudson.tasks.Shell>
   </builders>

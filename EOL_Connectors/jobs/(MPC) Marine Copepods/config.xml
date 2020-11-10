@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
   <description>https://eol-jira.bibalex.org/browse/DATA-1734</description>
@@ -25,7 +25,10 @@
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 php5.6 copepods.php jenkins
-</command>
+#generates copepods.tar.gz
+
+php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;copepods_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
+#generates copepods_meta_recoded.tar.gz</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

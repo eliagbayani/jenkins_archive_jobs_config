@@ -1,8 +1,7 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>http://opendata.eol.org/dataset/birds_adw&#xd;
-http://www.eol.org/content_partners/8/resources/22</description>
+  <description>https://eol-jira.bibalex.org/browse/DATA-1864</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
@@ -19,21 +18,13 @@ http://www.eol.org/content_partners/8/resources/22</description>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers>
-    <hudson.triggers.TimerTrigger>
-      <spec>H H 14 1,2,3,4,5,6,7,8,9,10,11,12 *</spec>
-    </hudson.triggers.TimerTrigger>
-  </triggers>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-php5.6 201.php jenkins
-#generates 201.tar.gz
-
-php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;201_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
-#generates 201_meta_recoded.tar.gz
+php5.6 vimeo2020.php jenkins
 </command>
     </hudson.tasks.Shell>
   </builders>
