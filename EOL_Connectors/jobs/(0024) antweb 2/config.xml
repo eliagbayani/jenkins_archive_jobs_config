@@ -1,7 +1,8 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description></description>
+  <description>https://opendata.eol.org/dataset/antweb&#xd;
+http://eol.org/content_partners/6/resources/24</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
@@ -22,16 +23,20 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
+      <command>#temporarily commented Oct 24, 2018, AntWeb API is down.
 
-php5.6 mad_natdb.php jenkins
-#generates natdb.tar.gz
+#exit -1
 
-php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;natdb_meta_recoded_1&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
-#-&gt;occurrenceRemarks
-php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;natdb_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
-#-&gt;lifeStage
+#cd /html/eol_php_code/update_resources/connectors
+#php5.6 24.php jenkins
 
+#for Trait data
+#cd /html/eol_php_code/update_resources/connectors
+#php5.6 dwca_utility.php jenkins 24
+
+### atm for caching only...
+cd /html/eol_php_code/update_resources/connectors
+php5.6 24_new.php jenkins
 </command>
     </hudson.tasks.Shell>
   </builders>
