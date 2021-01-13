@@ -23,8 +23,19 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
-
 php5.6 wikimedia_subsets.php jenkins
+
+### NEW:start - To free up space, delete un-needed files. Part of housekeeping.
+cd /extra/dumps/wikidata
+rm -f latest-all.json.gz
+rm -f latest-all.json
+
+gzip -c latest-all-taxon.json &gt; latest-all-taxon.json.gz
+rm -f latest-all-taxon.json
+
+cd /extra/dumps/wikidata/wikimedia
+rm -f commonswiki-latest-pages-articles.xml
+### NEW:end
 
 ### temporarily will not proceed with &apos;Wikipedia en start&apos;
 #exit 1

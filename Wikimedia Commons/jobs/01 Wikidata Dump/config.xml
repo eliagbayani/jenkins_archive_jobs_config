@@ -48,7 +48,7 @@ rm -f wikipedia_*.tmp
 
 # working OK
 cd /extra/dumps/wikidata
-rm -f latest-all.json.gz
+[ -f latest-all.json.gz ] &amp;&amp; rm -f latest-all.json.gz || echo &quot;File does not exist&quot;
 
 ##works ok but to verbose:
 ##wget -c https://dumps.wikimedia.org/wikidatawiki/entities/latest-all.json.gz

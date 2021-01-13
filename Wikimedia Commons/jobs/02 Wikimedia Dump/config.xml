@@ -26,6 +26,8 @@
 # working OK
 
 cd /extra/dumps/wikidata/wikimedia
+[ -f commonswiki-latest-pages-articles.xml.bz2 ] &amp;&amp; rm -f commonswiki-latest-pages-articles.xml.bz2 || echo &quot;File does not exist&quot;
+
 
 #works OK:
 wget -c -nv http://dumps.wikimedia.org/commonswiki/latest/commonswiki-latest-pages-articles.xml.bz2

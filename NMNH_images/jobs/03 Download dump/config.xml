@@ -1,0 +1,42 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>### start DwCA downloads ================================= worked OK
+
+#OK
+cd /extra/other_files/NMNH_image_DwCA/GBIF_service/
+rm -f NMNH_images_DwCA.zip
+###curl -L -o &apos;NMNH_images_DwCA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/xxxxxxx-200221144449610.zip
+bash /html/eol_php_code/update_resources/connectors/files/NMNH_images/run_NMNH_images.sh
+unzip -jo NMNH_images_DwCA.zip multimedia.txt
+unzip -jo NMNH_images_DwCA.zip occurrence.txt
+
+#Build other projects:
+#04 NMNH image resource</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>04 NMNH image resource</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+  </publishers>
+  <buildWrappers/>
+</project>

@@ -22,7 +22,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>### start main program ===================================
+      <command>### start main program =================================== RUN ONLY ONCE EVERY HARVEST
 
 cd /html/eol_php_code/update_resources/connectors
 

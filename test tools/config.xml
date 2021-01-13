@@ -22,10 +22,19 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /extra/apps/vangelis_tagger/eol_tagger/
+      <command>cd /extra/other_files/GBIF_occurrence/DwCA_Other7Groups/
+#rm -f Other7Groups_DwcA.zip
+###curl -L -o &apos;Other7Groups_DwcA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0081146-200221144449610.zip                                        
+#bash /html/eol_php_code/update_resources/connectors/files/GBIF/run_Other7Groups.sh
+unzip -jo Other7Groups_DwCA.zip multimedia.txt
+unzip -jo Other7Groups_DwCA.zip occurrence.txt
+
+
+
+#cd /extra/apps/vangelis_tagger/eol_tagger/
 #./environments_tagger ../test_text_data/ &amp;&gt; ../eol_tags/eol_tags.tsv
 
-yum -v
+#yum -v
 
 #cd /html/eol_php_code/update_resources/connectors
 #php5.6 test.php

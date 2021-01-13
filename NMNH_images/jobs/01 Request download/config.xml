@@ -1,0 +1,38 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers>
+    <hudson.triggers.TimerTrigger>
+      <spec># 13th of the month. Quarterly = Jan Apr Jul Oct
+H H 13 4,7,10,1 *</spec>
+    </hudson.triggers.TimerTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>cd /html/eol_php_code/update_resources/connectors
+### This will overwrite any current download request. Run this once ONLY every harvest per taxon group.
+php5.6 gbif_download_request_for_NMNH.php jenkins &apos;{&quot;task&quot;:&quot;send_download_request&quot;, &quot;taxon&quot;:&quot;NMNH_images&quot;}&apos;
+
+### Will wait for a day to check if downloads are ready
+sleep 24h
+
+### This will generate the .sh file if download is ready. The .sh file is the curl command to download.
+php5.6 gbif_download_request_for_NMNH.php jenkins &apos;{&quot;task&quot;:&quot;start_download&quot;, &quot;taxon&quot;:&quot;NMNH_images&quot;}&apos;
+
+### This will check if all downloads are ready
+php5.6 gbif_download_request_for_NMNH.php jenkins &apos;{&quot;task&quot;:&quot;check_if_all_downloads_are_ready_YN&quot;}&apos;
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

@@ -1,13 +1,13 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description></description>
+  <description>DATA-1871</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>5</numToKeep>
+        <numToKeep>2</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -22,13 +22,10 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>### start main program =================================== RUN ONLY ONCE EVERY HARVEST
-
+      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-
-php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;group&quot;:&quot;Plantae&quot;,&quot;divisor&quot;:10}&apos;
-
-###This will open 10 Plantae jobs in: [03 EOL tools and FreshData Monitors V2 jobs]</command>
+php5.6 nmnh_images.php jenkins
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
