@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
   <description>https://eol-jira.bibalex.org/browse/DATA-1744&#xd;
@@ -28,7 +28,13 @@ This is a pre-requisite for the two:&#xd;
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-php5.6 COL_data.php jenkins
+#this is kinda one-time since it is date sensitive.
+#php5.6 COL_data.php jenkins
+#generates col.tar.gz
+
+php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;col_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
+#generates col_meta_recorded.tar.gz
+#this just moves MEDIA contributor to AGENTS
 </command>
     </hudson.tasks.Shell>
   </builders>
