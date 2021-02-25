@@ -47,7 +47,7 @@ rm -f commonswiki-latest-pages-articles.xml
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>08.6 Wikimedia partial,../Wikipedia in different languages/Wikipedia en start</childProjects>
+      <childProjects>08.6 Wikimedia partial</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

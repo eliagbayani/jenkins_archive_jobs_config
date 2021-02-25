@@ -30,17 +30,18 @@ H H 10 * *</spec>
       <command>cd /html/eol_php_code/update_resources/connectors
 
 #OK
-#php5.6 26.php jenkins
+php5.6 26.php jenkins
 #generates 26.tar.gz
 
 #OK
-#php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;26_meta_recoded_1&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
+php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;26_meta_recoded_1&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
 #generates 26_meta_recoded_1.tar.gz
 
 #OK
-#php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;26_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
+php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;26_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
 #generates 26_meta_recoded.tar.gz
 
+#OK
 php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;World Register of Marine Species&quot;, &quot;resource_id&quot;:&quot;26&quot;, &quot;subjects&quot;:&quot;Habitat&quot;}&apos;
 #generates 26_ENV</command>
     </hudson.tasks.Shell>

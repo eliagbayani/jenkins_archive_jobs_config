@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
   <description></description>
@@ -24,9 +24,11 @@
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
+# Can be repeated from this point. 
+# Especially if harvest was aborted due to maintenance, you can start here.
+
 php5.6 wikidata.php jenkins create_then_fill_commons_data #OK - few hours
 
-#which gzip
 </command>
     </hudson.tasks.Shell>
   </builders>

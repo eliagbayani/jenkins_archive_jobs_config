@@ -27,6 +27,7 @@ cd /html/eol_php_code/update_resources/connectors
 
 ### last run April 14 2018
 ### this will generate 168.tar.gz
+### needs to be updated first, generates far less fewer records than usual.
 #php5.6 168.php jenkins
 
 ### this will generate 168_meta_recoded.tar.gz

@@ -22,12 +22,18 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /extra/other_files/GBIF_occurrence/DwCA_Other7Groups/
+      <command>cd /extra/other_files/
+#cd /extra/d_w_h/2018_12/
+ls -lt
+
+
+#cd /extra/other_files/GBIF_occurrence/DwCA_Other7Groups/
 #rm -f Other7Groups_DwcA.zip
 ###curl -L -o &apos;Other7Groups_DwcA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0081146-200221144449610.zip                                        
 #bash /html/eol_php_code/update_resources/connectors/files/GBIF/run_Other7Groups.sh
-unzip -jo Other7Groups_DwCA.zip multimedia.txt
-unzip -jo Other7Groups_DwCA.zip occurrence.txt
+
+#unzip -jo Other7Groups_DwCA.zip multimedia.txt
+#unzip -jo Other7Groups_DwCA.zip occurrence.txt
 
 
 
