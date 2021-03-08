@@ -24,7 +24,11 @@
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-php5.6 SDR_consolid8.php jenkins
+
+php5.6 SDR_consolid8.php jenkins parent_BV_consolid8
+php5.6 SDR_consolid8.php jenkins TS_consolid8
+php5.6 SDR_consolid8.php jenkins parent_TS_consolid8
+php5.6 SDR_consolid8.php jenkins SDR_consolidated
 </command>
     </hudson.tasks.Shell>
   </builders>
