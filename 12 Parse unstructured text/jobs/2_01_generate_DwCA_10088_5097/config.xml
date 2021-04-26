@@ -22,26 +22,9 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command># use this if you want to stop dead on its tracks
-exit 1
-
-#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
-#php5.6 wikipedia.php jenkins pl #
-#---------------------
-#initially six (6) connectors
-
-echo &quot;start Wikipedia pl build...&quot;
-#php5.6 wikipedia.php jenkins pl generate_resource 1 416666 1of6
-#php5.6 wikipedia.php jenkins pl generate_resource 416666 833332 2of6
-#php5.6 wikipedia.php jenkins pl generate_resource 833332 1249998 3of6
-#php5.6 wikipedia.php jenkins pl generate_resource 1249998 1666664 4of6
-#php5.6 wikipedia.php jenkins pl generate_resource 1666664 2083330 5of6
-#php5.6 wikipedia.php jenkins pl generate_resource 2083330 2500000 6of6 #all remaining
-
-
-#historically
-#Wikipedia pl 1of6,Wikipedia pl 2of6,Wikipedia pl 3of6,Wikipedia pl 4of6,Wikipedia pl 5of6,Wikipedia pl 6of6</command>
+      <command>cd /html/eol_php_code/update_resources/connectors
+php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;SI Contributions to Zoology&quot;, &quot;resource_id&quot;:&quot;10088_5097&quot;, &quot;subjects&quot;:&quot;Description&quot;}&apos;
+#generates 10088_5097_ENV.tar.gz</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

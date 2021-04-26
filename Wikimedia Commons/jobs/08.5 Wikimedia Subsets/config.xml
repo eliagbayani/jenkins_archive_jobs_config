@@ -30,8 +30,9 @@ cd /extra/dumps/wikidata
 rm -f latest-all.json.gz
 rm -f latest-all.json
 
-gzip -c latest-all-taxon.json &gt; latest-all-taxon.json.gz
-rm -f latest-all-taxon.json
+##CANNOT DELETE AT THIS POINT, FILE WILL BE USED IN WIKIPEDIA EN AND MAYBE OTHER LANGS.
+##gzip -c latest-all-taxon.json &gt; latest-all-taxon.json.gz
+##rm -f latest-all-taxon.json
 
 cd /extra/dumps/wikidata/wikimedia
 rm -f commonswiki-latest-pages-articles.xml

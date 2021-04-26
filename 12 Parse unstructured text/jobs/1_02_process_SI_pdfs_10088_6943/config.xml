@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>5</numToKeep>
+        <numToKeep>3</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -20,8 +20,11 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
     <hudson.triggers.TimerTrigger>
-      <spec>## schedule is OK. commented since connector is being updated...
-H H 10 * *</spec>
+      <spec># once in every 3 hours slot between 9 AM and 5 PM everyday (perhaps at 10:38 AM, 12:38 PM, 2:38 PM, 4:38 PM)
+H H(1-23)/4 * * 1-7
+
+
+</spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
@@ -29,21 +32,19 @@ H H 10 * *</spec>
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-#OK
-##php5.6 26.php jenkins
-#generates 26.tar.gz
+##php5.6 process_SI_pdfs.php jenkins &apos;{&quot;resource_id&quot;: &quot;10088_5097&quot;, &quot;resource_name&quot;:&quot;SI Contributions to Zoology&quot;}&apos;
+##- 1st repo to process
+##- generates 10088_5097.tar.gz
 
-#OK
-##php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;26_meta_recoded_1&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
-#generates 26_meta_recoded_1.tar.gz
+php5.6 process_SI_pdfs.php jenkins &apos;{&quot;resource_id&quot;: &quot;10088_6943&quot;, &quot;resource_name&quot;:&quot;SI Contributions to Botany&quot;}&apos;
+##- 2nd repo
+##- generates 10088_6943.tar.gz
 
-#OK
-##php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;26_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
-#generates 26_meta_recoded.tar.gz
 
-#OK
-php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;World Register of Marine Species&quot;, &quot;resource_id&quot;:&quot;26&quot;, &quot;subjects&quot;:&quot;Habitat|Distribution&quot;}&apos;
-#generates 26_ENV</command>
+
+## if you want to build next step:
+##02_generate_DwCA
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

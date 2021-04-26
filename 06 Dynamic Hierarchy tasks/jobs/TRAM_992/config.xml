@@ -1,13 +1,13 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>http://www.eol.org/content_partners/2/resources/42</description>
+  <description>https://eol-jira.bibalex.org/browse/TRAM-992</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>5</numToKeep>
+        <numToKeep>3</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -18,32 +18,13 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers>
-    <hudson.triggers.TimerTrigger>
-      <spec>#start build at midnight:
-#    @midnight
-#or start build at midnight, every Saturday:
-#    59 23 * * 6
-#every first of every month between 2:00 a.m. - 02:30 a.m. :
-H 01 5 * *
-
-#or start build at midnight, every Saturday:
-#H 23 * * 6
-</spec>
-    </hudson.triggers.TimerTrigger>
-  </triggers>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
+      <command>cd /html/eol_php_code/update_resources/connectors
+php5.6 tram_992.php jenkins
 
-php5.6 100.php jenkins
-# generates 100.xml and 100.tar.gz
-
-### this seems not needed anymore. DwCA 100.tar.gz is generated in 100.php already.
-### php5.6 xml_2_dwca.php jenkins 100
-### generates 100.tar.gz
 </command>
     </hudson.tasks.Shell>
   </builders>

@@ -22,9 +22,13 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /extra/other_files/
+      <command>/usr/bin/gnparser name -f &quot;json-pretty&quot; &quot;Gadus morhua Jordan, 1964&quot;
+
+#gnparser name -f json-pretty &apos;Gadus morhua Jordan, 1964&apos;
+
+#cd /extra/other_files/
 #cd /extra/d_w_h/2018_12/
-ls -lt
+#ls -lt
 
 
 #cd /extra/other_files/GBIF_occurrence/DwCA_Other7Groups/

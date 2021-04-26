@@ -47,8 +47,11 @@ cd /html/eol_php_code/update_resources/connectors
 #php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:282, &quot;sci&quot;:&quot;Angiosperms&quot;}&apos;
 
 #Next batch as of Aug 24, 2020 - DATA-1861
-php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:282, &quot;sci&quot;:&quot;Angiosperms&quot;, &quot;limit_images_per_family&quot;:30}&apos;
+#php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:282, &quot;sci&quot;:&quot;Angiosperms&quot;, &quot;limit_images_per_family&quot;:30}&apos;
 
+#Next batch as of Mar 15, 2021:
+php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:164, &quot;sci&quot;:&quot;Arthropoda&quot;}&apos;
+#php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:164, &quot;sci&quot;:&quot;Arthropoda&quot;, &quot;resource_name&quot;: &quot;NMNH Entomology&quot;, &quot;bundles&quot;: 5000}&apos;
 </command>
     </hudson.tasks.Shell>
   </builders>

@@ -50,12 +50,17 @@ cd /html/eol_php_code/update_resources/connectors
 php5.6 wikipedia.php jenkins en generate_resource #
 
 ### temporarily won&apos;t continue to Spanish es wikipedia
-#exit 1</command>
+#exit 1
+
+### add this to continue to Spanish es wikipedia
+### Build other projects
+### Projects to build
+#Wikipedia es start</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>Wikipedia es start</childProjects>
+      <childProjects>Wikipedia es start,../Environmental tagger for EOL resources/Wikipedia EN (English)</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
