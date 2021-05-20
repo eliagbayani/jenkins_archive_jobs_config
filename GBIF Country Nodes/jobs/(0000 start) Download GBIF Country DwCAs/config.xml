@@ -22,7 +22,10 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>## This is one-time every refresh of the resources, quarterly.
+      <command>obsolete...
+exit
+
+## This is one-time every refresh of the resources, quarterly.
 wget -q http://api.gbif.org/v1/occurrence/download/request/0010139-190918142434337.zip -O /extra/other_files/GBIF_DwCA/Germany_0010139-190918142434337.zip
 wget -q http://api.gbif.org/v1/occurrence/download/request/0010142-190918142434337.zip -O /extra/other_files/GBIF_DwCA/Sweden_0010142-190918142434337.zip
 wget -q http://api.gbif.org/v1/occurrence/download/request/0010147-190918142434337.zip -O /extra/other_files/GBIF_DwCA/UK_0010147-190918142434337.zip

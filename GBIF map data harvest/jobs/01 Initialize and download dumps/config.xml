@@ -48,25 +48,25 @@ mv /extra/tmp/final_taxon_concept_IDS*.txt /extra/map_data_dwca/
 
 #OK
 cd /extra/other_files/GBIF_occurrence/DwCA_Animalia/
-#rm -f Animalia_DwCA.zip
+rm -f Animalia_DwCA.zip
 ###curl -L -o &apos;Animalia_DwCA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0081142-200221144449610.zip
-#bash /html/eol_php_code/update_resources/connectors/files/GBIF/run_Animalia.sh
+bash /html/eol_php_code/update_resources/connectors/files/GBIF/run_Animalia.sh
 unzip -jo Animalia_DwCA.zip multimedia.txt
 unzip -jo Animalia_DwCA.zip occurrence.txt
 
 #OK
 cd /extra/other_files/GBIF_occurrence/DwCA_Plantae/
-#rm -f Plantae_DwCA.zip
+rm -f Plantae_DwCA.zip
 ###curl -L -o &apos;Plantae_DwCA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0081144-200221144449610.zip                                   
-#bash /html/eol_php_code/update_resources/connectors/files/GBIF/run_Plantae.sh
+bash /html/eol_php_code/update_resources/connectors/files/GBIF/run_Plantae.sh
 unzip -jo Plantae_DwCA.zip multimedia.txt
 unzip -jo Plantae_DwCA.zip occurrence.txt
 
 #OK
 cd /extra/other_files/GBIF_occurrence/DwCA_Other7Groups/
-#rm -f Other7Groups_DwcA.zip
+rm -f Other7Groups_DwcA.zip
 ###curl -L -o &apos;Other7Groups_DwcA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0081146-200221144449610.zip                                        
-#bash /html/eol_php_code/update_resources/connectors/files/GBIF/run_Other7Groups.sh
+bash /html/eol_php_code/update_resources/connectors/files/GBIF/run_Other7Groups.sh
 unzip -jo Other7Groups_DwCA.zip multimedia.txt
 unzip -jo Other7Groups_DwCA.zip occurrence.txt
 </command>
