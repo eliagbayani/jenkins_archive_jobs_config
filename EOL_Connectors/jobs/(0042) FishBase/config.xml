@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>5</numToKeep>
+        <numToKeep>3</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -33,6 +33,11 @@ php5.6 42.php jenkins
 
 php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;42_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
 #generates 42_meta_recoded.tar.gz
+
+# a utility:
+# generates FishBase_contributors.tsv
+###php5.6 contributor_map.php jenkins
+
 </command>
     </hudson.tasks.Shell>
   </builders>
