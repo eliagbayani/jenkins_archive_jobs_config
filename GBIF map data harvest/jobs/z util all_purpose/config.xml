@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>5</numToKeep>
+        <numToKeep>-1</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -22,20 +22,12 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>### start main program ===================================
-
-cd /html/eol_php_code/update_resources/connectors
-
-php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;save_ids_to_text_from_many_folders&quot;}&apos;
-
-wc -l /extra/map_data_dwca/final_taxon_concept_IDS.txt
-
-
-### start to tgz the map data folder ===================================
-### working OK!
-#cd /extra/
-#tar -czf map_data_dwca_$(date +&quot;%Y-%m-%d&quot;).tgz map_data_dwca/
-#ls -l map_data_dwca_$(date +&quot;%Y-%m-%d&quot;).tgz #just to verity the tgz file
+      <command>cd /extra/other_files/GBIF_occurrence/DwCA_Other7Groups/
+rm -f Other7Groups_DwcA.zip
+###curl -L -o &apos;Other7Groups_DwcA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0081146-200221144449610.zip                                        
+bash /html/eol_php_code/update_resources/connectors/files/GBIF/run_Other7Groups.sh
+unzip -jo Other7Groups_DwCA.zip multimedia.txt
+unzip -jo Other7Groups_DwCA.zip occurrence.txt
 </command>
     </hudson.tasks.Shell>
   </builders>

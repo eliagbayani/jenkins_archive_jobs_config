@@ -25,7 +25,7 @@ H H(1-1) 2 2,4,6,8,10,12 *
 ### comment above to stop scheduled build
 
 
-#TODO: works okay but we need to run only every friday
+#TODO: works okay but we need to run only on a friday
 </spec>
     </hudson.triggers.TimerTrigger>
   </triggers>

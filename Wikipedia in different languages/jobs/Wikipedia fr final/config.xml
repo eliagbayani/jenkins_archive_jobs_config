@@ -39,7 +39,7 @@ cd /html/eol_php_code/update_resources/connectors
 php5.6 wikipedia.php jenkins fr generate_resource #
 
 ### temporarily won&apos;t continue to: Wikipedia pt start,Wikipedia - ru,Wikipedia - ja,Wikipedia - ko
-#exit 1
+exit 1
 
 ##copy this to: [Post-build Actions][Build other projects][Projects to build] below:
 # Wikipedia pt start,Wikipedia - ru,Wikipedia - ja,Wikipedia - ko

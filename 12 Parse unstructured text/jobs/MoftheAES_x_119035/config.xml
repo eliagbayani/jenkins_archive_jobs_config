@@ -18,40 +18,24 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers>
-    <hudson.triggers.TimerTrigger>
-      <spec># This was for 001:
-### H H 11 10,2,6 *
-
-# 16th of the month. Five days after the API requests were sent.
-H H 16 10,2,6 *
-</spec>
-    </hudson.triggers.TimerTrigger>
-  </triggers>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-### This will check if all downloads are ready.
-### - will fail if not ready. Will not proceed to next job.
-### - will proceed with next job if ready
-php5.6 gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;check_if_all_downloads_are_ready_YN&quot;}&apos;
+php5.6 parse_unstructured_text_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;119035&quot;, &quot;resource_name&quot;:&quot;MotAES&quot;}&apos;
 
-#Build other projects:
-#01 Initialize and download dumps</command>
+php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;119035&quot;, &quot;resource_name&quot;:&quot;MotAES&quot;}&apos;
+#generates 119035.tar.gz
+
+sleep 120 #wait for 60 seconds
+
+php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MotAES others&quot;, &quot;resource_id&quot;:&quot;119035&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
+#generates 119035_ENV.tar.gz
+</command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>01 Initialize and download dumps</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-        <completeBuild>true</completeBuild>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
-  </publishers>
+  <publishers/>
   <buildWrappers/>
 </project>

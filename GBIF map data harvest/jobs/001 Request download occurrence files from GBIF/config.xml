@@ -21,7 +21,9 @@
   <triggers>
     <hudson.triggers.TimerTrigger>
       <spec># 11th of the month. 3x per year = Apr Aug Dec
-H H 11 4,8,12 *</spec>
+#H H 11 4,8,12 *
+H H 11 10,2,6 *
+</spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
@@ -48,6 +50,16 @@ php5.6 gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;check_if_
 </command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>002 Check if ready to start</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+  </publishers>
   <buildWrappers/>
 </project>

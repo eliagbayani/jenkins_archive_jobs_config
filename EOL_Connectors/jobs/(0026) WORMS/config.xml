@@ -30,7 +30,7 @@ H H 10 * *</spec>
       <command>cd /html/eol_php_code/update_resources/connectors
 
 #OK
-###php5.6 26.php jenkins
+php5.6 26.php jenkins
 #generates 26.tar.gz
 
 #OK

@@ -66,7 +66,7 @@ php5.6 wikipedia.php jenkins en generate_resource #
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>../Environmental tagger for EOL resources/Wikipedia EN (English)</childProjects>
+      <childProjects>../Environmental tagger for EOL resources/Wikipedia EN (English),Wikipedia es start</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
