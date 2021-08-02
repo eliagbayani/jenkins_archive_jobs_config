@@ -38,7 +38,7 @@ php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eo
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>z MoftheAES_all_documents 1 2 4 5 6 7</childProjects>
+      <childProjects>z MoftheAES_20_documents</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

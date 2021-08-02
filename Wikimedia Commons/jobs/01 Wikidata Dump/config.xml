@@ -21,7 +21,7 @@
   <triggers>
     <hudson.triggers.TimerTrigger>
       <spec>### will run 2nd day of the month at 1AM. Every other month
-H H(1-1) 2 2,4,6,8,10,12 *
+#H H(1-1) 2 2,4,6,8,10,12 *
 ### comment above to stop scheduled build
 
 

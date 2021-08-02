@@ -32,12 +32,19 @@ php5.6 wikidata.php jenkins create_all_taxon_dump #OK - few hours
 # working OK
 cd /extra/dumps/wikidata
 [ -f latest-all.json.gz ] &amp;&amp; rm -f latest-all.json.gz || echo &quot;File does not exist&quot;
+
+### temporarily goes here:
+#../Wikipedia in different languages/Wikipedia en start
+
+
+### orig operation is:
+#04_Save_all_media_filenames_(1of6),04_Save_all_media_filenames_(2of6),04_Save_all_media_filenames_(3of6),04_Save_all_media_filenames_(4of6),04_Save_all_media_filenames_(5of6),04_Save_all_media_filenames_(6of6)
 </command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>04_Save_all_media_filenames_(1of6),04_Save_all_media_filenames_(2of6),04_Save_all_media_filenames_(3of6),04_Save_all_media_filenames_(4of6),04_Save_all_media_filenames_(5of6),04_Save_all_media_filenames_(6of6)</childProjects>
+      <childProjects>../Wikipedia in different languages/Wikipedia en start</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

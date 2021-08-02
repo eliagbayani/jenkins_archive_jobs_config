@@ -33,7 +33,8 @@
 
 cd /html/eol_php_code/applications/content_server/resources
 rm -f wikipedia_generation_status*.txt 
-rm -r wikipedia_*.tmp
+
+[ -f wikipedia_*.tmp ] &amp;&amp; rm -f wikipedia_*.tmp || echo &quot;Files do not exist&quot;
 
 #cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
