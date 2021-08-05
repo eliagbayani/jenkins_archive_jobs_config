@@ -27,15 +27,17 @@ php5.6 wikimedia_subsets.php jenkins
 
 ### NEW:start - To free up space, delete un-needed files. Part of housekeeping.
 cd /extra/dumps/wikidata
-rm -f latest-all.json.gz
-rm -f latest-all.json
+[ -f latest-all.json.gz ] &amp;&amp; rm -f latest-all.json.gz || echo &quot;File does not exist&quot;
+[ -f latest-all.json ] &amp;&amp; rm -f latest-all.json || echo &quot;File does not exist&quot;
+
 
 ##CANNOT DELETE AT THIS POINT, FILE WILL BE USED IN WIKIPEDIA EN AND MAYBE OTHER LANGS.
 ##gzip -c latest-all-taxon.json &gt; latest-all-taxon.json.gz
 ##rm -f latest-all-taxon.json
 
 cd /extra/dumps/wikidata/wikimedia
-rm -f commonswiki-latest-pages-articles.xml
+[ -f commonswiki-latest-pages-articles.xml ] &amp;&amp; rm -f commonswiki-latest-pages-articles.xml || echo &quot;File does not exist&quot;
+[ -f commonswiki-latest-pages-articles.xml.bz2 ] &amp;&amp; rm -f commonswiki-latest-pages-articles.xml.bz2 || echo &quot;File does not exist&quot;
 ### NEW:end
 
 ### temporarily will not proceed with &apos;Wikipedia en start&apos;

@@ -37,14 +37,14 @@ cd /extra/dumps/wikidata
 #../Wikipedia in different languages/Wikipedia en start
 
 
-### orig operation is:
+### orig operation should to here:
 #04_Save_all_media_filenames_(1of6),04_Save_all_media_filenames_(2of6),04_Save_all_media_filenames_(3of6),04_Save_all_media_filenames_(4of6),04_Save_all_media_filenames_(5of6),04_Save_all_media_filenames_(6of6)
 </command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>../Wikipedia in different languages/Wikipedia en start</childProjects>
+      <childProjects>04_Save_all_media_filenames_(1of6),04_Save_all_media_filenames_(2of6),04_Save_all_media_filenames_(3of6),04_Save_all_media_filenames_(4of6),04_Save_all_media_filenames_(5of6),04_Save_all_media_filenames_(6of6)</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
