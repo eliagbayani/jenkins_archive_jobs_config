@@ -29,6 +29,8 @@ php5.6 parse_unstructured_text_memoirs.php jenkins &apos;{&quot;resource_id&quot
 php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;91225&quot;, &quot;resource_name&quot;:&quot;6th BHL&quot;, &quot;doc&quot;: &quot;&quot;}&apos;
 #generates 91225.tar.gz
 
+### host-pathogen... stops here...
+
 #sleep 120 #wait for 60 seconds
 
 #php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MotAES others&quot;, &quot;resource_id&quot;:&quot;91225&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
