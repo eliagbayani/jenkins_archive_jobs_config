@@ -26,9 +26,10 @@
 
 #step 4: initially six (6) connectors
 
-php5.6 wikidata.php jenkins generate_resource 2333333 2800000 6of6 #all remaining. Prev 2,500,000. Now 2.8 just to be sure.
-
-		</command>
+php5.6 wikidata.php jenkins generate_resource 2622175 3200000 6of6 
+#all remaining. Prev 2,500,000. Now 2.8 just to be sure.
+#all remaining. Prev 2,800,000. Now 3.2 just to be sure.
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

@@ -28,10 +28,16 @@ cd /html/eol_php_code/update_resources/connectors
 #step 1: just one connector
 php5.6 wikidata.php jenkins create_all_taxon_dump #OK - few hours
 
-#step 2: delete big file after generating an all-taxon dump
+#step 2: delete big .gz file after generating an all-taxon dump
 # working OK
 cd /extra/dumps/wikidata
 [ -f latest-all.json.gz ] &amp;&amp; rm -f latest-all.json.gz || echo &quot;File does not exist&quot;
+
+#step 3: can now delete big actual txt file after generating an all-taxon dump
+# working OK
+cd /extra/dumps/wikidata
+[ -f latest-all.json ] &amp;&amp; rm -f latest-all.json || echo &quot;File does not exist&quot;
+
 
 ### temporarily goes here:
 #../Wikipedia in different languages/Wikipedia en start

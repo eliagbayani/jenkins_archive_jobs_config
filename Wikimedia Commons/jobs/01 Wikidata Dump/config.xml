@@ -21,7 +21,7 @@
   <triggers>
     <hudson.triggers.TimerTrigger>
       <spec>### will run 2nd day of the month at 1AM. Every other month
-#H H(1-1) 2 2,4,6,8,10,12 *
+H H(1-1) 2 3,5,7,9,11,1 *
 ### comment above to stop scheduled build
 
 
@@ -61,6 +61,11 @@ wget -c -nv https://dumps.wikimedia.org/wikidatawiki/entities/latest-all.json.gz
 gunzip -fk latest-all.json.gz 
 #-k means keep, don&apos;t delete orig file. 
 #-f means overwrites.
+
+
+# upon extraction -- you can delete the big .gz file (NEW: Aug 28, 2021)
+cd /extra/dumps/wikidata
+[ -f latest-all.json.gz ] &amp;&amp; rm -f latest-all.json.gz || echo &quot;File does not exist&quot;
 
 
 ### =========================================================================

@@ -39,10 +39,16 @@ php5.6 filter_term_group_by_taxa.php jenkins &apos;{&quot;source&quot;: &quot;61
 #generates wikipedia_en_traits_FTG.tar.gz
 
 #step 3: final step
-## Wikipedia EN creates a new DwCA for its traits. Not like &apos;AmphibiaWeb text&apos;.
-## Thus there is a new line for Wikipedia EN: it removes taxa without MoF
+# Wikipedia EN creates a new DwCA for its traits. Not like &apos;AmphibiaWeb text&apos;.
+# Thus there is an extra step for Wikipedia EN: it removes taxa without MoF
 php5.6 remove_taxa_without_MoF.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia_en_traits_FTG&quot;}&apos;
-#generates wikipedia_en_traits.tar.gz
+# OLD: generates wikipedia_en_traits.tar.gz
+# NEW: generates wikipedia_en_traits_tmp1.tar.gz
+
+#step 4: new step
+# remove contradicting traits in MoF
+php5.6 remove_contradicting_traits_from_MoF.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia_en_traits_tmp1&quot;}&apos;
+#generates the final: wikipedia_en_traits.tar.gz
 </command>
     </hudson.tasks.Shell>
   </builders>

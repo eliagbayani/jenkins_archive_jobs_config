@@ -26,7 +26,7 @@
 
 #step 4: initially six (6) connectors
 
-php5.6 wikidata.php jenkins generate_resource 1866667 2333333 5of6 #inc 520000
+php5.6 wikidata.php jenkins generate_resource 2097740 2622175 5of6 #inc 520000
 
 		</command>
     </hudson.tasks.Shell>

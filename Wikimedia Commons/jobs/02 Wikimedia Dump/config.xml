@@ -23,8 +23,15 @@
   <builders>
     <hudson.tasks.Shell>
       <command>#exit 1
-# working OK
 
+### copied from previous step. Just to be sure to delete un-needed files to save space
+# upon extraction -- you can delete the big .gz file (NEW: Aug 28, 2021)
+cd /extra/dumps/wikidata
+[ -f latest-all.json.gz ] &amp;&amp; rm -f latest-all.json.gz || echo &quot;File does not exist&quot;
+
+
+
+# working OK
 cd /extra/dumps/wikidata/wikimedia
 [ -f commonswiki-latest-pages-articles.xml.bz2 ] &amp;&amp; rm -f commonswiki-latest-pages-articles.xml.bz2 || echo &quot;File does not exist&quot;
 
@@ -38,6 +45,12 @@ bzip2 -dkf commonswiki-latest-pages-articles.xml.bz2
 
 #just temporary replacement:
 #which gzip
+
+# should work -- delete .bz2 after extraction
+cd /extra/dumps/wikidata/wikimedia
+[ -f commonswiki-latest-pages-articles.xml.bz2 ] &amp;&amp; rm -f commonswiki-latest-pages-articles.xml.bz2 || echo &quot;File does not exist&quot;
+
+
 
 #exit 1 ##force stop OK</command>
     </hudson.tasks.Shell>

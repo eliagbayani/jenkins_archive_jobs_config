@@ -21,7 +21,9 @@
   <triggers>
     <hudson.triggers.TimerTrigger>
       <spec>## working but commented for now Aug 1, 2019
-#H H(1-1) 1 2,4,6,8,10,12 *</spec>
+#H H(1-1) 1 2,4,6,8,10,12 *
+
+### scheduled to run after Wikimedia resource is done.</spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>

@@ -26,7 +26,9 @@
 
 #step 2: initially six connectors to cache, then one connector to finalize
 
-php5.6 wikidata.php jenkins save_all_media_filenames 1400000 1866667 4of6
+php5.6 wikidata.php jenkins save_all_media_filenames 1573305 2097740 4of6
+#2097740	2622175
+#2622175	3146610
 
 </command>
     </hudson.tasks.Shell>
