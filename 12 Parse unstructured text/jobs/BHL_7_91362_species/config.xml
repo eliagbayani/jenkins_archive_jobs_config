@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>3</numToKeep>
+        <numToKeep>6</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -24,20 +24,19 @@
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-#php5.6 parse_unstructured_text_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;91362_species&quot;, &quot;resource_name&quot;:&quot;all_BHL&quot;}&apos;
+php5.6 parse_unstructured_text_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;91362_species&quot;, &quot;resource_name&quot;:&quot;all_BHL&quot;}&apos;
 
-#php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;91362_species&quot;, &quot;resource_name&quot;:&quot;7th BHL&quot;, &quot;doc&quot;: &quot;BHL&quot;}&apos;
-#generates 91362_species.tar.gz
+php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;91362_species&quot;, &quot;resource_name&quot;:&quot;7th BHL&quot;, &quot;doc&quot;: &quot;BHL&quot;}&apos;
+#generates 91362_species.tar.gz OK
 
-#sleep 120 #wait for 60 seconds
+sleep 120 #wait for 60 seconds
 
-#php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;all_BHL&quot;, &quot;resource_id&quot;:&quot;91362_species&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
-#generates 91362_species_ENV.tar.gz
+php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;all_BHL&quot;, &quot;resource_id&quot;:&quot;91362_species&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
+#generates 91362_species_ENV.tar.gz OK
 
 ## combine two DwCA
 php5.6 aggregate_91362.php jenkins
-
-</command>
+#generates 91362_resource.tar.gz OK</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

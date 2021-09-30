@@ -33,9 +33,21 @@ sleep 120 #wait for 60 seconds
 
 php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MotAES others&quot;, &quot;resource_id&quot;:&quot;118936&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
 #generates 118936_ENV.tar.gz
-</command>
+
+### orig goes next here:
+### MoftheAES_x02_118946</command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>MoftheAES_x02_118946</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+  </publishers>
   <buildWrappers/>
 </project>

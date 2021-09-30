@@ -31,9 +31,11 @@ php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot
 
 sleep 120 #wait for 60 seconds
 
-php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;Memoirs of the American Entomological Society&quot;, &quot;resource_id&quot;:&quot;120081&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
+php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MoftheAES 2nd&quot;, &quot;resource_id&quot;:&quot;120081&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
 #generates 120081_ENV.tar.gz
-</command>
+
+### cont. next in line
+### MoftheAES_4_120082</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

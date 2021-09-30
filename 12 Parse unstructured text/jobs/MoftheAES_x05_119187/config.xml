@@ -24,16 +24,18 @@
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-php5.6 parse_unstructured_text_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;118941&quot;, &quot;resource_name&quot;:&quot;BHL&quot;}&apos;
+php5.6 parse_unstructured_text_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;119187&quot;, &quot;resource_name&quot;:&quot;MotAES&quot;}&apos;
 
-php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;118941&quot;, &quot;resource_name&quot;:&quot;MotAES&quot;}&apos;
-#generates 118941.tar.gz
+php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;119187&quot;, &quot;resource_name&quot;:&quot;MotAES&quot;}&apos;
+#generates 119187.tar.gz
 
-sleep 120 #wait for 60 seconds
+sleep 30 #wait for 60 seconds
 
-php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MotAES others&quot;, &quot;resource_id&quot;:&quot;118941&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
-#generates 118941_ENV.tar.gz
-</command>
+php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MotAES others&quot;, &quot;resource_id&quot;:&quot;119187&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
+#generates 119187_ENV.tar.gz
+
+### orig continues to:
+### MoftheAES_x06_119188</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

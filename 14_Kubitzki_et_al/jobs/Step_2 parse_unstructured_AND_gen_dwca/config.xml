@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>3</numToKeep>
+        <numToKeep>2</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -22,17 +22,12 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
+      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
+cd /html/eol_php_code/update_resources/connectors
 
-php5.6 parse_unstructured_text_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;119187&quot;, &quot;resource_name&quot;:&quot;MotAES&quot;}&apos;
+php5.6 parse_unstructured_text_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;volii1993&quot;, &quot;resource_name&quot;:&quot;Kubitzki&quot;, &quot;group&quot;:&quot;Kubitzki&quot;}&apos;
 
-php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;119187&quot;, &quot;resource_name&quot;:&quot;MotAES&quot;}&apos;
-#generates 119187.tar.gz
-
-sleep 120 #wait for 60 seconds
-
-php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MotAES others&quot;, &quot;resource_id&quot;:&quot;119187&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
-#generates 119187_ENV.tar.gz
+php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;volii1993&quot;, &quot;resource_name&quot;:&quot;Kubitzki&quot;, &quot;doc&quot;: &quot;Kubitzki_et_al&quot;}&apos;
 </command>
     </hudson.tasks.Shell>
   </builders>

@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>3</numToKeep>
+        <numToKeep>2</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -22,18 +22,15 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
+      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
+cd /html/eol_php_code/update_resources/connectors
 
-php5.6 parse_unstructured_text_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;119520&quot;, &quot;resource_name&quot;:&quot;MotAES&quot;}&apos;
+# This was run in command-line since pdftotext is not linked to Jenkins.
+# Worked OK in command-line. Run once only.
 
-php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;119520&quot;, &quot;resource_name&quot;:&quot;MotAES&quot;}&apos;
-#generates 119520.tar.gz
+#php5.6 download_Kubitzki_PDFs.php jenkins
 
-sleep 120 #wait for 60 seconds
-
-php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MotAES others&quot;, &quot;resource_id&quot;:&quot;119520&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
-#generates 119520_ENV.tar.gz
-</command>
+#which pdftotext</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
