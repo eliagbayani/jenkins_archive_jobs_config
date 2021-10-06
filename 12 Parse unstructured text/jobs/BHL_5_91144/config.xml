@@ -29,7 +29,7 @@ php5.6 parse_unstructured_text_memoirs.php jenkins &apos;{&quot;resource_id&quot
 php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;91144&quot;, &quot;resource_name&quot;:&quot;5th BHL&quot;, &quot;doc&quot;: &quot;BHL&quot;}&apos;
 #generates 91144.tar.gz
 
-sleep 120 #wait for 60 seconds
+sleep 30 #wait for 60 seconds
 
 php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;all_BHL&quot;, &quot;resource_id&quot;:&quot;91144&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
 #generates 91144_ENV.tar.gz
@@ -38,6 +38,16 @@ php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eo
 </command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>BHL_6_91225</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+  </publishers>
   <buildWrappers/>
 </project>

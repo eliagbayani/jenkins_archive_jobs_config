@@ -26,7 +26,9 @@
 cd /html/eol_php_code/update_resources/connectors
 php5.6 treatment_bank.php jenkins &apos;{&quot;task&quot;: &quot;generate_single_dwca&quot;}&apos;
 #generates TreatmentBank.tar.gz (this will be fed to the Pensoft annotator)
-</command>
+
+### orig continues to:
+### Step 4 textmine</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
