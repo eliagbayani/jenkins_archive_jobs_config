@@ -18,15 +18,7 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers>
-    <hudson.triggers.TimerTrigger>
-      <spec># once in every 3 hours slot between 9 AM and 5 PM everyday (perhaps at 10:38 AM, 12:38 PM, 2:38 PM, 4:38 PM)
-#H H(1-23)/2 * * 1-7
-
-
-</spec>
-    </hudson.triggers.TimerTrigger>
-  </triggers>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
