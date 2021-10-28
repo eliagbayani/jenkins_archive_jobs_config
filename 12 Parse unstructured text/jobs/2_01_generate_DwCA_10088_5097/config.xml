@@ -25,7 +25,10 @@
       <command>cd /html/eol_php_code/update_resources/connectors
 php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;SI Contributions to Zoology&quot;, &quot;resource_id&quot;:&quot;10088_5097&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
 #generates 10088_5097_ENV.tar.gz
-</command>
+
+
+### orig continues to:
+### 1_02_process_SI_pdfs_10088_6943</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

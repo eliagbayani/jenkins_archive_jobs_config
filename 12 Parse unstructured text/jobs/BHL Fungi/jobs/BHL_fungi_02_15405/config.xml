@@ -24,15 +24,15 @@
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-php5.6 parse_unstructured_text_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;15427&quot;, &quot;resource_name&quot;:&quot;all_BHL&quot;}&apos;
+php5.6 parse_unstructured_text_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;15405&quot;, &quot;resource_name&quot;:&quot;all_BHL&quot;}&apos;
 
-php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;15427&quot;, &quot;resource_name&quot;:&quot;NAF&quot;, &quot;doc&quot;: &quot;BHL&quot;}&apos;
-#generates 15427.tar.gz
+php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;15405&quot;, &quot;resource_name&quot;:&quot;NAF&quot;, &quot;doc&quot;: &quot;BHL&quot;}&apos;
+#generates 15405.tar.gz
 
 sleep 30 #wait for 60 seconds
 
-php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;all_BHL&quot;, &quot;resource_id&quot;:&quot;15427&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
-#generates 15427_ENV.tar.gz
+php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;all_BHL&quot;, &quot;resource_id&quot;:&quot;15405&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
+#generates 15405_ENV.tar.gz
 
 
 </command>
@@ -40,7 +40,7 @@ php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eo
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>BHL_4_15428</childProjects>
+      <childProjects>BHL_fungi_03_15406</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

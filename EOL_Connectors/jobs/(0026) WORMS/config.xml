@@ -43,7 +43,11 @@ php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;26_met
 
 #OK
 php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;World Register of Marine Species&quot;, &quot;resource_id&quot;:&quot;26&quot;, &quot;subjects&quot;:&quot;Habitat|Distribution&quot;}&apos;
-#generates 26_ENV</command>
+#generates 26_ENV
+
+#OK
+php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;26_ENV_final&quot;, &quot;task&quot;: &quot;change_measurementIDs&quot;}&apos;
+#generates 26_ENV_final.tar.gz</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

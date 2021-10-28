@@ -26,7 +26,7 @@
 
 php5.6 parse_unstructured_text_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;15423&quot;, &quot;resource_name&quot;:&quot;all_BHL&quot;}&apos;
 
-php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;15423&quot;, &quot;resource_name&quot;:&quot;1st BHL&quot;, &quot;doc&quot;: &quot;BHL&quot;}&apos;
+php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;15423&quot;, &quot;resource_name&quot;:&quot;NAF&quot;, &quot;doc&quot;: &quot;BHL&quot;}&apos;
 
 #generates 15423.tar.gz
 
@@ -37,7 +37,8 @@ php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eo
 
 
 ### orig continues to:
-### BHL_2_91155</command>
+### BHL_2_91155
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

@@ -7,11 +7,21 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>6</numToKeep>
+        <numToKeep>3</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
     </jenkins.model.BuildDiscarderProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>resource_ID</name>
+          <description></description>
+          <defaultValue>15420</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
   </properties>
   <scm class="hudson.scm.NullSCM"/>
   <canRoam>true</canRoam>
@@ -24,15 +34,15 @@
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-php5.6 parse_unstructured_text_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;15404&quot;, &quot;resource_name&quot;:&quot;all_BHL&quot;}&apos;
+php5.6 parse_unstructured_text_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;&apos;$resource_ID&apos;&quot;, &quot;resource_name&quot;:&quot;all_BHL&quot;, &quot;group&quot;:&quot;Fungi&quot;}&apos;
 
-php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;15404&quot;, &quot;resource_name&quot;:&quot;nth BHL&quot;, &quot;doc&quot;: &quot;BHL&quot;}&apos;
-#generates 15404.tar.gz
+php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;&apos;$resource_ID&apos;&quot;, &quot;resource_name&quot;:&quot;NAF&quot;, &quot;doc&quot;: &quot;BHL&quot;}&apos;
+#generates 15405.tar.gz
 
 sleep 30 #wait for 60 seconds
 
-php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;all_BHL&quot;, &quot;resource_id&quot;:&quot;15404&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
-#generates 15404_ENV.tar.gz
+php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;all_BHL&quot;, &quot;resource_id&quot;:&quot;&apos;$resource_ID&apos;&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
+#generates 15405_ENV.tar.gz
 
 
 </command>
@@ -40,7 +50,7 @@ php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eo
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>BHL_fungi_2_15405</childProjects>
+      <childProjects>BHL_fungi_18_15421</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
