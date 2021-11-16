@@ -36,7 +36,7 @@
 
 php5.6 parse_unstructured_text_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;&apos;$resource_ID&apos;&quot;, &quot;resource_name&quot;:&quot;all_BHL&quot;, &quot;group&quot;:&quot;Fungi&quot;}&apos;
 
-php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;&apos;$resource_ID&apos;&quot;, &quot;resource_name&quot;:&quot;NAF&quot;, &quot;doc&quot;: &quot;BHL&quot;}&apos;
+php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;&apos;$resource_ID&apos;&quot;, &quot;resource_name&quot;:&quot;NAF&quot;, &quot;doc&quot;: &quot;BHL&quot;, &quot;IOReport&quot;: &quot;NAF_Fungi&quot;}&apos;
 #generates 15405.tar.gz
 
 sleep 30 #wait for 60 seconds
@@ -45,7 +45,8 @@ php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eo
 #generates 15405_ENV.tar.gz
 
 
-</command>
+### orig continues to:
+### BHL_fungi_04_15407</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

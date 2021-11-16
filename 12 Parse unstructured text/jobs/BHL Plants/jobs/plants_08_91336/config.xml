@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>3</numToKeep>
+        <numToKeep>2</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -17,7 +17,7 @@
         <hudson.model.StringParameterDefinition>
           <name>resource_ID</name>
           <description></description>
-          <defaultValue>15422</defaultValue>
+          <defaultValue>91336</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
@@ -36,7 +36,7 @@
 
 php5.6 parse_unstructured_text_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;&apos;$resource_ID&apos;&quot;, &quot;resource_name&quot;:&quot;all_BHL&quot;, &quot;group&quot;:&quot;Plants&quot;}&apos;
 
-php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;&apos;$resource_ID&apos;&quot;, &quot;resource_name&quot;:&quot;NAF&quot;, &quot;doc&quot;: &quot;BHL&quot;}&apos;
+php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;&apos;$resource_ID&apos;&quot;, &quot;resource_name&quot;:&quot;NAF&quot;, &quot;doc&quot;: &quot;BHL&quot;, &quot;IOReport&quot;:&quot;NAF_Plants&quot;}&apos;
 #generates 15405.tar.gz
 
 sleep 30 #wait for 60 seconds
@@ -48,6 +48,16 @@ php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eo
 </command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>plants_09_91365</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+  </publishers>
   <buildWrappers/>
 </project>

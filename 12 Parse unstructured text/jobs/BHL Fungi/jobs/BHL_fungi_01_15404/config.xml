@@ -26,7 +26,7 @@
 
 php5.6 parse_unstructured_text_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;15404&quot;, &quot;resource_name&quot;:&quot;all_BHL&quot;}&apos;
 
-php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;15404&quot;, &quot;resource_name&quot;:&quot;NAF&quot;, &quot;doc&quot;: &quot;BHL&quot;}&apos;
+php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;15404&quot;, &quot;resource_name&quot;:&quot;NAF&quot;, &quot;doc&quot;: &quot;BHL&quot;, &quot;IOReport&quot;: &quot;NAF_Fungi&quot;}&apos;
 #generates 15404.tar.gz
 
 sleep 30 #wait for 60 seconds

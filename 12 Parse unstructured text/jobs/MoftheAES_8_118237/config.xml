@@ -26,10 +26,10 @@
 
 php5.6 parse_unstructured_text_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;118237&quot;, &quot;resource_name&quot;:&quot;8th doc&quot;}&apos;
 
-php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;118237&quot;, &quot;resource_name&quot;:&quot;8th doc&quot;}&apos;
+php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;118237&quot;, &quot;resource_name&quot;:&quot;8th doc&quot;, &quot;IOReport&quot;:&quot;MotAES&quot;}&apos;
 #generates 118237.tar.gz
 
-sleep 120 #wait for 60 seconds
+sleep 30 #wait for 60 seconds
 
 php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MoftheAES 8th&quot;, &quot;resource_id&quot;:&quot;118237&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
 #generates 118237_ENV.tar.gz

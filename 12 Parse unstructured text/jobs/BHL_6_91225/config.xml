@@ -26,7 +26,7 @@
 
 php5.6 parse_unstructured_text_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;91225&quot;, &quot;resource_name&quot;:&quot;MotAES&quot;}&apos;
 
-php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;91225&quot;, &quot;resource_name&quot;:&quot;NAF&quot;, &quot;doc&quot;: &quot;&quot;}&apos;
+php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;91225&quot;, &quot;resource_name&quot;:&quot;NAF&quot;, &quot;doc&quot;: &quot;&quot;, &quot;IOReport&quot;: &quot;NAF_first7&quot;}&apos;
 #generates 91225.tar.gz
 
 ### host-pathogen... stops here... Pensoft was never ran for this resource.

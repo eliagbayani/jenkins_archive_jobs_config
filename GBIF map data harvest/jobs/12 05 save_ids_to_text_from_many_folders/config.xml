@@ -24,18 +24,17 @@
     <hudson.tasks.Shell>
       <command>### start main program ===================================
 
+### working OK!
 cd /html/eol_php_code/update_resources/connectors
-
 php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;save_ids_to_text_from_many_folders&quot;}&apos;
-
 wc -l /extra/map_data_dwca/final_taxon_concept_IDS.txt
 
 
-### start to tgz the map data folder ===================================
+### start to tgz the map data folder =================================== per JRice
 ### working OK!
-#cd /extra/
-#tar -czf map_data_dwca_$(date +&quot;%Y-%m-%d&quot;).tgz map_data_dwca/
-#ls -l map_data_dwca_$(date +&quot;%Y-%m-%d&quot;).tgz #just to verity the tgz file
+cd /extra/
+tar -czf map_data_dwca_$(date +&quot;%Y-%m-%d&quot;).tgz map_data_dwca/
+ls -l map_data_dwca_$(date +&quot;%Y-%m-%d&quot;).tgz #just to verity the tgz file
 </command>
     </hudson.tasks.Shell>
   </builders>

@@ -31,6 +31,16 @@ php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eo
 ### 1_02_process_SI_pdfs_10088_6943</command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>1_02_process_SI_pdfs_10088_6943</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+  </publishers>
   <buildWrappers/>
 </project>

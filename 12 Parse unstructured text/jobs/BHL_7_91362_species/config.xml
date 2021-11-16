@@ -26,7 +26,7 @@
 
 php5.6 parse_unstructured_text_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;91362_species&quot;, &quot;resource_name&quot;:&quot;all_BHL&quot;}&apos;
 
-php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;91362_species&quot;, &quot;resource_name&quot;:&quot;NAF&quot;, &quot;doc&quot;: &quot;BHL&quot;}&apos;
+php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;91362_species&quot;, &quot;resource_name&quot;:&quot;NAF&quot;, &quot;doc&quot;: &quot;BHL&quot;, &quot;IOReport&quot;: &quot;NAF_first7&quot;}&apos;
 #generates 91362_species.tar.gz OK
 
 sleep 30 #wait for 60 seconds
@@ -44,7 +44,7 @@ php5.6 aggregate_91362.php jenkins
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>z NorthAmericanFlora_7_documents</childProjects>
+      <childProjects>BHL Fungi/BHL_fungi_01_15404</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

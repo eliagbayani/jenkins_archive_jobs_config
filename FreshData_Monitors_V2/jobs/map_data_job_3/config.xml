@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>3</numToKeep>
+        <numToKeep>2</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -35,9 +35,11 @@
       <command>cd /html/eol_php_code/update_resources/connectors
 $myShell
 
+### a contingency:
+### works! - use this if server is restarted and connector is aborted due to maintenance
+###php5.6 generate_map_data_using_GBIF_csv_files.php jenkins &apos;{&quot;group&quot;:false,&quot;range&quot;:[510496,554053],&quot;ctr&quot;:3,&quot;rank&quot;:&quot;&quot;}&apos;
 
-##this is temporary only
-#php5.6 generate_map_data_using_GBIF_csv_files.php jenkins &apos;{&quot;group&quot;:false,&quot;range&quot;:[745851,1118776],&quot;ctr&quot;:3}&apos;</command>
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
