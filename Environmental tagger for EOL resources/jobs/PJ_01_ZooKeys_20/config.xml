@@ -24,12 +24,18 @@
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-php5.6 aggregate_NorthAF.php </command>
+php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;Pensoft_journals&quot;, &quot;resource_id&quot;:&quot;20&quot;, &quot;subjects&quot;:&quot;GeneralDescription|Distribution|Description&quot;}&apos;
+# generates 20_ENV.tar.gz
+
+php5.6 zookeys_add_trait.php jenkins
+# makes use of 20_ENV.tar.gz above and 
+# generates 20_ENV_final.tar.gz
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>MoftheAES_1_118935,z NorthAmericanFlora_ALL</childProjects>
+      <childProjects>PJ_02_Zookeys_829</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

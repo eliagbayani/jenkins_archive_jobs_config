@@ -45,19 +45,10 @@ php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eo
 #generates 15405_ENV.tar.gz
 
 
-</command>
+### orig goes to:
+### ../z NorthAmericanFlora_Plants_docs</command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>../z NorthAmericanFlora_Plants_docs</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-        <completeBuild>true</completeBuild>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
-  </publishers>
+  <publishers/>
   <buildWrappers/>
 </project>

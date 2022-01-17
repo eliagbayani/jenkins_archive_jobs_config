@@ -53,7 +53,7 @@ cd /extra/dumps/wikidata
 ##works ok but to verbose:
 ##wget -c https://dumps.wikimedia.org/wikidatawiki/entities/latest-all.json.gz
 
-wget -c -nv https://dumps.wikimedia.org/wikidatawiki/entities/latest-all.json.gz
+wget -c -nv --no-check-certificate https://dumps.wikimedia.org/wikidatawiki/entities/latest-all.json.gz
 ## -nv means non-verbose but errors gets printed out.
 
 

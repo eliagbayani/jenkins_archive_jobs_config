@@ -24,25 +24,22 @@
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-php5.6 parse_unstructured_text_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;91362_species&quot;, &quot;resource_name&quot;:&quot;all_BHL&quot;}&apos;
+php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;Pensoft_journals&quot;, &quot;resource_id&quot;:&quot;792&quot;, &quot;subjects&quot;:&quot;GeneralDescription|Distribution&quot;}&apos;
 
-php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;91362_species&quot;, &quot;resource_name&quot;:&quot;NAF&quot;, &quot;doc&quot;: &quot;BHL&quot;, &quot;IOReport&quot;: &quot;NAF_first7&quot;}&apos;
-#generates 91362_species.tar.gz OK
-
-sleep 30 #wait for 60 seconds
-
-php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;all_BHL&quot;, &quot;resource_id&quot;:&quot;91362_species&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
-#generates 91362_species_ENV.tar.gz OK
-
-## combine two DwCA
-php5.6 aggregate_91362.php jenkins
-#generates 91362_resource.tar.gz OK
-
-###orig continues to:
-### BHL Fungi/BHL_fungi_01_15404
+#generates 792_ENV.tar.gz
 </command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>PJ_08_Phytokeys_826</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+  </publishers>
   <buildWrappers/>
 </project>

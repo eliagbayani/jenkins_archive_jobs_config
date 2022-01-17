@@ -18,11 +18,7 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers>
-    <hudson.triggers.TimerTrigger>
-      <spec>H H 10 1-12 *</spec>
-    </hudson.triggers.TimerTrigger>
-  </triggers>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
@@ -39,7 +35,10 @@ php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;cotr_m
 php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;cotr_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
 #-&gt; fixes eventDate as row in MoF
 #generates cotr_meta_recoded.tar.gz
-</command>
+
+php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;cotr_meta_recoded_final&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
+#-&gt; moves a bunch of MoF cols as MoF child records
+#-&gt; generates cotr_meta_recoded_final.tar.gz</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
