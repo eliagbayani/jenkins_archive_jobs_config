@@ -30,6 +30,11 @@
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 php5.6 15.php jenkins
+# generates 15.tar.gz
+
+php5.6 make_hash_IDs_4Deltas.php jenkins &apos;{&quot;task&quot;: &quot;&quot;, &quot;resource&quot;:&quot;Deltas_4hashing&quot;, &quot;resource_id&quot;:&quot;15&quot;}&apos;
+# generates 15_delta.tar.gz
+
 
 ###temporarily not continue with &quot;Build other projects&quot; -&gt; (0544) BHL - BioDivLibrary&apos;s photostream
 #exit 1</command>

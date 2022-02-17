@@ -33,7 +33,8 @@
 cd /html/eol_php_code/update_resources/connectors
 php5.6 wikimedia_partial.php jenkins
 
-</command>
+### may continue to:
+### 08.7 Wikidata taxonomy</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

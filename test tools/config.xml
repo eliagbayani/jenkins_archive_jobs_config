@@ -22,7 +22,12 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>/usr/bin/gnparser name -f &quot;json-pretty&quot; &quot;Gadus morhua Jordan, 1964&quot;
+      <command>which gnparser
+
+#/usr/bin/gnparser name -f &quot;json-pretty&quot; &quot;Gadus morhua Jordan, 1964&quot;
+
+#/usr/local/bin/gnparser -h
+#/opt/gnparser/bin/gnparser -h
 
 #gnparser name -f json-pretty &apos;Gadus morhua Jordan, 1964&apos;
 
