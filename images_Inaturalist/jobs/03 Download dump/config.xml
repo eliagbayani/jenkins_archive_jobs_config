@@ -22,11 +22,31 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
-php5.6 nmnh_images.php jenkins
+      <command>### start DwCA downloads ================================= worked OK
+
+#OK
+cd /extra/other_files/iNat_image_DwCA/GBIF_service/
+rm -f iNat_images_DwCA.zip
+###curl -L -o &apos;iNat_images_DwCA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/xxxxxxx-200221144449610.zip
+bash /html/eol_php_code/update_resources/connectors/files/iNat_images/run_iNat_images.sh
+unzip -jo iNat_images_DwCA.zip multimedia.txt
+unzip -jo iNat_images_DwCA.zip occurrence.txt
+
+#Build other projects:
+#04 iNat image resource
 </command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>04 iNat image resource</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+  </publishers>
   <buildWrappers/>
 </project>

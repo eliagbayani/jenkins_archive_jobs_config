@@ -2,7 +2,6 @@
 <com.cloudbees.hudson.plugins.folder.Folder plugin="cloudbees-folder@6.5.1">
   <actions/>
   <description></description>
-  <displayName>images_NMNH</displayName>
   <properties>
     <org.jenkinsci.plugins.pipeline.modeldefinition.config.FolderConfig plugin="pipeline-model-definition@1.3.8">
       <dockerLabel></dockerLabel>

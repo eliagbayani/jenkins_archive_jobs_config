@@ -47,7 +47,11 @@ php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eo
 
 #OK
 php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;26_ENV_final&quot;, &quot;task&quot;: &quot;change_measurementIDs&quot;}&apos;
-#generates 26_ENV_final.tar.gz</command>
+#generates 26_ENV_final.tar.gz
+
+#not yet OK: commented still needs investigation
+php5.6 make_hash_IDs_4Deltas.php jenkins &apos;{&quot;task&quot;: &quot;&quot;, &quot;resource&quot;:&quot;Deltas_4hashing&quot;, &quot;resource_id&quot;:&quot;26_ENV_final&quot;}&apos;
+#generates 26_delta.tar.gz</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
