@@ -25,12 +25,15 @@
       <command>cd /html/eol_php_code/update_resources/connectors
 php5.6 inat_images.php jenkins
 # generates inat_images.tar.gz
+# generates inat_images_100limit.tar.gz
+# generates inat_images_75limit.tar.gz
+# generates inat_images_20limit
 
 
 # IMPORTANT: this will be run in command-line since python can&apos;t be accessed here in Jenkins.
 # php5.6 inat_images_select.php jenkins
-# generates inat_images_100cap.tar.gz
-</command>
+# generates inat_images_100cap.tar.gz --- didn&apos;t materialize
+# generates inat_images_3Mcap</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

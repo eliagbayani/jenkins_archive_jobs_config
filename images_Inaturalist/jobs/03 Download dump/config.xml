@@ -39,7 +39,7 @@ unzip -jo iNat_images_DwCA.zip occurrence.txt
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>04 iNat image resource</childProjects>
+      <childProjects>04 create iNat image resource</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
