@@ -25,8 +25,13 @@
       <command>cd /html/eol_php_code/update_resources/connectors
 
 php5.6 dwh_ncbi_TRAM_795.php jenkins &apos;{&quot;with_Vernaculars&quot;: 0}&apos;
-php5.6 dwh_ncbi_TRAM_795.php jenkins &apos;{&quot;with_Vernaculars&quot;: 1}&apos; 
+# generates NCBI_Taxonomy_Harvest_no_vernaculars.tar.gz
+
+php5.6 dwh_ncbi_TRAM_795.php jenkins &apos;{&quot;with_Vernaculars&quot;: 1}&apos;
+# generates NCBI_Taxonomy_Harvest.tar.gz
+
 php5.6 dwh_ncbi_TRAM_796.php
+# generates NCBI_Taxonomy_Harvest_DH.tar.gz
 </command>
     </hudson.tasks.Shell>
   </builders>

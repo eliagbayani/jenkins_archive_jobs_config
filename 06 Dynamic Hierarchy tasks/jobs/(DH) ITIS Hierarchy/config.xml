@@ -23,11 +23,20 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
-php5.6 dwh_itis.php jenkins
+
+#php5.6 dwh_itis.php jenkins &apos;{&quot;allNodesYN&quot;:&quot;0&quot;, &quot;resource_id&quot;:&quot;itis_2020-07-28&quot;}&apos;
+#php5.6 dwh_itis.php jenkins &apos;{&quot;allNodesYN&quot;:&quot;0&quot;, &quot;resource_id&quot;:&quot;itis_2020-12-01&quot;}&apos;
+php5.6 dwh_itis.php jenkins &apos;{&quot;allNodesYN&quot;:&quot;1&quot;, &quot;resource_id&quot;:&quot;itis_2022-02-28&quot;}&apos;
+
 
 #php5.6 synonyms_handling.php jenkins itis_2019-08-28 #old version
 #php5.6 synonyms_handling.php jenkins itis_2020-07-28 #TRAM-987
-php5.6 synonyms_handling.php jenkins itis_2020-12-01 #TRAM-987</command>
+#php5.6 synonyms_handling.php jenkins itis_2020-12-01 #TRAM-987
+# generates itis_2020-12-01.tar.gz
+
+php5.6 synonyms_handling.php jenkins itis_2022-02-28_all_nodes #for DH21 synonyms
+# generates itis_2022-02-28_all_nodes.tar.gz
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
