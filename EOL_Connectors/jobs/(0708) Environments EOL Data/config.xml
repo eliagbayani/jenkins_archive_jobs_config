@@ -28,7 +28,11 @@ cd /html/eol_php_code/update_resources/connectors
 ## php5.6 708.php jenkins
 ##-- this is an OBSOLETE connector already
 
-php5.6 708_new.php jenkins
+##php5.6 708_new.php jenkins
+# generates 708.tar.gz
+
+php5.6 rem_marine_terr_desc.php jenkins &apos;{&quot;resource_id&quot;:&quot;708&quot;}&apos;
+# generates 708_cleaned_habitat_values.tar.gz
 </command>
     </hudson.tasks.Shell>
   </builders>
