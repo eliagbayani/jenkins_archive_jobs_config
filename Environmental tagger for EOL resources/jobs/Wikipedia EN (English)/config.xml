@@ -24,11 +24,11 @@
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-#step 1
+#STEP 1
 php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;wikipedia English&quot;, &quot;resource_id&quot;:&quot;617&quot;, &quot;subjects&quot;:&quot;Description&quot;}&apos;
 #generates 617_ENV.tar.gz
 
-#step 2: just a utility
+#STEP 2: just a utility
 #these 3 is just for stats = generates 3 reports
 #php5.6 filter_term_group_by_taxa.php jenkins &apos;{&quot;source&quot;: &quot;617_ENV&quot;, &quot;target&quot;:&quot;wikipedia_en_traits_FTG&quot;, &quot;taxonIDs&quot;: &quot;Q1357&quot;, &quot;habitat_filter&quot;: &quot;saline water&quot;}&apos;
 #php5.6 filter_term_group_by_taxa.php jenkins &apos;{&quot;source&quot;: &quot;617_ENV&quot;, &quot;target&quot;:&quot;wikipedia_en_traits_FTG&quot;, &quot;taxonIDs&quot;: &quot;Q1390&quot;, &quot;habitat_filter&quot;: &quot;saline water&quot;}&apos;
@@ -38,18 +38,26 @@ php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eo
 php5.6 filter_term_group_by_taxa.php jenkins &apos;{&quot;source&quot;: &quot;617_ENV&quot;, &quot;target&quot;:&quot;wikipedia_en_traits_FTG&quot;, &quot;taxonIDs&quot;: &quot;Q1390, Q1357, Q10908&quot;, &quot;habitat_filter&quot;: &quot;saline water&quot;}&apos;
 #generates wikipedia_en_traits_FTG.tar.gz
 
-#step 3: final step
+#STEP 3: final step
 # Wikipedia EN creates a new DwCA for its traits. Not like &apos;AmphibiaWeb text&apos;.
 # Thus there is an extra step for Wikipedia EN: it removes taxa without MoF
 php5.6 remove_taxa_without_MoF.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia_en_traits_FTG&quot;}&apos;
 # OLD: generates wikipedia_en_traits.tar.gz
 # NEW: generates wikipedia_en_traits_tmp1.tar.gz
 
-#step 4: new step
+#STEP 4: new step
 # remove contradicting traits in MoF
 php5.6 remove_contradicting_traits_from_MoF.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia_en_traits_tmp1&quot;}&apos;
-#generates the final: wikipedia_en_traits.tar.gz
-</command>
+# OLD: generates the final: wikipedia_en_traits.tar.gz
+# NEW: generates wikipedia_en_traits_tmp2.tar.gz
+
+#STEP 5: remove all records for taxon with habitat value(s) that are 
+#        descendants of both marine and terrestrial
+php5.6 rem_marine_terr_desc.php jenkins &apos;{&quot;resource_id&quot;:&quot;wikipedia_en_traits_tmp2&quot;}&apos;
+#generates: wikipedia_en_traits_tmp3.tar.gz
+
+#LAST STEP: copy wikipedia_en_traits_tmp3.tar.gz to wikipedia_en_traits.tar.gz OK
+cp /html/eol_php_code/applications/content_server/resources/wikipedia_en_traits_tmp3.tar.gz /html/eol_php_code/applications/content_server/resources/wikipedia_en_traits.tar.gz </command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
