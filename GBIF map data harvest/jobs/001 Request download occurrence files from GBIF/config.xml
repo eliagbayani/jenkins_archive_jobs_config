@@ -22,7 +22,8 @@
     <hudson.triggers.TimerTrigger>
       <spec># 11th of the month. 3x per year = Apr Aug Dec
 #H H 11 4,8,12 *
-H H 11 10,2,6 *
+# twice a year
+H H 25 4,10 *
 </spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
@@ -47,7 +48,10 @@ php5.6 gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;generate_
 
 ### This will check if all downloads are ready
 php5.6 gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;check_if_all_downloads_are_ready_YN&quot;}&apos;
-</command>
+
+
+### temporarily removed in [Post-build Actions] -&gt; [Build other projects]:
+###002 Check if ready to start</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

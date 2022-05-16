@@ -18,22 +18,7 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers>
-    <hudson.triggers.TimerTrigger>
-      <spec>### will run 2nd day of the month at 1AM. Every other month
-H H(1-1) 2 5,8,11,2 *
-### comment above to stop scheduled build
-
-# On Wed, Mar 30, 2022 at 11:28 PM Eli Agbayani &lt;eagbayani@eol.org&gt; wrote:
-#    Hi Jen,
-#    I&apos;ve now set it up to run quarterly: May 2, Aug 2, Nov 2, Feb 2
-#    Actually it starts with the Wikimedia Commons resource, then the English Wikipedia, then all the other languages.
-#    Thanks,
-#    Eli
-
-#TODO: works okay but we need to run only on a Friday</spec>
-    </hudson.triggers.TimerTrigger>
-  </triggers>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>

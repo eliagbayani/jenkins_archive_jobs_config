@@ -43,9 +43,14 @@ cd /extra/dumps/wikidata
 #../Wikipedia in different languages/Wikipedia en start
 
 
-### orig operation should to here:
+### orig operation should go here: Post-build Actions
 #04_Save_all_media_filenames_(1of6),04_Save_all_media_filenames_(2of6),04_Save_all_media_filenames_(3of6),04_Save_all_media_filenames_(4of6),04_Save_all_media_filenames_(5of6),04_Save_all_media_filenames_(6of6)
-</command>
+
+
+### special request to refresh: Wikimedia common names or [08.5 Wikimedia Subsets]
+#08.5 Wikimedia Subsets,../Wikipedia in different languages/Wikipedia en start
+### now realized that [08.5 Wikimedia Subsets] cannot run here bec. it uses 71.tar.gz
+### only [../Wikipedia in different languages/Wikipedia en start] can run at this stage</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

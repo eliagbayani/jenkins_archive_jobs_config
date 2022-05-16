@@ -31,7 +31,8 @@
 ###Remove all CSV files (.csv):
 rm -rf /extra/other_files/GBIF_occurrence/GBIF_taxa_csv_dwca/*
 
-###Remove multimedia assignments to taxon (.txt):
+###Remove multimedia assignments to taxon (.txt): 
+### --- PLEASE REVIEW IF WE NEED TO REMOVE THIS EVERY HARVEST --- BEC. IT TAKES SO MUCH TIME
 rm -rf /extra/other_files/GBIF_occurrence/multimedia_gbifID/*
 
 ###Move txt files before nuke /map_data_dwca/*
@@ -49,32 +50,33 @@ mv /extra/tmp/final_taxon_concept_IDS*.txt /extra/map_data_dwca/
 
 ### OK
 cd /extra/other_files/GBIF_occurrence/DwCA_Animalia/
-rm -f Animalia_DwCA.zip
+[ -f Animalia_DwCA.zip ] &amp;&amp; rm -f Animalia_DwCA.zip || echo &quot;File does not exist. OK&quot;
 # old way ##curl -L -o &apos;Animalia_DwCA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0081142-200221144449610.zip
 bash /html/eol_php_code/update_resources/connectors/files/GBIF/run_Animalia.sh
 unzip -jo Animalia_DwCA.zip multimedia.txt
 unzip -jo Animalia_DwCA.zip occurrence.txt
+rm -f Animalia_DwCA.zip #after unzipping remove zip file
 
 ### OK
 cd /extra/other_files/GBIF_occurrence/DwCA_Plantae/
-rm -f Plantae_DwCA.zip
+[ -f Plantae_DwCA.zip ] &amp;&amp; rm -f Plantae_DwCA.zip || echo &quot;File does not exist. OK&quot;
 # old way ##curl -L -o &apos;Plantae_DwCA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0081144-200221144449610.zip                                   
 bash /html/eol_php_code/update_resources/connectors/files/GBIF/run_Plantae.sh
 unzip -jo Plantae_DwCA.zip multimedia.txt
 unzip -jo Plantae_DwCA.zip occurrence.txt
+rm -f Plantae_DwCA.zip #after unzipping remove zip file
 
 ### OK
 cd /extra/other_files/GBIF_occurrence/DwCA_Other7Groups/
-rm -f Other7Groups_DwcA.zip
+[ -f Other7Groups_DwcA.zip ] &amp;&amp; rm -f Other7Groups_DwcA.zip || echo &quot;File does not exist. OK&quot;
 # old way ##curl -L -o &apos;Other7Groups_DwcA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0081146-200221144449610.zip                                        
 bash /html/eol_php_code/update_resources/connectors/files/GBIF/run_Other7Groups.sh
 unzip -jo Other7Groups_DwCA.zip multimedia.txt
 unzip -jo Other7Groups_DwCA.zip occurrence.txt
+rm -f Other7Groups_DwcA.zip #after unzipping remove zip file
 
 
-
-
-# orig next step, commented temporarily
+# ORIG next step, commented temporarily
 # 02a breakdown Animalia</command>
     </hudson.tasks.Shell>
   </builders>

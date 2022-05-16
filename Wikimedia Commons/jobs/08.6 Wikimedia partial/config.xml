@@ -33,6 +33,11 @@
 cd /html/eol_php_code/update_resources/connectors
 php5.6 wikimedia_partial.php jenkins
 
+cd /html/eol_php_code/applications/content_server/resources
+# now delete temp /71/ folder
+[ -d 71/ ] &amp;&amp; rmdir -rf 71/
+
+
 ### may continue to:
 ### 08.7 Wikidata taxonomy</command>
     </hudson.tasks.Shell>

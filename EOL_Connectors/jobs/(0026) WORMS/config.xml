@@ -49,9 +49,25 @@ php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eo
 php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;26_ENV_final&quot;, &quot;task&quot;: &quot;change_measurementIDs&quot;}&apos;
 #generates 26_ENV_final.tar.gz
 
-#not yet OK: commented still needs investigation
+#OK
 php5.6 make_hash_IDs_4Deltas.php jenkins &apos;{&quot;task&quot;: &quot;&quot;, &quot;resource&quot;:&quot;Deltas_4hashing&quot;, &quot;resource_id&quot;:&quot;26_ENV_final&quot;}&apos;
-#generates 26_delta.tar.gz</command>
+#generates 26_delta.tar.gz
+
+#OK: remove all Habitat contradicting MoF records for taxon;
+# i.e.  MoF habitat value(s) that are descendants of both marine and terrestrial
+php5.6 rem_marine_terr_desc.php jenkins &apos;{&quot;resource_id&quot;:&quot;26_delta&quot;}&apos;
+#generates: 26_delta_new.tar.gz
+
+#OK: remove the orphan child records in MoF
+php5.6 dwca_MoF_fix.php jenkins &apos;{&quot;resource_id&quot;:&quot;26_delta_new&quot;, &quot;resource&quot;:&quot;MoF_normalized&quot;}&apos;
+#generates 26_MoF_normalized.tar.gz
+
+#LAST STEP: copy last transactional DwCA to WoRMS.tar.gz OK
+cd /html/eol_php_code/applications/content_server/resources
+cp 26_MoF_normalized.tar.gz WoRMS.tar.gz
+ls -lt 26_MoF_normalized.tar.gz
+ls -lt WoRMS.tar.gz
+rm -f 26_MoF_normalized.tar.gz</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

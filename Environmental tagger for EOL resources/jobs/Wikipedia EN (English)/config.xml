@@ -26,6 +26,7 @@
 
 #STEP 1
 php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;wikipedia English&quot;, &quot;resource_id&quot;:&quot;617&quot;, &quot;subjects&quot;:&quot;Description&quot;}&apos;
+#source is 80.tar.gz -- via API call using resource name &quot;wikipedia English&quot;
 #generates 617_ENV.tar.gz
 
 #STEP 2: just a utility
@@ -57,7 +58,14 @@ php5.6 rem_marine_terr_desc.php jenkins &apos;{&quot;resource_id&quot;:&quot;wik
 #generates: wikipedia_en_traits_tmp3.tar.gz
 
 #LAST STEP: copy wikipedia_en_traits_tmp3.tar.gz to wikipedia_en_traits.tar.gz OK
-cp /html/eol_php_code/applications/content_server/resources/wikipedia_en_traits_tmp3.tar.gz /html/eol_php_code/applications/content_server/resources/wikipedia_en_traits.tar.gz </command>
+cd /html/eol_php_code/applications/content_server/resources
+cp wikipedia_en_traits_tmp3.tar.gz wikipedia_en_traits.tar.gz
+ls -lt wikipedia_en_traits_tmp3.tar.gz
+ls -lt wikipedia_en_traits.tar.gz
+# then delete wikipedia_en_traits_tmp3.tar.gz
+rm -f wikipedia_en_traits_tmp3.tar.gz
+
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

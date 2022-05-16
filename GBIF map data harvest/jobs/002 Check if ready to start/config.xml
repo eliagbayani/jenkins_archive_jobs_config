@@ -20,7 +20,7 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
     <hudson.triggers.TimerTrigger>
-      <spec># This was for 001:
+      <spec># This was from 001:
 ### H H 11 10,2,6 *
 
 # 16th of the month. Five days after the API requests were sent.

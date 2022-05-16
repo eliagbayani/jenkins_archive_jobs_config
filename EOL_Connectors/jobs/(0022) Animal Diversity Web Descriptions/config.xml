@@ -29,9 +29,22 @@ http://www.eol.org/content_partners/8/resources/22</description>
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-#php5.6 22.php jenkins
+#php5.6 22.php jenkins --- OBSOLETE
 
-php5.6 quaardvark.php jenkins</command>
+#OK
+php5.6 quaardvark.php jenkins
+# generates 22.tar.gz
+
+#OK
+php5.6 rem_marine_terr_desc.php jenkins &apos;{&quot;resource_id&quot;:&quot;22&quot;}&apos;
+# generates 22_cleaned_MoF_habitat.tar.gz
+
+#LAST STEP: OK
+cd /html/eol_php_code/applications/content_server/resources
+cp 22_cleaned_MoF_habitat.tar.gz AnimalDiversityWeb.tar.gz
+ls -lt 22_cleaned_MoF_habitat.tar.gz
+ls -lt AnimalDiversityWeb.tar.gz
+rm -f 22_cleaned_MoF_habitat.tar.gz</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
