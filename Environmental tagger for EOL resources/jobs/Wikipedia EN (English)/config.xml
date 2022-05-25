@@ -3,16 +3,7 @@
   <actions/>
   <description></description>
   <keepDependencies>false</keepDependencies>
-  <properties>
-    <jenkins.model.BuildDiscarderProperty>
-      <strategy class="hudson.tasks.LogRotator">
-        <daysToKeep>-1</daysToKeep>
-        <numToKeep>5</numToKeep>
-        <artifactDaysToKeep>-1</artifactDaysToKeep>
-        <artifactNumToKeep>-1</artifactNumToKeep>
-      </strategy>
-    </jenkins.model.BuildDiscarderProperty>
-  </properties>
+  <properties/>
   <scm class="hudson.scm.NullSCM"/>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
@@ -24,47 +15,46 @@
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-#STEP 1
+# === STEP 1
 php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;wikipedia English&quot;, &quot;resource_id&quot;:&quot;617&quot;, &quot;subjects&quot;:&quot;Description&quot;}&apos;
 #source is 80.tar.gz -- via API call using resource name &quot;wikipedia English&quot;
 #generates 617_ENV.tar.gz
 
-#STEP 2: just a utility
+# === just a utility
 #these 3 is just for stats = generates 3 reports
 #php5.6 filter_term_group_by_taxa.php jenkins &apos;{&quot;source&quot;: &quot;617_ENV&quot;, &quot;target&quot;:&quot;wikipedia_en_traits_FTG&quot;, &quot;taxonIDs&quot;: &quot;Q1357&quot;, &quot;habitat_filter&quot;: &quot;saline water&quot;}&apos;
 #php5.6 filter_term_group_by_taxa.php jenkins &apos;{&quot;source&quot;: &quot;617_ENV&quot;, &quot;target&quot;:&quot;wikipedia_en_traits_FTG&quot;, &quot;taxonIDs&quot;: &quot;Q1390&quot;, &quot;habitat_filter&quot;: &quot;saline water&quot;}&apos;
 #php5.6 filter_term_group_by_taxa.php jenkins &apos;{&quot;source&quot;: &quot;617_ENV&quot;, &quot;target&quot;:&quot;wikipedia_en_traits_FTG&quot;, &quot;taxonIDs&quot;: &quot;Q10908&quot;, &quot;habitat_filter&quot;: &quot;saline water&quot;}&apos;
 
-#main operation is:
+# === STEP 2:
 php5.6 filter_term_group_by_taxa.php jenkins &apos;{&quot;source&quot;: &quot;617_ENV&quot;, &quot;target&quot;:&quot;wikipedia_en_traits_FTG&quot;, &quot;taxonIDs&quot;: &quot;Q1390, Q1357, Q10908&quot;, &quot;habitat_filter&quot;: &quot;saline water&quot;}&apos;
 #generates wikipedia_en_traits_FTG.tar.gz
 
-#STEP 3: final step
+# === STEP 3: final step
 # Wikipedia EN creates a new DwCA for its traits. Not like &apos;AmphibiaWeb text&apos;.
 # Thus there is an extra step for Wikipedia EN: it removes taxa without MoF
 php5.6 remove_taxa_without_MoF.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia_en_traits_FTG&quot;}&apos;
 # OLD: generates wikipedia_en_traits.tar.gz
 # NEW: generates wikipedia_en_traits_tmp1.tar.gz
 
-#STEP 4: new step
+# === STEP 4: new step
 # remove contradicting traits in MoF
 php5.6 remove_contradicting_traits_from_MoF.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia_en_traits_tmp1&quot;}&apos;
 # OLD: generates the final: wikipedia_en_traits.tar.gz
 # NEW: generates wikipedia_en_traits_tmp2.tar.gz
 
-#STEP 5: remove all records for taxon with habitat value(s) that are 
-#        descendants of both marine and terrestrial
+# === STEP 5: remove all records for taxon with habitat value(s) that are 
+#             descendants of both marine and terrestrial
 php5.6 rem_marine_terr_desc.php jenkins &apos;{&quot;resource_id&quot;:&quot;wikipedia_en_traits_tmp2&quot;}&apos;
 #generates: wikipedia_en_traits_tmp3.tar.gz
 
-#LAST STEP: copy wikipedia_en_traits_tmp3.tar.gz to wikipedia_en_traits.tar.gz OK
+# === LAST STEP: copy wikipedia_en_traits_tmp3.tar.gz to wikipedia_en_traits.tar.gz OK
 cd /html/eol_php_code/applications/content_server/resources
 cp wikipedia_en_traits_tmp3.tar.gz wikipedia_en_traits.tar.gz
 ls -lt wikipedia_en_traits_tmp3.tar.gz
 ls -lt wikipedia_en_traits.tar.gz
 # then delete wikipedia_en_traits_tmp3.tar.gz
 rm -f wikipedia_en_traits_tmp3.tar.gz
-
 </command>
     </hudson.tasks.Shell>
   </builders>
