@@ -38,6 +38,11 @@ cd /html/eol_php_code/update_resources/connectors
 
 php5.6 wikipedia.php jenkins pt generate_resource #
 
+# === STEP: fill-up missing parent entries
+php5.6 fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-pt&quot;, &quot;source_dwca&quot;: &quot;wikipedia-pt&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
+#generates: wikipedia-pt.tar.gz
+
+
 ### temporarily won&apos;t continue to wikipedia zh
 #exit 1
 # Wikipedia zh start</command>

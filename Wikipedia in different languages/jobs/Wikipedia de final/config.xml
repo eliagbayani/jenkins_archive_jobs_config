@@ -38,6 +38,11 @@ cd /html/eol_php_code/update_resources/connectors
 
 php5.6 wikipedia.php jenkins de generate_resource #
 
+# === STEP: fill-up missing parent entries
+php5.6 fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;957&quot;, &quot;source_dwca&quot;: &quot;957&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
+#generates: 957.tar.gz
+
+
 ### temporarily won&apos;t continue to Spanish es wikipedia
 #exit 1</command>
     </hudson.tasks.Shell>

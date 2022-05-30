@@ -38,6 +38,11 @@ cd /html/eol_php_code/update_resources/connectors
 
 php5.6 wikipedia.php jenkins fr generate_resource #
 
+# === STEP: fill-up missing parent entries
+php5.6 fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-fr&quot;, &quot;source_dwca&quot;: &quot;wikipedia-fr&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
+#generates: wikipedia-fr.tar.gz
+
+
 ### temporarily won&apos;t continue to: Wikipedia pt start,Wikipedia - ru,Wikipedia - ja,Wikipedia - ko
 #exit 1
 

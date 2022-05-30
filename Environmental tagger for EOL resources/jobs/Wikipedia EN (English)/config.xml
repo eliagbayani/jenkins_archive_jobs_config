@@ -48,16 +48,30 @@ php5.6 remove_contradicting_traits_from_MoF.php jenkins &apos;{&quot;resource_id
 php5.6 rem_marine_terr_desc.php jenkins &apos;{&quot;resource_id&quot;:&quot;wikipedia_en_traits_tmp2&quot;}&apos;
 #generates: wikipedia_en_traits_tmp3.tar.gz
 
-# === LAST STEP: copy wikipedia_en_traits_tmp3.tar.gz to wikipedia_en_traits.tar.gz OK
+# === STEP 6: fill-up missing parent entries
+php5.6 fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia_en_traits_tmp4&quot;, &quot;source_dwca&quot;: &quot;wikipedia_en_traits_tmp3&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
+#generates: wikipedia_en_traits_tmp4.tar.gz
+
+# === LAST STEP: copy wikipedia_en_traits_tmp4.tar.gz to wikipedia_en_traits.tar.gz OK
 cd /html/eol_php_code/applications/content_server/resources
-cp wikipedia_en_traits_tmp3.tar.gz wikipedia_en_traits.tar.gz
-ls -lt wikipedia_en_traits_tmp3.tar.gz
+cp wikipedia_en_traits_tmp4.tar.gz wikipedia_en_traits.tar.gz
+ls -lt wikipedia_en_traits_tmp4.tar.gz
 ls -lt wikipedia_en_traits.tar.gz
-# then delete wikipedia_en_traits_tmp3.tar.gz
-rm -f wikipedia_en_traits_tmp3.tar.gz
+# then delete wikipedia_en_traits_tmp4.tar.gz
+rm -f wikipedia_en_traits_tmp4.tar.gz
 </command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>../Wikipedia in different languages/Wikipedia es start</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+  </publishers>
   <buildWrappers/>
 </project>

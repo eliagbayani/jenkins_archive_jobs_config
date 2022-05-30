@@ -23,7 +23,13 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
+
+### main operation
 php5.6 wikimedia_subsets.php jenkins
+
+# === STEP: fill-up missing parent entries
+php5.6 fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikimedia_comnames&quot;, &quot;source_dwca&quot;: &quot;wikimedia_comnames&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
+
 
 ### NEW:start - To free up space, delete un-needed files. Part of housekeeping.
 cd /extra/dumps/wikidata
@@ -40,14 +46,12 @@ cd /extra/dumps/wikidata/wikimedia
 [ -f commonswiki-latest-pages-articles.xml.bz2 ] &amp;&amp; rm -f commonswiki-latest-pages-articles.xml.bz2 || echo &quot;File does not exist&quot;
 ### NEW:end
 
-### temporarily will not proceed with &apos;Wikipedia en start&apos;
+### temporarily will not proceed to &apos;Post-build Actions&apos;
 #exit 1
 
-### this was already added in an earlier job: [08 generate_resource]
-### so no need to add this here.
-### add this to &apos;Post-build Actions&apos; to cont. with Wikipedia en
-### ../Wikipedia in different languages/Wikipedia en start
-### will temporarily remove this for now.</command>
+
+### orig post-build actions:
+### 08.5.1 Hash media identifiers 71</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

@@ -47,7 +47,14 @@ cd /html/eol_php_code/update_resources/connectors
 #php5.6 wikipedia.php jenkins en generate_resource 1900000 2500000 6of6 #all remaining
 
 
-php5.6 wikipedia.php jenkins en generate_resource #
+php5.6 wikipedia.php jenkins en generate_resource #main operation
+
+
+# === STEP: fill-up missing parent entries
+php5.6 fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;80&quot;, &quot;source_dwca&quot;: &quot;80&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
+#generates: 80.tar.gz
+
+
 
 ### temporarily won&apos;t continue to Spanish es wikipedia
 #exit 1
@@ -55,17 +62,10 @@ php5.6 wikipedia.php jenkins en generate_resource #
 ### originally has two downstream:
 ###Wikipedia es start
 ###../Environmental tagger for EOL resources/Wikipedia EN (English)
-  #../Environmental tagger for EOL resources/Wikipedia EN (English),Wikipedia es start
-
-### temporarily distcontinuded to Spanish es. Apr 20, 2022. Let it run next harvest.
-### add this to continue to Spanish es wikipedia
-### Build other projects
-### Projects to build
-#Wikipedia es start
 
 
-### temporarily commented:
-### Wikipedia es start</command>
+
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
