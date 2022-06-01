@@ -27,6 +27,8 @@ cd /html/eol_php_code/update_resources/connectors
 
 php5.6 wikipedia.php jenkins bs #Bosnian
 
+# === STEP: fill-up missing parent entries
+php5.6 fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-bs&quot;, &quot;source_dwca&quot;: &quot;wikipedia-bs&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
 </command>
     </hudson.tasks.Shell>
   </builders>
