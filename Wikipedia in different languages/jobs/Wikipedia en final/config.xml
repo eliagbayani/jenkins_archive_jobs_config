@@ -54,9 +54,14 @@ php5.6 wikipedia.php jenkins en generate_resource #main operation
 php5.6 fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;80&quot;, &quot;source_dwca&quot;: &quot;80&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
 #generates: 80.tar.gz
 
+#LAST STEP: copy last transactional DwCA to wikipedia-en.tar.gz OK
+cd /html/eol_php_code/applications/content_server/resources
+cp 80.tar.gz wikipedia-en.tar.gz
+ls -lt 80.tar.gz
+ls -lt wikipedia-en.tar.gz
+rm -f 80.tar.gz
 
 
-### temporarily won&apos;t continue to Spanish es wikipedia
 #exit 1
 
 ### originally has two downstream:

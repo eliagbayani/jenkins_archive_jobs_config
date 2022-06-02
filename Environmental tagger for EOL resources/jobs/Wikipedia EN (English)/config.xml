@@ -16,8 +16,9 @@
       <command>cd /html/eol_php_code/update_resources/connectors
 
 # === STEP 1
-php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;wikipedia English&quot;, &quot;resource_id&quot;:&quot;617&quot;, &quot;subjects&quot;:&quot;Description&quot;}&apos;
-#source is 80.tar.gz -- via API call using resource name &quot;wikipedia English&quot;
+php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;wikipedia-en (English)&quot;, &quot;resource_id&quot;:&quot;617&quot;, &quot;subjects&quot;:&quot;Description&quot;}&apos;
+#source is 80.tar.gz           -- via API call using resource name &quot;wikipedia English&quot;
+#source is wikipedia-en.tar.gz -- via API call using NEW resource name &quot;wikipedia-en (English)&quot;
 #generates 617_ENV.tar.gz
 
 # === just a utility

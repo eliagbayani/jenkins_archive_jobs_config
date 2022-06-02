@@ -42,6 +42,12 @@ php5.6 wikipedia.php jenkins de generate_resource #
 php5.6 fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;957&quot;, &quot;source_dwca&quot;: &quot;957&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
 #generates: 957.tar.gz
 
+#LAST STEP: copy last transactional DwCA to wikipedia-de.tar.gz OK
+cd /html/eol_php_code/applications/content_server/resources
+cp 957.tar.gz wikipedia-de.tar.gz
+ls -lt 957.tar.gz
+ls -lt wikipedia-de.tar.gz
+rm -f 957.tar.gz
 
 ### temporarily won&apos;t continue to Spanish es wikipedia
 #exit 1</command>
