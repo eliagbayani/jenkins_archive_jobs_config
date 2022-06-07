@@ -26,6 +26,7 @@
 
 cd /html/eol_php_code/update_resources/connectors
 
+
 ## works OK as utility - manually adding jobs
 ## for generate_map_data_using_GBIF_csv_files
 #php5.6 generate_map_data_using_GBIF_csv_files.php jenkins &apos;{&quot;group&quot;:false,&quot;range&quot;:[585613,615613],&quot;ctr&quot;:10,&quot;rank&quot;:&quot;&quot;}&apos;
@@ -36,16 +37,18 @@ cd /html/eol_php_code/update_resources/connectors
 ### new utility step: Apr 30, 2022
 ### To remove files before the actual harvest. Since these files will be removed anyway
 ### during actual harvest.
-rm -rf /extra/other_files/GBIF_occurrence/GBIF_taxa_csv_dwca/*
-rm -rf /extra/other_files/GBIF_occurrence/multimedia_gbifID/*
+#rm -rf /extra/other_files/GBIF_occurrence/GBIF_taxa_csv_dwca/*
+#rm -rf /extra/other_files/GBIF_occurrence/multimedia_gbifID/*
 
-cd /extra/other_files/GBIF_occurrence/GBIF_taxa_csv_dwca/
-touch eli.txt
-cd /extra/other_files/GBIF_occurrence/multimedia_gbifID/
-touch eli.txt
+#cd /extra/other_files/GBIF_occurrence/GBIF_taxa_csv_dwca/
+#touch eli.txt
+#cd /extra/other_files/GBIF_occurrence/multimedia_gbifID/
+#touch eli.txt
 
 
-### temporarily added a Post-build Action</command>
+### new utility step: 
+php5.6 gen_map_data_forTaxa_with_children.php jenkins &apos;{&quot;group&quot;:false,&quot;range&quot;:[22401,33123],&quot;ctr&quot;:2,&quot;rank&quot;:&quot;genus&quot;}&apos;
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

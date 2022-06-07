@@ -18,45 +18,24 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers>
-    <hudson.triggers.TimerTrigger>
-      <spec>### will run every 1st day of the month at 1AM - every 6 months
-#H H(1-1) 20 3,9 *
-</spec>
-    </hudson.triggers.TimerTrigger>
-  </triggers>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
       <command># use this if you want to stop dead on its tracks
 # exit 1
 
-#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-#php5.6 wikipedia.php jenkins nl #Dutch
-#---------------------
-#initially six (6) connectors
 
-echo &quot;start Wikipedia nl build...&quot;
-#php5.6 wikipedia.php jenkins sv generate_resource 1 416666 1of6
-#php5.6 wikipedia.php jenkins sv generate_resource 416666 833332 2of6
-#php5.6 wikipedia.php jenkins sv generate_resource 833332 1249998 3of6
-#php5.6 wikipedia.php jenkins sv generate_resource 1249998 1666664 4of6
-#php5.6 wikipedia.php jenkins sv generate_resource 1666664 2083330 5of6
-#php5.6 wikipedia.php jenkins sv generate_resource 2083330 2500000 6of6 #all remaining
-</command>
+php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:6, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;sv&quot;}&apos;
+# -&gt; new OK -- 6 connectors run
+# -&gt; does not work if divisor is not 6. Should always be 6
+
+
+# orig obsolete post build:
+# Wikipedia sv 1of6,Wikipedia sv 2of6,Wikipedia sv 3of6,Wikipedia sv 4of6,Wikipedia sv 5of6,Wikipedia sv 6of6</command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>Wikipedia sv 1of6,Wikipedia sv 2of6,Wikipedia sv 3of6,Wikipedia sv 4of6,Wikipedia sv 5of6,Wikipedia sv 6of6</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-        <completeBuild>true</completeBuild>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
-  </publishers>
+  <publishers/>
   <buildWrappers/>
 </project>

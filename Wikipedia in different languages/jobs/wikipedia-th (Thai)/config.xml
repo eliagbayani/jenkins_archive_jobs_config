@@ -26,10 +26,18 @@
 cd /html/eol_php_code/update_resources/connectors
 
 php5.6 wikipedia.php jenkins th #Thai
+# -&gt; old 1 connector
+
+#php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:6, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;th&quot;}&apos;
+# -&gt; new OK -- 6 connectors run
+# -&gt; does not work if divisor is not 6. Should always be 6
+
 
 # === STEP: fill-up missing parent entries
 php5.6 fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-th&quot;, &quot;source_dwca&quot;: &quot;wikipedia-th&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
-</command>
+
+#orig post build:
+# wikipedia-kk (Kazakh)</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

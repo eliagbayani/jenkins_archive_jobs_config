@@ -22,27 +22,29 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
+      <command>#cd /extra/other_files/GBIF_occurrence/multimedia_gbifID/
+#rm -rf /extra/other_files/GBIF_occurrence/multimedia_gbifID/b*
+
 cd /html/eol_php_code/update_resources/connectors
 
-php5.6 wikipedia.php jenkins ne #Nepali
+#php5.6 wikipedia_ver2.php jenkins ce #Chechen
+# -&gt; orig 1 connector run
+
+#php5.6 wikipedia_ver2.php jenkins ce generate_resource_force #Chechen
+# -&gt; OK works orig 1 connector run --- same as above
+
+
+#php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:6, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;ce&quot;}&apos;
+# -&gt; new OK -- 6 connectors run
+# -&gt; does not work if divisor is not 6. Should always be 6
+
+php5.6 test_jenkins.php jenkins
 
 # === STEP: fill-up missing parent entries
-php5.6 fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-ne&quot;, &quot;source_dwca&quot;: &quot;wikipedia-ne&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
-
-#orig post build: wikipedia-oc (Occitan)</command>
+#php5.6 fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-ce&quot;, &quot;source_dwca&quot;: &quot;wikipedia-ce&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
+</command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>wikipedia-oc (Occitan)</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-        <completeBuild>true</completeBuild>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
-  </publishers>
+  <publishers/>
   <buildWrappers/>
 </project>
