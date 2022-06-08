@@ -35,14 +35,20 @@ cd /html/eol_php_code/update_resources/connectors
 
 
 #php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:6, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;ce&quot;}&apos;
+php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:6, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;no&quot;, &quot;cont_2next_lang&quot;:&quot;Y&quot;}&apos;
 # -&gt; new OK -- 6 connectors run
 # -&gt; does not work if divisor is not 6. Should always be 6
 
-php5.6 test_jenkins.php jenkins
+#php5.6 test_jenkins.php jenkins
 
 # === STEP: fill-up missing parent entries
-#php5.6 fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-ce&quot;, &quot;source_dwca&quot;: &quot;wikipedia-ce&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
-</command>
+#php5.6 fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-pl&quot;, &quot;source_dwca&quot;: &quot;wikipedia-pl&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
+
+#php5.6 test_jenkins.php jenkins
+
+#exit 1 #--- error in jenkins
+
+#exit #no error in jenkins</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

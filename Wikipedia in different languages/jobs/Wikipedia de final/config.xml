@@ -18,28 +18,17 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers>
-    <jenkins.triggers.ReverseBuildTrigger>
-      <spec></spec>
-      <upstreamProjects>Wikipedia de 1of6,Wikipedia de 2of6,Wikipedia de 3of6,Wikipedia de 4of6,Wikipedia de 5of6,Wikipedia de 6of6</upstreamProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-        <completeBuild>true</completeBuild>
-      </threshold>
-    </jenkins.triggers.ReverseBuildTrigger>
-  </triggers>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 
-php5.6 wikipedia.php jenkins de generate_resource #
+#php5.6 wikipedia.php jenkins de generate_resource #
 
 # === STEP: fill-up missing parent entries
-php5.6 fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;957&quot;, &quot;source_dwca&quot;: &quot;957&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
+#php5.6 fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;957&quot;, &quot;source_dwca&quot;: &quot;957&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
 #generates: 957.tar.gz
 
 #LAST STEP: copy last transactional DwCA to wikipedia-de.tar.gz OK

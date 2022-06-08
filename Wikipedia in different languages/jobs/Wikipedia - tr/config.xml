@@ -32,10 +32,6 @@ php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&
 # -&gt; new OK -- 6 connectors run
 # -&gt; does not work if divisor is not 6. Should always be 6
 
-
-# === STEP: fill-up missing parent entries
-#php5.6 fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-tr&quot;, &quot;source_dwca&quot;: &quot;wikipedia-tr&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
-
 #orig post build:
 # wikipedia-th (Thai)</command>
     </hudson.tasks.Shell>

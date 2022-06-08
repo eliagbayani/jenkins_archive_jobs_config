@@ -25,9 +25,9 @@
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 
-#php5.6 wikipedia.php jenkins id #Indonesian
+php5.6 wikipedia.php jenkins id #Indonesian
 
-php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:6, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;id&quot;}&apos;
+#php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:6, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;id&quot;}&apos;
 # -&gt; new OK -- 6 connectors run
 # -&gt; does not work if divisor is not 6. Should always be 6
 

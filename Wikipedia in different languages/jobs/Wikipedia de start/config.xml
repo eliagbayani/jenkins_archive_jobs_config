@@ -34,7 +34,7 @@ echo &quot;start Wikipedia de build...&quot;
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>Wikipedia de 1of6,Wikipedia de 2of6,Wikipedia de 3of6,Wikipedia de 4of6,Wikipedia de 5of6,Wikipedia de 6of6</childProjects>
+      <childProjects></childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
