@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>3</numToKeep>
+        <numToKeep>6</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -24,21 +24,19 @@
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
+php5.6 treatmentbank_adjust.php jenkins
+#-&gt; generates TreatmentBank_adjustment_01.tar.gz
 
-php5.6 wikipedia.php jenkins es generate_resource 1 416666 1of6
+# === LAST STEP: copy TreatmentBank_adjustment_01.tar.gz to TreatmentBank_final.tar.gz OK
+cd /html/eol_php_code/applications/content_server/resources
+cp TreatmentBank_adjustment_01.tar.gz TreatmentBank_final.tar.gz
+ls -lt TreatmentBank_adjustment_01.tar.gz
+ls -lt TreatmentBank_final.tar.gz
+# then delete TreatmentBank_adjustment_01.tar.gz
+rm -f TreatmentBank_adjustment_01.tar.gz
 </command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>Wikipedia es final</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-        <completeBuild>true</completeBuild>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
-  </publishers>
+  <publishers/>
   <buildWrappers/>
 </project>

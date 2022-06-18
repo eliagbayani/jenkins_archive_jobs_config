@@ -55,7 +55,8 @@ php5.6 gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;generate_
 
 
 
-</command>
+# orig post build:
+# 02 Check if ready to start</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

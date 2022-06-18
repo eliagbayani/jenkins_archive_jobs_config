@@ -30,8 +30,8 @@
   <builders>
     <hudson.tasks.Shell>
       <command>### use this if you want to stop dead on its tracks
-#exit 1
-### temporarily stopped by Eli Jul 21, 2020.
+exit 1
+### temporarily stopped by Eli Jun 17, 2022.
 
 cd /html/eol_php_code/applications/content_server/resources
 rm -f wikipedia_generation_status*.txt 
@@ -56,7 +56,7 @@ echo &quot;start Wikipedia en build...&quot;
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>Wikipedia en 1of6,Wikipedia en 2of6,Wikipedia en 3of6,Wikipedia en 4of6,Wikipedia en 5of6,Wikipedia en 6of6,taxon_wiki_per_language_stats</childProjects>
+      <childProjects>taxon_wiki_per_language_stats</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
