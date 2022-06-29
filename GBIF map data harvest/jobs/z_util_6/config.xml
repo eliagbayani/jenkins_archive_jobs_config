@@ -22,11 +22,15 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>
-cd /extra/other_files/GBIF_occurrence/multimedia_gbifID/
-rm -rf /extra/other_files/GBIF_occurrence/multimedia_gbifID/a*
+      <command>cd /html/eol_php_code/update_resources/connectors
 
-</command>
+
+#php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:6, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;ce&quot;}&apos;
+#php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:6, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;war&quot;, &quot;cont_2next_lang&quot;:&quot;Y&quot;}&apos;
+#php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:6, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;vi&quot;, &quot;cont_2next_lang&quot;:&quot;Y&quot;, &quot;six_coverage&quot;:&quot;2nd&quot;}&apos;
+
+php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:6, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;ceb&quot;, &quot;cont_2next_lang&quot;:&quot;Y&quot;, &quot;forceYN&quot;:&quot;Y&quot;}&apos;
+# forceYN if &quot;Y&quot; means it will force-harvest, will disregard last-date harvested.</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

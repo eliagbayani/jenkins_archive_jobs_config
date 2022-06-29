@@ -30,7 +30,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>### use this if you want to stop dead on its tracks
-exit 1
+#exit 1
 ### temporarily stopped by Eli Jun 17, 2022.
 
 cd /html/eol_php_code/applications/content_server/resources
@@ -44,7 +44,7 @@ cd /html/eol_php_code/update_resources/connectors
 #---------------------
 #initially six (6) connectors
 
-echo &quot;start Wikipedia en build...&quot;
+#echo &quot;start Wikipedia en build...&quot;
 #php5.6 wikipedia.php jenkins en generate_resource 1 416666 1of6
 #php5.6 wikipedia.php jenkins en generate_resource 416666 833332 2of6
 #php5.6 wikipedia.php jenkins en generate_resource 833332 1249998 3of6
