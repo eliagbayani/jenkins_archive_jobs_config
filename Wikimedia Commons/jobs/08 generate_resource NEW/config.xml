@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>5</numToKeep>
+        <numToKeep>6</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -24,10 +24,21 @@
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-#step 4: initially six (6) connectors
+### orig scheme - obsolete
+# php5.6 wikidata.php jenkins generate_resource # orig
 
-php5.6 wikidata.php jenkins generate_resource 1 524435 1of6
-</command>
+### new scheme
+php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikimedia&quot;, &quot;divisor&quot;:6, &quot;task&quot;:&quot;initial&quot;}&apos;
+### This will trigger 6 eol_stats_job_? jobs.
+### After all 6 are done, will aggregate into a single DwCA: 71.tar.gz
+### Next will run: fill_up_undefined_parents_real.php on another job
+### To do: upon finish, should trigger: [08.5 Wikimedia Subsets]
+  
+
+### originally has 2 post build:
+# 08.5 Wikimedia Subsets,../Wikipedia in different languages/Wikipedia en start
+
+### permanently disabled Post build for: [Wikipedia en start] on 1Jul2022.</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
