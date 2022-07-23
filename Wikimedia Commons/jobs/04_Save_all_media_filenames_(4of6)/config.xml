@@ -26,9 +26,15 @@
 
 #step 2: initially six connectors to cache, then one connector to finalize
 
-php5.6 wikidata.php jenkins save_all_media_filenames 1573305 2097740 4of6
-#2097740	2622175
-#2622175	3146610
+#php5.6 wikidata.php jenkins save_all_media_filenames 1573305 2097740 4of6
+php5.6 wikidata.php jenkins &apos;{&quot;task&quot;:&quot;save_all_media_filenames&quot;, &quot;range_from&quot;:&quot;1724269&quot;, &quot;range_to&quot;:&quot;2299025&quot;, &quot;actual&quot;:&quot;4of6&quot;}&apos;
+
+#[1] =&gt; 1  574757
+#[2] =&gt; 574757 1149513
+#[3] =&gt; 1149513  1724269
+#[4] =&gt; 1724269  2299025
+#[5] =&gt; 2299025  2873781
+#[6] =&gt; 2873781  3448537
 
 </command>
     </hudson.tasks.Shell>

@@ -32,7 +32,7 @@ H H 13 4,7,10,1 *</spec>
 php5.6 gbif_download_request_for_NMNH.php jenkins &apos;{&quot;task&quot;:&quot;send_download_request&quot;, &quot;taxon&quot;:&quot;NMNH_images&quot;}&apos;
 
 ### Will wait for a half a day to check if downloads are ready
-sleep 12h
+sleep 4h
 
 ### This will generate the .sh file if download is ready. The .sh file is the curl command to download.
 php5.6 gbif_download_request_for_NMNH.php jenkins &apos;{&quot;task&quot;:&quot;start_download&quot;, &quot;taxon&quot;:&quot;NMNH_images&quot;}&apos;

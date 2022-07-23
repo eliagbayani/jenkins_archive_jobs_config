@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
   <description></description>
@@ -43,7 +43,7 @@
 #php5.6 wikidata.php jenkins save_all_media_filenames 1130000 1960000 #inc 830000
 #php5.6 wikidata.php jenkins save_all_media_filenames 1960000 2500000 #all remaining
 
-php5.6 wikidata.php jenkins save_all_media_filenames #finalize
+php5.6 wikidata.php jenkins &apos;{&quot;task&quot;:&quot;save_all_media_filenames&quot;}&apos; #finalize
 
 
 </command>

@@ -18,7 +18,12 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers/>
+  <triggers>
+    <hudson.triggers.TimerTrigger>
+      <spec># once a day on the 1st and 15th of every month except December
+H H 1 7,9,11,1,3,5 *</spec>
+    </hudson.triggers.TimerTrigger>
+  </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
@@ -54,8 +59,9 @@ gunzip -fk latest-all.json.gz
 
 
 # upon extraction -- you can delete the big .gz file (NEW: Aug 28, 2021)
-cd /extra/dumps/wikidata
-[ -f latest-all.json.gz ] &amp;&amp; rm -f latest-all.json.gz || echo &quot;File does not exist&quot;
+## working OK but decided not to delete here
+##cd /extra/dumps/wikidata
+##[ -f latest-all.json.gz ] &amp;&amp; rm -f latest-all.json.gz || echo &quot;File does not exist&quot;
 
 
 ### =========================================================================
@@ -70,6 +76,9 @@ cd /extra/dumps/wikidata
 ##exit 1
 
 
+##temporarily discontinued post build:
+##02 Wikimedia Dump
+
 
 ### history - all failed below: ============================================
 
@@ -83,10 +92,7 @@ cd /extra/dumps/wikidata
 #gunzip -fk /extra/dumps/wikidata/latest-all.json.gz
 
 #another try: still fails :-(
-#gzip -dfkq /extra/dumps/wikidata/latest-all.json.gz
-
-
-</command>
+#gzip -dfkq /extra/dumps/wikidata/latest-all.json.gz</command>
     </hudson.tasks.Shell>
     <sp.sd.fileoperations.FileOperationsBuilder plugin="file-operations@1.7">
       <fileOperations/>

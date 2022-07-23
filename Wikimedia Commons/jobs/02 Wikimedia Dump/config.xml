@@ -26,8 +26,9 @@
 
 ### copied from previous step. Just to be sure to delete un-needed files to save space
 # upon extraction -- you can delete the big .gz file (NEW: Aug 28, 2021)
-cd /extra/dumps/wikidata
-[ -f latest-all.json.gz ] &amp;&amp; rm -f latest-all.json.gz || echo &quot;File does not exist&quot;
+### working OK but decided not to delete yet
+#cd /extra/dumps/wikidata
+#[ -f latest-all.json.gz ] &amp;&amp; rm -f latest-all.json.gz || echo &quot;File does not exist&quot;
 
 
 

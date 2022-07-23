@@ -32,7 +32,7 @@ php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikimedia&quot;, &
 ### This will trigger 6 eol_stats_job_? jobs.
 ### After all 6 are done, will aggregate into a single DwCA: 71.tar.gz
 ### Next will run: fill_up_undefined_parents_real.php on another job
-### To do: upon finish, should trigger: [08.5 Wikimedia Subsets]
+### Next will run: should trigger: [08.5 Wikimedia Subsets]
   
 
 ### originally has 2 post build:

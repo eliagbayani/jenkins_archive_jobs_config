@@ -33,7 +33,7 @@ php5.6 fill_up_undefined_parents_real.php jenkins &apos;{&quot;resource_id&quot;
 
 ### NEW:start - To free up space, delete un-needed files. Part of housekeeping.
 cd /extra/dumps/wikidata
-[ -f latest-all.json.gz ] &amp;&amp; rm -f latest-all.json.gz || echo &quot;File does not exist&quot;
+#[ -f latest-all.json.gz ] &amp;&amp; rm -f latest-all.json.gz || echo &quot;File does not exist&quot;
 [ -f latest-all.json ] &amp;&amp; rm -f latest-all.json || echo &quot;File does not exist&quot;
 
 
@@ -42,7 +42,7 @@ cd /extra/dumps/wikidata
 ##rm -f latest-all-taxon.json
 
 cd /extra/dumps/wikidata/wikimedia
-[ -f commonswiki-latest-pages-articles.xml ] &amp;&amp; rm -f commonswiki-latest-pages-articles.xml || echo &quot;File does not exist&quot;
+#[ -f commonswiki-latest-pages-articles.xml ] &amp;&amp; rm -f commonswiki-latest-pages-articles.xml || echo &quot;File does not exist&quot;
 [ -f commonswiki-latest-pages-articles.xml.bz2 ] &amp;&amp; rm -f commonswiki-latest-pages-articles.xml.bz2 || echo &quot;File does not exist&quot;
 ### NEW:end
 

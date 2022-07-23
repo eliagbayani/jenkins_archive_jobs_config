@@ -22,7 +22,15 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>which gnparser
+      <command>
+cd /extra/dumps/wikidata
+touch eli.txt
+gzip -c eli.txt &gt; eli.txt.gz
+ls -lt
+
+
+
+#which gnparser
 
 #/usr/bin/gnparser name -f &quot;json-pretty&quot; &quot;Gadus morhua Jordan, 1964&quot;
 
