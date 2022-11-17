@@ -23,11 +23,13 @@
   <builders>
     <hudson.tasks.Shell>
       <command>
-cd /extra/dumps/wikidata
-touch eli.txt
-gzip -c eli.txt &gt; eli.txt.gz
-ls -lt
+#cd /extra/dumps/wikidata
+#touch eli.txt
+#gzip -c eli.txt &gt; eli.txt.gz
+#ls -lt
 
+cd /extra/dumps/wikidata
+ls -lt
 
 
 #which gnparser

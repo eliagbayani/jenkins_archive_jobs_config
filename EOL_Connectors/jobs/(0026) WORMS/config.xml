@@ -30,27 +30,27 @@ H H 10 * *</spec>
       <command>cd /html/eol_php_code/update_resources/connectors
 
 #OK
-#php5.6 26.php jenkins
+php5.6 26.php jenkins
 #generates 26.tar.gz
 
 #OK
-#php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;26_meta_recoded_1&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
+php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;26_meta_recoded_1&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
 #generates 26_meta_recoded_1.tar.gz
 
 #OK
-#php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;26_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
+php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;26_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
 #generates 26_meta_recoded.tar.gz
 
 #OK
-#php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;World Register of Marine Species&quot;, &quot;resource_id&quot;:&quot;26&quot;, &quot;subjects&quot;:&quot;Habitat|Distribution&quot;}&apos;
+php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;World Register of Marine Species&quot;, &quot;resource_id&quot;:&quot;26&quot;, &quot;subjects&quot;:&quot;Habitat|Distribution&quot;}&apos;
 #generates 26_ENV
 
 #OK
-#php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;26_ENV_final&quot;, &quot;task&quot;: &quot;change_measurementIDs&quot;}&apos;
+php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;26_ENV_final&quot;, &quot;task&quot;: &quot;change_measurementIDs&quot;}&apos;
 #generates 26_ENV_final.tar.gz
 
 #OK
-#php5.6 make_hash_IDs_4Deltas.php jenkins &apos;{&quot;task&quot;: &quot;&quot;, &quot;resource&quot;:&quot;Deltas_4hashing&quot;, &quot;resource_id&quot;:&quot;26_ENV_final&quot;}&apos;
+php5.6 make_hash_IDs_4Deltas.php jenkins &apos;{&quot;task&quot;: &quot;&quot;, &quot;resource&quot;:&quot;Deltas_4hashing&quot;, &quot;resource_id&quot;:&quot;26_ENV_final&quot;}&apos;
 #generates 26_delta.tar.gz
 
 #OK: remove all Habitat contradicting MoF records for taxon;
@@ -62,12 +62,16 @@ php5.6 rem_marine_terr_desc.php jenkins &apos;{&quot;resource_id&quot;:&quot;26_
 php5.6 dwca_MoF_fix.php jenkins &apos;{&quot;resource_id&quot;:&quot;26_delta_new&quot;, &quot;resource&quot;:&quot;MoF_normalized&quot;}&apos;
 #generates 26_MoF_normalized.tar.gz
 
+# total 8 php files to run
+
 #LAST STEP: copy last transactional DwCA to WoRMS.tar.gz OK
+
 cd /html/eol_php_code/applications/content_server/resources
 cp 26_MoF_normalized.tar.gz WoRMS.tar.gz
 ls -lt 26_MoF_normalized.tar.gz
 ls -lt WoRMS.tar.gz
-rm -f 26_MoF_normalized.tar.gz</command>
+rm -f 26_MoF_normalized.tar.gz
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

@@ -20,13 +20,10 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
     <hudson.triggers.TimerTrigger>
-      <spec># will run daily every 1pm. First of a series of connectors to run, one after the other.
-
+      <spec>### now commented - project stopped
 #everyday works OK
-H 13 * * * 
+#H 13 * * * 
 
-#every other day, works OK - Jun 25, 2019
-#H 13 * * 0,2,4,6 
 </spec>
     </hudson.triggers.TimerTrigger>
   </triggers>

@@ -24,7 +24,7 @@
 ### H H 11 10,2,6 *
 
 # 16th of the month. Five days after the API requests were sent.
-H H 16 10,2,6 *
+#H H 16 10,2,6 *
 </spec>
     </hudson.triggers.TimerTrigger>
   </triggers>

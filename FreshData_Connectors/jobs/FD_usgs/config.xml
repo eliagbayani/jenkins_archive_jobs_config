@@ -20,14 +20,9 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
     <hudson.triggers.TimerTrigger>
-      <spec># thrice a week, works OK
-#H 13 * * 0,3,6 
-
-# once a week, every Friday, works OK
-#H 13 * * 5 
-
+      <spec>### commented - project stopped
 # twice a week, works OK
-H 13 * * 0,4 
+#H 13 * * 0,4 
 
 </spec>
     </hudson.triggers.TimerTrigger>

@@ -31,7 +31,7 @@ php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eo
 #generates 21_ENV.tar.gz
 
 ### NOTE: marine+terrestrial habitat filter didn&apos;t change the DwCA
-### Also from Jen: t looks like we can discard this filter from both AntWeb and AmphibiaWeb. DATA-1870
+### Also from Jen: it looks like we can discard this filter from both AntWeb and AmphibiaWeb. DATA-1870
 </command>
     </hudson.tasks.Shell>
   </builders>

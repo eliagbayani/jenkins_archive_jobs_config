@@ -50,7 +50,7 @@ php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>/Wikipedia in different languages/Wikipedia - no, /Wikipedia in different languages/Wikipedia - tr</childProjects>
+      <childProjects>/Wikipedia in different languages/Wikipedia - no,/Wikipedia in different languages/Wikipedia - tr</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

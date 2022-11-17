@@ -32,7 +32,8 @@ php5.6 treatment_bank.php jenkins &apos;{&quot;task&quot;: &quot;generate_single
 # elapsed time = 19.47 hours
 
 ### orig continues to:
-### Step 4 textmine</command>
+### Step 4 textmine
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

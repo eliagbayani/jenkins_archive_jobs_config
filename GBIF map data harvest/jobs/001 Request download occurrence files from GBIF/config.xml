@@ -20,11 +20,10 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
     <hudson.triggers.TimerTrigger>
-      <spec># 11th of the month. 3x per year = Apr Aug Dec
-#H H 11 4,8,12 *
-# twice a year
-H H 25 4,10 *
-</spec>
+      <spec># twice a year - Apr and Oct
+# H H 1 4,10 *
+# trice a year - Oct, Feb, Jun
+H H 1 2,6,10 *</spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>

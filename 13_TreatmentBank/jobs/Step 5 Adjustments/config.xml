@@ -27,16 +27,19 @@ cd /html/eol_php_code/update_resources/connectors
 php5.6 treatmentbank_adjust.php jenkins
 #-&gt; generates TreatmentBank_adjustment_01.tar.gz
 
-# === LAST STEP: copy TreatmentBank_adjustment_01.tar.gz to TreatmentBank_final.tar.gz OK
-cd /html/eol_php_code/applications/content_server/resources
-cp TreatmentBank_adjustment_01.tar.gz TreatmentBank_final.tar.gz
-ls -lt TreatmentBank_adjustment_01.tar.gz
-ls -lt TreatmentBank_final.tar.gz
-# then delete TreatmentBank_adjustment_01.tar.gz
-rm -f TreatmentBank_adjustment_01.tar.gz
 </command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>Step 6 Clade Specific Filters for Habitat</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+  </publishers>
   <buildWrappers/>
 </project>

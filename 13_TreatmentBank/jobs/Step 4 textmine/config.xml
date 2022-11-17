@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>3</numToKeep>
+        <numToKeep>6</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -26,7 +26,9 @@
 cd /html/eol_php_code/update_resources/connectors
 php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;all_BHL&quot;, &quot;resource_id&quot;:&quot;TreatmentBank&quot;, &quot;subjects&quot;:&quot;Uses&quot;}&apos;
 #-&gt; generates TreatmentBank_ENV.tar.gz
-</command>
+
+# continue: normal operations
+# Step 5 Adjustments</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

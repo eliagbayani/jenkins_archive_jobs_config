@@ -39,7 +39,10 @@ cd /html/eol_php_code/applications/content_server/resources
 
 
 ### may continue to:
-### 08.7 Wikidata taxonomy</command>
+### 08.7 Wikidata taxonomy
+
+### orig next step: as of Sep 11, 2022
+#08.6.1 START Wikipedia langs</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

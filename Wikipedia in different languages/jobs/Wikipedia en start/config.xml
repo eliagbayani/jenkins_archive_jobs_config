@@ -29,7 +29,9 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>### use this if you want to stop dead on its tracks
+      <command>exit #obsolete
+
+### use this if you want to stop dead on its tracks
 #exit 1
 ### temporarily stopped by Eli Jun 17, 2022.
 

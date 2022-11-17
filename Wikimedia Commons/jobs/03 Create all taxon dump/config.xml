@@ -25,10 +25,11 @@
       <command>#exit 1 #temporary forces exit with FAILURE
 cd /html/eol_php_code/update_resources/connectors
 
-#step 1: just one connector
-php5.6 wikidata.php jenkins &apos;{&quot;task&quot;:&quot;create_all_taxon_dump&quot;}&apos; #OK - few hours
+#step 1: just one connector --- works OK
+###php5.6 wikidata.php jenkins &apos;{&quot;task&quot;:&quot;create_all_taxon_dump&quot;}&apos; #OK - few hours
 # generates latest-all-taxon.json
 
+cd /extra/dumps/wikidata
 gzip -c latest-all-taxon.json &gt; latest-all-taxon.json.gz
 # just for backup, since this file is hard to generate.
 

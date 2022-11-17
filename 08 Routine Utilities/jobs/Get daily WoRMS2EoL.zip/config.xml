@@ -32,8 +32,8 @@ cd /extra/other_files/WoRMS/
 ls -lt
 rm -f WoRMS2EoL.zip
 
-
-wget -nv http://www.marinespecies.org/export/eol/WoRMS2EoL.zip
+#wget -nv http://www.marinespecies.org/export/eol/WoRMS2EoL.zip
+wget -c --no-check-certificate --no-verbose http://www.marinespecies.org/export/eol/WoRMS2EoL.zip
 
 #wget -c -nv http://www.marinespecies.org/export/eol/WoRMS2EoL.zip
 ## -nv means non-verbose but errors gets printed out.
@@ -42,6 +42,10 @@ wget -nv http://www.marinespecies.org/export/eol/WoRMS2EoL.zip
 ls -lt
 chmod 755 WoRMS2EoL.zip
 ls -lt
+
+# both worked OK
+#cd /html/other_files/WoRMS/
+#cd /extra/other_files/WoRMS/
 </command>
     </hudson.tasks.Shell>
   </builders>
