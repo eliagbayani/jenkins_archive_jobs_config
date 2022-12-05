@@ -21,7 +21,7 @@
   <triggers>
     <hudson.triggers.TimerTrigger>
       <spec># monthly, every 1st day of the month:
-H H 1 10,12,2,4,6,8 *</spec>
+#H H 1 10,12,2,4,6,8 *</spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
