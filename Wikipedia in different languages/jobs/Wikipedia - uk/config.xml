@@ -25,7 +25,13 @@
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 
+# for 1 connector run: orig
 php5.6 wikipedia.php jenkins uk #Ukranian
+
+# for multiple conn run (six conn)
+#php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:6, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;uk&quot;,  &quot;cont_2next_lang&quot;:&quot;N&quot;, &quot;six_coverage&quot;:&quot;1st&quot;}&apos;
+# worked OK to force run 6 connectors.
+
 
 # === STEP: fill-up missing parent entries
 php5.6 fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-uk&quot;, &quot;source_dwca&quot;: &quot;wikipedia-uk&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
