@@ -22,9 +22,11 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
-php5.6 nmnh_images.php jenkins
+      <command>now moved to http://160.111.248.39:8081/job/NMNH_images/
+exit
+
+#cd /html/eol_php_code/update_resources/connectors
+#php5.6 nmnh_images.php jenkins
 </command>
     </hudson.tasks.Shell>
   </builders>

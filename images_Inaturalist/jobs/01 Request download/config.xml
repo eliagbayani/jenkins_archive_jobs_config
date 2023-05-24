@@ -20,8 +20,8 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
     <hudson.triggers.TimerTrigger>
-      <spec># 13th of the month. Quarterly = Feb May Aug Nov
-H H 13 5,8,11,2 *</spec>
+      <spec>#1st of the month. = Mar May Jul Sep Nov Jan
+H H 1 3,5,7,9,11,1 *</spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
@@ -32,7 +32,7 @@ H H 13 5,8,11,2 *</spec>
 php5.6 gbif_download_request_for_iNat.php jenkins &apos;{&quot;task&quot;:&quot;send_download_request&quot;, &quot;taxon&quot;:&quot;iNat_images&quot;}&apos;
 
 ### Will wait for a half a day to check if downloads are ready
-sleep 12h
+sleep 5h
 
 ### This does not do anything. Can be commented.
 ### php5.6 gbif_download_request_for_iNat.php jenkins &apos;{&quot;task&quot;:&quot;start_download&quot;, &quot;taxon&quot;:&quot;iNat_images&quot;}&apos;

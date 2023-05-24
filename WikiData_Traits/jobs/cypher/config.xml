@@ -18,26 +18,31 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers>
-    <hudson.triggers.TimerTrigger>
-      <spec># once a day on the 1st and 15th of every month except December
-H H 15 1,3,5,7,9,11 *</spec>
-    </hudson.triggers.TimerTrigger>
-  </triggers>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-# OK
-php5.6 globi_data.php jenkins
-# generates globi_associations.tar.gz
-# then also...
-# generates globi_associations_final.tar.gz
+echo &quot;try --&gt; 1&quot;
+php5.6 cypher.php jenkins
+sleep 300 #5 mins
 
-# OK - part of main operation. Temporarily commented as I&apos;m fixing above script.
-php5.6 make_hash_IDs_4Deltas.php jenkins &apos;{&quot;task&quot;: &quot;&quot;, &quot;resource&quot;:&quot;Deltas_4hashing&quot;, &quot;resource_id&quot;:&quot;globi_associations_final&quot;}&apos;
-# generates globi_associations_delta.tar.gz
+echo &quot;try --&gt; 2&quot;
+php5.6 cypher.php jenkins
+sleep 300 #5 mins
+
+echo &quot;try --&gt; 3&quot;
+php5.6 cypher.php jenkins
+sleep 300 #5 mins
+
+echo &quot;try --&gt; 4&quot;
+php5.6 cypher.php jenkins
+sleep 300 #5 mins
+
+echo &quot;try --&gt; 5&quot;
+php5.6 cypher.php jenkins
+sleep 300 #5 mins
 </command>
     </hudson.tasks.Shell>
   </builders>

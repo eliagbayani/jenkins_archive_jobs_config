@@ -20,8 +20,9 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
     <hudson.triggers.TimerTrigger>
-      <spec># monthly, every 1st day of the month:
-#H H 1 10,12,2,4,6,8 *</spec>
+      <spec># quarterly Feb May Aug Nov
+#H H 5 2,5,8,11 *
+</spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>

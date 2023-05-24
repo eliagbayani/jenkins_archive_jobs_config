@@ -28,18 +28,18 @@
 #gzip -c eli.txt &gt; eli.txt.gz
 #ls -lt
 
-cd /extra/dumps/wikidata
-ls -lt
+#cd /extra/dumps/wikidata
+#ls -lt
 
 
-#which gnparser
+which gnparser
 
 #/usr/bin/gnparser name -f &quot;json-pretty&quot; &quot;Gadus morhua Jordan, 1964&quot;
 
 #/usr/local/bin/gnparser -h
 #/opt/gnparser/bin/gnparser -h
 
-#gnparser name -f json-pretty &apos;Gadus morhua Jordan, 1964&apos;
+gnparser name -f json-pretty &apos;Gadus morhua Jordan, 1964&apos;
 
 #cd /extra/other_files/
 #cd /extra/d_w_h/2018_12/

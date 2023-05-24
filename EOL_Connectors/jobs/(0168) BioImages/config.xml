@@ -18,20 +18,34 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers/>
+  <triggers>
+    <hudson.triggers.TimerTrigger>
+      <spec># once a day on the 1st and 15th of every month except December
+H H 1 7,10,1,4 *</spec>
+    </hudson.triggers.TimerTrigger>
+  </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 
-### last run April 14 2018
 ### this will generate 168.tar.gz
-### needs to be updated first, generates far less fewer records than usual.
-#php5.6 168.php jenkins
+php5.6 168.php jenkins
 
 ### this will generate 168_meta_recoded.tar.gz
 php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;168_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
+
+
+#LAST STEP: copy last transactional DwCA to Bioimages.tar.gz OK
+
+cd /html/eol_php_code/applications/content_server/resources
+cp 168_meta_recoded.tar.gz Bioimages.tar.gz
+ls -lt 168_meta_recoded.tar.gz
+ls -lt Bioimages.tar.gz
+rm -f 168_meta_recoded.tar.gz
+
+
 </command>
     </hudson.tasks.Shell>
   </builders>
