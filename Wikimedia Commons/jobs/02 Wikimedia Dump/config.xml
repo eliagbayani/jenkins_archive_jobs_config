@@ -38,7 +38,7 @@ cd /extra/dumps/wikidata/wikimedia
 
 
 #works OK:
-wget -c -nv --no-check-certificate http://dumps.wikimedia.org/commonswiki/latest/commonswiki-latest-pages-articles.xml.bz2
+wget -c -nv --no-check-certificate https://dumps.wikimedia.org/commonswiki/latest/commonswiki-latest-pages-articles.xml.bz2
 # -nv means non-verbose but errors get printted out still.
 
 #works OK:

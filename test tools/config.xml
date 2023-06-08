@@ -22,8 +22,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>
-#cd /extra/dumps/wikidata
+      <command>#cd /extra/dumps/wikidata
 #touch eli.txt
 #gzip -c eli.txt &gt; eli.txt.gz
 #ls -lt
@@ -31,15 +30,26 @@
 #cd /extra/dumps/wikidata
 #ls -lt
 
+df -h
+#cd /usr/bin
+#ls -lt
 
-which gnparser
+#cd /usr/local/bin
+#cd /opt
+#ls -lt
+
+/extra/gnparser/gnparser/bin/gnparser &quot;Homo sapiens Linnaeus 1758&quot; -f pretty
+
+/extra/gnparser/gnparser/bin/gnparser -V
+
+/extra/gnparser/gnparser172/gnparser -V
+/extra/gnparser/gnparser172/gnparser &quot;Homo sapiens Linnaeus 1758&quot; -f pretty
 
 #/usr/bin/gnparser name -f &quot;json-pretty&quot; &quot;Gadus morhua Jordan, 1964&quot;
 
 #/usr/local/bin/gnparser -h
 #/opt/gnparser/bin/gnparser -h
 
-gnparser name -f json-pretty &apos;Gadus morhua Jordan, 1964&apos;
 
 #cd /extra/other_files/
 #cd /extra/d_w_h/2018_12/

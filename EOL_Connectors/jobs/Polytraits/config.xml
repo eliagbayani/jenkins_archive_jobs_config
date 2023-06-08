@@ -18,13 +18,21 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers/>
+  <triggers>
+    <hudson.triggers.TimerTrigger>
+      <spec># once a day on the 1st and 15th of every month except December
+H H 13 6,8,10,12,2,4 *</spec>
+    </hudson.triggers.TimerTrigger>
+  </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
-php5.6 polytraits.php jenkins
+      <command>cd /html/eol_php_code/update_resources/connectors
+
+### php5.6 polytraits.php jenkins #OBSOLETE
+
+php5.6 polytraits_new.php jenkins
+
 </command>
     </hudson.tasks.Shell>
   </builders>

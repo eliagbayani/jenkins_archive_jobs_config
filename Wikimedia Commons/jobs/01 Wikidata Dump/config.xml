@@ -21,7 +21,7 @@
   <triggers>
     <hudson.triggers.TimerTrigger>
       <spec># quarterly Feb May Aug Nov
-#H H 5 2,5,8,11 *
+H H 5 3,6,9,12 *
 </spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
