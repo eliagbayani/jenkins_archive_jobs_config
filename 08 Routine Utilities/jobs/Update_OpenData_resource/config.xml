@@ -1,13 +1,13 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>https://eol-jira.bibalex.org/browse/DATA-1802</description>
+  <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>3</numToKeep>
+        <numToKeep>5</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -18,22 +18,16 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers>
-    <hudson.triggers.TimerTrigger>
-      <spec>### run quarterly:
-#H H(1-1) 10 11,2,5,8 *
-H H(1-1) 10 1-12 *
-</spec>
-    </hudson.triggers.TimerTrigger>
-  </triggers>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
+      <command># All trait data dump
 cd /html/eol_php_code/update_resources/connectors
-php5.6 protisten.php jenkins
+#php5.6 ckan_api_access.php jenkins &quot;6e24f0df-56ee-470f-b81e-e5a367a65bfb&quot; &quot;07/08/2023 21:41:00&quot;
+#Jul 8, 2023 9:41 PM
 
-# php5.6 ckan_api_access.php jenkins &quot;84c7f07a-8b39-467b-923e-b9e9ef5fa45a&quot;
+php5.6 ckan_api_access.php jenkins &quot;a10fbde2-6dd1-4155-aabf-3628a1d71a84&quot;
 </command>
     </hudson.tasks.Shell>
   </builders>

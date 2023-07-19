@@ -45,7 +45,7 @@ ls -lt 168_meta_recoded.tar.gz
 ls -lt Bioimages.tar.gz
 rm -f 168_meta_recoded.tar.gz
 
-
+php5.6 ckan_api_access.php jenkins &quot;5b1ebec7-efd0-47b5-860e-5c841d88d366&quot;
 </command>
     </hudson.tasks.Shell>
   </builders>
