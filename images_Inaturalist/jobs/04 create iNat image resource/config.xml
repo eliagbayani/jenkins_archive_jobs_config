@@ -31,7 +31,8 @@ php5.6 inat_images.php jenkins
 
 
 ## IMPORTANT: this last step will be run in command-line, 
-## since python can&apos;t be accessed here in Jenkins.
+## since &apos;convert&apos; can&apos;t be accessed here in Jenkins.
+## &apos;convert&apos; is imageMagick
 # php5.6 inat_images_select.php jenkins
 ## generates inat_images_100cap.tar.gz --- didn&apos;t materialize
 ## generates inat_images_3Mcap

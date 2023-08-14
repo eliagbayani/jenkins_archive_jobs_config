@@ -30,7 +30,7 @@ php5.6 wikipedia.php jenkins udm #Udmurt
 # === STEP: fill-up missing parent entries
 php5.6 fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-udm&quot;, &quot;source_dwca&quot;: &quot;wikipedia-udm&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
 
-</command>
+#Build other projects: wikipedia-co (Corsican)</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

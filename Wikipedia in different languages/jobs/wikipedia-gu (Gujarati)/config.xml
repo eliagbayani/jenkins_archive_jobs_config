@@ -25,11 +25,17 @@
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 
-php5.6 wikipedia.php jenkins gu #Gujarati
+#orig:
+#php5.6 wikipedia.php jenkins gu #Gujarati
+
+php5.6 wikipedia.php jenkins gu generate_resource_force
+
 
 # === STEP: fill-up missing parent entries
 php5.6 fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-gu&quot;, &quot;source_dwca&quot;: &quot;wikipedia-gu&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
-</command>
+
+
+#Build other projects: wikipedia-vls (West Flemish)</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

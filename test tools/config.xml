@@ -206,7 +206,27 @@ df -h
 #cd /extra/eol_php_code_tmp/
 #ls -lt
 
-#php -v</command>
+#php -v
+
+which python
+
+python -V
+/usr/bin/python -V
+
+python2 -V
+/usr/bin/python2 -V
+
+python2.7 -V
+/usr/bin/python2.7 -V
+
+#/usr/local/bin/convert -version
+#/usr/bin/convert -version
+
+
+cd /usr/local/bin/
+ls -lt
+
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
