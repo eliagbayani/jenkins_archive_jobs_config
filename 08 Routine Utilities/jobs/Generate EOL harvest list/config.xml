@@ -23,7 +23,7 @@
       <spec># once every two hours at 45 minutes past the hour starting at 9:45 AM and finishing at 3:45 PM every weekday.
 # 45 9-16/2 * * 1-5 # working default
 
-55 0-23/6 * * 1-5</spec>
+H 0-23/6 * * 1-5</spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>

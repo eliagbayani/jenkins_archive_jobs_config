@@ -29,19 +29,10 @@ php5.6 wikipedia.php jenkins zea #Zeelandic
 
 # === STEP: fill-up missing parent entries
 php5.6 fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-zea&quot;, &quot;source_dwca&quot;: &quot;wikipedia-zea&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
-</command>
+
+#post build: wikipedia-ceb (Cebu)</command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>wikipedia-ceb (Cebu)</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-        <completeBuild>true</completeBuild>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
-  </publishers>
+  <publishers/>
   <buildWrappers/>
 </project>

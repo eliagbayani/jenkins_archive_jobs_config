@@ -18,34 +18,23 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers>
-    <hudson.triggers.TimerTrigger>
-      <spec>## working but commented for now Aug 1, 2019
-#H H(1-1) 1 2,4,6,8,10,12 *
-
-### scheduled to run after Wikimedia resource is done.</spec>
-    </hudson.triggers.TimerTrigger>
-  </triggers>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>exit #obsolete
-
-### use this if you want to stop dead on its tracks
+      <command>### use this if you want to stop dead on its tracks
 #exit 1
-### temporarily stopped by Eli Jun 17, 2022.
 
-cd /html/eol_php_code/applications/content_server/resources
-rm -f wikipedia_generation_status*.txt 
+#cd /html/eol_php_code/applications/content_server/resources
+#rm -f wikipedia_generation_status*.txt 
+#[ -f wikipedia_*.tmp ] &amp;&amp; rm -f wikipedia_*.tmp || echo &quot;Files do not exist&quot;
 
-[ -f wikipedia_*.tmp ] &amp;&amp; rm -f wikipedia_*.tmp || echo &quot;Files do not exist&quot;
-
-#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-#php5.6 wikipedia.php jenkins en #English
+php5.6 wikipedia.php jenkins en #English
+#should generate 80.tar.gz
+
 #---------------------
 #initially six (6) connectors
-
 #echo &quot;start Wikipedia en build...&quot;
 #php5.6 wikipedia.php jenkins en generate_resource 1 416666 1of6
 #php5.6 wikipedia.php jenkins en generate_resource 416666 833332 2of6
@@ -58,7 +47,7 @@ cd /html/eol_php_code/update_resources/connectors
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>taxon_wiki_per_language_stats</childProjects>
+      <childProjects>../Environmental tagger for EOL resources/Wikipedia EN (English)</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

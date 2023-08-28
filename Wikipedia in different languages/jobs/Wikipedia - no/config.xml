@@ -27,8 +27,8 @@ cd /html/eol_php_code/update_resources/connectors
 
 php5.6 wikipedia.php jenkins no #Norwegian
 
-# === STEP: fill-up missing parent entries
-php5.6 fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-no&quot;, &quot;source_dwca&quot;: &quot;wikipedia-no&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
+# === STEP: fill-up missing parent entries | DOES NOT NEED ANYMORE
+#php5.6 fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-no&quot;, &quot;source_dwca&quot;: &quot;wikipedia-no&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
 
 
 ### normal is to cont to:
@@ -37,7 +37,7 @@ php5.6 fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &qu
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>wikipedia-ka (Georgian)</childProjects>
+      <childProjects>Wikipedia - sv</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

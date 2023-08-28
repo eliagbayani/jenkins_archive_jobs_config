@@ -28,7 +28,7 @@ rm -f wikipedia_generation_status*.txt
 [ -f wikipedia_*.tmp ] &amp;&amp; rm -f wikipedia_*.tmp || echo &quot;Files do not exist&quot;
 
 # regular main:
-cd /html/eol_php_code/update_resources/connectors
+#cd /html/eol_php_code/update_resources/connectors
 
 #php5.6 wikipedia_ver2.php jenkins ce #Chechen
 # -&gt; orig 1 connector run
@@ -36,21 +36,30 @@ cd /html/eol_php_code/update_resources/connectors
 #php5.6 wikipedia_ver2.php jenkins ce generate_resource_force #Chechen
 # -&gt; OK works orig 1 connector run --- same as above
 
-php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:6, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;en&quot;,  &quot;cont_2next_lang&quot;:&quot;Y&quot;, &quot;six_coverage&quot;:&quot;1st&quot;}&apos;
-
-#php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:6, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;ce&quot;}&apos;
+#php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:6, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;en&quot;,  &quot;cont_2next_lang&quot;:&quot;Y&quot;, &quot;six_coverage&quot;:&quot;1st&quot;}&apos;
 #php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:6, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;war&quot;, &quot;cont_2next_lang&quot;:&quot;Y&quot;}&apos;
+#php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:6, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;ce&quot;}&apos;
 
 #originally post builds 4:
 # /Wikipedia in different languages/Wikipedia - no,
 # /Wikipedia in different languages/Wikipedia - ro,
 # /Wikipedia in different languages/Wikipedia - tr,
-# /Wikipedia in different languages/Wikipedia - uk</command>
+# /Wikipedia in different languages/Wikipedia - uk
+
+# LATEST: post builds: as of Aug 28, 2023
+# en, no, tr -&gt; will start single connectors
+# es -&gt; will start 6c multiple connectors
+###../Wikipedia in different languages/Wikipedia - en, 
+###../Wikipedia in different languages/Wikipedia - es, 
+###../Wikipedia in different languages/Wikipedia - no, 
+###../Wikipedia in different languages/Wikipedia - tr
+
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>/Wikipedia in different languages/Wikipedia - no,/Wikipedia in different languages/Wikipedia - tr</childProjects>
+      <childProjects>../Wikipedia in different languages/Wikipedia - en, ../Wikipedia in different languages/Wikipedia - es, ../Wikipedia in different languages/Wikipedia - no, ../Wikipedia in different languages/Wikipedia - tr</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

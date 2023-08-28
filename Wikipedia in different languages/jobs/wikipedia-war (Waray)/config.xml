@@ -22,21 +22,24 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
-
-php5.6 wikipedia.php jenkins wa #Walloon
-
-# === STEP: fill-up missing parent entries
-php5.6 fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-wa&quot;, &quot;source_dwca&quot;: &quot;wikipedia-wa&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
+      <command>cd /html/eol_php_code/update_resources/connectors
 
 
-#build other proj: wikipedia-nah (Nahuatl)</command>
+### php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:6, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;war&quot;}&apos;
+# -&gt; new OK 6 connectors run
+
+# only processes single conn.
+php5.6 wikipedia.php jenkins war
+
+php5.6 fill_up_undefined_parents_real.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-war&quot;, &quot;source_dwca&quot;: &quot;wikipedia-war&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
+
+
+#orig post build: aggregate_wikipedia</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>wikipedia-nah (Nahuatl)</childProjects>
+      <childProjects>aggregate_wikipedia</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

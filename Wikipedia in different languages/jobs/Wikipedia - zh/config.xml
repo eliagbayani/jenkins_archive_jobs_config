@@ -25,18 +25,18 @@
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 
-php5.6 wikipedia.php jenkins wa #Walloon
+php5.6 wikipedia.php jenkins zh
 
-# === STEP: fill-up missing parent entries
-php5.6 fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-wa&quot;, &quot;source_dwca&quot;: &quot;wikipedia-wa&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
+# === STEP: fill-up missing parent entries | SEEMS NOT NEEDED ANYMORE
+#php5.6 fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-zh&quot;, &quot;source_dwca&quot;: &quot;wikipedia-zh&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
 
 
-#build other proj: wikipedia-nah (Nahuatl)</command>
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>wikipedia-nah (Nahuatl)</childProjects>
+      <childProjects>wikipedia-th (Thai)</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
