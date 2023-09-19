@@ -37,7 +37,7 @@ php5.6 wikipedia.php jenkins no #Norwegian
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>Wikipedia - sv</childProjects>
+      <childProjects>wikipedia-ka (Georgian)</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

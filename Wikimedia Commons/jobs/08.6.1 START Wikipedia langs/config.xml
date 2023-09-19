@@ -59,7 +59,7 @@ rm -f wikipedia_generation_status*.txt
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>../Wikipedia in different languages/Wikipedia - en, ../Wikipedia in different languages/Wikipedia - es, ../Wikipedia in different languages/Wikipedia - no, ../Wikipedia in different languages/Wikipedia - tr</childProjects>
+      <childProjects>../Wikipedia in different languages/Wikipedia - en,../Wikipedia in different languages/Wikipedia - es,../Wikipedia in different languages/Wikipedia - no,../Wikipedia in different languages/Wikipedia - tr</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
