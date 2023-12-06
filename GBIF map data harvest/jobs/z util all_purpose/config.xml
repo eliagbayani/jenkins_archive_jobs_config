@@ -22,15 +22,43 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /extra/other_files/GBIF_occurrence/DwCA_Other7Groups/
-rm -f Other7Groups_DwcA.zip
-###curl -L -o &apos;Other7Groups_DwcA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0081146-200221144449610.zip                                        
-bash /html/eol_php_code/update_resources/connectors/files/GBIF/run_Other7Groups.sh
-unzip -jo Other7Groups_DwCA.zip multimedia.txt
-unzip -jo Other7Groups_DwCA.zip occurrence.txt
+      <command>#exit ### exit muna
+### Latest as of Oct2018 | 8Jun2020 | 27Sep2023
+
+### UN-COMMENT ALL THOSE WITH ## FOR ORIG OPERATION
+
+### start initializing - deleting old files ==============
+
+### Remove all CSV files (.csv):
+rm -rf /extra/other_files/GBIF_occurrence/GBIF_taxa_csv_dwca/*
+
+### Remove multimedia assignments to taxon (.txt): 
+### --- PLEASE REVIEW IF WE NEED TO REMOVE THIS EVERY HARVEST --- BEC. IT TAKES SO MUCH TIME
+rm -rf /extra/other_files/GBIF_occurrence/multimedia_gbifID/*
+
+### Move txt files before nuke /map_data_dwca/*
+[ ! -d &quot;/extra/tmp&quot; ] &amp;&amp; mkdir /extra/tmp
+mv /extra/map_data_dwca/final_taxon_concept_IDS*.txt /extra/tmp/
+
+### Remove all map data (.json)
+rm -rf /extra/map_data_dwca/*
+
+### Move back txt files
+mv /extra/tmp/final_taxon_concept_IDS*.txt /extra/map_data_dwca/
+
 </command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>02a breakdown Animalia</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+  </publishers>
   <buildWrappers/>
 </project>

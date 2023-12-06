@@ -1,0 +1,76 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>3</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>cd /html/eol_php_code/update_resources/connectors
+
+#php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:10, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;sv&quot;}&apos;
+# -&gt; new OK 6 connectors run
+
+#php5.6 wikipedia.php jenkins ps --- right to left
+#php5.6 wikipedia.php jenkins sd
+#php5.6 wikipedia.php jenkins ckb
+#php5.6 wikipedia.php jenkins dv
+
+
+php5.6 wikipedia.php jenkins ak
+php5.6 wikipedia.php jenkins bm
+php5.6 wikipedia.php jenkins cu
+php5.6 wikipedia.php jenkins ks
+php5.6 wikipedia.php jenkins pap
+php5.6 wikipedia.php jenkins got
+php5.6 wikipedia.php jenkins ee
+php5.6 wikipedia.php jenkins ady
+php5.6 wikipedia.php jenkins pih
+php5.6 wikipedia.php jenkins ki
+php5.6 wikipedia.php jenkins shn
+php5.6 wikipedia.php jenkins pi
+php5.6 wikipedia.php jenkins sm
+php5.6 wikipedia.php jenkins ti
+php5.6 wikipedia.php jenkins ve
+php5.6 wikipedia.php jenkins ch
+php5.6 wikipedia.php jenkins ig
+php5.6 wikipedia.php jenkins lrc
+php5.6 wikipedia.php jenkins om
+php5.6 wikipedia.php jenkins st
+php5.6 wikipedia.php jenkins din
+php5.6 wikipedia.php jenkins ss
+php5.6 wikipedia.php jenkins tet
+php5.6 wikipedia.php jenkins sg
+php5.6 wikipedia.php jenkins ff
+php5.6 wikipedia.php jenkins pnt
+php5.6 wikipedia.php jenkins tn
+php5.6 wikipedia.php jenkins cbk-zam
+php5.6 wikipedia.php jenkins rmy
+php5.6 wikipedia.php jenkins bug
+php5.6 wikipedia.php jenkins data
+php5.6 wikipedia.php jenkins dz
+php5.6 wikipedia.php jenkins nqo
+php5.6 wikipedia.php jenkins mh
+php5.6 wikipedia.php jenkins tw
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

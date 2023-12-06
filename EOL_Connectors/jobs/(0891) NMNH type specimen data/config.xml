@@ -8,7 +8,7 @@ https://opendata.eol.org/dataset/national_museum-of_natural_history</description
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>3</numToKeep>
+        <numToKeep>6</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -28,10 +28,11 @@ https://opendata.eol.org/dataset/national_museum-of_natural_history</description
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
+      <command>cd /html/eol_php_code/update_resources/connectors
 php5.6 891.php jenkins
-</command>
+
+# just tests:
+#php5.6 download_extract.php jenkins</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

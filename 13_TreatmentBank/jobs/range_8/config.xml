@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>-1</numToKeep>
+        <numToKeep>2</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -22,22 +22,12 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>echo &quot;this is d&quot;
-#exit 1 #--- error in jenkins
-
-#exit #no error in jenkins</command>
+      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
+cd /html/eol_php_code/update_resources/connectors
+php5.6 treatment_bank.php jenkins &apos;{&quot;range_from&quot;: &quot;700000&quot;, &quot;range_to&quot;:&quot;779000&quot;}&apos;
+# total 778,468</command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>z_util_4e</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-        <completeBuild>true</completeBuild>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
-  </publishers>
+  <publishers/>
   <buildWrappers/>
 </project>

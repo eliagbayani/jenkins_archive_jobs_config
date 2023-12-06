@@ -22,7 +22,8 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>### Latest as of Oct2018 | 8Jun2020
+      <command>exit 1 ### exit muna
+### Latest as of Oct2018 | 8Jun2020 | 27Sep2023
 
 ### UN-COMMENT ALL THOSE WITH ## FOR ORIG OPERATION
 
@@ -32,7 +33,8 @@
 rm -rf /extra/other_files/GBIF_occurrence/GBIF_taxa_csv_dwca/*
 
 ### Remove multimedia assignments to taxon (.txt): 
-### --- PLEASE REVIEW IF WE NEED TO REMOVE THIS EVERY HARVEST --- BEC. IT TAKES SO MUCH TIME
+### --- PLEASE REVIEW IF WE NEED TO REMOVE THIS EVERY HARVEST 
+### --- BEC. IT TAKES SO MUCH TIME
 rm -rf /extra/other_files/GBIF_occurrence/multimedia_gbifID/*
 
 ### Move txt files before nuke /map_data_dwca/*
@@ -45,14 +47,17 @@ rm -rf /extra/map_data_dwca/*
 ### Move back txt files
 mv /extra/tmp/final_taxon_concept_IDS*.txt /extra/map_data_dwca/
 
+#### exit 1
 
 ### start DwCA downloads ================================= worked OK
 
 ### OK
 cd /extra/other_files/GBIF_occurrence/DwCA_Animalia/
-[ -f Animalia_DwCA.zip ] &amp;&amp; rm -f Animalia_DwCA.zip || echo &quot;File does not exist. OK&quot;
-# old way ##curl -L -o &apos;Animalia_DwCA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0081142-200221144449610.zip
+[ -f Animalia_DwCA.zip ] &amp;&amp; rm -f Animalia_DwCA.zip || echo &quot;Animalia_DwCA.zip does not exist. OK&quot;
+#### old way ##curl -L -o &apos;Animalia_DwCA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0081142-200221144449610.zip
 bash /html/eol_php_code/update_resources/connectors/files/GBIF/run_Animalia.sh
+[ -f multimedia.txt ] &amp;&amp; rm -f multimedia.txt || echo &quot;multimedia.txt does not exist. OK&quot;
+[ -f occurrence.txt ] &amp;&amp; rm -f occurrence.txt || echo &quot;occurrence.txt does not exist. OK&quot;
 unzip -jo Animalia_DwCA.zip multimedia.txt
 unzip -jo Animalia_DwCA.zip occurrence.txt
 rm -f Animalia_DwCA.zip #after unzipping remove zip file
@@ -60,20 +65,24 @@ rm -f Animalia_DwCA.zip #after unzipping remove zip file
 ### OK
 cd /extra/other_files/GBIF_occurrence/DwCA_Plantae/
 [ -f Plantae_DwCA.zip ] &amp;&amp; rm -f Plantae_DwCA.zip || echo &quot;File does not exist. OK&quot;
-# old way ##curl -L -o &apos;Plantae_DwCA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0081144-200221144449610.zip                                   
+#### old way ##curl -L -o &apos;Plantae_DwCA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0081144-200221144449610.zip                                   
 bash /html/eol_php_code/update_resources/connectors/files/GBIF/run_Plantae.sh
+[ -f multimedia.txt ] &amp;&amp; rm -f multimedia.txt || echo &quot;multimedia.txt does not exist. OK&quot;
+[ -f occurrence.txt ] &amp;&amp; rm -f occurrence.txt || echo &quot;occurrence.txt does not exist. OK&quot;
 unzip -jo Plantae_DwCA.zip multimedia.txt
 unzip -jo Plantae_DwCA.zip occurrence.txt
 rm -f Plantae_DwCA.zip #after unzipping remove zip file
 
 ### OK
 cd /extra/other_files/GBIF_occurrence/DwCA_Other7Groups/
-[ -f Other7Groups_DwcA.zip ] &amp;&amp; rm -f Other7Groups_DwcA.zip || echo &quot;File does not exist. OK&quot;
-# old way ##curl -L -o &apos;Other7Groups_DwcA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0081146-200221144449610.zip                                        
+[ -f Other7Groups_DwCA.zip ] &amp;&amp; rm -f Other7Groups_DwCA.zip || echo &quot;File does not exist. OK&quot;
+#### old way ##curl -L -o &apos;Other7Groups_DwCA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/0081146-200221144449610.zip                                        
 bash /html/eol_php_code/update_resources/connectors/files/GBIF/run_Other7Groups.sh
+[ -f multimedia.txt ] &amp;&amp; rm -f multimedia.txt || echo &quot;multimedia.txt does not exist. OK&quot;
+[ -f occurrence.txt ] &amp;&amp; rm -f occurrence.txt || echo &quot;occurrence.txt does not exist. OK&quot;
 unzip -jo Other7Groups_DwCA.zip multimedia.txt
 unzip -jo Other7Groups_DwCA.zip occurrence.txt
-rm -f Other7Groups_DwcA.zip #after unzipping remove zip file
+rm -f Other7Groups_DwCA.zip #after unzipping remove zip file
 
 
 # ORIG next step, commented temporarily

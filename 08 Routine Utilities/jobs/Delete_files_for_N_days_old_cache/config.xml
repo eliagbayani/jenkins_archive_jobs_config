@@ -30,8 +30,8 @@
       <command>## working OK
 #cd /extra/eol_php_cache/
 cd /extra/
-#find eol_php_cache/     -mtime +1825 -name &apos;*.cache&apos; -type f  -ls
-#find eol_php_cache/     -mtime +1825 -name &apos;*.cache&apos; -type f  -delete
+#find eol_php_cache/     -mtime +1460 -name &apos;*.cache&apos; -type f  -ls
+find eol_php_cache/     -mtime +1460 -name &apos;*.cache&apos; -type f  -delete
 
 
 #find &apos;eol_php_cache/13/&apos; -mtime +1825 -name &apos;*.cache&apos; -type f  -ls
@@ -42,6 +42,7 @@ cd /extra/
 ping smtp.gmail.com
 
 
+## files ends with .cache, older than 4 years = 365*4 = 1460 meron
 ## files ends with .cache, older than 5 years = 365*5 = 1825 meron
 ## files ends with .cache, older than 6 years = 365*6 = 2190 nothing
 ## files ends with .cache, older than 7 years = 365*7 = 2555 nothing

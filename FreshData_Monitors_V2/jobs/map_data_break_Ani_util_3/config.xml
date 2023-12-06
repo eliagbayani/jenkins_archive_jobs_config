@@ -22,12 +22,21 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
-php5.6 treatment_bank.php jenkins &apos;{&quot;range_from&quot;: &quot;494000&quot;, &quot;range_to&quot;:&quot;497000&quot;}&apos;
+      <command>cd /html/eol_php_code/update_resources/connectors
+php breakdown_GBIF_DwCA_file.php jenkins &apos;{&quot;group&quot;:&quot;Animalia&quot;,&quot;range&quot;:[516000000,604128934],&quot;ctr&quot;:3,&quot;rank&quot;:&quot;&quot;}&apos;
 </command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>../GBIF map data harvest/02b breakdown Plantae</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+  </publishers>
   <buildWrappers/>
 </project>

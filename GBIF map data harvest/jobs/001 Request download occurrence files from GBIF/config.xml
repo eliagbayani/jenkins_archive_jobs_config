@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>3</numToKeep>
+        <numToKeep>5</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -23,21 +23,26 @@
       <spec># twice a year - Apr and Oct
 # H H 1 4,10 *
 # trice a year - Oct, Feb, Jun
-H H 1 2,6,10 *</spec>
+#H H 1 2,6,10 *</spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
+      <command>exit 1 ### exit muna
+
+cd /html/eol_php_code/update_resources/connectors
 ### This will overwrite any current download request. 
 ### Run this once ONLY every harvest per taxon group.
 php5.6 gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;send_download_request&quot;, &quot;taxon&quot;:&quot;Animalia&quot;}&apos;
 php5.6 gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;send_download_request&quot;, &quot;taxon&quot;:&quot;Plantae&quot;}&apos;
 php5.6 gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;send_download_request&quot;, &quot;taxon&quot;:&quot;Other7Groups&quot;}&apos;
 
+### newly added here:
+rm -rf /extra/other_files/GBIF_occurrence/GBIF_taxa_csv_dwca/*
+
 ### Will wait for a day to check if downloads are ready
-sleep 24h
+sleep 12h
 
 ### This will generate the .sh file if download is ready. 
 ### The .sh file is the curl command to download.

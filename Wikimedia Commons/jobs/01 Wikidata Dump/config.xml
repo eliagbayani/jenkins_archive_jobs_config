@@ -21,7 +21,7 @@
   <triggers>
     <hudson.triggers.TimerTrigger>
       <spec># quarterly Feb May Aug Nov
-H H 30 3,6,9,12 *
+#H H 30 3,6,9,12 *
 </spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
@@ -29,7 +29,7 @@ H H 30 3,6,9,12 *
   <builders>
     <hudson.tasks.Shell>
       <command># temporarily commented due to some reason it should not run as scheduled
-#exit 1
+exit 1
 
 ### =========================================================================
 cd /html/eol_php_code/applications/content_server/resources

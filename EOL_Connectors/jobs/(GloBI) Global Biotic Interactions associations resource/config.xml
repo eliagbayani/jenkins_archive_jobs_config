@@ -34,6 +34,7 @@ php5.6 globi_data.php jenkins
 # generates globi_associations.tar.gz
 # then also...
 # generates globi_associations_final.tar.gz
+#exit 1 #during tests
 
 # OK - part of main operation. Temporarily commented as I&apos;m fixing above script.
 php5.6 make_hash_IDs_4Deltas.php jenkins &apos;{&quot;task&quot;: &quot;&quot;, &quot;resource&quot;:&quot;Deltas_4hashing&quot;, &quot;resource_id&quot;:&quot;globi_associations_final&quot;}&apos;

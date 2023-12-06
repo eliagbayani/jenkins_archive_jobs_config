@@ -33,19 +33,10 @@ php5.6 treatment_bank.php jenkins &apos;{&quot;task&quot;: &quot;generate_single
 
 ### orig continues to:
 ### Step 4 textmine
+### Step 4 textmine
 </command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>Step 4 textmine</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-        <completeBuild>true</completeBuild>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
-  </publishers>
+  <publishers/>
   <buildWrappers/>
 </project>

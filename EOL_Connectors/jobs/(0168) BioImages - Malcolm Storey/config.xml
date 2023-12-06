@@ -1,13 +1,13 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description></description>
+  <description>http://www.eol.org/content_partners/2/resources/42</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>2</numToKeep>
+        <numToKeep>3</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -18,13 +18,35 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers/>
+  <triggers>
+    <hudson.triggers.TimerTrigger>
+      <spec># quarterly - Jul Oct Jan Apr
+H H 1 7,10,1,4 *</spec>
+    </hudson.triggers.TimerTrigger>
+  </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-php5.6 treatment_bank.php jenkins &apos;{&quot;range_from&quot;: &quot;497000&quot;, &quot;range_to&quot;:&quot;500000&quot;}&apos;
+
+### this will generate 168.tar.gz
+php5.6 168.php jenkins
+
+### this will generate 168_meta_recoded.tar.gz
+php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;168_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
+
+
+#LAST STEP: copy last transactional DwCA to Bioimages.tar.gz OK
+
+cd /html/eol_php_code/applications/content_server/resources
+cp 168_meta_recoded.tar.gz Bioimages.tar.gz
+ls -lt 168_meta_recoded.tar.gz
+ls -lt Bioimages.tar.gz
+rm -f 168_meta_recoded.tar.gz
+
+cd /html/eol_php_code/update_resources/connectors
+php5.6 ckan_api_access.php jenkins &quot;5b1ebec7-efd0-47b5-860e-5c841d88d366&quot;
 </command>
     </hudson.tasks.Shell>
   </builders>

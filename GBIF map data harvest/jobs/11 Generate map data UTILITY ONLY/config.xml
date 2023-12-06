@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>3</numToKeep>
+        <numToKeep>6</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -28,9 +28,9 @@ cd /html/eol_php_code/update_resources/connectors
 
 
 ## works per taxon OK
-#php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;gen_map_data_forTaxa_with_children&quot;,&quot;sciname&quot;:&quot;Gadus&quot;,&quot;tc_id&quot;:46564414}&apos;
+php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;gen_map_data_forTaxa_with_children&quot;,&quot;sciname&quot;:&quot;Gadus&quot;,&quot;tc_id&quot;:46564414}&apos;
 #php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;gen_map_data_forTaxa_with_children&quot;,&quot;sciname&quot;:&quot;Gadidae&quot;,&quot;tc_id&quot;:5503}&apos;
-php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;gen_map_data_forTaxa_with_children&quot;,&quot;sciname&quot;:&quot;Gadiformes&quot;,&quot;tc_id&quot;:5496}&apos;
+#php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;gen_map_data_forTaxa_with_children&quot;,&quot;sciname&quot;:&quot;Gadiformes&quot;,&quot;tc_id&quot;:5496}&apos;
 
 
 ## taxon with many many children OK
