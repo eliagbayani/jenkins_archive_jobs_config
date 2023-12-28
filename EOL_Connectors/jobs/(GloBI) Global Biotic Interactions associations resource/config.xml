@@ -29,16 +29,31 @@ H H 15 1,3,5,7,9,11 *</spec>
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-# OK
+# step 1: OK
 php5.6 globi_data.php jenkins
 # generates globi_associations.tar.gz
 # then also...
 # generates globi_associations_final.tar.gz
 #exit 1 #during tests
 
-# OK - part of main operation. Temporarily commented as I&apos;m fixing above script.
+# step 2: OK - part of main operation. Temporarily commented as I&apos;m fixing above script.
 php5.6 make_hash_IDs_4Deltas.php jenkins &apos;{&quot;task&quot;: &quot;&quot;, &quot;resource&quot;:&quot;Deltas_4hashing&quot;, &quot;resource_id&quot;:&quot;globi_associations_final&quot;}&apos;
 # generates globi_associations_delta.tar.gz
+
+# step 3: OK remove unused Reference entries
+php5.6 remove_unused_references.php jenkins &apos;{&quot;resource_id&quot;: &quot;globi_associations_delta&quot;}&apos;
+# generates globi_associations_tmp1.tar.gz
+
+# === LAST STEP: copy globi_associations_tmp1.tar.gz to globi_assoc.tar.gz OK
+cd /html/eol_php_code/applications/content_server/resources
+cp globi_associations_tmp1.tar.gz globi_assoc.tar.gz
+ls -lt globi_associations_tmp1.tar.gz
+ls -lt globi_assoc.tar.gz
+# then delete globi_associations_tmp1.tar.gz
+rm -f globi_associations_tmp1.tar.gz
+
+cd /html/eol_php_code/update_resources/connectors
+php5.6 ckan_api_access.php jenkins &quot;c8392978-16c2-453b-8f0e-668fbf284b61&quot;
 </command>
     </hudson.tasks.Shell>
   </builders>

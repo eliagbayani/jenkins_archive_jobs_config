@@ -24,7 +24,7 @@
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-### orig scheme - obsolete
+### orig scheme - OBSOLETE
 # php5.6 wikidata.php jenkins generate_resource # orig
 
 ### new scheme

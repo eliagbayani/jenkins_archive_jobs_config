@@ -29,7 +29,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command># temporarily commented due to some reason it should not run as scheduled
-exit 1
+#exit 1
 
 ### =========================================================================
 cd /html/eol_php_code/applications/content_server/resources

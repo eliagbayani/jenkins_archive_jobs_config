@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>5</numToKeep>
+        <numToKeep>6</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -76,6 +76,11 @@ cp 26_MoF_normalized.tar.gz WoRMS.tar.gz
 ls -lt 26_MoF_normalized.tar.gz
 ls -lt WoRMS.tar.gz
 rm -f 26_MoF_normalized.tar.gz
+
+### but this only works if OpenData is set ot Public and not Private
+### https://opendata.eol.org/dataset/worms-internal
+cd /html/eol_php_code/update_resources/connectors
+php5.6 ckan_api_access.php jenkins &quot;a74bcc92-d2a2-4a7b-b18f-b5fd2e3a5b5c&quot;
 
 </command>
     </hudson.tasks.Shell>

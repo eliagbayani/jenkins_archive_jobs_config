@@ -25,8 +25,8 @@
       <command>cd /html/eol_php_code/update_resources/connectors
 
 ### main operation
-# php5.6 aggregate_71.php jenkins
-### -&gt; works OK
+php5.6 aggregate_71.php jenkins
+### -&gt; works OK | generates 71.tar.gz
 
 # === STEP: fill-up missing parent entries
 php5.6 fill_up_undefined_parents_real.php jenkins &apos;{&quot;resource_id&quot;: &quot;71&quot;, &quot;source_dwca&quot;: &quot;71&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;

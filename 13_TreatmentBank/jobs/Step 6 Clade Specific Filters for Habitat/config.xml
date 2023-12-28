@@ -22,18 +22,27 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
+      <command>cd /html/eol_php_code/update_resources/connectors
 php5.6 clade_filters_4_habitats.php jenkins &apos;{&quot;resource_id&quot;:&quot;TreatmentBank_adjustment_01&quot;}&apos;
-#-&gt; generates TreatmentBank_adjustment_02.tar.gz
+###-&gt; generates TreatmentBank_adjustment_02.tar.gz
 
-# === LAST STEP: copy TreatmentBank_adjustment_02.tar.gz to TreatmentBank_final.tar.gz OK
+
+php5.6 georgia_cntry_vs_state.php jenkins &apos;{&quot;resource_id&quot;: &quot;TreatmentBank_adjustment_02&quot;}&apos;
+### generates TreatmentBank_adjustment_03.tar.gz
+
+
+### === LAST STEP: copy TreatmentBank_adjustment_03.tar.gz to TreatmentBank_final.tar.gz OK
 cd /html/eol_php_code/applications/content_server/resources
-cp TreatmentBank_adjustment_02.tar.gz TreatmentBank_final.tar.gz
-ls -lt TreatmentBank_adjustment_02.tar.gz
+cp TreatmentBank_adjustment_03.tar.gz TreatmentBank_final.tar.gz
+ls -lt TreatmentBank_adjustment_03.tar.gz
 ls -lt TreatmentBank_final.tar.gz
-# then delete TreatmentBank_adjustment_02.tar.gz
-rm -f TreatmentBank_adjustment_02.tar.gz
+### then delete TreatmentBank_adjustment_03.tar.gz
+rm -f TreatmentBank_adjustment_03.tar.gz
+
+
+### below updates CKAN date updated entry
+cd /html/eol_php_code/update_resources/connectors
+php5.6 ckan_api_access.php jenkins &quot;8eaf28c4-67eb-4eb0-931e-7ac8f89a87cf&quot;
 </command>
     </hudson.tasks.Shell>
   </builders>

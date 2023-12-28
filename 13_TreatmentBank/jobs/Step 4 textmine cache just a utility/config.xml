@@ -26,6 +26,7 @@
 php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;all_BHL&quot;, &quot;resource_id&quot;:&quot;TreatmentBank&quot;, &quot;subjects&quot;:&quot;Uses&quot;}&apos;
 #-&gt; generates TreatmentBank_ENV.tar.gz
 
+
 #cd /html/Pensoft_annotator/TreatmentBank/
 #ls -lt
 #rm -rf json_partial_old
