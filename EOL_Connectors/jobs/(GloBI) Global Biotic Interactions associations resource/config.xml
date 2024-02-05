@@ -27,7 +27,7 @@ H H 15 1,3,5,7,9,11 *</spec>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
+      <command>cd /var/www/html/eol_php_code/update_resources/connectors
 
 # step 1: OK
 php globi_data.php jenkins
@@ -45,14 +45,14 @@ php remove_unused_references.php jenkins &apos;{&quot;resource_id&quot;: &quot;g
 # generates globi_associations_tmp1.tar.gz
 
 # === LAST STEP: copy globi_associations_tmp1.tar.gz to globi_assoc.tar.gz OK
-cd /html/eol_php_code/applications/content_server/resources
+cd /var/www/html/eol_php_code/applications/content_server/resources
 cp globi_associations_tmp1.tar.gz globi_assoc.tar.gz
 ls -lt globi_associations_tmp1.tar.gz
 ls -lt globi_assoc.tar.gz
 # then delete globi_associations_tmp1.tar.gz
 rm -f globi_associations_tmp1.tar.gz
 
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 php ckan_api_access.php jenkins &quot;c8392978-16c2-453b-8f0e-668fbf284b61&quot;
 </command>
     </hudson.tasks.Shell>

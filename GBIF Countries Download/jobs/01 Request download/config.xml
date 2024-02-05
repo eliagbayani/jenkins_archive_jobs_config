@@ -27,7 +27,7 @@ H H 15 6,9,12,3 *</spec>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
+      <command>cd /var/www/html/eol_php_code/update_resources/connectors
 ### This will overwrite any current download request. 
 ### Run this once ONLY every harvest per taxon group.
 

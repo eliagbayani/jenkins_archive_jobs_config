@@ -32,7 +32,7 @@ H 0-23/6 * * 1-5</spec>
       <command># Generate the EOL Harvest list:
 # 
 
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 php eol_harvest_publish.php jenkins
 </command>
     </hudson.tasks.Shell>

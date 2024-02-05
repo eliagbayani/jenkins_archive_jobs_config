@@ -22,7 +22,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
+      <command>cd /var/www/html/eol_php_code/update_resources/connectors
 
 # A utility. If you want to force generate - works OK
 php wikidata.php jenkins generate_resource_force

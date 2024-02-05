@@ -72,7 +72,7 @@ unzip -j Other7Groups_DwcA.zip occurrence.txt
 
 ### start main program ===================================
 
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 php gbif_georeference_dwca.php jenkins
 </command>
     </hudson.tasks.Shell>

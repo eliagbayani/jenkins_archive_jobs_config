@@ -24,7 +24,7 @@ Eli as of Sep 12, 2019 deleted the builds coz it is getting too much space.</des
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
+      <command>cd /var/www/html/eol_php_code/update_resources/connectors
 
 # step 1 OK. This will process XLS from OpenData:
 # https://opendata.eol.org/dataset/aab3818f-d538-4d5f-a3b8-b52d233c7ac0/resource/8e46a838-0394-42bd-9272-0a8591834713/download/plant-habit-habitat-and-distribution.xlsx

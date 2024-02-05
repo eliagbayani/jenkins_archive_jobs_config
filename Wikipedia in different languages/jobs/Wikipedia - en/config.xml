@@ -25,11 +25,11 @@
       <command>### use this if you want to stop dead on its tracks
 #exit 1
 
-#cd /html/eol_php_code/applications/content_server/resources
+#cd /var/www/html/eol_php_code/applications/content_server/resources
 #rm -f wikipedia_generation_status*.txt 
 #[ -f wikipedia_*.tmp ] &amp;&amp; rm -f wikipedia_*.tmp || echo &quot;Files do not exist&quot;
 
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 php wikipedia.php jenkins en #English
 #should generate 80.tar.gz
 

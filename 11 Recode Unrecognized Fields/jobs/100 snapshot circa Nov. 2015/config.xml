@@ -23,7 +23,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 php resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;circa_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
 </command>
     </hudson.tasks.Shell>

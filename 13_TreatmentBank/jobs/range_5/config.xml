@@ -23,7 +23,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 php treatment_bank.php jenkins &apos;{&quot;range_from&quot;: &quot;400000&quot;, &quot;range_to&quot;:&quot;500000&quot;}&apos;
 </command>
     </hudson.tasks.Shell>

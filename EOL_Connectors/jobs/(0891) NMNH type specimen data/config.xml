@@ -28,7 +28,7 @@ https://opendata.eol.org/dataset/national_museum-of_natural_history</description
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
+      <command>cd /var/www/html/eol_php_code/update_resources/connectors
 php 891.php jenkins
 
 # just tests:

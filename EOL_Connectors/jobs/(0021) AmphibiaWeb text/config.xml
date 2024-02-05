@@ -23,7 +23,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 #php 21.php jenkins #XML from partner explodes atm. Fixed version is used here.
 #generates 21.tar.gz
 

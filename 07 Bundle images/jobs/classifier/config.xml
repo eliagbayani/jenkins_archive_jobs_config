@@ -23,7 +23,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 
 # Workd OK, ran already.
 #php image_bundle_classifier.php jenkins &apos;{&quot;task&quot;: &quot;task_1&quot;}&apos;

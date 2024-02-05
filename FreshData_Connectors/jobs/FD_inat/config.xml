@@ -32,7 +32,7 @@
     <hudson.tasks.Shell>
       <command>#exit 1
 #cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 php freedata_inat_supplement.php jenkins
 </command>
     </hudson.tasks.Shell>

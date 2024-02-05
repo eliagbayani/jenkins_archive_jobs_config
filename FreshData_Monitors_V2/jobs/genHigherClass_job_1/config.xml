@@ -31,7 +31,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/applications/genHigherClass_jenkins
+      <command>cd /var/www/html/eol_php_code/applications/genHigherClass_jenkins
 $myShell
 </command>
     </hudson.tasks.Shell>

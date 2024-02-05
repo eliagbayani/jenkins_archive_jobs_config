@@ -36,7 +36,7 @@ H 01 5 * *
   <builders>
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 
 php 100.php jenkins
 # generates 100.xml and 100.tar.gz

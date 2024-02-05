@@ -25,7 +25,7 @@
       <command>#cd /extra/other_files/GBIF_occurrence/multimedia_gbifID/
 #rm -rf /extra/other_files/GBIF_occurrence/multimedia_gbifID/b*
 
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 
 #php wikipedia.php jenkins ce #Chechen -- ce
 php wikipedia.php jenkins &apos;be-x-old&apos;

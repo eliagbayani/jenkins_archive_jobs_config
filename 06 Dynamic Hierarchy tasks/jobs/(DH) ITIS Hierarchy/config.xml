@@ -22,7 +22,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
+      <command>cd /var/www/html/eol_php_code/update_resources/connectors
 
 #php dwh_itis.php jenkins &apos;{&quot;allNodesYN&quot;:&quot;0&quot;, &quot;resource_id&quot;:&quot;itis_2020-07-28&quot;}&apos;
 #php dwh_itis.php jenkins &apos;{&quot;allNodesYN&quot;:&quot;0&quot;, &quot;resource_id&quot;:&quot;itis_2020-12-01&quot;}&apos;

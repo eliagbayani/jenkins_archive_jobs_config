@@ -22,7 +22,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
+      <command>cd /var/www/html/eol_php_code/update_resources/connectors
 
 ##php process_SI_pdfs.php jenkins &apos;{&quot;resource_id&quot;: &quot;10088_5097&quot;, &quot;resource_name&quot;:&quot;SI Contributions to Zoology&quot;}&apos;
 ##- 1st repo to process

@@ -23,7 +23,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 php recode_unrecognized_fields.php jenkins process_OpenData_resources</command>
     </hudson.tasks.Shell>
   </builders>

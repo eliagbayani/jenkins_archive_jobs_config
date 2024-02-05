@@ -27,7 +27,7 @@ This is a pre-requisite for the two:&#xd;
   <builders>
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 #this is kinda one-time since it is date sensitive.
 #php COL_data.php jenkins
 #generates col.tar.gz

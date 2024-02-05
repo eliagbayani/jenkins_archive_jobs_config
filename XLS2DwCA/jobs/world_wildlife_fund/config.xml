@@ -23,7 +23,7 @@ https://eol-jira.bibalex.org/browse/DATA-1727</description>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
+      <command>cd /var/www/html/eol_php_code/update_resources/connectors
 
 # step 1 OK. This will process XLS from OpenData:
 php spreadsheet_2_dwca.php jenkins world_wildlife_fund

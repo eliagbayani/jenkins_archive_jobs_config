@@ -14,7 +14,7 @@ https://opendata.eol.org/dataset/old-world-fruit-bat-body-mass</description>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
+      <command>cd /var/www/html/eol_php_code/update_resources/connectors
 php eol_api_traits.php jenkins bat_body_mass
 
 </command>

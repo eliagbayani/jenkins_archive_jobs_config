@@ -23,7 +23,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 
 #php taxon_image_bundles_part2.php jenkins &apos;{&quot;eol_page_id&quot;:7631, &quot;sci&quot;:&quot;Chiroptera&quot;}&apos;
 #php taxon_image_bundles_part2.php jenkins &apos;{&quot;eol_page_id&quot;:747, &quot;sci&quot;:&quot;Lepidoptera_test&quot;}&apos;

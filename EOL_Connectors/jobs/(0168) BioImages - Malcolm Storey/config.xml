@@ -28,7 +28,7 @@ H H 1 7,10,1,4 *</spec>
   <builders>
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 
 ### this will generate 168.tar.gz
 php 168.php jenkins
@@ -39,13 +39,13 @@ php resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;168_meta_
 
 #LAST STEP: copy last transactional DwCA to Bioimages.tar.gz OK
 
-cd /html/eol_php_code/applications/content_server/resources
+cd /var/www/html/eol_php_code/applications/content_server/resources
 cp 168_meta_recoded.tar.gz Bioimages.tar.gz
 ls -lt 168_meta_recoded.tar.gz
 ls -lt Bioimages.tar.gz
 rm -f 168_meta_recoded.tar.gz
 
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 php ckan_api_access.php jenkins &quot;5b1ebec7-efd0-47b5-860e-5c841d88d366&quot;
 </command>
     </hudson.tasks.Shell>

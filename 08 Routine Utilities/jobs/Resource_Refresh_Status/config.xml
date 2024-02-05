@@ -28,7 +28,7 @@ H H(0-23)/12 * * 1-7
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
+      <command>cd /var/www/html/eol_php_code/update_resources/connectors
 
 php resource_refresh_sched.php jenkins
 # cache expires after 11 hours

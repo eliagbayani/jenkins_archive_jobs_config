@@ -24,7 +24,7 @@
     <hudson.tasks.Shell>
       <command>### start main program ===================================
 
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 
 ## works per taxon OK
 #php gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;generate_map_data_using_GBIF_csv_files&quot;,&quot;sciname&quot;:&quot;Pycnogonidae&quot;,&quot;tc_id&quot;:6270}&apos;

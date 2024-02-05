@@ -32,7 +32,7 @@
 #exit 1
 
 ### =========================================================================
-cd /html/eol_php_code/applications/content_server/resources
+cd /var/www/html/eol_php_code/applications/content_server/resources
 rm -f wikimedia_filenames_status_*.txt
 rm -f wikimedia_filenames_*.txt
 rm -f wikimedia_generation_status_*.txt

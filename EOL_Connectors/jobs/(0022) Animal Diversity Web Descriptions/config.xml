@@ -31,7 +31,7 @@ http://www.eol.org/content_partners/8/resources/22</description>
   <builders>
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 #php 22.php jenkins --- OBSOLETE
 
 #OK
@@ -43,7 +43,7 @@ php rem_marine_terr_desc.php jenkins &apos;{&quot;resource_id&quot;:&quot;22&quo
 # generates 22_cleaned_MoF_habitat.tar.gz
 
 #LAST STEP: OK
-cd /html/eol_php_code/applications/content_server/resources
+cd /var/www/html/eol_php_code/applications/content_server/resources
 cp 22_cleaned_MoF_habitat.tar.gz AnimalDiversityWeb.tar.gz
 ls -lt 22_cleaned_MoF_habitat.tar.gz
 ls -lt AnimalDiversityWeb.tar.gz

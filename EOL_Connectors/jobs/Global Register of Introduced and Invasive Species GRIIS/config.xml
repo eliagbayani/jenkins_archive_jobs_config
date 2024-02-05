@@ -28,7 +28,7 @@ H H 28 4,7,10,1 *</spec>
   <builders>
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 
 php global_register_IIS.php jenkins
 #generates griis.tar.gz

@@ -27,7 +27,7 @@ H H 11 * *</spec>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
+      <command>cd /var/www/html/eol_php_code/update_resources/connectors
 
 ### a utility - it works OK - updates the OpenData metadata but not if private.
 ### php ckan_api_access.php jenkins &quot;a74bcc92-d2a2-4a7b-b18f-b5fd2e3a5b5c&quot;                  
@@ -71,7 +71,7 @@ php dwca_MoF_fix.php jenkins &apos;{&quot;resource_id&quot;:&quot;26_delta_new&q
 
 #LAST STEP: copy last transactional DwCA to WoRMS.tar.gz OK
 
-cd /html/eol_php_code/applications/content_server/resources
+cd /var/www/html/eol_php_code/applications/content_server/resources
 cp 26_MoF_normalized.tar.gz WoRMS.tar.gz
 ls -lt 26_MoF_normalized.tar.gz
 ls -lt WoRMS.tar.gz
@@ -79,7 +79,7 @@ rm -f 26_MoF_normalized.tar.gz
 
 ### but this only works if OpenData is set ot Public and not Private
 ### https://opendata.eol.org/dataset/worms-internal
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 php ckan_api_access.php jenkins &quot;a74bcc92-d2a2-4a7b-b18f-b5fd2e3a5b5c&quot;
 
 </command>

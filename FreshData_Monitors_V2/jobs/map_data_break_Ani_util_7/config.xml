@@ -22,7 +22,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
+      <command>cd /var/www/html/eol_php_code/update_resources/connectors
 php breakdown_GBIF_DwCA_file.php jenkins &apos;{&quot;group&quot;:&quot;Animalia&quot;,&quot;range&quot;:[1308500000,1409634178],&quot;ctr&quot;:7,&quot;rank&quot;:&quot;&quot;}&apos;
 
 </command>

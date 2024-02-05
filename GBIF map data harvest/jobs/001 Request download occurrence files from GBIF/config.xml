@@ -31,7 +31,7 @@
     <hudson.tasks.Shell>
       <command>exit 1 ### exit muna
 
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 ### This will overwrite any current download request. 
 ### Run this once ONLY every harvest per taxon group.
 php gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;send_download_request&quot;, &quot;taxon&quot;:&quot;Animalia&quot;}&apos;

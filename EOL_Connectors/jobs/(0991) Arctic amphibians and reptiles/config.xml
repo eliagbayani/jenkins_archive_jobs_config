@@ -37,7 +37,7 @@ H 01 10 * *
   <builders>
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 php spreadsheet_2_dwca.php jenkins 991
 </command>
     </hudson.tasks.Shell>

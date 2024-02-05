@@ -24,7 +24,7 @@
     <hudson.tasks.Shell>
       <command>### start main program ===================================
 
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 
 php gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;breakdown_multimedia_to_gbifID_files&quot;}&apos;
 

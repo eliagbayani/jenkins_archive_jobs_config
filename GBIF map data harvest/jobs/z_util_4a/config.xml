@@ -24,7 +24,7 @@
     <hudson.tasks.Shell>
       <command>### start main program ===================================
 
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 #php generate_map_data_using_GBIF_csv_files.php jenkins &apos;{&quot;group&quot;:false,&quot;range&quot;:[585613,615613],&quot;ctr&quot;:10,&quot;rank&quot;:&quot;&quot;}&apos;
 #php generate_map_data_using_GBIF_csv_files.php jenkins &apos;{&quot;group&quot;:false,&quot;range&quot;:[555613,585613],&quot;ctr&quot;:11,&quot;rank&quot;:&quot;&quot;}&apos;
 #php generate_map_data_using_GBIF_csv_files.php jenkins &apos;{&quot;group&quot;:false,&quot;range&quot;:[525613,555613],&quot;ctr&quot;:12,&quot;rank&quot;:&quot;&quot;}&apos;

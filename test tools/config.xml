@@ -71,7 +71,7 @@ df -h
 
 #yum -v
 
-#cd /html/eol_php_code/update_resources/connectors
+#cd /var/www/html/eol_php_code/update_resources/connectors
 #php test.php
 
 
@@ -173,12 +173,12 @@ df -h
 #which gzip
 
 
-#cd /html/eol_php_code/applications/content_server/resources/
+#cd /var/www/html/eol_php_code/applications/content_server/resources/
 #gzip -dfk /html/eol_php_code/applications/content_server/resources/eli.html.gz
 
 #which gzip
 
-#cd /html/eol_php_code/applications/content_server/
+#cd /var/www/html/eol_php_code/applications/content_server/
 #cd /extra/tools_temp/
 
 #ls -lt
@@ -199,7 +199,7 @@ df -h
 #which ffmpeg
 
 
-#cd /html/eol_php_code/update_resources/connectors/
+#cd /var/www/html/eol_php_code/update_resources/connectors/
 #php media_convert.php
 
 #exit(1)

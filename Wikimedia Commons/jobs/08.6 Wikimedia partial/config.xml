@@ -22,7 +22,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/applications/content_server/resources
+      <command>cd /var/www/html/eol_php_code/applications/content_server/resources
 #if 71 folder does not exist, will create folder
 [ ! -d 71/ ] &amp;&amp; mkdir 71
 
@@ -30,10 +30,10 @@
 [ -d 71/ ] &amp;&amp; tar xvzf 71.tar.gz -C 71/ 
 
 #regular connector run
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 php wikimedia_partial.php jenkins
 
-cd /html/eol_php_code/applications/content_server/resources
+cd /var/www/html/eol_php_code/applications/content_server/resources
 # now delete temp /71/ folder
 [ -d 71/ ] &amp;&amp; rm -rf 71/
 

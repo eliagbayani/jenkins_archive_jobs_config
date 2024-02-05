@@ -22,7 +22,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
+      <command>cd /var/www/html/eol_php_code/update_resources/connectors
 
 php dwh_ncbi_TRAM_795.php jenkins &apos;{&quot;with_Vernaculars&quot;: 0}&apos;
 # generates NCBI_Taxonomy_Harvest_no_vernaculars.tar.gz

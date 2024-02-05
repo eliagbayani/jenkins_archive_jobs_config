@@ -29,7 +29,7 @@
       <command>#exit 1 #force to exit with FAILURE
 
 #cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 php freedata_marylandbio.php jenkins
 
 

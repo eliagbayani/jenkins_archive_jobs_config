@@ -29,7 +29,7 @@ H H * 1-12 7</spec>
     <hudson.tasks.Shell>
       <command># Remove un-used resources for Trait Data Import tool
 
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 php trait_data_import_cleanup.php jenkins
 </command>
     </hudson.tasks.Shell>

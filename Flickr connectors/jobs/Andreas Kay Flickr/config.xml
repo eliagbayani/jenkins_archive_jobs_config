@@ -25,7 +25,7 @@
       <command>### NO NEED TO REFRESH BASED ON: DATA-1919
 
 #cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 php andreas_kay_flickr.php jenkins
 
 </command>

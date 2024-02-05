@@ -14,7 +14,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>#regular connector run
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 
 ### Step 1: OK un-comment in real operation
 #php wikidata.php jenkins generate_wikidata_taxonomy

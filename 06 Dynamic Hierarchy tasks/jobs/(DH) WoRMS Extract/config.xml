@@ -23,7 +23,7 @@ https://eol-jira.bibalex.org/browse/TRAM-988</description>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
+      <command>cd /var/www/html/eol_php_code/update_resources/connectors
 
 # below will be run on command-line since gnparser can&apos;t run in jenkins yet.
 #php resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;WoRMS2EoL_zip&quot;, &quot;task&quot;: &quot;add_canonical_in_taxa&quot;}&apos;

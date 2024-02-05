@@ -23,12 +23,12 @@
   <builders>
     <hudson.tasks.Shell>
       <command># first 3 lines, once every harvest:
-cd /html/eol_php_code/applications/content_server/resources
+cd /var/www/html/eol_php_code/applications/content_server/resources
 rm -f wikipedia_generation_status*.txt 
 [ -f wikipedia_*.tmp ] &amp;&amp; rm -f wikipedia_*.tmp || echo &quot;Files do not exist&quot;
 
 # regular main:
-#cd /html/eol_php_code/update_resources/connectors
+#cd /var/www/html/eol_php_code/update_resources/connectors
 
 #php wikipedia_ver2.php jenkins ce #Chechen
 # -&gt; orig 1 connector run

@@ -24,7 +24,7 @@
     <hudson.tasks.Shell>
       <command>### start main program ===================================
 
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 
 
 ## works per taxon OK

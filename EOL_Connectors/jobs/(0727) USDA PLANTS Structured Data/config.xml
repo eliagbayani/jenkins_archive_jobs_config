@@ -18,7 +18,7 @@ H H 10 3,6,9,12 *</spec>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
+      <command>cd /var/www/html/eol_php_code/update_resources/connectors
 ##php spreadsheet_2_dwca.php jenkins 727
 
 #The legacy 727.tar.gz was renamed to 727_24Oct2017.tar.gz. 
@@ -36,7 +36,7 @@ php resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;727_meta_
 # generates 727_meta_recoded.tar.gz
 
 #LAST STEP: copy last transactional DwCA to usda_plant_traits.tar.gz OK
-cd /html/eol_php_code/applications/content_server/resources
+cd /var/www/html/eol_php_code/applications/content_server/resources
 cp 727_meta_recoded.tar.gz usda_plant_traits.tar.gz
 ls -lt 727_meta_recoded.tar.gz
 ls -lt usda_plant_traits.tar.gz

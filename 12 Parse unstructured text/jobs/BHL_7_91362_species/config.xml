@@ -22,7 +22,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /html/eol_php_code/update_resources/connectors
+      <command>cd /var/www/html/eol_php_code/update_resources/connectors
 
 php parse_unstructured_text_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;91362_species&quot;, &quot;resource_name&quot;:&quot;all_BHL&quot;}&apos;
 

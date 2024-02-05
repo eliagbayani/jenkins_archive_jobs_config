@@ -25,7 +25,7 @@
       <command>#exit 1 ## comment on next harvest
 ### start main program =================================== RUN ONLY ONCE EVERY HARVEST
 
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 
 php gbif_georeference_dwca.php jenkins &apos;{&quot;group&quot;:&quot;Animalia&quot;,&quot;divisor&quot;:10}&apos;
 

@@ -25,7 +25,7 @@
       <command>now moved to http://160.111.248.39:8081/job/NMNH_images/
 exit
 
-#cd /html/eol_php_code/update_resources/connectors
+#cd /var/www/html/eol_php_code/update_resources/connectors
 #php nmnh_images.php jenkins
 </command>
     </hudson.tasks.Shell>

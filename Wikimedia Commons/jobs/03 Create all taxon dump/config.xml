@@ -23,7 +23,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>#exit 1 #temporary forces exit with FAILURE
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 
 #step 1: just one connector --- works OK
 php wikidata.php jenkins &apos;{&quot;task&quot;:&quot;create_all_taxon_dump&quot;}&apos; #OK - few hours

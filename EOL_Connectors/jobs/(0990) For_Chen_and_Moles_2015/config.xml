@@ -29,7 +29,7 @@ https://eol-jira.bibalex.org/browse/DATA-1735</description>
   <builders>
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /html/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
 php spreadsheet_2_dwca.php jenkins 990
 </command>
     </hudson.tasks.Shell>
