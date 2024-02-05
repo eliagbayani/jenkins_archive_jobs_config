@@ -24,106 +24,106 @@
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-#php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:10, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;sv&quot;}&apos;
+#php run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:10, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;sv&quot;}&apos;
 # -&gt; new OK 6 connectors run
 
 
-#php5.6 wikipedia.php jenkins ps --- right to left
-#php5.6 wikipedia.php jenkins sd
-#php5.6 wikipedia.php jenkins ckb
-#php5.6 wikipedia.php jenkins dv
+#php wikipedia.php jenkins ps --- right to left
+#php wikipedia.php jenkins sd
+#php wikipedia.php jenkins ckb
+#php wikipedia.php jenkins dv
 
 
 # === STEP: fill-up missing parent entries
-#php5.6 fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-sv&quot;, &quot;source_dwca&quot;: &quot;wikipedia-sv&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
+#php fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-sv&quot;, &quot;source_dwca&quot;: &quot;wikipedia-sv&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
 
 
-php5.6 wikipedia.php jenkins yi
-php5.6 wikipedia.php jenkins ug
-php5.6 wikipedia.php jenkins arz
-php5.6 wikipedia.php jenkins mzn
-php5.6 wikipedia.php jenkins hyw
-php5.6 wikipedia.php jenkins lo
-php5.6 wikipedia.php jenkins kg
-php5.6 wikipedia.php jenkins km
-php5.6 wikipedia.php jenkins gom
-php5.6 wikipedia.php jenkins frp
-php5.6 wikipedia.php jenkins sat
-php5.6 wikipedia.php jenkins gan
-php5.6 wikipedia.php jenkins haw
-php5.6 wikipedia.php jenkins hif
-php5.6 wikipedia.php jenkins nso
-php5.6 wikipedia.php jenkins xal
-php5.6 wikipedia.php jenkins mnw
-php5.6 wikipedia.php jenkins zu
-php5.6 wikipedia.php jenkins bi
-php5.6 wikipedia.php jenkins lad
-php5.6 wikipedia.php jenkins map-bms
-php5.6 wikipedia.php jenkins roa-tara
-php5.6 wikipedia.php jenkins pdc
-php5.6 wikipedia.php jenkins kbp
-php5.6 wikipedia.php jenkins jbo
-php5.6 wikipedia.php jenkins kaa
-php5.6 wikipedia.php jenkins srn
-php5.6 wikipedia.php jenkins gag
-php5.6 wikipedia.php jenkins ty
-php5.6 wikipedia.php jenkins fur
-php5.6 wikipedia.php jenkins ie
-php5.6 wikipedia.php jenkins lg
-php5.6 wikipedia.php jenkins ts
-php5.6 wikipedia.php jenkins bpy
-php5.6 wikipedia.php jenkins iu
-php5.6 wikipedia.php jenkins arc
-php5.6 wikipedia.php jenkins gor
-php5.6 wikipedia.php jenkins nov
-php5.6 wikipedia.php jenkins crh
-php5.6 wikipedia.php jenkins tum
-php5.6 wikipedia.php jenkins glk
-php5.6 wikipedia.php jenkins krc
-php5.6 wikipedia.php jenkins ksh
-php5.6 wikipedia.php jenkins na
-php5.6 wikipedia.php jenkins ny
-php5.6 wikipedia.php jenkins pfl
-php5.6 wikipedia.php jenkins xh
-php5.6 wikipedia.php jenkins tpi
-php5.6 wikipedia.php jenkins cr
-php5.6 wikipedia.php jenkins gcr
-php5.6 wikipedia.php jenkins jam
-php5.6 wikipedia.php jenkins ak
-php5.6 wikipedia.php jenkins bm
-php5.6 wikipedia.php jenkins cu
-php5.6 wikipedia.php jenkins ks
-php5.6 wikipedia.php jenkins pap
-php5.6 wikipedia.php jenkins got
-php5.6 wikipedia.php jenkins ee
-php5.6 wikipedia.php jenkins ady
-php5.6 wikipedia.php jenkins pih
-php5.6 wikipedia.php jenkins ki
-php5.6 wikipedia.php jenkins shn
-php5.6 wikipedia.php jenkins pi
-php5.6 wikipedia.php jenkins sm
-php5.6 wikipedia.php jenkins ti
-php5.6 wikipedia.php jenkins ve
-php5.6 wikipedia.php jenkins ch
-php5.6 wikipedia.php jenkins ig
-php5.6 wikipedia.php jenkins lrc
-php5.6 wikipedia.php jenkins om
-php5.6 wikipedia.php jenkins st
-php5.6 wikipedia.php jenkins din
-php5.6 wikipedia.php jenkins ss
-php5.6 wikipedia.php jenkins tet
-php5.6 wikipedia.php jenkins sg
-php5.6 wikipedia.php jenkins ff
-php5.6 wikipedia.php jenkins pnt
-php5.6 wikipedia.php jenkins tn
-php5.6 wikipedia.php jenkins cbk-zam
-php5.6 wikipedia.php jenkins rmy
-php5.6 wikipedia.php jenkins bug
-php5.6 wikipedia.php jenkins data
-php5.6 wikipedia.php jenkins dz
-php5.6 wikipedia.php jenkins nqo
-php5.6 wikipedia.php jenkins mh
-php5.6 wikipedia.php jenkins tw
+php wikipedia.php jenkins yi
+php wikipedia.php jenkins ug
+php wikipedia.php jenkins arz
+php wikipedia.php jenkins mzn
+php wikipedia.php jenkins hyw
+php wikipedia.php jenkins lo
+php wikipedia.php jenkins kg
+php wikipedia.php jenkins km
+php wikipedia.php jenkins gom
+php wikipedia.php jenkins frp
+php wikipedia.php jenkins sat
+php wikipedia.php jenkins gan
+php wikipedia.php jenkins haw
+php wikipedia.php jenkins hif
+php wikipedia.php jenkins nso
+php wikipedia.php jenkins xal
+php wikipedia.php jenkins mnw
+php wikipedia.php jenkins zu
+php wikipedia.php jenkins bi
+php wikipedia.php jenkins lad
+php wikipedia.php jenkins map-bms
+php wikipedia.php jenkins roa-tara
+php wikipedia.php jenkins pdc
+php wikipedia.php jenkins kbp
+php wikipedia.php jenkins jbo
+php wikipedia.php jenkins kaa
+php wikipedia.php jenkins srn
+php wikipedia.php jenkins gag
+php wikipedia.php jenkins ty
+php wikipedia.php jenkins fur
+php wikipedia.php jenkins ie
+php wikipedia.php jenkins lg
+php wikipedia.php jenkins ts
+php wikipedia.php jenkins bpy
+php wikipedia.php jenkins iu
+php wikipedia.php jenkins arc
+php wikipedia.php jenkins gor
+php wikipedia.php jenkins nov
+php wikipedia.php jenkins crh
+php wikipedia.php jenkins tum
+php wikipedia.php jenkins glk
+php wikipedia.php jenkins krc
+php wikipedia.php jenkins ksh
+php wikipedia.php jenkins na
+php wikipedia.php jenkins ny
+php wikipedia.php jenkins pfl
+php wikipedia.php jenkins xh
+php wikipedia.php jenkins tpi
+php wikipedia.php jenkins cr
+php wikipedia.php jenkins gcr
+php wikipedia.php jenkins jam
+php wikipedia.php jenkins ak
+php wikipedia.php jenkins bm
+php wikipedia.php jenkins cu
+php wikipedia.php jenkins ks
+php wikipedia.php jenkins pap
+php wikipedia.php jenkins got
+php wikipedia.php jenkins ee
+php wikipedia.php jenkins ady
+php wikipedia.php jenkins pih
+php wikipedia.php jenkins ki
+php wikipedia.php jenkins shn
+php wikipedia.php jenkins pi
+php wikipedia.php jenkins sm
+php wikipedia.php jenkins ti
+php wikipedia.php jenkins ve
+php wikipedia.php jenkins ch
+php wikipedia.php jenkins ig
+php wikipedia.php jenkins lrc
+php wikipedia.php jenkins om
+php wikipedia.php jenkins st
+php wikipedia.php jenkins din
+php wikipedia.php jenkins ss
+php wikipedia.php jenkins tet
+php wikipedia.php jenkins sg
+php wikipedia.php jenkins ff
+php wikipedia.php jenkins pnt
+php wikipedia.php jenkins tn
+php wikipedia.php jenkins cbk-zam
+php wikipedia.php jenkins rmy
+php wikipedia.php jenkins bug
+php wikipedia.php jenkins data
+php wikipedia.php jenkins dz
+php wikipedia.php jenkins nqo
+php wikipedia.php jenkins mh
+php wikipedia.php jenkins tw
 </command>
     </hudson.tasks.Shell>
   </builders>

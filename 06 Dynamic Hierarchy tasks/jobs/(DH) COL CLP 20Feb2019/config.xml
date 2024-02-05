@@ -23,7 +23,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
-php5.6 dwh_col_TRAM_803.php jenkins
+php dwh_col_TRAM_803.php jenkins
 
 </command>
     </hudson.tasks.Shell>

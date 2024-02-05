@@ -29,10 +29,10 @@
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 
-php5.6 200.php jenkins
+php 200.php jenkins
 #generates 200.tar.gz
 
-php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;200_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
+php resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;200_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
 #reads 200.tar.gz and generates 200_meta_recoded.tar.gz
 </command>
     </hudson.tasks.Shell>

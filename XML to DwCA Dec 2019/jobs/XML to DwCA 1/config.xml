@@ -25,20 +25,20 @@
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 
-php5.6 xml_2_dwca.php jenkins 20
-#php5.6 xml_2_dwca.php jenkins 327
+php xml_2_dwca.php jenkins 20
+#php xml_2_dwca.php jenkins 327
 
-#php5.6 xml_2_dwca.php jenkins TaiEOL
-#php5.6 xml_2_dwca.php jenkins 547
-#php5.6 xml_2_dwca.php jenkins 889
-#php5.6 xml_2_dwca.php jenkins 890
-#php5.6 xml_2_dwca.php jenkins 888
+#php xml_2_dwca.php jenkins TaiEOL
+#php xml_2_dwca.php jenkins 547
+#php xml_2_dwca.php jenkins 889
+#php xml_2_dwca.php jenkins 890
+#php xml_2_dwca.php jenkins 888
 
-#php5.6 xml_2_dwca.php jenkins 6
-#php5.6 xml_2_dwca.php jenkins 339
+#php xml_2_dwca.php jenkins 6
+#php xml_2_dwca.php jenkins 339
 
-#php5.6 xml_2_dwca.php jenkins 63 #INOTAXA
-#php5.6 xml_2_dwca.php jenkins 116 #The Dutch Ascidians Homepage
+#php xml_2_dwca.php jenkins 63 #INOTAXA
+#php xml_2_dwca.php jenkins 116 #The Dutch Ascidians Homepage
 
 
 

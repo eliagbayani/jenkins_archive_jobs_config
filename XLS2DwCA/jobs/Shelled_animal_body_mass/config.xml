@@ -26,10 +26,10 @@ https://eol-jira.bibalex.org/browse/DATA-1733</description>
       <command>cd /html/eol_php_code/update_resources/connectors
 
 # step 1 OK. This will process XLS from OpenData:
-php5.6 spreadsheet_2_dwca.php jenkins Shelled_animal_body_mass
+php spreadsheet_2_dwca.php jenkins Shelled_animal_body_mass
 
 # step 2 OK. This will process Shelled_animal_body_mass.tar.gz from /resources/ folder.
-php5.6 dwca_utility.php jenkins Shelled_animal_body_mass
+php dwca_utility.php jenkins Shelled_animal_body_mass
 </command>
     </hudson.tasks.Shell>
   </builders>

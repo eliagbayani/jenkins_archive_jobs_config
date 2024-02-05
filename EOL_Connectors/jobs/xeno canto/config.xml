@@ -28,10 +28,10 @@
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-# php5.6 xeno_canto.php jenkins
+# php xeno_canto.php jenkins
 # was run from local Mac Studio, until API refreshes.
 
-php5.6 ckan_api_access.php jenkins &quot;09844d24-5880-41aa-a031-b19f688185cb&quot; &quot;09/25/2023 6:52:00&quot;
+php ckan_api_access.php jenkins &quot;09844d24-5880-41aa-a031-b19f688185cb&quot; &quot;09/25/2023 6:52:00&quot;
 # that is for Sep 25, 2023 @ 6:52 AM
 </command>
     </hudson.tasks.Shell>

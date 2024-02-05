@@ -31,7 +31,7 @@ http://eol.org/content_partners/534/resources/487&#xd;
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-php5.6 487.php jenkins
+php 487.php jenkins
 </command>
     </hudson.tasks.Shell>
   </builders>

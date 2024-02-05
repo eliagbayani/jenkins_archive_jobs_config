@@ -29,9 +29,9 @@ H H 13 6,8,10,12,2,4 *</spec>
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-### php5.6 polytraits.php jenkins #OBSOLETE
+### php polytraits.php jenkins #OBSOLETE
 
-php5.6 polytraits_new.php jenkins
+php polytraits_new.php jenkins
 
 </command>
     </hudson.tasks.Shell>

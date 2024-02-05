@@ -16,7 +16,7 @@ https://opendata.eol.org/dataset/usda_plants/resource/aca53f69-b18a-40b9-adbc-34
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-php5.6 108.php jenkins
+php 108.php jenkins
 </command>
     </hudson.tasks.Shell>
   </builders>

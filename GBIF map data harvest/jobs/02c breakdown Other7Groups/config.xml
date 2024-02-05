@@ -26,7 +26,7 @@
 
 cd /html/eol_php_code/update_resources/connectors
 
-php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;group&quot;:&quot;Other7Groups&quot;,&quot;divisor&quot;:10}&apos;
+php gbif_georeference_dwca.php jenkins &apos;{&quot;group&quot;:&quot;Other7Groups&quot;,&quot;divisor&quot;:10}&apos;
 
 ###This will open 10 Other7Groups jobs from: [03 EOL tools and FreshData Monitors V2 jobs]</command>
     </hudson.tasks.Shell>

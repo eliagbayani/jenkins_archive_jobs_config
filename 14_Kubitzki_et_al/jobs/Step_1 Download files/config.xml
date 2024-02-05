@@ -28,7 +28,7 @@ cd /html/eol_php_code/update_resources/connectors
 # This was run in command-line since pdftotext is not linked to Jenkins.
 # Worked OK in command-line. Run once only.
 
-#php5.6 download_Kubitzki_PDFs.php jenkins
+#php download_Kubitzki_PDFs.php jenkins
 
 #which pdftotext</command>
     </hudson.tasks.Shell>

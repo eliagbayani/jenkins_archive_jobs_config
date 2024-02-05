@@ -33,7 +33,7 @@
       <command>#exit 1
 #cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-php5.6 freedata_inat_supplement.php jenkins
+php freedata_inat_supplement.php jenkins
 </command>
     </hudson.tasks.Shell>
   </builders>

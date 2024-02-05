@@ -24,10 +24,10 @@
     <hudson.tasks.Shell>
       <command># All trait data dump
 cd /html/eol_php_code/update_resources/connectors
-php5.6 ckan_api_access.php jenkins &quot;6e24f0df-56ee-470f-b81e-e5a367a65bfb&quot; &quot;07/08/2023 21:41:00&quot; &quot;EOL file&quot;
+php ckan_api_access.php jenkins &quot;6e24f0df-56ee-470f-b81e-e5a367a65bfb&quot; &quot;07/08/2023 21:41:00&quot; &quot;EOL file&quot;
 #Jul 8, 2023 9:41 PM
 
-#php5.6 ckan_api_access.php jenkins &quot;a10fbde2-6dd1-4155-aabf-3628a1d71a84&quot;
+#php ckan_api_access.php jenkins &quot;a10fbde2-6dd1-4155-aabf-3628a1d71a84&quot;
 </command>
     </hudson.tasks.Shell>
   </builders>

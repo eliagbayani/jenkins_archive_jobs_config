@@ -41,20 +41,20 @@ H(0-30) 1 15 * *
 #exit -1
 
 #cd /html/eol_php_code/update_resources/connectors
-#php5.6 24.php jenkins OBSOLETE, REPLACED BY: 24_new.php
+#php 24.php jenkins OBSOLETE, REPLACED BY: 24_new.php
 
 #for Trait data
 #cd /html/eol_php_code/update_resources/connectors
-#php5.6 dwca_utility.php jenkins 24 OBSOLETE AS WELL, REPLACED BY:24_new.php
+#php dwca_utility.php jenkins 24 OBSOLETE AS WELL, REPLACED BY:24_new.php
 
 ### NEW CONNECTOR: OK
 cd /html/eol_php_code/update_resources/connectors
-php5.6 24_new.php jenkins
+php 24_new.php jenkins
 # generates 24.tar.gz
 
 
 # From Jen: it looks like we can discard this filter from both AntWeb and AmphibiaWeb. DATA-1870
-###php5.6 rem_marine_terr_desc.php jenkins &apos;{&quot;resource_id&quot;:&quot;24&quot;}&apos;
+###php rem_marine_terr_desc.php jenkins &apos;{&quot;resource_id&quot;:&quot;24&quot;}&apos;
 # generates 24_cleaned_MoF_habitat.tar.gz
 # it worked OK, but no longer being used</command>
     </hudson.tasks.Shell>

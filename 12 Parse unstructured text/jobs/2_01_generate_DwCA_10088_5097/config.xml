@@ -23,7 +23,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
-php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;SI Contributions to Zoology&quot;, &quot;resource_id&quot;:&quot;10088_5097&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
+php environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;SI Contributions to Zoology&quot;, &quot;resource_id&quot;:&quot;10088_5097&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
 #generates 10088_5097_ENV.tar.gz
 
 

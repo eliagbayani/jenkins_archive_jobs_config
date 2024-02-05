@@ -25,10 +25,10 @@
       <command>cd /html/eol_php_code/update_resources/connectors
 
 ### orig scheme - OBSOLETE
-# php5.6 wikidata.php jenkins generate_resource # orig
+# php wikidata.php jenkins generate_resource # orig
 
 ### new scheme
-php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikimedia&quot;, &quot;divisor&quot;:6, &quot;task&quot;:&quot;initial&quot;}&apos;
+php run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikimedia&quot;, &quot;divisor&quot;:6, &quot;task&quot;:&quot;initial&quot;}&apos;
 ### This will trigger 6 eol_stats_job_? jobs.
 ### After all 6 are done, will aggregate into a single DwCA: 71.tar.gz
 ### Next will run: fill_up_undefined_parents_real.php on another job

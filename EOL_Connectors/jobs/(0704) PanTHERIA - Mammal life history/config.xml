@@ -19,7 +19,7 @@
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-php5.6 dwca_utility.php jenkins 704
+php dwca_utility.php jenkins 704
 </command>
     </hudson.tasks.Shell>
   </builders>

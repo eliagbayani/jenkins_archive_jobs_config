@@ -33,7 +33,7 @@ http://www.eol.org/content_partners/196/resources/120</description>
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-#php5.6 120.php jenkins
+#php 120.php jenkins
 
 
 </command>

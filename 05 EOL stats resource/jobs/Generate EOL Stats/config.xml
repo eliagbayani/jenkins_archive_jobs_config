@@ -35,7 +35,7 @@ H H 20 1-12 *</spec>
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-#php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;eol_v3_api.php&quot;, &quot;divisor&quot;:8, &quot;task&quot;:&quot;initial&quot;}&apos;
+#php run.php jenkins &apos;{&quot;connector&quot;:&quot;eol_v3_api.php&quot;, &quot;divisor&quot;:8, &quot;task&quot;:&quot;initial&quot;}&apos;
 ##originally divisor set to 6
 
 gzip --help</command>

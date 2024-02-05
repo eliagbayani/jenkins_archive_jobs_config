@@ -29,20 +29,20 @@ H H 1 3,5,7,9,11,1 *</spec>
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 ### This will overwrite any current download request. Run this once ONLY every harvest per taxon group.
-php5.6 gbif_download_request_for_iNat.php jenkins &apos;{&quot;task&quot;:&quot;send_download_request&quot;, &quot;taxon&quot;:&quot;iNat_images&quot;}&apos;
+php gbif_download_request_for_iNat.php jenkins &apos;{&quot;task&quot;:&quot;send_download_request&quot;, &quot;taxon&quot;:&quot;iNat_images&quot;}&apos;
 
 ### Will wait for a half a day to check if downloads are ready
 sleep 5h
 
 ### This does not do anything. Can be commented.
-### php5.6 gbif_download_request_for_iNat.php jenkins &apos;{&quot;task&quot;:&quot;start_download&quot;, &quot;taxon&quot;:&quot;iNat_images&quot;}&apos;
+### php gbif_download_request_for_iNat.php jenkins &apos;{&quot;task&quot;:&quot;start_download&quot;, &quot;taxon&quot;:&quot;iNat_images&quot;}&apos;
 
 ### This will generate the .sh file if download is ready. The .sh file is the curl command to download.
-php5.6 gbif_download_request_for_iNat.php jenkins &apos;{&quot;task&quot;:&quot;generate_sh_file&quot;, &quot;taxon&quot;:&quot;iNat_images&quot;}&apos;
+php gbif_download_request_for_iNat.php jenkins &apos;{&quot;task&quot;:&quot;generate_sh_file&quot;, &quot;taxon&quot;:&quot;iNat_images&quot;}&apos;
 
 
 ### This will check if all downloads are ready
-php5.6 gbif_download_request_for_iNat.php jenkins &apos;{&quot;task&quot;:&quot;check_if_all_downloads_are_ready_YN&quot;}&apos;
+php gbif_download_request_for_iNat.php jenkins &apos;{&quot;task&quot;:&quot;check_if_all_downloads_are_ready_YN&quot;}&apos;
 
 
 ### orig: goes here next:

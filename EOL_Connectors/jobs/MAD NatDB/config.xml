@@ -24,13 +24,13 @@
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-php5.6 mad_natdb.php jenkins
+php mad_natdb.php jenkins
 #generates natdb.tar.gz
 
-php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;natdb_meta_recoded_1&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
+php resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;natdb_meta_recoded_1&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
 #-&gt;occurrenceRemarks
 
-php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;natdb_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
+php resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;natdb_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
 #-&gt;lifeStage
 
 </command>

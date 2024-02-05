@@ -28,15 +28,15 @@ http://eol.org/content_partners/6/resources/24</description>
 #exit -1
 
 #cd /html/eol_php_code/update_resources/connectors
-#php5.6 24.php jenkins
+#php 24.php jenkins
 
 #for Trait data
 #cd /html/eol_php_code/update_resources/connectors
-#php5.6 dwca_utility.php jenkins 24
+#php dwca_utility.php jenkins 24
 
 ### atm for caching only...
 cd /html/eol_php_code/update_resources/connectors
-php5.6 24_new.php jenkins
+php 24_new.php jenkins
 </command>
     </hudson.tasks.Shell>
   </builders>

@@ -26,11 +26,11 @@
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 
-#php5.6 spreadsheet_2_dwca.php jenkins 707 --&gt; ran already. OBSOLETE.
+#php spreadsheet_2_dwca.php jenkins 707 --&gt; ran already. OBSOLETE.
 
-php5.6 707.php jenkins # --&gt; this starts with the DwCA generated above.
+php 707.php jenkins # --&gt; this starts with the DwCA generated above.
 
-php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;707_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
+php resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;707_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
 </command>
     </hudson.tasks.Shell>
   </builders>

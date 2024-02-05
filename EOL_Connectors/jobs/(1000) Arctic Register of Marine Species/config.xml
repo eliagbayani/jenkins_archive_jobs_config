@@ -29,9 +29,9 @@ In Nov 22, 2019 - https://eol-jira.bibalex.org/browse/DATA-1841</description>
       <command>cd /html/eol_php_code/update_resources/connectors
 ##Now has 2 steps:
 #step 1: generates 1000.tar.gz
-php5.6 spreadsheet_2_dwca.php jenkins 1000
+php spreadsheet_2_dwca.php jenkins 1000
 #step 2: generates 1000_final.tar.gz
-php5.6 1000.php jenkins
+php 1000.php jenkins
 </command>
     </hudson.tasks.Shell>
   </builders>

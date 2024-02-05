@@ -14,7 +14,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
-php5.6 37.php jenkins
+php 37.php jenkins
 # generates 37.tar.gz</command>
     </hudson.tasks.Shell>
   </builders>

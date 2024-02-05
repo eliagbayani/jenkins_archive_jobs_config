@@ -25,12 +25,12 @@
       <command>cd /html/eol_php_code/update_resources/connectors
 
 # if u want to process all
-#php5.6 conv_csv_dwca.php jenkins
+#php conv_csv_dwca.php jenkins
 
 # if u want to process one resource
-#php5.6 conv_csv_dwca.php jenkins 131
+#php conv_csv_dwca.php jenkins 131
 
-php5.6 conv_csv_dwca.php jenkins 809
+php conv_csv_dwca.php jenkins 809
 </command>
     </hudson.tasks.Shell>
   </builders>

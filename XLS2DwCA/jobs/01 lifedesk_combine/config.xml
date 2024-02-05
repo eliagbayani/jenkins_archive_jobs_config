@@ -24,11 +24,11 @@
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-# php5.6 lifedesk_combine.php jenkins 357
-# php5.6 lifedesk_combine.php jenkins _ scratchpad
-# php5.6 lifedesk_combine.php jenkins _ _
-# php5.6 lifedesk_combine.php jenkins 504
-php5.6 lifedesk_combine.php jenkins 145
+# php lifedesk_combine.php jenkins 357
+# php lifedesk_combine.php jenkins _ scratchpad
+# php lifedesk_combine.php jenkins _ _
+# php lifedesk_combine.php jenkins 504
+php lifedesk_combine.php jenkins 145
 
 </command>
     </hudson.tasks.Shell>

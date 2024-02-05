@@ -27,10 +27,10 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
-php5.6 ictv.php jenkins
+php ictv.php jenkins
 
 #this will add higherClassification
-php5.6 dwca_utility.php jenkins ICTV-virus_taxonomy Y
+php dwca_utility.php jenkins ICTV-virus_taxonomy Y
 </command>
     </hudson.tasks.Shell>
   </builders>

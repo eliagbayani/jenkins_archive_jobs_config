@@ -24,7 +24,7 @@
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;Pensoft_journals&quot;, &quot;resource_id&quot;:&quot;EOL_554_final&quot;, &quot;subjects&quot;:&quot;GeneralDescription&quot;}&apos;
+php environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;Pensoft_journals&quot;, &quot;resource_id&quot;:&quot;EOL_554_final&quot;, &quot;subjects&quot;:&quot;GeneralDescription&quot;}&apos;
 
 #generates EOL_554_final_ENV.tar.gz
 </command>

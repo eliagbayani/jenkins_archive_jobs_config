@@ -14,7 +14,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
-php5.6 bhl_cropped_images.php jenkins
+php bhl_cropped_images.php jenkins
 
 </command>
     </hudson.tasks.Shell>

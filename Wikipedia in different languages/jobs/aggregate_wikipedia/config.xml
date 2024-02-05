@@ -29,13 +29,13 @@
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 
-php5.6 aggregate_resources.php jenkins
+php aggregate_resources.php jenkins
 # generates wikipedia_combined_languages.tar.gz
 # and       wikipedia_combined_languages_batch2.tar.gz
 
 
-php5.6 fill_up_undefined_parents_real.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia_combined_languages&quot;,        &quot;source_dwca&quot;: &quot;wikipedia_combined_languages&quot;,        &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
-php5.6 fill_up_undefined_parents_real.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia_combined_languages_batch2&quot;, &quot;source_dwca&quot;: &quot;wikipedia_combined_languages_batch2&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
+php fill_up_undefined_parents_real.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia_combined_languages&quot;,        &quot;source_dwca&quot;: &quot;wikipedia_combined_languages&quot;,        &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
+php fill_up_undefined_parents_real.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia_combined_languages_batch2&quot;, &quot;source_dwca&quot;: &quot;wikipedia_combined_languages_batch2&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
 
 </command>
     </hudson.tasks.Shell>

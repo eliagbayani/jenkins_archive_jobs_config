@@ -24,11 +24,11 @@
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-##php5.6 process_SI_pdfs.php jenkins &apos;{&quot;resource_id&quot;: &quot;10088_5097&quot;, &quot;resource_name&quot;:&quot;SI Contributions to Zoology&quot;}&apos;
+##php process_SI_pdfs.php jenkins &apos;{&quot;resource_id&quot;: &quot;10088_5097&quot;, &quot;resource_name&quot;:&quot;SI Contributions to Zoology&quot;}&apos;
 ##- 1st repo to process
 ##- generates 10088_5097.tar.gz
 
-php5.6 process_SI_pdfs.php jenkins &apos;{&quot;resource_id&quot;: &quot;10088_6943&quot;, &quot;resource_name&quot;:&quot;SI Contributions to Botany&quot;}&apos;
+php process_SI_pdfs.php jenkins &apos;{&quot;resource_id&quot;: &quot;10088_6943&quot;, &quot;resource_name&quot;:&quot;SI Contributions to Botany&quot;}&apos;
 ##- 2nd repo
 ##- generates 10088_6943.tar.gz
 

@@ -30,41 +30,41 @@ H H 11 * *</spec>
       <command>cd /html/eol_php_code/update_resources/connectors
 
 ### a utility - it works OK - updates the OpenData metadata but not if private.
-### php5.6 ckan_api_access.php jenkins &quot;a74bcc92-d2a2-4a7b-b18f-b5fd2e3a5b5c&quot;                  
+### php ckan_api_access.php jenkins &quot;a74bcc92-d2a2-4a7b-b18f-b5fd2e3a5b5c&quot;                  
 ### exit 1
 
 #OK
-php5.6 26.php jenkins
+php 26.php jenkins
 #generates 26.tar.gz
 #exit 1
 
 #OK
-php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;26_meta_recoded_1&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
+php resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;26_meta_recoded_1&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
 #generates 26_meta_recoded_1.tar.gz
 
 #OK
-php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;26_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
+php resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;26_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
 #generates 26_meta_recoded.tar.gz
 
 #OK
-php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;World Register of Marine Species&quot;, &quot;resource_id&quot;:&quot;26&quot;, &quot;subjects&quot;:&quot;Habitat|Distribution&quot;}&apos;
+php environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;World Register of Marine Species&quot;, &quot;resource_id&quot;:&quot;26&quot;, &quot;subjects&quot;:&quot;Habitat|Distribution&quot;}&apos;
 #generates 26_ENV
 
 #OK
-php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;26_ENV_final&quot;, &quot;task&quot;: &quot;change_measurementIDs&quot;}&apos;
+php resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;26_ENV_final&quot;, &quot;task&quot;: &quot;change_measurementIDs&quot;}&apos;
 #generates 26_ENV_final.tar.gz
 
 #OK
-php5.6 make_hash_IDs_4Deltas.php jenkins &apos;{&quot;task&quot;: &quot;&quot;, &quot;resource&quot;:&quot;Deltas_4hashing&quot;, &quot;resource_id&quot;:&quot;26_ENV_final&quot;}&apos;
+php make_hash_IDs_4Deltas.php jenkins &apos;{&quot;task&quot;: &quot;&quot;, &quot;resource&quot;:&quot;Deltas_4hashing&quot;, &quot;resource_id&quot;:&quot;26_ENV_final&quot;}&apos;
 #generates 26_delta.tar.gz
 
 #OK: remove all Habitat contradicting MoF records for taxon;
 # i.e.  MoF habitat value(s) that are descendants of both marine and terrestrial
-php5.6 rem_marine_terr_desc.php jenkins &apos;{&quot;resource_id&quot;:&quot;26_delta&quot;}&apos;
+php rem_marine_terr_desc.php jenkins &apos;{&quot;resource_id&quot;:&quot;26_delta&quot;}&apos;
 #generates: 26_delta_new.tar.gz
 
 #OK: remove the orphan child records in MoF
-php5.6 dwca_MoF_fix.php jenkins &apos;{&quot;resource_id&quot;:&quot;26_delta_new&quot;, &quot;resource&quot;:&quot;MoF_normalized&quot;}&apos;
+php dwca_MoF_fix.php jenkins &apos;{&quot;resource_id&quot;:&quot;26_delta_new&quot;, &quot;resource&quot;:&quot;MoF_normalized&quot;}&apos;
 #generates 26_MoF_normalized.tar.gz
 
 # total 8 php files to run
@@ -80,7 +80,7 @@ rm -f 26_MoF_normalized.tar.gz
 ### but this only works if OpenData is set ot Public and not Private
 ### https://opendata.eol.org/dataset/worms-internal
 cd /html/eol_php_code/update_resources/connectors
-php5.6 ckan_api_access.php jenkins &quot;a74bcc92-d2a2-4a7b-b18f-b5fd2e3a5b5c&quot;
+php ckan_api_access.php jenkins &quot;a74bcc92-d2a2-4a7b-b18f-b5fd2e3a5b5c&quot;
 
 </command>
     </hudson.tasks.Shell>

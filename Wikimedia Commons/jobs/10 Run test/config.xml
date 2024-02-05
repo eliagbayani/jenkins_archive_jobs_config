@@ -24,11 +24,11 @@
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-php5.6 wikidata.php jenkins test
+php wikidata.php jenkins test
 
-# php5.6 wikidata.php jenkins debug &apos;Salix_sericea_NRCS-2.jpg&apos;
+# php wikidata.php jenkins debug &apos;Salix_sericea_NRCS-2.jpg&apos;
 
-# php5.6 wikidata.php jenkins debug Okinawa_Churaumi_Aquarium.jpg
+# php wikidata.php jenkins debug Okinawa_Churaumi_Aquarium.jpg
 
 # mysql -V</command>
     </hudson.tasks.Shell>

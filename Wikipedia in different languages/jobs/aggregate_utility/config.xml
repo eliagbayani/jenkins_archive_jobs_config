@@ -24,9 +24,9 @@
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-php5.6 aggregate_resources_generic.php jenkins
+php aggregate_resources_generic.php jenkins
 ### fill-up is very much needed here...integral part...required
-php5.6 fill_up_undefined_parents_real.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-sv&quot;, &quot;source_dwca&quot;: &quot;wikipedia-sv&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
+php fill_up_undefined_parents_real.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-sv&quot;, &quot;source_dwca&quot;: &quot;wikipedia-sv&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
 
 </command>
     </hudson.tasks.Shell>

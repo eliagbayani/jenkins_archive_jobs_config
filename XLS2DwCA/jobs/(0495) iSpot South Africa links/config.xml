@@ -26,9 +26,9 @@
 
 # step 1 OK. This will process XLS from OpenData:
 
-#php5.6 spreadsheet_2_dwca.php jenkins 489 ???
+#php spreadsheet_2_dwca.php jenkins 489 ???
 
-php5.6 spreadsheet_2_dwca.php jenkins 495
+php spreadsheet_2_dwca.php jenkins 495
 </command>
     </hudson.tasks.Shell>
   </builders>

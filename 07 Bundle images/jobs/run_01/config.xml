@@ -25,33 +25,33 @@
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 
-#php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:328672, &quot;sci&quot;:&quot;Panthera leo&quot;}&apos;
-#php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:695, &quot;sci&quot;:&quot;Aves&quot;}&apos;
-#php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:164, &quot;sci&quot;:&quot;Arthropoda&quot;}&apos;
-#php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:1642, &quot;sci&quot;:&quot;Mammalia&quot;}&apos;
+#php taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:328672, &quot;sci&quot;:&quot;Panthera leo&quot;}&apos;
+#php taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:695, &quot;sci&quot;:&quot;Aves&quot;}&apos;
+#php taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:164, &quot;sci&quot;:&quot;Arthropoda&quot;}&apos;
+#php taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:1642, &quot;sci&quot;:&quot;Mammalia&quot;}&apos;
 
 ##Finished at: 8,100
 ##[https://eol.org/api/pages/1.0/695.json?details=true&amp;images_per_page=50&amp;images_page=8100]
 ##objects: 50
 
-#php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:7631, &quot;sci&quot;:&quot;Chiroptera&quot;}&apos;
-#php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:747, &quot;sci&quot;:&quot;Lepidoptera&quot;}&apos;
+#php taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:7631, &quot;sci&quot;:&quot;Chiroptera&quot;}&apos;
+#php taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:747, &quot;sci&quot;:&quot;Lepidoptera&quot;}&apos;
 
 #Next batch as of Apr 10, 2020: Squamata (Lizards And Snakes), Anura (Frogs And Toads), Coleoptera (Beetles), and Carnivora (Carnivores)
-#php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:1704, &quot;sci&quot;:&quot;Squamata&quot;}&apos;
-#php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:1553, &quot;sci&quot;:&quot;Anura&quot;}&apos;
-#php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:345, &quot;sci&quot;:&quot;Coleoptera&quot;}&apos;
-#php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:7662, &quot;sci&quot;:&quot;Carnivora&quot;}&apos;
+#php taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:1704, &quot;sci&quot;:&quot;Squamata&quot;}&apos;
+#php taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:1553, &quot;sci&quot;:&quot;Anura&quot;}&apos;
+#php taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:345, &quot;sci&quot;:&quot;Coleoptera&quot;}&apos;
+#php taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:7662, &quot;sci&quot;:&quot;Carnivora&quot;}&apos;
 
 #Next batch, first with ancestry
-#php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:282, &quot;sci&quot;:&quot;Angiosperms&quot;}&apos;
+#php taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:282, &quot;sci&quot;:&quot;Angiosperms&quot;}&apos;
 
 #Next batch as of Aug 24, 2020 - DATA-1861
-#php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:282, &quot;sci&quot;:&quot;Angiosperms&quot;, &quot;limit_images_per_family&quot;:30}&apos;
+#php taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:282, &quot;sci&quot;:&quot;Angiosperms&quot;, &quot;limit_images_per_family&quot;:30}&apos;
 
 #Next batch as of Mar 15, 2021:
-php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:164, &quot;sci&quot;:&quot;Arthropoda&quot;}&apos;
-#php5.6 taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:164, &quot;sci&quot;:&quot;Arthropoda&quot;, &quot;resource_name&quot;: &quot;NMNH Entomology&quot;, &quot;bundles&quot;: 5000}&apos;
+php taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:164, &quot;sci&quot;:&quot;Arthropoda&quot;}&apos;
+#php taxon_image_bundles.php jenkins &apos;{&quot;eol_page_id&quot;:164, &quot;sci&quot;:&quot;Arthropoda&quot;, &quot;resource_name&quot;: &quot;NMNH Entomology&quot;, &quot;bundles&quot;: 5000}&apos;
 </command>
     </hudson.tasks.Shell>
   </builders>

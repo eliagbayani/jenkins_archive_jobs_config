@@ -24,12 +24,12 @@
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;MoftheAES&quot;, &quot;resource_name&quot;:&quot;all MoftheAES&quot;}&apos;
+php process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;MoftheAES&quot;, &quot;resource_name&quot;:&quot;all MoftheAES&quot;}&apos;
 #generates MoftheAES.tar.gz
 
 sleep 120 #wait for 60 seconds
 
-php5.6 environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MoftheAES&quot;, &quot;resource_id&quot;:&quot;MoftheAES&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
+php environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MoftheAES&quot;, &quot;resource_id&quot;:&quot;MoftheAES&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
 #generates MoftheAES_ENV.tar.gz
 </command>
     </hudson.tasks.Shell>

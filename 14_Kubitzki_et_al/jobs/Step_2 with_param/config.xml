@@ -35,9 +35,9 @@
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 
-php5.6 parse_unstructured_text_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;&apos;$resource_ID&apos;&quot;, &quot;resource_name&quot;:&quot;Kubitzki&quot;, &quot;group&quot;:&quot;Kubitzki&quot;}&apos;
+php parse_unstructured_text_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;&apos;$resource_ID&apos;&quot;, &quot;resource_name&quot;:&quot;Kubitzki&quot;, &quot;group&quot;:&quot;Kubitzki&quot;}&apos;
 
-php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;&apos;$resource_ID&apos;&quot;, &quot;resource_name&quot;:&quot;Kubitzki&quot;, &quot;doc&quot;: &quot;Kubitzki_et_al&quot;}&apos;
+php process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;&apos;$resource_ID&apos;&quot;, &quot;resource_name&quot;:&quot;Kubitzki&quot;, &quot;doc&quot;: &quot;Kubitzki_et_al&quot;}&apos;
 </command>
     </hudson.tasks.Shell>
   </builders>

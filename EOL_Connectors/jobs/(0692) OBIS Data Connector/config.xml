@@ -26,10 +26,10 @@
 cd /html/eol_php_code/update_resources/connectors
 
 # generates 692.tar.gz
-php5.6 692.php jenkins
+php 692.php jenkins
 
 # new metadata recoding: reads 692.tar.gz and generates 692_meta_recoded.tar.gz
-php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;692_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
+php resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;692_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
 
 </command>
     </hudson.tasks.Shell>

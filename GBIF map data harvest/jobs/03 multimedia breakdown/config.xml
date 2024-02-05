@@ -26,7 +26,7 @@
 
 cd /html/eol_php_code/update_resources/connectors
 
-php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;breakdown_multimedia_to_gbifID_files&quot;}&apos;
+php gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;breakdown_multimedia_to_gbifID_files&quot;}&apos;
 
 </command>
     </hudson.tasks.Shell>

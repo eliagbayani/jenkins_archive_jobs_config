@@ -37,7 +37,7 @@ $myShell
 
 ### a contingency:
 ### works! - use this if server is restarted and connector is aborted due to maintenance
-###php5.6 generate_map_data_using_GBIF_csv_files.php jenkins &apos;{&quot;group&quot;:false,&quot;range&quot;:[510496,554053],&quot;ctr&quot;:3,&quot;rank&quot;:&quot;&quot;}&apos;
+###php generate_map_data_using_GBIF_csv_files.php jenkins &apos;{&quot;group&quot;:false,&quot;range&quot;:[510496,554053],&quot;ctr&quot;:3,&quot;rank&quot;:&quot;&quot;}&apos;
 
 </command>
     </hudson.tasks.Shell>

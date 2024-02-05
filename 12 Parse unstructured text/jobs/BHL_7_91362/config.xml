@@ -24,9 +24,9 @@
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-php5.6 parse_unstructured_text_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;91362&quot;, &quot;resource_name&quot;:&quot;MotAES&quot;}&apos;
+php parse_unstructured_text_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;91362&quot;, &quot;resource_name&quot;:&quot;MotAES&quot;}&apos;
 
-php5.6 process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;91362&quot;, &quot;resource_name&quot;:&quot;NAF&quot;, &quot;doc&quot;: &quot;&quot;, &quot;IOReport&quot;: &quot;NAF_first7&quot;}&apos;
+php process_SI_pdfs_memoirs.php jenkins &apos;{&quot;resource_id&quot;: &quot;91362&quot;, &quot;resource_name&quot;:&quot;NAF&quot;, &quot;doc&quot;: &quot;&quot;, &quot;IOReport&quot;: &quot;NAF_first7&quot;}&apos;
 #generates 91362.tar.gz
 
 </command>

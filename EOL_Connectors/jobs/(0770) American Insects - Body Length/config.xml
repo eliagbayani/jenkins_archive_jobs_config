@@ -30,10 +30,10 @@ H H 15 3,6,9,12 *</spec>
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-php5.6 770.php jenkins
+php 770.php jenkins
 #generates 770.tar.gz
 
-php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;770_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
+php resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;770_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
 #generates 770_meta_recoded.tar.gz
 </command>
     </hudson.tasks.Shell>

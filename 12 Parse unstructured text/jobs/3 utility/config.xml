@@ -23,7 +23,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
-#php5.6 parse_unstructured_text.php jenkins
+#php parse_unstructured_text.php jenkins
 
 exit 0</command>
     </hudson.tasks.Shell>

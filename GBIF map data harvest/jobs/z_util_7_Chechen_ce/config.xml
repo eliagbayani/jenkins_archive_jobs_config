@@ -27,31 +27,31 @@
 
 cd /html/eol_php_code/update_resources/connectors
 
-#php5.6 wikipedia.php jenkins ce #Chechen -- ce
-php5.6 wikipedia.php jenkins &apos;be-x-old&apos;
+#php wikipedia.php jenkins ce #Chechen -- ce
+php wikipedia.php jenkins &apos;be-x-old&apos;
 
 # -&gt; orig 1 connector run
 
-#php5.6 wikipedia.php jenkins ce generate_resource_force #Chechen
+#php wikipedia.php jenkins ce generate_resource_force #Chechen
 # -&gt; OK works orig 1 connector run --- same as above
 
 
-#php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:6, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;ce&quot;}&apos;
-#php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:6, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;war&quot;, &quot;cont_2next_lang&quot;:&quot;Y&quot;}&apos;
-#php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:6, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;be-x-old&quot;, &quot;cont_2next_lang&quot;:&quot;Y&quot;, &quot;six_coverage&quot;:&quot;1st&quot;}&apos;
+#php run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:6, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;ce&quot;}&apos;
+#php run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:6, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;war&quot;, &quot;cont_2next_lang&quot;:&quot;Y&quot;}&apos;
+#php run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:6, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;be-x-old&quot;, &quot;cont_2next_lang&quot;:&quot;Y&quot;, &quot;six_coverage&quot;:&quot;1st&quot;}&apos;
 
 
 # -&gt; new OK -- 6 connectors run
 # -&gt; does not work if divisor is not 6. Should always be 6
 
-#php5.6 test_jenkins.php jenkins
+#php test_jenkins.php jenkins
 
 # === STEP: fill-up missing parent entries
-#php5.6 fill_up_undefined_parents_real.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-ceb&quot;, &quot;source_dwca&quot;: &quot;wikipedia-ceb&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
-#php5.6 fill_up_undefined_parents_real.php jenkins &apos;{&quot;resource_id&quot;: &quot;80&quot;, &quot;source_dwca&quot;: &quot;80&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
+#php fill_up_undefined_parents_real.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-ceb&quot;, &quot;source_dwca&quot;: &quot;wikipedia-ceb&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
+#php fill_up_undefined_parents_real.php jenkins &apos;{&quot;resource_id&quot;: &quot;80&quot;, &quot;source_dwca&quot;: &quot;80&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
 
 
-#php5.6 test_jenkins.php jenkins
+#php test_jenkins.php jenkins
 
 #exit 1 #--- error in jenkins
 

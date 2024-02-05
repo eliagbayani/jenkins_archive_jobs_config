@@ -24,7 +24,7 @@
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-php5.6 treatmentbank_adjust.php jenkins
+php treatmentbank_adjust.php jenkins
 #-&gt; generates TreatmentBank_adjustment_01.tar.gz
 
 </command>

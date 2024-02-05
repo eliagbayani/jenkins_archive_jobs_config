@@ -17,16 +17,16 @@
 cd /html/eol_php_code/update_resources/connectors
 
 ### Step 1: OK un-comment in real operation
-#php5.6 wikidata.php jenkins generate_wikidata_taxonomy
+#php wikidata.php jenkins generate_wikidata_taxonomy
 #generates wikidata-hierarchy.tar.gz
 
 ### Step 2: OK
 #IMPORTANT: this will be run in command-line since gnparser can&amp;apos;t be accessed here in Jenkins
-#php5.6 fill_up_undefined_parents.php jenkins
+#php fill_up_undefined_parents.php jenkins
 #generates wikidata-hierarchy-final.tar.gz
 
 ### Step 3: OK
-php5.6 assign_EOLid.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikidata-hierarchy-final&quot;}&apos;
+php assign_EOLid.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikidata-hierarchy-final&quot;}&apos;
 #generates wikidata_hierarchy.tar.gz
 
 

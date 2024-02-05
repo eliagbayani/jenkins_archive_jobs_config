@@ -33,7 +33,7 @@ H 0-23/6 * * 1-5</spec>
 # 
 
 cd /html/eol_php_code/update_resources/connectors
-php5.6 eol_harvest_publish.php jenkins
+php eol_harvest_publish.php jenkins
 </command>
     </hudson.tasks.Shell>
   </builders>

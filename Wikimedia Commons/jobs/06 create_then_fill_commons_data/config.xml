@@ -27,7 +27,7 @@
 # Can be repeated from this point. 
 # Especially if harvest was aborted due to maintenance, you can start here.
 
-php5.6 wikidata.php jenkins &apos;{&quot;task&quot;:&quot;create_then_fill_commons_data&quot;}&apos; #OK - few hours
+php wikidata.php jenkins &apos;{&quot;task&quot;:&quot;create_then_fill_commons_data&quot;}&apos; #OK - few hours
 
 ### orig post build:
 ### 08 generate_resource NEW</command>

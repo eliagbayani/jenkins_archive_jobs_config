@@ -15,10 +15,10 @@
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-php5.6 170.php jenkins
+php 170.php jenkins
 
 #to do: we need to install ffmpeg in eol-archive.
-php5.6 170_final.php jenkins
+php 170_final.php jenkins
 </command>
     </hudson.tasks.Shell>
   </builders>

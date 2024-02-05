@@ -24,7 +24,7 @@
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-php5.6 wikidata_test.php jenkins
+php wikidata_test.php jenkins
 </command>
     </hudson.tasks.Shell>
   </builders>

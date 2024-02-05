@@ -25,7 +25,7 @@
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 
-php5.6 usda_plant_images.php jenkins #new connector for image resource
+php usda_plant_images.php jenkins #new connector for image resource
 </command>
     </hudson.tasks.Shell>
   </builders>

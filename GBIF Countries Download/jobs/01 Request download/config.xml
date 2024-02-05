@@ -31,14 +31,14 @@ H H 15 6,9,12,3 *</spec>
 ### This will overwrite any current download request. 
 ### Run this once ONLY every harvest per taxon group.
 
-php5.6 gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;send_download_request&quot;, &quot;taxon&quot;:&quot;GBIF_Netherlands&quot;}&apos;
-php5.6 gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;send_download_request&quot;, &quot;taxon&quot;:&quot;GBIF_France&quot;}&apos;
+php gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;send_download_request&quot;, &quot;taxon&quot;:&quot;GBIF_Netherlands&quot;}&apos;
+php gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;send_download_request&quot;, &quot;taxon&quot;:&quot;GBIF_France&quot;}&apos;
 sleep 1h
-php5.6 gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;send_download_request&quot;, &quot;taxon&quot;:&quot;GBIF_Germany&quot;}&apos;
-php5.6 gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;send_download_request&quot;, &quot;taxon&quot;:&quot;GBIF_Brazil&quot;}&apos;
+php gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;send_download_request&quot;, &quot;taxon&quot;:&quot;GBIF_Germany&quot;}&apos;
+php gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;send_download_request&quot;, &quot;taxon&quot;:&quot;GBIF_Brazil&quot;}&apos;
 sleep 1h
-php5.6 gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;send_download_request&quot;, &quot;taxon&quot;:&quot;GBIF_Sweden&quot;}&apos;
-php5.6 gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;send_download_request&quot;, &quot;taxon&quot;:&quot;GBIF_UnitedKingdom&quot;}&apos;
+php gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;send_download_request&quot;, &quot;taxon&quot;:&quot;GBIF_Sweden&quot;}&apos;
+php gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;send_download_request&quot;, &quot;taxon&quot;:&quot;GBIF_UnitedKingdom&quot;}&apos;
 sleep 1h
 
 ### Will wait for another hour to check if downloads are ready
@@ -46,12 +46,12 @@ sleep 1h
 
 ### This will generate the .sh file if download is ready. 
 ### The .sh file is the curl command to download.
-php5.6 gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;generate_sh_file&quot;, &quot;taxon&quot;:&quot;GBIF_Netherlands&quot;}&apos;
-php5.6 gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;generate_sh_file&quot;, &quot;taxon&quot;:&quot;GBIF_France&quot;}&apos;
-php5.6 gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;generate_sh_file&quot;, &quot;taxon&quot;:&quot;GBIF_Germany&quot;}&apos;
-php5.6 gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;generate_sh_file&quot;, &quot;taxon&quot;:&quot;GBIF_Brazil&quot;}&apos;
-php5.6 gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;generate_sh_file&quot;, &quot;taxon&quot;:&quot;GBIF_Sweden&quot;}&apos;
-php5.6 gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;generate_sh_file&quot;, &quot;taxon&quot;:&quot;GBIF_UnitedKingdom&quot;}&apos;
+php gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;generate_sh_file&quot;, &quot;taxon&quot;:&quot;GBIF_Netherlands&quot;}&apos;
+php gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;generate_sh_file&quot;, &quot;taxon&quot;:&quot;GBIF_France&quot;}&apos;
+php gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;generate_sh_file&quot;, &quot;taxon&quot;:&quot;GBIF_Germany&quot;}&apos;
+php gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;generate_sh_file&quot;, &quot;taxon&quot;:&quot;GBIF_Brazil&quot;}&apos;
+php gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;generate_sh_file&quot;, &quot;taxon&quot;:&quot;GBIF_Sweden&quot;}&apos;
+php gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;generate_sh_file&quot;, &quot;taxon&quot;:&quot;GBIF_UnitedKingdom&quot;}&apos;
 
 
 

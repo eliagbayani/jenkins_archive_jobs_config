@@ -29,7 +29,7 @@ https://opendata.eol.org/dataset/miscellaneous/resource/63788557-5fca-44a4-9e66-
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-php5.6 664.php jenkins
+php 664.php jenkins
 </command>
     </hudson.tasks.Shell>
   </builders>

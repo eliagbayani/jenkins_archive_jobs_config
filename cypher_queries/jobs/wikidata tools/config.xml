@@ -13,7 +13,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
-php5.6 cypher.php jenkins
+php cypher.php jenkins
 </command>
     </hudson.tasks.Shell>
   </builders>

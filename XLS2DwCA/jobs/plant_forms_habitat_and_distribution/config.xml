@@ -28,10 +28,10 @@ Eli as of Sep 12, 2019 deleted the builds coz it is getting too much space.</des
 
 # step 1 OK. This will process XLS from OpenData:
 # https://opendata.eol.org/dataset/aab3818f-d538-4d5f-a3b8-b52d233c7ac0/resource/8e46a838-0394-42bd-9272-0a8591834713/download/plant-habit-habitat-and-distribution.xlsx
-php5.6 spreadsheet_2_dwca.php jenkins plant_forms_habitat_and_distribution
+php spreadsheet_2_dwca.php jenkins plant_forms_habitat_and_distribution
 
 # step 2 OK. This will process plant_forms_habitat_and_distribution.tar.gz from /resources/ folder.
-php5.6 dwca_utility.php jenkins plant_forms_habitat_and_distribution
+php dwca_utility.php jenkins plant_forms_habitat_and_distribution
 </command>
     </hudson.tasks.Shell>
   </builders>

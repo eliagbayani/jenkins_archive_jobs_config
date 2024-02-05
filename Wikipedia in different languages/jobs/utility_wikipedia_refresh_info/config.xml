@@ -34,7 +34,7 @@
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-php5.6 resource_refresh_info.php jenkins $month_year
+php resource_refresh_info.php jenkins $month_year
 
 
 </command>

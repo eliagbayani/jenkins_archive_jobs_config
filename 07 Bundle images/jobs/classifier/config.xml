@@ -26,12 +26,12 @@
 cd /html/eol_php_code/update_resources/connectors
 
 # Workd OK, ran already.
-#php5.6 image_bundle_classifier.php jenkins &apos;{&quot;task&quot;: &quot;task_1&quot;}&apos;
-#php5.6 image_bundle_classifier.php jenkins &apos;{&quot;task&quot;: &quot;task_3a&quot;}&apos;
-#php5.6 image_bundle_classifier.php jenkins &apos;{&quot;task&quot;: &quot;task_3c&quot;}&apos;
+#php image_bundle_classifier.php jenkins &apos;{&quot;task&quot;: &quot;task_1&quot;}&apos;
+#php image_bundle_classifier.php jenkins &apos;{&quot;task&quot;: &quot;task_3a&quot;}&apos;
+#php image_bundle_classifier.php jenkins &apos;{&quot;task&quot;: &quot;task_3c&quot;}&apos;
 
-#php5.6 image_bundle_classifier.php jenkins &apos;{&quot;task&quot;: &quot;task_2&quot;}&apos;
-php5.6 image_bundle_classifier.php jenkins &apos;{&quot;task&quot;: &quot;task_3b&quot;}&apos;
+#php image_bundle_classifier.php jenkins &apos;{&quot;task&quot;: &quot;task_2&quot;}&apos;
+php image_bundle_classifier.php jenkins &apos;{&quot;task&quot;: &quot;task_3b&quot;}&apos;
 </command>
     </hudson.tasks.Shell>
   </builders>

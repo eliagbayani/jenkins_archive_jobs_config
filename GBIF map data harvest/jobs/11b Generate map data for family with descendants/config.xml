@@ -28,21 +28,21 @@ cd /html/eol_php_code/update_resources/connectors
 
 
 ## works per taxon OK
-#php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;gen_map_data_forTaxa_with_children&quot;,&quot;sciname&quot;:&quot;Gadus&quot;,&quot;tc_id&quot;:46564414}&apos;
+#php gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;gen_map_data_forTaxa_with_children&quot;,&quot;sciname&quot;:&quot;Gadus&quot;,&quot;tc_id&quot;:46564414}&apos;
 ## taxon with many many children OK
-#php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;gen_map_data_forTaxa_with_children&quot;,&quot;sciname&quot;:&quot;Noctuidae&quot;,&quot;tc_id&quot;:873}&apos;
-#php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;gen_map_data_forTaxa_with_children&quot;,&quot;sciname&quot;:&quot;Saurischia&quot;,&quot;tc_id&quot;:4531095}&apos;
+#php gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;gen_map_data_forTaxa_with_children&quot;,&quot;sciname&quot;:&quot;Noctuidae&quot;,&quot;tc_id&quot;:873}&apos;
+#php gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;gen_map_data_forTaxa_with_children&quot;,&quot;sciname&quot;:&quot;Saurischia&quot;,&quot;tc_id&quot;:4531095}&apos;
 
 
 ## development only OK --- NOT to run in eol-archive
-#php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;gen_map_data_forTaxa_with_children&quot;}&apos;
+#php gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;gen_map_data_forTaxa_with_children&quot;}&apos;
 
 
 ## normal operation OK - triggers jenkins job fine
 ## formerly divisor equals 6 only
-#php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;gen_map_data_forTaxa_with_children&quot;,&quot;divisor&quot;:10,&quot;rank&quot;:&quot;genus&quot;}&apos;
-php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;gen_map_data_forTaxa_with_children&quot;,&quot;divisor&quot;:10,&quot;rank&quot;:&quot;family&quot;}&apos;
-#php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;gen_map_data_forTaxa_with_children&quot;,&quot;divisor&quot;:10,&quot;rank&quot;:&quot;order&quot;}&apos;
+#php gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;gen_map_data_forTaxa_with_children&quot;,&quot;divisor&quot;:10,&quot;rank&quot;:&quot;genus&quot;}&apos;
+php gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;gen_map_data_forTaxa_with_children&quot;,&quot;divisor&quot;:10,&quot;rank&quot;:&quot;family&quot;}&apos;
+#php gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;gen_map_data_forTaxa_with_children&quot;,&quot;divisor&quot;:10,&quot;rank&quot;:&quot;order&quot;}&apos;
 </command>
     </hudson.tasks.Shell>
   </builders>

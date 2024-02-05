@@ -24,7 +24,7 @@ will check connector and disable debug info</description>
   <builders>
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
-php5.6 gbif_georeference_dwca.php jenkins
+php gbif_georeference_dwca.php jenkins
 
 </command>
     </hudson.tasks.Shell>

@@ -23,7 +23,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
-php5.6 DATA_1718.php jenkins
+php DATA_1718.php jenkins
 
 </command>
     </hudson.tasks.Shell>

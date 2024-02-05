@@ -27,12 +27,12 @@
 ### This will check if all downloads are ready.
 ### - will fail if not ready. Will not proceed to next job.
 ### - will proceed with next job if ready
-php5.6 gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;check_if_all_downloads_are_ready_YN&quot;, &quot;taxon&quot;:&quot;GBIF_Netherlands&quot;}&apos;
-php5.6 gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;check_if_all_downloads_are_ready_YN&quot;, &quot;taxon&quot;:&quot;GBIF_France&quot;}&apos;
-php5.6 gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;check_if_all_downloads_are_ready_YN&quot;, &quot;taxon&quot;:&quot;GBIF_Germany&quot;}&apos;
-php5.6 gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;check_if_all_downloads_are_ready_YN&quot;, &quot;taxon&quot;:&quot;GBIF_Brazil&quot;}&apos;
-php5.6 gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;check_if_all_downloads_are_ready_YN&quot;, &quot;taxon&quot;:&quot;GBIF_Sweden&quot;}&apos;
-php5.6 gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;check_if_all_downloads_are_ready_YN&quot;, &quot;taxon&quot;:&quot;GBIF_UnitedKingdom&quot;}&apos;
+php gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;check_if_all_downloads_are_ready_YN&quot;, &quot;taxon&quot;:&quot;GBIF_Netherlands&quot;}&apos;
+php gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;check_if_all_downloads_are_ready_YN&quot;, &quot;taxon&quot;:&quot;GBIF_France&quot;}&apos;
+php gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;check_if_all_downloads_are_ready_YN&quot;, &quot;taxon&quot;:&quot;GBIF_Germany&quot;}&apos;
+php gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;check_if_all_downloads_are_ready_YN&quot;, &quot;taxon&quot;:&quot;GBIF_Brazil&quot;}&apos;
+php gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;check_if_all_downloads_are_ready_YN&quot;, &quot;taxon&quot;:&quot;GBIF_Sweden&quot;}&apos;
+php gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;check_if_all_downloads_are_ready_YN&quot;, &quot;taxon&quot;:&quot;GBIF_UnitedKingdom&quot;}&apos;
 
 
 #Build other projects:

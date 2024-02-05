@@ -25,7 +25,7 @@
       <command>### start main program ===================================
 
 cd /html/eol_php_code/update_resources/connectors
-php5.6 generate_map_data_using_GBIF_csv_files.php jenkins &apos;{&quot;group&quot;:false,&quot;range&quot;:[509855,554053],&quot;ctr&quot;:3,&quot;rank&quot;:&quot;&quot;}&apos;
+php generate_map_data_using_GBIF_csv_files.php jenkins &apos;{&quot;group&quot;:false,&quot;range&quot;:[509855,554053],&quot;ctr&quot;:3,&quot;rank&quot;:&quot;&quot;}&apos;
 </command>
     </hudson.tasks.Shell>
   </builders>

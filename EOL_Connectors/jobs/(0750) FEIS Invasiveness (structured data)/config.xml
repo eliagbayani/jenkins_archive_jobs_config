@@ -25,7 +25,7 @@ http://opendata.eol.org/dataset/fire_effects_information_system</description>
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-php5.6 750.php jenkins
+php 750.php jenkins
 </command>
     </hudson.tasks.Shell>
   </builders>

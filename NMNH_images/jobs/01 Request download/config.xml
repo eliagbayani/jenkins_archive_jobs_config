@@ -29,16 +29,16 @@ H H 13 5,8,11,2 *</spec>
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 ### This will overwrite any current download request. Run this once ONLY every harvest per taxon group.
-php5.6 gbif_download_request_for_NMNH.php jenkins &apos;{&quot;task&quot;:&quot;send_download_request&quot;, &quot;taxon&quot;:&quot;NMNH_images&quot;}&apos;
+php gbif_download_request_for_NMNH.php jenkins &apos;{&quot;task&quot;:&quot;send_download_request&quot;, &quot;taxon&quot;:&quot;NMNH_images&quot;}&apos;
 
 ### Will wait for a half a day to check if downloads are ready
 sleep 3h
 
 ### This will generate the .sh file if download is ready. The .sh file is the curl command to download.
-php5.6 gbif_download_request_for_NMNH.php jenkins &apos;{&quot;task&quot;:&quot;start_download&quot;, &quot;taxon&quot;:&quot;NMNH_images&quot;}&apos;
+php gbif_download_request_for_NMNH.php jenkins &apos;{&quot;task&quot;:&quot;start_download&quot;, &quot;taxon&quot;:&quot;NMNH_images&quot;}&apos;
 
 ### This will check if all downloads are ready
-php5.6 gbif_download_request_for_NMNH.php jenkins &apos;{&quot;task&quot;:&quot;check_if_all_downloads_are_ready_YN&quot;}&apos;
+php gbif_download_request_for_NMNH.php jenkins &apos;{&quot;task&quot;:&quot;check_if_all_downloads_are_ready_YN&quot;}&apos;
 </command>
     </hudson.tasks.Shell>
   </builders>

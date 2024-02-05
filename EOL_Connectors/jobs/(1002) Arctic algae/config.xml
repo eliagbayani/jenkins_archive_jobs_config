@@ -24,7 +24,7 @@ https://opendata.eol.org/dataset/arctic_biodiversity</description>
   <builders>
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
-php5.6 spreadsheet_2_dwca.php jenkins 1002
+php spreadsheet_2_dwca.php jenkins 1002
 </command>
     </hudson.tasks.Shell>
   </builders>

@@ -25,7 +25,7 @@
       <command>cd /html/eol_php_code/update_resources/connectors
 
 # step 1 OK. This will process XLS from OpenData:
-php5.6 spreadsheet_2_dwca.php jenkins 990
+php spreadsheet_2_dwca.php jenkins 990
 
 </command>
     </hudson.tasks.Shell>

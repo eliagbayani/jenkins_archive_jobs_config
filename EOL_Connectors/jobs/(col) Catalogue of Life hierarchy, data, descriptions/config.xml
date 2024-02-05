@@ -29,10 +29,10 @@ This is a pre-requisite for the two:&#xd;
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 #this is kinda one-time since it is date sensitive.
-#php5.6 COL_data.php jenkins
+#php COL_data.php jenkins
 #generates col.tar.gz
 
-php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;col_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
+php resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;col_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
 #generates col_meta_recorded.tar.gz
 #this just moves MEDIA contributor to AGENTS
 </command>

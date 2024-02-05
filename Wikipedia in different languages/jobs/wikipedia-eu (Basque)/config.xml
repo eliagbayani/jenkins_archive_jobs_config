@@ -25,10 +25,10 @@
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 
-php5.6 wikipedia.php jenkins eu #Basque
+php wikipedia.php jenkins eu #Basque
 
 # === STEP: fill-up missing parent entries
-php5.6 fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-eu&quot;, &quot;source_dwca&quot;: &quot;wikipedia-eu&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
+php fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-eu&quot;, &quot;source_dwca&quot;: &quot;wikipedia-eu&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
 
 </command>
     </hudson.tasks.Shell>

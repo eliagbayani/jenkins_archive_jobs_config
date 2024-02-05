@@ -23,10 +23,10 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
-php5.6 fao_species.php jenkins
+php fao_species.php jenkins
 
 ### works but didn&apos;t use it anymore. Salvaged above code.
-### php5.6 dwca_utility.php jenkins fao_species
+### php dwca_utility.php jenkins fao_species
 </command>
     </hudson.tasks.Shell>
   </builders>

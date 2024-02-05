@@ -72,7 +72,7 @@ df -h
 #yum -v
 
 #cd /html/eol_php_code/update_resources/connectors
-#php5.6 test.php
+#php test.php
 
 
 #ls -lt /usr/bin/p*
@@ -82,7 +82,7 @@ df -h
 #ls -lt /html/eol_php_code/tmp/cache2/
 
 
-#php5.6 -v
+#php -v
 #php -v
 
 #/usr/bin/mysql -uroot -p&apos;m173!XAbc*&apos;  -e &quot;SELECT @@datadir;&quot;
@@ -101,16 +101,16 @@ df -h
 #curl --help
 
 #php -m
-#php5.6 -m
+#php -m
 
 #which php5.6
 #which sudo
-#php5.6 -i
+#php -i
 #gzip --help
 
 #which zip
 #zip -v
-#php5.6 -v
+#php -v
 #php --info
 
 #which gzip
@@ -200,7 +200,7 @@ df -h
 
 
 #cd /html/eol_php_code/update_resources/connectors/
-#php5.6 media_convert.php
+#php media_convert.php
 
 #exit(1)
 #cd /extra/eol_php_code_tmp/

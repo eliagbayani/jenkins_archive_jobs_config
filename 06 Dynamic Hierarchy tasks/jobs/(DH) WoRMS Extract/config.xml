@@ -26,10 +26,10 @@ https://eol-jira.bibalex.org/browse/TRAM-988</description>
       <command>cd /html/eol_php_code/update_resources/connectors
 
 # below will be run on command-line since gnparser can&apos;t run in jenkins yet.
-#php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;WoRMS2EoL_zip&quot;, &quot;task&quot;: &quot;add_canonical_in_taxa&quot;}&apos;
+#php resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;WoRMS2EoL_zip&quot;, &quot;task&quot;: &quot;add_canonical_in_taxa&quot;}&apos;
 
 ## this one will run OK in Jenkins.
-php5.6 dwh_worms_TRAM_798.php jenkins
+php dwh_worms_TRAM_798.php jenkins
 
 # testing...
 #/usr/local/bin/gnparser name &quot;Gadus morhua&quot;

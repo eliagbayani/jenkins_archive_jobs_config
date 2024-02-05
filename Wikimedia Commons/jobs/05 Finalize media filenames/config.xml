@@ -36,14 +36,14 @@
       <command>cd /html/eol_php_code/update_resources/connectors
 
 #step 2: initially six connectors to cache, then one connector to finalize
-#php5.6 wikidata.php jenkins save_all_media_filenames 1 xxx
-#php5.6 wikidata.php jenkins save_all_media_filenames xxx xxx
-#php5.6 wikidata.php jenkins save_all_media_filenames 200000 300000
-#php5.6 wikidata.php jenkins save_all_media_filenames 300000 1130000 #inc 830000
-#php5.6 wikidata.php jenkins save_all_media_filenames 1130000 1960000 #inc 830000
-#php5.6 wikidata.php jenkins save_all_media_filenames 1960000 2500000 #all remaining
+#php wikidata.php jenkins save_all_media_filenames 1 xxx
+#php wikidata.php jenkins save_all_media_filenames xxx xxx
+#php wikidata.php jenkins save_all_media_filenames 200000 300000
+#php wikidata.php jenkins save_all_media_filenames 300000 1130000 #inc 830000
+#php wikidata.php jenkins save_all_media_filenames 1130000 1960000 #inc 830000
+#php wikidata.php jenkins save_all_media_filenames 1960000 2500000 #all remaining
 
-php5.6 wikidata.php jenkins &apos;{&quot;task&quot;:&quot;save_all_media_filenames&quot;}&apos; #finalize
+php wikidata.php jenkins &apos;{&quot;task&quot;:&quot;save_all_media_filenames&quot;}&apos; #finalize
 
 
 </command>

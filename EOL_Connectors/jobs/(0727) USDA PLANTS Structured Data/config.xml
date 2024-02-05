@@ -19,7 +19,7 @@ H H 10 3,6,9,12 *</spec>
   <builders>
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
-##php5.6 spreadsheet_2_dwca.php jenkins 727
+##php spreadsheet_2_dwca.php jenkins 727
 
 #The legacy 727.tar.gz was renamed to 727_24Oct2017.tar.gz. 
 #We&amp;apos;re going to use the latter moving forward.
@@ -28,11 +28,11 @@ H H 10 3,6,9,12 *</spec>
 
 # ===== this will be the new connector moving forward: =====
 # OK
-php5.6 727.php jenkins
+php 727.php jenkins
 # generates 727.tar.gz
 
 # OK
-php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;727_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
+php resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;727_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
 # generates 727_meta_recoded.tar.gz
 
 #LAST STEP: copy last transactional DwCA to usda_plant_traits.tar.gz OK

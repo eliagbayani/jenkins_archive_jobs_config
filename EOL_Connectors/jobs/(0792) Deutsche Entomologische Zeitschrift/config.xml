@@ -38,7 +38,7 @@ H 01 6 * *
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-php5.6 792.php jenkins
+php 792.php jenkins
 </command>
     </hudson.tasks.Shell>
   </builders>

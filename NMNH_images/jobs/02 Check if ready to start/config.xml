@@ -27,7 +27,7 @@
 ### This will check if all downloads are ready.
 ### - will fail if not ready. Will not proceed to next job.
 ### - will proceed with next job if ready
-php5.6 gbif_download_request_for_NMNH.php jenkins &apos;{&quot;task&quot;:&quot;check_if_all_downloads_are_ready_YN&quot;}&apos;
+php gbif_download_request_for_NMNH.php jenkins &apos;{&quot;task&quot;:&quot;check_if_all_downloads_are_ready_YN&quot;}&apos;
 
 #Build other projects:
 #

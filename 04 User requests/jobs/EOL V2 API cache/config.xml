@@ -14,7 +14,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
-php5.6 eol_api.php jenkins
+php eol_api.php jenkins
 
 </command>
     </hudson.tasks.Shell>

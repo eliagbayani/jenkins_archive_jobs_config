@@ -26,7 +26,7 @@
 
 # OK test
 cd /html/eol_php_code/update_resources/connectors
-php5.6 dwca_utility.php jenkins 24
+php dwca_utility.php jenkins 24
 
 #which gzip</command>
     </hudson.tasks.Shell>

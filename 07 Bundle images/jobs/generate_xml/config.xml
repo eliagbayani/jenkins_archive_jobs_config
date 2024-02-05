@@ -25,17 +25,17 @@
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 
-#php5.6 taxon_image_bundles_part2.php jenkins &apos;{&quot;eol_page_id&quot;:7631, &quot;sci&quot;:&quot;Chiroptera&quot;}&apos;
-#php5.6 taxon_image_bundles_part2.php jenkins &apos;{&quot;eol_page_id&quot;:747, &quot;sci&quot;:&quot;Lepidoptera_test&quot;}&apos;
-#php5.6 taxon_image_bundles_part2.php jenkins &apos;{&quot;eol_page_id&quot;:747, &quot;sci&quot;:&quot;Lepidoptera_train&quot;}&apos;
+#php taxon_image_bundles_part2.php jenkins &apos;{&quot;eol_page_id&quot;:7631, &quot;sci&quot;:&quot;Chiroptera&quot;}&apos;
+#php taxon_image_bundles_part2.php jenkins &apos;{&quot;eol_page_id&quot;:747, &quot;sci&quot;:&quot;Lepidoptera_test&quot;}&apos;
+#php taxon_image_bundles_part2.php jenkins &apos;{&quot;eol_page_id&quot;:747, &quot;sci&quot;:&quot;Lepidoptera_train&quot;}&apos;
 
 #new batch: Apr 1, 2020
-php5.6 taxon_image_bundles_part2.php jenkins &apos;{&quot;eol_page_id&quot;:1, &quot;sci&quot;:&quot;anura_crops_test_notaug_fin&quot;}&apos;
-php5.6 taxon_image_bundles_part2.php jenkins &apos;{&quot;eol_page_id&quot;:1, &quot;sci&quot;:&quot;carnivora_crops_test_notaug_fin&quot;}&apos;
-php5.6 taxon_image_bundles_part2.php jenkins &apos;{&quot;eol_page_id&quot;:1, &quot;sci&quot;:&quot;coleoptera_crops_test_notaug_fin&quot;}&apos;
-php5.6 taxon_image_bundles_part2.php jenkins &apos;{&quot;eol_page_id&quot;:1, &quot;sci&quot;:&quot;multitaxa_crops_test_notaug_fin&quot;}&apos;
-php5.6 taxon_image_bundles_part2.php jenkins &apos;{&quot;eol_page_id&quot;:1, &quot;sci&quot;:&quot;multitaxa_crops_train_aug_all_fin&quot;}&apos;
-php5.6 taxon_image_bundles_part2.php jenkins &apos;{&quot;eol_page_id&quot;:1, &quot;sci&quot;:&quot;squamata_crops_test_notaug_fin&quot;}&apos;
+php taxon_image_bundles_part2.php jenkins &apos;{&quot;eol_page_id&quot;:1, &quot;sci&quot;:&quot;anura_crops_test_notaug_fin&quot;}&apos;
+php taxon_image_bundles_part2.php jenkins &apos;{&quot;eol_page_id&quot;:1, &quot;sci&quot;:&quot;carnivora_crops_test_notaug_fin&quot;}&apos;
+php taxon_image_bundles_part2.php jenkins &apos;{&quot;eol_page_id&quot;:1, &quot;sci&quot;:&quot;coleoptera_crops_test_notaug_fin&quot;}&apos;
+php taxon_image_bundles_part2.php jenkins &apos;{&quot;eol_page_id&quot;:1, &quot;sci&quot;:&quot;multitaxa_crops_test_notaug_fin&quot;}&apos;
+php taxon_image_bundles_part2.php jenkins &apos;{&quot;eol_page_id&quot;:1, &quot;sci&quot;:&quot;multitaxa_crops_train_aug_all_fin&quot;}&apos;
+php taxon_image_bundles_part2.php jenkins &apos;{&quot;eol_page_id&quot;:1, &quot;sci&quot;:&quot;squamata_crops_test_notaug_fin&quot;}&apos;
 </command>
     </hudson.tasks.Shell>
   </builders>

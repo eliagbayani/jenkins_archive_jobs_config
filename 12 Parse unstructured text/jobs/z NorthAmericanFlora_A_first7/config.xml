@@ -24,7 +24,7 @@
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-php5.6 aggregate_NorthAF.php
+php aggregate_NorthAF.php
 
 ### orig goes here
 ### MoftheAES_1_118935,z NorthAmericanFlora_ALL</command>

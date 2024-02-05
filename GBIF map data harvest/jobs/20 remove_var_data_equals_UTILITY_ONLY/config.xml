@@ -24,7 +24,7 @@
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-php5.6 gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;remove_var_data_equals&quot;}&apos;
+php gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;remove_var_data_equals&quot;}&apos;
 
 </command>
     </hudson.tasks.Shell>

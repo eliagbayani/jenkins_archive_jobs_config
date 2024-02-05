@@ -26,8 +26,8 @@
 
 cd /html/eol_php_code/update_resources/connectors
 
-#php5.6 generate_map_data_using_GBIF_csv_files.php jenkins &apos;{&quot;group&quot;:false,&quot;range&quot;:[509613,510613],&quot;ctr&quot;:16,&quot;rank&quot;:&quot;&quot;}&apos;
-#php5.6 generate_map_data_using_GBIF_csv_files.php jenkins &apos;{&quot;group&quot;:false,&quot;range&quot;:[514613,515613],&quot;ctr&quot;:17,&quot;rank&quot;:&quot;&quot;}&apos;
+#php generate_map_data_using_GBIF_csv_files.php jenkins &apos;{&quot;group&quot;:false,&quot;range&quot;:[509613,510613],&quot;ctr&quot;:16,&quot;rank&quot;:&quot;&quot;}&apos;
+#php generate_map_data_using_GBIF_csv_files.php jenkins &apos;{&quot;group&quot;:false,&quot;range&quot;:[514613,515613],&quot;ctr&quot;:17,&quot;rank&quot;:&quot;&quot;}&apos;
 
 rm -rf /extra/other_files/GBIF_occurrence/multimedia_gbifID/e*
 </command>

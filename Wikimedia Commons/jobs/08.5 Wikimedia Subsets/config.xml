@@ -25,10 +25,10 @@
       <command>cd /html/eol_php_code/update_resources/connectors
 
 ### main operation
-php5.6 wikimedia_subsets.php jenkins
+php wikimedia_subsets.php jenkins
 
 # === STEP: fill-up missing parent entries
-php5.6 fill_up_undefined_parents_real.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikimedia_comnames&quot;, &quot;source_dwca&quot;: &quot;wikimedia_comnames&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
+php fill_up_undefined_parents_real.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikimedia_comnames&quot;, &quot;source_dwca&quot;: &quot;wikimedia_comnames&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
 
 
 ### NEW:start - To free up space, delete un-needed files. Part of housekeeping.

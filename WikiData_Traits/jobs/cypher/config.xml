@@ -25,23 +25,23 @@
       <command>cd /html/eol_php_code/update_resources/connectors
 
 echo &quot;try --&gt; 1&quot;
-php5.6 cypher.php jenkins
+php cypher.php jenkins
 sleep 300 #5 mins
 
 echo &quot;try --&gt; 2&quot;
-php5.6 cypher.php jenkins
+php cypher.php jenkins
 sleep 300 #5 mins
 
 echo &quot;try --&gt; 3&quot;
-php5.6 cypher.php jenkins
+php cypher.php jenkins
 sleep 300 #5 mins
 
 echo &quot;try --&gt; 4&quot;
-php5.6 cypher.php jenkins
+php cypher.php jenkins
 sleep 300 #5 mins
 
 echo &quot;try --&gt; 5&quot;
-php5.6 cypher.php jenkins
+php cypher.php jenkins
 sleep 300 #5 mins
 </command>
     </hudson.tasks.Shell>

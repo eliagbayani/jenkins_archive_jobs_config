@@ -28,7 +28,7 @@
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
-php5.6 freedata_emammal.php jenkins
+php freedata_emammal.php jenkins
 </command>
     </hudson.tasks.Shell>
   </builders>

@@ -24,7 +24,7 @@
     <hudson.tasks.Shell>
       <command>### NO NEED TO REFRESH BASED ON: DATA-1919
 cd /html/eol_php_code/update_resources/connectors
-php5.6 650.php jenkins
+php 650.php jenkins
 
 </command>
     </hudson.tasks.Shell>

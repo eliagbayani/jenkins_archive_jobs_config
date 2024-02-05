@@ -26,14 +26,14 @@
 cd /html/eol_php_code/update_resources/connectors
 
 ## works OK but will try to use MultipleConnJenkins
-php5.6 wikipedia.php jenkins sh #Serbo-Croatian (sh)
+php wikipedia.php jenkins sh #Serbo-Croatian (sh)
 
 # === STEP: fill-up missing parent entries
-php5.6 fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-sh&quot;, &quot;source_dwca&quot;: &quot;wikipedia-sh&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
+php fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-sh&quot;, &quot;source_dwca&quot;: &quot;wikipedia-sh&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
 
 
 ## not set atm to run multiple connectors (set in wikipedia.php)
-#php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:1, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;sh&quot;}&apos;
+#php run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:1, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;sh&quot;}&apos;
 </command>
     </hudson.tasks.Shell>
   </builders>

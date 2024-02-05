@@ -25,7 +25,7 @@
       <command>cd /html/eol_php_code/update_resources/connectors
 
 # A utility. If you want to force generate - works OK
-php5.6 wikidata.php jenkins generate_resource_force
+php wikidata.php jenkins generate_resource_force
 
 
 </command>

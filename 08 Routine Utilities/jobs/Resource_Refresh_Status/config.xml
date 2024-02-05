@@ -30,11 +30,11 @@ H H(0-23)/12 * * 1-7
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-php5.6 resource_refresh_sched.php jenkins
+php resource_refresh_sched.php jenkins
 # cache expires after 11 hours
 # normal operation
 
-#php5.6 resource_refresh_sched.php jenkins 1
+#php resource_refresh_sched.php jenkins 1
 # cache expires now
 # on-deman only</command>
     </hudson.tasks.Shell>

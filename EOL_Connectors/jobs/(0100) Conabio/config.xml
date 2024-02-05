@@ -38,11 +38,11 @@ H 01 5 * *
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 
-php5.6 100.php jenkins
+php 100.php jenkins
 # generates 100.xml and 100.tar.gz
 
 ### this seems not needed anymore. DwCA 100.tar.gz is generated in 100.php already.
-### php5.6 xml_2_dwca.php jenkins 100
+### php xml_2_dwca.php jenkins 100
 ### generates 100.tar.gz
 </command>
     </hudson.tasks.Shell>

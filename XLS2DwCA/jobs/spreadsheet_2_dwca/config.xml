@@ -25,28 +25,28 @@
       <command>cd /html/eol_php_code/update_resources/connectors
 
 
-#php5.6 spreadsheet_2_dwca.php jenkins 1014 
-#php5.6 spreadsheet_2_dwca.php jenkins 1017 
-#php5.6 spreadsheet_2_dwca.php jenkins 1024 
-#php5.6 spreadsheet_2_dwca.php jenkins 1019 
-#php5.6 spreadsheet_2_dwca.php jenkins 1013 
-#php5.6 spreadsheet_2_dwca.php jenkins 986 
-#php5.6 spreadsheet_2_dwca.php jenkins 1009 
-#php5.6 spreadsheet_2_dwca.php jenkins 1010 
-#php5.6 spreadsheet_2_dwca.php jenkins 1012 
-#php5.6 spreadsheet_2_dwca.php jenkins 1016 
-#php5.6 spreadsheet_2_dwca.php jenkins 1018 
-#php5.6 spreadsheet_2_dwca.php jenkins 1020 
-#php5.6 spreadsheet_2_dwca.php jenkins 1021 
-#php5.6 spreadsheet_2_dwca.php jenkins 1022 
-#php5.6 spreadsheet_2_dwca.php jenkins 1023 
-php5.6 spreadsheet_2_dwca.php jenkins 985
+#php spreadsheet_2_dwca.php jenkins 1014 
+#php spreadsheet_2_dwca.php jenkins 1017 
+#php spreadsheet_2_dwca.php jenkins 1024 
+#php spreadsheet_2_dwca.php jenkins 1019 
+#php spreadsheet_2_dwca.php jenkins 1013 
+#php spreadsheet_2_dwca.php jenkins 986 
+#php spreadsheet_2_dwca.php jenkins 1009 
+#php spreadsheet_2_dwca.php jenkins 1010 
+#php spreadsheet_2_dwca.php jenkins 1012 
+#php spreadsheet_2_dwca.php jenkins 1016 
+#php spreadsheet_2_dwca.php jenkins 1018 
+#php spreadsheet_2_dwca.php jenkins 1020 
+#php spreadsheet_2_dwca.php jenkins 1021 
+#php spreadsheet_2_dwca.php jenkins 1022 
+#php spreadsheet_2_dwca.php jenkins 1023 
+php spreadsheet_2_dwca.php jenkins 985
 
 
-#php5.6 spreadsheet_2_dwca.php jenkins NMNHPlantGrowthFormData
+#php spreadsheet_2_dwca.php jenkins NMNHPlantGrowthFormData
 
 
-#php5.6 spreadsheet_2_dwca.php jenkins _ &quot;https://github.com/eliagbayani/EOL-connector-data-files/raw/master/schema/eol_import_spreadsheet.xlsx&quot; 
+#php spreadsheet_2_dwca.php jenkins _ &quot;https://github.com/eliagbayani/EOL-connector-data-files/raw/master/schema/eol_import_spreadsheet.xlsx&quot; 
 </command>
     </hudson.tasks.Shell>
   </builders>

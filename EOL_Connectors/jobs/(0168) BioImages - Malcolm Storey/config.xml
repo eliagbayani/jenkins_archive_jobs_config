@@ -31,10 +31,10 @@ H H 1 7,10,1,4 *</spec>
 cd /html/eol_php_code/update_resources/connectors
 
 ### this will generate 168.tar.gz
-php5.6 168.php jenkins
+php 168.php jenkins
 
 ### this will generate 168_meta_recoded.tar.gz
-php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;168_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
+php resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;168_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
 
 
 #LAST STEP: copy last transactional DwCA to Bioimages.tar.gz OK
@@ -46,7 +46,7 @@ ls -lt Bioimages.tar.gz
 rm -f 168_meta_recoded.tar.gz
 
 cd /html/eol_php_code/update_resources/connectors
-php5.6 ckan_api_access.php jenkins &quot;5b1ebec7-efd0-47b5-860e-5c841d88d366&quot;
+php ckan_api_access.php jenkins &quot;5b1ebec7-efd0-47b5-860e-5c841d88d366&quot;
 </command>
     </hudson.tasks.Shell>
   </builders>

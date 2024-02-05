@@ -28,9 +28,9 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
-#php5.6 brazilian_flora.php jenkins
+#php brazilian_flora.php jenkins
 # generates BF.tar.gz
-php5.6 mov_taxaRef_toMOF.php jenkins &apos;{&quot;resource_id&quot;:&quot;Brazilian_Flora&quot;}&apos;
+php mov_taxaRef_toMOF.php jenkins &apos;{&quot;resource_id&quot;:&quot;Brazilian_Flora&quot;}&apos;
 # generates Brazilian_Flora.tar.gz
 
 </command>

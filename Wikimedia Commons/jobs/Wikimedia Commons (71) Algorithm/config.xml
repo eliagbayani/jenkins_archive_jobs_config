@@ -25,23 +25,23 @@
       <command>#cd /html/eol_php_code/update_resources/connectors
 
 #step 1: just one connector
-#php5.6 wikidata.php jenkins create_all_taxon_dump #OK - few hours
+#php wikidata.php jenkins create_all_taxon_dump #OK - few hours
 
 #step 2: initially six connectors to cache, then one connector to finalize
-#php5.6 wikidata.php jenkins save_all_media_filenames 1 300000
-#php5.6 wikidata.php jenkins save_all_media_filenames 300000 600000
-#php5.6 wikidata.php jenkins save_all_media_filenames 600000 900000
-#php5.6 wikidata.php jenkins save_all_media_filenames 900000 1400000 #inc 500000
-#php5.6 wikidata.php jenkins save_all_media_filenames 1400000 1900000 #inc 500000
-#php5.6 wikidata.php jenkins save_all_media_filenames 1900000 2500000 #all remaining
+#php wikidata.php jenkins save_all_media_filenames 1 300000
+#php wikidata.php jenkins save_all_media_filenames 300000 600000
+#php wikidata.php jenkins save_all_media_filenames 600000 900000
+#php wikidata.php jenkins save_all_media_filenames 900000 1400000 #inc 500000
+#php wikidata.php jenkins save_all_media_filenames 1400000 1900000 #inc 500000
+#php wikidata.php jenkins save_all_media_filenames 1900000 2500000 #all remaining
 
-#php5.6 wikidata.php jenkins save_all_media_filenames#finalize
+#php wikidata.php jenkins save_all_media_filenames#finalize
 
 #step 3: just one connector
-#php5.6 wikidata.php jenkins create_then_fill_commons_data #OK - few hours
+#php wikidata.php jenkins create_then_fill_commons_data #OK - few hours
 
 #step 4: just one connector
-#php5.6 wikidata.php jenkins generate_resource #
+#php wikidata.php jenkins generate_resource #
 </command>
     </hudson.tasks.Shell>
   </builders>

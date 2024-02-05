@@ -27,10 +27,10 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
-php5.6 ioc.php jenkins
+php ioc.php jenkins
 
 #this will add higherClassification
-php5.6 dwca_utility.php jenkins ioc-birdlist Y
+php dwca_utility.php jenkins ioc-birdlist Y
 </command>
     </hudson.tasks.Shell>
   </builders>

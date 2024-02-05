@@ -17,7 +17,7 @@ as of Sep 12, 2019 deleted the builds, will check connector to disable debug inf
   <builders>
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
-php5.6 eol_api_traits.php jenkins growth_habit
+php eol_api_traits.php jenkins growth_habit
 
 </command>
     </hudson.tasks.Shell>

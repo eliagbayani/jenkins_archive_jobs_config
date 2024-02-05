@@ -24,7 +24,7 @@
     <hudson.tasks.Shell>
       <command>cd /html/eol_php_code/update_resources/connectors
 
-php5.6 aggregate_NorthAF_Plants.php </command>
+php aggregate_NorthAF_Plants.php </command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

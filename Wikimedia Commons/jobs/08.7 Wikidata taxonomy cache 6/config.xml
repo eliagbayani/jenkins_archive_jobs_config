@@ -25,7 +25,7 @@
       <command>#regular connector run
 cd /html/eol_php_code/update_resources/connectors
 
-php5.6 wikidata.php jenkins generate_wikidata_taxonomy
+php wikidata.php jenkins generate_wikidata_taxonomy
 </command>
     </hudson.tasks.Shell>
   </builders>

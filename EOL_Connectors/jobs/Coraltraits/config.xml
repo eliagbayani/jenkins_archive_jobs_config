@@ -25,18 +25,18 @@
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /html/eol_php_code/update_resources/connectors
 
-php5.6 coral_traits.php jenkins
+php coral_traits.php jenkins
 #generates cotr.tar.gz
 
-php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;cotr_meta_recoded_1&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
+php resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;cotr_meta_recoded_1&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
 #-&gt; fixes lifeStage
 #generates cotr_meta_recoded_1.tar.gz
 
-php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;cotr_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
+php resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;cotr_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
 #-&gt; fixes eventDate as row in MoF
 #generates cotr_meta_recoded.tar.gz
 
-php5.6 resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;cotr_meta_recoded_final&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
+php resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;cotr_meta_recoded_final&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
 #-&gt; moves a bunch of MoF cols as MoF child records
 #-&gt; generates cotr_meta_recoded_final.tar.gz</command>
     </hudson.tasks.Shell>

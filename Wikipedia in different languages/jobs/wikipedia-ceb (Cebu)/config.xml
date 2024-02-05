@@ -26,19 +26,19 @@
 cd /html/eol_php_code/update_resources/connectors
 
 # normal as of Sep 24,2023 - works OK
-php5.6 run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:10, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;ceb&quot;}&apos;
+php run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:10, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;ceb&quot;}&apos;
 # -&gt; new OK 6 connectors run
 
 # only processes single conn.
-#php5.6 wikipedia.php jenkins ceb #sw #en #
+#php wikipedia.php jenkins ceb #sw #en #
 
 
 # don&apos;t need this, just for testing. Above will already auto-run &apos;fill up undefined parents&apos;.
-#php5.6 fill_up_undefined_parents_real.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-war&quot;, &quot;source_dwca&quot;: &quot;wikipedia-war&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
+#php fill_up_undefined_parents_real.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-war&quot;, &quot;source_dwca&quot;: &quot;wikipedia-war&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
 
-#php5.6 fill_up_undefined_parents_real.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-ceb_4Oct2023&quot;, &quot;source_dwca&quot;: &quot;wikipedia-ceb_16Sep2023&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
+#php fill_up_undefined_parents_real.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-ceb_4Oct2023&quot;, &quot;source_dwca&quot;: &quot;wikipedia-ceb_16Sep2023&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
 
-#php5.6 fill_up_undefined_parents_real.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-sv&quot;, &quot;source_dwca&quot;: &quot;wikipedia-sv&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
+#php fill_up_undefined_parents_real.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-sv&quot;, &quot;source_dwca&quot;: &quot;wikipedia-sv&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
 
 
 ### orig post build: aggregate_wikipedia</command>
