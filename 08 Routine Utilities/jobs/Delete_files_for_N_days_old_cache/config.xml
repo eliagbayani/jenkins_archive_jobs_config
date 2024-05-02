@@ -30,16 +30,17 @@
       <command>## working OK
 #cd /extra/eol_php_cache/
 cd /extra/
-#find eol_php_cache/     -mtime +1460 -name &apos;*.cache&apos; -type f  -ls
-find eol_php_cache/     -mtime +1460 -name &apos;*.cache&apos; -type f  -delete
+find eol_php_cache/     -mtime +1825 -name &apos;*.cache&apos; -type f  -ls
+#find eol_php_cache/     -mtime +1460 -name &apos;*.cache&apos; -type f  -delete
 
 
 #find &apos;eol_php_cache/13/&apos; -mtime +1825 -name &apos;*.cache&apos; -type f  -ls
 #find &apos;eol_php_cache/22/&apos; -mtime +1825 -name &apos;*.cache&apos; -type f  -ls | wc -l
-#find &apos;eol_php_cache/01/&apos; -mtime +1825 -name &apos;*.cache&apos; -type f  -delete
-#find &apos;eol_php_cache/01/&apos; -mtime +1825 -name &apos;*.cache&apos; -type f  -ls | wc -l
 
-ping smtp.gmail.com
+#find &apos;eol_php_cache/02/&apos; -mtime +1825 -name &apos;*.cache&apos; -type f  -delete
+#find &apos;eol_php_cache/02/&apos; -mtime +1825 -name &apos;*.cache&apos; -type f  -ls
+
+#ping smtp.gmail.com
 
 
 ## files ends with .cache, older than 4 years = 365*4 = 1460 meron
@@ -53,6 +54,7 @@ ping smtp.gmail.com
 #ls -lt
 #cat 000008c752a418e395f731c3a79fcabe.cache
 </command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

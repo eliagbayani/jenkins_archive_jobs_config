@@ -23,7 +23,11 @@
       <spec># once every two hours at 45 minutes past the hour starting at 9:45 AM and finishing at 3:45 PM every weekday.
 # 45 9-16/2 * * 1-5 # working default
 
-H 0-23/6 * * 1-5</spec>
+#H 0-23/6 * * 1-5 # working 3x a day
+
+# Once a day:
+H H * 1-12 *
+</spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
@@ -33,8 +37,9 @@ H 0-23/6 * * 1-5</spec>
 # 
 
 cd /var/www/html/eol_php_code/update_resources/connectors
-php eol_harvest_publish.php jenkins
+php eol_harvest_publish.php _
 </command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

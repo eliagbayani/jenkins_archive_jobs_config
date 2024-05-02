@@ -18,25 +18,14 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers>
-    <hudson.triggers.TimerTrigger>
-      <spec># Once in every 12 hours for the entire 24-hr period everyday: that means it runs 2 times a day
-H H(0-23)/12 * * 1-7
-</spec>
-    </hudson.triggers.TimerTrigger>
-  </triggers>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
 
-php resource_refresh_sched.php _
-# cache expires after 11 hours
-# normal operation
-
-#php resource_refresh_sched.php jenkins 1
-# cache expires now
-# on-deman only</command>
+php run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:10, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;ka&quot;,  &quot;cont_2next_lang&quot;:&quot;Y&quot;, &quot;six_coverage&quot;:&quot;1st&quot;}&apos;
+</command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>

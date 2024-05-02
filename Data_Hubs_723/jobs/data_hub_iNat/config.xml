@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>3</numToKeep>
+        <numToKeep>2</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -18,25 +18,14 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers>
-    <hudson.triggers.TimerTrigger>
-      <spec># Once in every 12 hours for the entire 24-hr period everyday: that means it runs 2 times a day
-H H(0-23)/12 * * 1-7
-</spec>
-    </hudson.triggers.TimerTrigger>
-  </triggers>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /var/www/html/eol_php_code/update_resources/connectors
-
-php resource_refresh_sched.php _
-# cache expires after 11 hours
-# normal operation
-
-#php resource_refresh_sched.php jenkins 1
-# cache expires now
-# on-deman only</command>
+      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
+cd /var/www/html/eol_php_code/update_resources/connectors
+php datahub_inat.php _
+</command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
