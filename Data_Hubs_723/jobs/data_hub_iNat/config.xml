@@ -24,7 +24,7 @@
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /var/www/html/eol_php_code/update_resources/connectors
-php datahub_inat.php _
+php datahub_inat_v3.php _
 </command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>

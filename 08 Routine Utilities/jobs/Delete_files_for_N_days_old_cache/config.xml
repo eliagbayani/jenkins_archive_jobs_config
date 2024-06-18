@@ -30,8 +30,8 @@
       <command>## working OK
 #cd /extra/eol_php_cache/
 cd /extra/
-find eol_php_cache/     -mtime +1825 -name &apos;*.cache&apos; -type f  -ls
-#find eol_php_cache/     -mtime +1460 -name &apos;*.cache&apos; -type f  -delete
+#find eol_php_cache/     -mtime +1825 -name &apos;*.cache&apos; -type f  -ls
+find eol_php_cache/     -mtime +1460 -name &apos;*.cache&apos; -type f  -delete
 
 
 #find &apos;eol_php_cache/13/&apos; -mtime +1825 -name &apos;*.cache&apos; -type f  -ls

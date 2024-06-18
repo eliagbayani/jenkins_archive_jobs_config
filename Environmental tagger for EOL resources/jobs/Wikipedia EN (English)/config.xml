@@ -78,6 +78,7 @@ rm -f wikipedia_en_traits_tmp4.tar.gz
 cd /var/www/html/eol_php_code/update_resources/connectors
 php ckan_api_access.php jenkins &quot;202fc4df-a6b3-4c12-8beb-6be8091bbbe0&quot;
 </command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
