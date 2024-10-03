@@ -26,18 +26,9 @@
 cd /var/www/html/eol_php_code/update_resources/connectors
 php treatment_bank.php jenkins &apos;{&quot;range_from&quot;: &quot;200000&quot;, &quot;range_to&quot;:&quot;300000&quot;}&apos;
 </command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
-  <publishers>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>range_4</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-        <completeBuild>true</completeBuild>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
-  </publishers>
+  <publishers/>
   <buildWrappers/>
 </project>

@@ -1,13 +1,15 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description></description>
+  <description>https://github.com/EOL/ContentImport/issues/17&#xd;
+&#xd;
+</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>5</numToKeep>
+        <numToKeep>3</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -23,8 +25,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
-
-php usda_plant_images.php _ #new connector for image resource
+php remove_unused_media.php _ &apos;{&quot;resource_id&quot;: &quot;microscope_2024_06_05&quot;, &quot;resource&quot;: &quot;remove_unused_media&quot;, &quot;resource_name&quot;: &quot;micro*scope&quot;}&apos;
 </command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>

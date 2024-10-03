@@ -26,45 +26,46 @@
 [ ! -d &quot;GBIF_Netherlands&quot; ] &amp;&amp; mkdir GBIF_Netherlands
 cd GBIF_Netherlands
 [ -e GBIF_Netherlands_DwCA.zip ] &amp;&amp; rm GBIF_Netherlands_DwCA.zip
-bash /html/eol_php_code/update_resources/connectors/files/GBIF_Netherlands/run_GBIF_Netherlands.sh
+bash /var/www/html/eol_php_code/update_resources/connectors/files/GBIF_Netherlands/run_GBIF_Netherlands.sh
 
 
 cd /extra/other_files/GBIF_occurrence/
 [ ! -d &quot;GBIF_France&quot; ] &amp;&amp; mkdir GBIF_France
 cd GBIF_France
 [ -e GBIF_France_DwCA.zip ] &amp;&amp; rm GBIF_France_DwCA.zip
-bash /html/eol_php_code/update_resources/connectors/files/GBIF_France/run_GBIF_France.sh
+bash /var/www/html/eol_php_code/update_resources/connectors/files/GBIF_France/run_GBIF_France.sh
 
 
 cd /extra/other_files/GBIF_occurrence/
 [ ! -d &quot;GBIF_Germany&quot; ] &amp;&amp; mkdir GBIF_Germany
 cd GBIF_Germany
 [ -e GBIF_Germany_DwCA.zip ] &amp;&amp; rm GBIF_Germany_DwCA.zip
-bash /html/eol_php_code/update_resources/connectors/files/GBIF_Germany/run_GBIF_Germany.sh
+bash /var/www/html/eol_php_code/update_resources/connectors/files/GBIF_Germany/run_GBIF_Germany.sh
 
 
 cd /extra/other_files/GBIF_occurrence/
 [ ! -d &quot;GBIF_Brazil&quot; ] &amp;&amp; mkdir GBIF_Brazil
 cd GBIF_Brazil
 [ -e GBIF_Brazil_DwCA.zip ] &amp;&amp; rm GBIF_Brazil_DwCA.zip
-bash /html/eol_php_code/update_resources/connectors/files/GBIF_Brazil/run_GBIF_Brazil.sh
+bash /var/www/html/eol_php_code/update_resources/connectors/files/GBIF_Brazil/run_GBIF_Brazil.sh
 
 
 cd /extra/other_files/GBIF_occurrence/
 [ ! -d &quot;GBIF_Sweden&quot; ] &amp;&amp; mkdir GBIF_Sweden
 cd GBIF_Sweden
 [ -e GBIF_Sweden_DwCA.zip ] &amp;&amp; rm GBIF_Sweden_DwCA.zip
-bash /html/eol_php_code/update_resources/connectors/files/GBIF_Sweden/run_GBIF_Sweden.sh
+bash /var/www/html/eol_php_code/update_resources/connectors/files/GBIF_Sweden/run_GBIF_Sweden.sh
 
 
 cd /extra/other_files/GBIF_occurrence/
 [ ! -d &quot;GBIF_UnitedKingdom&quot; ] &amp;&amp; mkdir GBIF_UnitedKingdom
 cd GBIF_UnitedKingdom
 [ -e GBIF_UnitedKingdom_DwCA.zip ] &amp;&amp; rm GBIF_UnitedKingdom_DwCA.zip
-bash /html/eol_php_code/update_resources/connectors/files/GBIF_UnitedKingdom/run_GBIF_UnitedKingdom.sh
+bash /var/www/html/eol_php_code/update_resources/connectors/files/GBIF_UnitedKingdom/run_GBIF_UnitedKingdom.sh
 
 
 </command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

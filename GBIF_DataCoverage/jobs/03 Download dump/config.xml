@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>5</numToKeep>
+        <numToKeep>3</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -22,9 +22,17 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /var/www/html/eol_php_code/update_resources/connectors
+      <command>### start DwCA downloads ================================= worked OK
 
-php usda_plant_images.php _ #new connector for image resource
+#OK
+cd /extra/other_files/Data_coverage_DwCA/GBIF_service/
+rm -f Data_coverage_DwCA.zip
+###curl -L -o &apos;Data_coverage_DwCA.zip&apos; -C - http://api.gbif.org/v1/occurrence/download/request/xxxxxxx-200221144449610.zip
+bash /var/www/html/eol_php_code/update_resources/connectors/files/Data_coverage/run_Data_coverage.sh
+
+
+#Build other projects:
+#04 run GBIF Data coverage
 </command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>

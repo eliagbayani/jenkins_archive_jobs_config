@@ -29,10 +29,11 @@ https://opendata.eol.org/dataset/national_museum-of_natural_history</description
   <builders>
     <hudson.tasks.Shell>
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
-php 891.php jenkins
+php 891.php
 
 # just tests:
 #php download_extract.php jenkins</command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

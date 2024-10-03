@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
   <description>http://www.eol.org/content_partners/831/resources/991&#xd;
@@ -8,7 +8,7 @@ https://opendata.eol.org/dataset/arctic_biodiversity</description>
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>5</numToKeep>
+        <numToKeep>6</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -21,15 +21,9 @@ https://opendata.eol.org/dataset/arctic_biodiversity</description>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
     <hudson.triggers.TimerTrigger>
-      <spec>#start build at midnight:
-#    @midnight
-#or start build at midnight, every Saturday:
-#    59 23 * * 6
-#every first of every month between 2:00 a.m. - 02:30 a.m. :
-H 01 10 * *
+      <spec># will have to fix connector before enabling schedule again.
+#H 01 10 * *
 
-#or start build at midnight, every Saturday:
-#H 23 * * 6
 </spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
@@ -40,6 +34,7 @@ H 01 10 * *
 cd /var/www/html/eol_php_code/update_resources/connectors
 php spreadsheet_2_dwca.php jenkins 991
 </command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

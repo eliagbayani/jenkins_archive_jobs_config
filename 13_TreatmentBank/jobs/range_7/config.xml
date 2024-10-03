@@ -33,6 +33,7 @@ php treatment_bank.php jenkins &apos;{&quot;range_from&quot;: &quot;600000&quot;
 
 
 </command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

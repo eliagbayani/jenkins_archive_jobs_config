@@ -27,8 +27,7 @@ H H 1 7,10,1,4 *</spec>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /var/www/html/eol_php_code/update_resources/connectors
+      <command>cd /var/www/html/eol_php_code/update_resources/connectors
 
 ### this will generate 168.tar.gz
 php 168.php jenkins
@@ -36,18 +35,20 @@ php 168.php jenkins
 ### this will generate 168_meta_recoded.tar.gz
 php resource_utility.php jenkins &apos;{&quot;resource_id&quot;: &quot;168_meta_recoded&quot;, &quot;task&quot;: &quot;metadata_recoding&quot;}&apos;
 
-
 #LAST STEP: copy last transactional DwCA to Bioimages.tar.gz OK
-
 cd /var/www/html/eol_php_code/applications/content_server/resources
 cp 168_meta_recoded.tar.gz Bioimages.tar.gz
 ls -lt 168_meta_recoded.tar.gz
 ls -lt Bioimages.tar.gz
 rm -f 168_meta_recoded.tar.gz
 
+#NEXT STEP: needed to explicitly update the CKAN record. Since &apos;168_meta_recoded&apos; was renamed to &apos;Bioimages&apos;.
 cd /var/www/html/eol_php_code/update_resources/connectors
-php ckan_api_access.php jenkins &quot;5b1ebec7-efd0-47b5-860e-5c841d88d366&quot;
-</command>
+php ckan_api_access.php _ &quot;5b1ebec7-efd0-47b5-860e-5c841d88d366&quot;
+
+#NEXT STEP: Update respective Zenodo record
+php update_Zenodo_record_using_EOL_resourceID.php _ &apos;Bioimages&apos;</command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

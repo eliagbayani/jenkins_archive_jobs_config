@@ -23,8 +23,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
-
-php usda_plant_images.php _ #new connector for image resource
+php zenodo.php
 </command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>

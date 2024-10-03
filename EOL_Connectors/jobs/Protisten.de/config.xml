@@ -22,7 +22,9 @@
     <hudson.triggers.TimerTrigger>
       <spec>### run quarterly:
 #H H(1-1) 10 11,2,5,8 *
-H H(1-1) 10 1-12 *
+
+### run monthly: current
+#H H(1-1) 10 1-12 *
 </spec>
     </hudson.triggers.TimerTrigger>
   </triggers>

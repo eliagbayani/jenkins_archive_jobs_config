@@ -24,7 +24,7 @@
     <hudson.tasks.Shell>
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /var/www/html/eol_php_code/update_resources/connectors
-php treatment_bank.php jenkins &apos;{&quot;task&quot;: &quot;generate_single_dwca&quot;}&apos;
+php treatment_bank.php _ &apos;{&quot;task&quot;: &quot;generate_single_dwca&quot;}&apos;
 #generates TreatmentBank.tar.gz (this will be fed to the Pensoft annotator)
 
 # approximately takes this much time to generate_single_dwca 
@@ -35,6 +35,7 @@ php treatment_bank.php jenkins &apos;{&quot;task&quot;: &quot;generate_single_dw
 ### Step 4 textmine
 ### Step 4 textmine
 </command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

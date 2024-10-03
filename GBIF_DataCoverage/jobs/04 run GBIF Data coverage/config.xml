@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>5</numToKeep>
+        <numToKeep>3</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -23,8 +23,11 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
+php datahub_gbif.php jenkins
 
-php usda_plant_images.php _ #new connector for image resource
+### just a utility
+### cd /extra/eol_php_code_tmp/
+### rm -rf folder_name
 </command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>
