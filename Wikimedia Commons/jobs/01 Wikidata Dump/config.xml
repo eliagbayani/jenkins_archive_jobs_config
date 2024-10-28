@@ -45,6 +45,7 @@ rm -f wikipedia_*.tmp
 # working OK
 cd /extra/dumps/wikidata
 [ -f latest-all.json.gz ] &amp;&amp; rm -f latest-all.json.gz || echo &quot;File does not exist&quot;
+[ -f latest-all.json ]    &amp;&amp; rm -f latest-all.json    || echo &quot;File does not exist&quot;
 
 ##works ok but to verbose:
 ##wget -c https://dumps.wikimedia.org/wikidatawiki/entities/latest-all.json.gz
@@ -54,9 +55,10 @@ wget -c -nv --no-check-certificate https://dumps.wikimedia.org/wikidatawiki/enti
 
 
 # ORIG - this works OK doesn&apos;t trigger failure anymore
-gunzip -fk latest-all.json.gz 
+gunzip -f latest-all.json.gz 
 #-k means keep, don&apos;t delete orig file. 
-#-f means overwrites.
+#-k is now obsolete, and gives an error
+#-f means overwrites. this still works
 
 
 # upon extraction -- you can delete the big .gz file (NEW: Aug 28, 2021)
@@ -98,10 +100,8 @@ cd /extra/dumps/wikidata
 ## temporarily discontinued post build:
 ## 02 Wikimedia Dump
 </command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
-    <sp.sd.fileoperations.FileOperationsBuilder plugin="file-operations@1.7">
-      <fileOperations/>
-    </sp.sd.fileoperations.FileOperationsBuilder>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>

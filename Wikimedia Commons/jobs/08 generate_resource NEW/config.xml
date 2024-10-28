@@ -28,7 +28,7 @@
 # php wikidata.php jenkins generate_resource # orig
 
 ### new scheme
-php run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikimedia&quot;, &quot;divisor&quot;:6, &quot;task&quot;:&quot;initial&quot;}&apos;
+php run.php _ &apos;{&quot;connector&quot;:&quot;gen_wikimedia&quot;, &quot;divisor&quot;:6, &quot;task&quot;:&quot;initial&quot;}&apos;
 ### This will trigger 6 eol_stats_job_? jobs.
 ### After all 6 are done, will aggregate into a single DwCA: 71.tar.gz
 ### Next will run: fill_up_undefined_parents_real.php on another job
@@ -39,6 +39,7 @@ php run.php jenkins &apos;{&quot;connector&quot;:&quot;gen_wikimedia&quot;, &quo
 # 08.5 Wikimedia Subsets,../Wikipedia in different languages/Wikipedia en start
 
 ### permanently disabled Post build for: [Wikipedia en start] on 1Jul2022.</command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

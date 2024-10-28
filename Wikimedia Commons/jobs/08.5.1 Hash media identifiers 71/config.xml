@@ -25,14 +25,15 @@
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
 
 ### ok main operation
-php make_hash_IDs_4Deltas.php jenkins &apos;{&quot;task&quot;: &quot;&quot;, &quot;resource&quot;:&quot;Deltas_4hashing&quot;, &quot;resource_id&quot;:&quot;71&quot;}&apos;
+php make_hash_IDs_4Deltas.php _ &apos;{&quot;task&quot;: &quot;&quot;, &quot;resource&quot;:&quot;Deltas_4hashing&quot;, &quot;resource_id&quot;:&quot;71&quot;}&apos;
 
 # === STEP: fill-up missing parent entries
-php fill_up_undefined_parents_real.php jenkins &apos;{&quot;resource_id&quot;: &quot;71_delta&quot;, &quot;source_dwca&quot;: &quot;71_delta&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
+php fill_up_undefined_parents_real.php _ &apos;{&quot;resource_id&quot;: &quot;71_delta&quot;, &quot;source_dwca&quot;: &quot;71_delta&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
 
 
 ### orig goes here next:
 ### 08.6 Wikimedia partial</command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

@@ -26,20 +26,19 @@
 
 ### copied from previous step. Just to be sure to delete un-needed files to save space
 # upon extraction -- you can delete the big .gz file (NEW: Aug 28, 2021)
-### working OK but decided not to delete yet
-#cd /extra/dumps/wikidata
-#[ -f latest-all.json.gz ] &amp;&amp; rm -f latest-all.json.gz || echo &quot;File does not exist&quot;
-
+### working OK and decided to delete here:
+cd /extra/dumps/wikidata
+[ -f latest-all.json.gz ] &amp;&amp; rm -f latest-all.json.gz || echo &quot;File does not exist&quot;
 
 
 # working OK
 cd /extra/dumps/wikidata/wikimedia
 [ -f commonswiki-latest-pages-articles.xml.bz2 ] &amp;&amp; rm -f commonswiki-latest-pages-articles.xml.bz2 || echo &quot;File does not exist&quot;
-
+[ -f commonswiki-latest-pages-articles.xml ]     &amp;&amp; rm -f commonswiki-latest-pages-articles.xml     || echo &quot;File does not exist&quot;
 
 #works OK:
 wget -c -nv --no-check-certificate https://dumps.wikimedia.org/commonswiki/latest/commonswiki-latest-pages-articles.xml.bz2
-# -nv means non-verbose but errors get printted out still.
+# -nv means non-verbose but errors get printed out still.
 
 #works OK:
 bzip2 -dkf commonswiki-latest-pages-articles.xml.bz2
@@ -54,6 +53,7 @@ cd /extra/dumps/wikidata/wikimedia
 
 
 #exit 1 ##force stop OK</command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

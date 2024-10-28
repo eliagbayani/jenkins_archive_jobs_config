@@ -26,7 +26,7 @@
 cd /var/www/html/eol_php_code/update_resources/connectors
 
 #step 1: just one connector --- works OK
-php wikidata.php jenkins &apos;{&quot;task&quot;:&quot;create_all_taxon_dump&quot;}&apos; #OK - few hours
+php wikidata.php _ &apos;{&quot;task&quot;:&quot;create_all_taxon_dump&quot;}&apos; #OK - few hours
 # generates latest-all-taxon.json
 
 cd /extra/dumps/wikidata
@@ -57,6 +57,7 @@ cd /extra/dumps/wikidata
 #08.5 Wikimedia Subsets,../Wikipedia in different languages/Wikipedia en start
 ### now realized that [08.5 Wikimedia Subsets] cannot run here bec. it uses 71.tar.gz
 ### only [../Wikipedia in different languages/Wikipedia en start] can run at this stage</command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

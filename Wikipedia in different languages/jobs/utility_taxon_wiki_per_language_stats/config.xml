@@ -27,9 +27,10 @@ cd /var/www/html/eol_php_code/update_resources/connectors
 
 ###seems obsolete now
 ###php wikipedia.php jenkins en taxon_wiki_per_language_stats
-php wikipedia.php jenkins &apos;{&quot;language&quot;:&quot;war&quot;, &quot;task&quot;:&quot;taxon_wiki_per_language_stats&quot;}&apos;
+php wikipedia.php _ &apos;{&quot;language&quot;:&quot;war&quot;, &quot;task&quot;:&quot;taxon_wiki_per_language_stats&quot;}&apos;
 
 # &apos;war&apos; param here is any language that has obsolete date, and ready for refresh.</command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

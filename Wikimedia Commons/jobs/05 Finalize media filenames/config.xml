@@ -43,10 +43,11 @@
 #php wikidata.php jenkins save_all_media_filenames 1130000 1960000 #inc 830000
 #php wikidata.php jenkins save_all_media_filenames 1960000 2500000 #all remaining
 
-php wikidata.php jenkins &apos;{&quot;task&quot;:&quot;save_all_media_filenames&quot;}&apos; #finalize
+php wikidata.php _ &apos;{&quot;task&quot;:&quot;save_all_media_filenames&quot;}&apos; #finalize
 
 
 </command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

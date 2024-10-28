@@ -20,8 +20,9 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
     <hudson.triggers.TimerTrigger>
-      <spec># runs once a day
-#H H * 1-12 *</spec>
+      <spec># Once a day on the 1st and 15th of every month:
+H H 1,15 1-12 *
+</spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
@@ -30,9 +31,8 @@
       <command>## working OK
 #cd /extra/eol_php_cache/
 cd /extra/
-#find eol_php_cache/     -mtime +1825 -name &apos;*.cache&apos; -type f  -ls
+#find eol_php_cache/     -mtime +1460 -name &apos;*.cache&apos; -type f  -ls
 find eol_php_cache/     -mtime +1460 -name &apos;*.cache&apos; -type f  -delete
-
 
 #find &apos;eol_php_cache/13/&apos; -mtime +1825 -name &apos;*.cache&apos; -type f  -ls
 #find &apos;eol_php_cache/22/&apos; -mtime +1825 -name &apos;*.cache&apos; -type f  -ls | wc -l

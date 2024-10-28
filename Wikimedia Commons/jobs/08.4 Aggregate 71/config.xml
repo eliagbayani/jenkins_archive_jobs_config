@@ -25,12 +25,13 @@
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
 
 ### main operation
-php aggregate_71.php jenkins
+php aggregate_71.php _
 ### -&gt; works OK | generates 71.tar.gz
 
 # === STEP: fill-up missing parent entries
-php fill_up_undefined_parents_real.php jenkins &apos;{&quot;resource_id&quot;: &quot;71&quot;, &quot;source_dwca&quot;: &quot;71&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
+php fill_up_undefined_parents_real.php _ &apos;{&quot;resource_id&quot;: &quot;71&quot;, &quot;source_dwca&quot;: &quot;71&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
 </command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

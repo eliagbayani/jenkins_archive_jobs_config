@@ -22,7 +22,23 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#ruby -v
+      <command>## working OK
+#####cd /extra/eol_php_cache2/
+#find CITES/   -mtime +1460 -name &apos;*.json&apos; -type f  -ls
+#####find CITES/   -mtime +1460 -name &apos;*.json&apos; -type f  -delete
+
+cd /extra/other_files/
+du -h --max-depth=1 | sort -hr     
+
+#ruby -v
+#ruby --version
+#cd /var/www/html/eol_php_code/update_resources/connectors/helpers/anystyle/
+#sudo su -
+#yum install rh-ruby25
+#scl enable rh-ruby25 bash
+
+
+#ruby -v
 #ruby --version
 #su -
 #yum install rh-ruby25
@@ -31,23 +47,12 @@
 #scl enable rh-ruby25 bash
 
 #/usr/bin/scl enable rh-ruby25 /usr/bin/bash
-
-
-#ruby -v
-#ruby --version
-
-cd /var/www/html/eol_php_code/update_resources/connectors/helpers/anystyle/
-sudo su -
-#yum install rh-ruby25
-scl enable rh-ruby25 bash
-
 #ruby run.rb &quot;Eli A. The Quick Brown Fox. 1957.&quot;
 #gem install anystyle-cli
 
 #/opt/rh/rh-ruby25/root/usr/local/bin/anystyle
 #anystyle
 #which anystyle
-ruby -v
 #cd ~
 #ls -lt
 

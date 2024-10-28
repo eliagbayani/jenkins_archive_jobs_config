@@ -29,7 +29,11 @@
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /var/www/html/eol_php_code/update_resources/connectors
 php bolds.php jenkins
+
+# can be commented coz it is called automatically from Functions.php
+# php update_Zenodo_record_using_EOL_resourceID.php _ &apos;81&apos;
 </command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

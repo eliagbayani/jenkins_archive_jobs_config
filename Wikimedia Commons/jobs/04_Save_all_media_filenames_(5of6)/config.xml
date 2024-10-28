@@ -27,7 +27,7 @@
 #step 2: initially six connectors to cache, then one connector to finalize
 
 #php wikidata.php jenkins save_all_media_filenames 2097740 2622175 5of6
-php wikidata.php jenkins &apos;{&quot;task&quot;:&quot;save_all_media_filenames&quot;, &quot;range_from&quot;:&quot;2299025&quot;, &quot;range_to&quot;:&quot;2873781&quot;, &quot;actual&quot;:&quot;5of6&quot;}&apos;
+php wikidata.php _ &apos;{&quot;task&quot;:&quot;save_all_media_filenames&quot;, &quot;range_from&quot;:&quot;2299025&quot;, &quot;range_to&quot;:&quot;2873781&quot;, &quot;actual&quot;:&quot;5of6&quot;}&apos;
 
 #[1] =&gt; 1  574757
 #[2] =&gt; 574757 1149513
@@ -36,6 +36,7 @@ php wikidata.php jenkins &apos;{&quot;task&quot;:&quot;save_all_media_filenames&
 #[5] =&gt; 2299025  2873781
 #[6] =&gt; 2873781  3448537
 </command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

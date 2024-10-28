@@ -22,8 +22,13 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /var/www/html/eol_php_code/update_resources/connectors
+      <command>#cd /extra/eol_php_cache
+#du -a * | sort -r -n | head -1000
+#du -h --max-depth=1 | sort -hr      
+#-&gt; VERY HELPFUL - sorts the directories in size
 
+
+cd /var/www/html/eol_php_code/update_resources/connectors
 php wikidata.php jenkins test
 
 # php wikidata.php jenkins debug &apos;Salix_sericea_NRCS-2.jpg&apos;
@@ -31,6 +36,7 @@ php wikidata.php jenkins test
 # php wikidata.php jenkins debug Okinawa_Churaumi_Aquarium.jpg
 
 # mysql -V</command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

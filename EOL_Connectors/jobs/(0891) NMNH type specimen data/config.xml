@@ -31,6 +31,10 @@ https://opendata.eol.org/dataset/national_museum-of_natural_history</description
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
 php 891.php
 
+# can be commented coz it is called automatically from Functions.php
+# php update_Zenodo_record_using_EOL_resourceID.php _ &apos;891&apos;
+
+
 # just tests:
 #php download_extract.php jenkins</command>
       <configuredLocalRules/>
