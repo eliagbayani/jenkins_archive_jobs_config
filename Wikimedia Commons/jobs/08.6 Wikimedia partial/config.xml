@@ -32,6 +32,7 @@
 #regular connector run
 cd /var/www/html/eol_php_code/update_resources/connectors
 php wikimedia_partial.php _
+# generates wikimedia_partial.tar.gz
 
 cd /var/www/html/eol_php_code/applications/content_server/resources
 # now delete temp /71/ folder
@@ -43,20 +44,11 @@ cd /var/www/html/eol_php_code/applications/content_server/resources
 
 ### orig next step: as of Sep 11, 2022. Now temporarily commented Mar 9, 2023.
 #08.6.1 START Wikipedia langs
-#08.6.1 START Wikipedia langs</command>
+#08.6.1 START Wikipedia langs
+</command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
-  <publishers>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>08.6.1 START Wikipedia langs</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-        <completeBuild>true</completeBuild>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
-  </publishers>
+  <publishers/>
   <buildWrappers/>
 </project>

@@ -22,6 +22,7 @@
     <hudson.triggers.TimerTrigger>
       <spec># quarterly Feb May Aug Nov
 #H H 30 3,6,9,12 *
+H H 30 10,1,4,7 *
 </spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
@@ -32,6 +33,17 @@
 #exit 1
 
 ### =========================================================================
+cd /extra/eol_php_resources/
+rm -f wiki*.tmp
+rm -f wikipedia*.txt
+rm -rf  *_working
+rm -rf  80_*
+rm -f wikipedia_debug*
+rm -f wikipedia_en_*.txt
+rm -f wikipedia_en_*.tmp
+rm -f wikimedia_debug*.txt
+rm -f *_working*
+
 cd /var/www/html/eol_php_code/applications/content_server/resources
 rm -f wikimedia_filenames_status_*.txt
 rm -f wikimedia_filenames_*.txt

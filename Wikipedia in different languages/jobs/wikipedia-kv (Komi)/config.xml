@@ -25,11 +25,14 @@
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /var/www/html/eol_php_code/update_resources/connectors
 
-php wikipedia.php jenkins kv #Komi
+#php wikipedia.php jenkins kv #Komi
 
 # === STEP: fill-up missing parent entries
 php fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-kv&quot;, &quot;source_dwca&quot;: &quot;wikipedia-kv&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
-</command>
+
+# orig goes to: temporarily commented
+# wikipedia-gv (Manx)</command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

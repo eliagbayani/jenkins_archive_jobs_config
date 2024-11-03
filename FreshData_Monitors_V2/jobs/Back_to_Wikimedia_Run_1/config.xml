@@ -16,8 +16,6 @@
       <parameterDefinitions>
         <hudson.model.StringParameterDefinition>
           <name>myShell</name>
-          <description></description>
-          <defaultValue></defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
@@ -32,7 +30,11 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command></command>
+      <command># going to 08.5 is probably enough
+# Wikimedia Commons/08.5 Wikimedia Subsets
+# use 08.4 if for some reason, the resource didn&apos;t get aggregated
+# Wikimedia Commons/08.4 Aggregate 71</command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

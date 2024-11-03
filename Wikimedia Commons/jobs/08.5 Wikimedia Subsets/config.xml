@@ -26,6 +26,7 @@
 
 ### main operation
 php wikimedia_subsets.php _
+# generates wikimedia_comnames.tar.gz
 
 # === STEP: fill-up missing parent entries
 php fill_up_undefined_parents_real.php _ &apos;{&quot;resource_id&quot;: &quot;wikimedia_comnames&quot;, &quot;source_dwca&quot;: &quot;wikimedia_comnames&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;

@@ -30,6 +30,10 @@ php make_hash_IDs_4Deltas.php _ &apos;{&quot;task&quot;: &quot;&quot;, &quot;res
 # === STEP: fill-up missing parent entries
 php fill_up_undefined_parents_real.php _ &apos;{&quot;resource_id&quot;: &quot;71_delta&quot;, &quot;source_dwca&quot;: &quot;71_delta&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
 
+### Below is a utility, not part of main operation.
+### normally the Zenodo record should be updated during fill_up_undefined_parents_real.php
+### update_Zenodo_record_using_EOL_resourceID.php _ &apos;71_delta&apos;
+
 
 ### orig goes here next:
 ### 08.6 Wikimedia partial</command>
