@@ -32,11 +32,15 @@
 cd /var/www/html/eol_php_code/update_resources/connectors
 #php wikipedia.php _ en #English
 
-### this is normal operation:
+### this is the normal operation:
 php run.php _ &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:10, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;en&quot;,  &quot;cont_2next_lang&quot;:&quot;Y&quot;, &quot;six_coverage&quot;:&quot;1st&quot;}&apos;
 ### should generate 80.tar.gz
 
-### a utility: investigate why the final 80.tr.gz doesn&apos;t have media extension
+### Just a utility: not part of normal operation - Works OK!!!
+### php update_Zenodo_record_using_EOL_resourceID.php _ &apos;80&apos;
+### - should update respective Zenodo record
+
+### Just a utility: investigate why the final 80.tr.gz doesn&apos;t have media extension
 ### that is after finishing all the 80_1of10 to 80_10of10
 ### php wikipedia.php _ &apos;{&quot;language&quot;:&quot;en&quot;,&quot;task&quot;:&quot;generate_resource&quot;,&quot;range_from&quot;:&quot;&quot;,&quot;range_to&quot;:&quot;&quot;,&quot;actual&quot;:&quot;&quot;,&quot;debug_taxon&quot;:&quot;&quot;,&quot;six_coverage&quot;:&quot;1st&quot;}&apos;
 

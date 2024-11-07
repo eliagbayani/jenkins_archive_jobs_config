@@ -23,8 +23,9 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
-# a utility
-# php zenodo.php
+### works OK - a utility
+### php update_Zenodo_record_using_EOL_resourceID.php _ &apos;wikipedia-zh&apos;
+
 </command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>

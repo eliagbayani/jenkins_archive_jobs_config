@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>5</numToKeep>
+        <numToKeep>2</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -26,9 +26,10 @@
 
 # === Utility: caching
 ### php environments_2_eol.php _ &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;Raw English Wikipedia - initial step&quot;, &quot;resource_id&quot;:&quot;617&quot;, &quot;subjects&quot;:&quot;Description&quot;}&apos;
-#   php environments_2_eol.php _ &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;Raw English Wikipedia - initial step&quot;, &quot;resource_id&quot;:&quot;617&quot;, &quot;subjects&quot;:&quot;Description&quot;, &quot;conn_run&quot;: &quot;1&quot;}&apos;
+    php environments_2_eol.php _ &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;Raw English Wikipedia - initial step&quot;, &quot;resource_id&quot;:&quot;617&quot;, &quot;subjects&quot;:&quot;Description&quot;, &quot;conn_run&quot;: &quot;1&quot;}&apos;
 #   php environments_2_eol.php _ &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;Raw English Wikipedia - initial step&quot;, &quot;resource_id&quot;:&quot;617&quot;, &quot;subjects&quot;:&quot;Description&quot;, &quot;conn_run&quot;: &quot;2&quot;}&apos;
-    php environments_2_eol.php _ &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;Raw English Wikipedia - initial step&quot;, &quot;resource_id&quot;:&quot;617&quot;, &quot;subjects&quot;:&quot;Description&quot;, &quot;conn_run&quot;: &quot;4&quot;}&apos;
+#   php environments_2_eol.php _ &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;Raw English Wikipedia - initial step&quot;, &quot;resource_id&quot;:&quot;617&quot;, &quot;subjects&quot;:&quot;Description&quot;, &quot;conn_run&quot;: &quot;3&quot;}&apos;
+
 
 ### source is 80.tar.gz --- via API call using resource name &quot;Raw English Wikipedia - initial step&quot;
 ### generates 617_ENV.tar.gz

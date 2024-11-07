@@ -24,11 +24,16 @@
     <hudson.tasks.Shell>
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
 
-# === STEP 1
-php environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;Raw English Wikipedia - initial step&quot;, &quot;resource_id&quot;:&quot;617&quot;, &quot;subjects&quot;:&quot;Description&quot;}&apos;
-#source is 80.tar.gz --- via API call using resource name &quot;Raw English Wikipedia - initial step&quot;
-#generates 617_ENV.tar.gz
+# === Utility: caching
+### php environments_2_eol.php _ &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;Raw English Wikipedia - initial step&quot;, &quot;resource_id&quot;:&quot;617&quot;, &quot;subjects&quot;:&quot;Description&quot;}&apos;
+#   php environments_2_eol.php _ &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;Raw English Wikipedia - initial step&quot;, &quot;resource_id&quot;:&quot;617&quot;, &quot;subjects&quot;:&quot;Description&quot;, &quot;conn_run&quot;: &quot;1&quot;}&apos;
+#   php environments_2_eol.php _ &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;Raw English Wikipedia - initial step&quot;, &quot;resource_id&quot;:&quot;617&quot;, &quot;subjects&quot;:&quot;Description&quot;, &quot;conn_run&quot;: &quot;2&quot;}&apos;
+    php environments_2_eol.php _ &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;Raw English Wikipedia - initial step&quot;, &quot;resource_id&quot;:&quot;617&quot;, &quot;subjects&quot;:&quot;Description&quot;, &quot;conn_run&quot;: &quot;3&quot;}&apos;
+
+### source is 80.tar.gz --- via API call using resource name &quot;Raw English Wikipedia - initial step&quot;
+### generates 617_ENV.tar.gz
 </command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
