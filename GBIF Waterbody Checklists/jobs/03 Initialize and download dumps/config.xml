@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>5</numToKeep>
+        <numToKeep>3</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -22,10 +22,12 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /var/www/html/eol_php_code/update_resources/connectors
-### works OK - a utility
-### php update_Zenodo_record_using_EOL_resourceID.php _ &apos;wikipedia-zh&apos;
-php update_Zenodo_record_using_EOL_resourceID.php _ &apos;wikipedia_en_traits&apos;
+      <command>cd /extra/other_files/GBIF_occurrence/
+[ ! -d &quot;WaterBody_checklists&quot; ] &amp;&amp; mkdir WaterBody_checklists
+cd WaterBody_checklists
+[ -e WaterBody_checklists_DwCA.zip ] &amp;&amp; rm WaterBody_checklists_DwCA.zip
+bash /var/www/html/eol_php_code/update_resources/connectors/files/WaterBody_checklists/run_WaterBody_checklists.sh
+
 
 </command>
       <configuredLocalRules/>

@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>5</numToKeep>
+        <numToKeep>3</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -18,15 +18,21 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers/>
+  <triggers>
+    <hudson.triggers.TimerTrigger>
+      <spec># once a day on the 15th of Mar Jun Sep Dec - quarterly
+#H H 15 6,9,12,3 *</spec>
+    </hudson.triggers.TimerTrigger>
+  </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
-### works OK - a utility
-### php update_Zenodo_record_using_EOL_resourceID.php _ &apos;wikipedia-zh&apos;
-php update_Zenodo_record_using_EOL_resourceID.php _ &apos;wikipedia_en_traits&apos;
+### orig
+#php national_checklists_2024.php jenkins
 
+### when caching:
+php national_checklists_2024.php jenkins &apos;{&quot;counter&quot;:&quot;3&quot;}&apos;
 </command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>

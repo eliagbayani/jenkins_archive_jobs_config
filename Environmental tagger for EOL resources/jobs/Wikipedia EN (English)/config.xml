@@ -77,7 +77,11 @@ rm -f wikipedia_en_traits_tmp4.tar.gz
 
 cd /var/www/html/eol_php_code/update_resources/connectors
 php ckan_api_access.php _ &quot;202fc4df-a6b3-4c12-8beb-6be8091bbbe0&quot;
-</command>
+
+### works OK - a utility | Run separately after manually checking if file is good.
+### php update_Zenodo_record_using_EOL_resourceID.php _ &apos;wikipedia_en_traits&apos;
+### Better yet run it here: http://160.111.248.39:8090/job/Zenodo/job/update_Zenodo_record/
+### So u don&apos;t need to comment original intructions above.</command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>

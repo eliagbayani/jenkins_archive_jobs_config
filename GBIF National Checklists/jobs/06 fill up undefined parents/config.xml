@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>5</numToKeep>
+        <numToKeep>3</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -23,9 +23,9 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
-### works OK - a utility
-### php update_Zenodo_record_using_EOL_resourceID.php _ &apos;wikipedia-zh&apos;
-php update_Zenodo_record_using_EOL_resourceID.php _ &apos;wikipedia_en_traits&apos;
+### part of main operation
+# php fill_up_undefined_parents_real_GBIFChecklists.php jenkins &apos;{&quot;resource_id&quot;: &quot;SC_andorra&quot;, &quot;source_dwca&quot;: &quot;SC_andorra&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
+# ran already.
 
 </command>
       <configuredLocalRules/>

@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>5</numToKeep>
+        <numToKeep>3</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -18,16 +18,31 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers/>
+  <triggers>
+    <hudson.triggers.TimerTrigger>
+      <spec># once a day on the 15th of Mar Jun Sep Dec - quarterly
+#H H 15 6,9,12,3 *</spec>
+    </hudson.triggers.TimerTrigger>
+  </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
-### works OK - a utility
-### php update_Zenodo_record_using_EOL_resourceID.php _ &apos;wikipedia-zh&apos;
-php update_Zenodo_record_using_EOL_resourceID.php _ &apos;wikipedia_en_traits&apos;
+### This will overwrite any current download request. 
+### Run this once ONLY every harvest per taxon group.
 
-</command>
+php gbif_download_request_for_CtryChecklists.php jenkins &apos;{&quot;task&quot;:&quot;send_download_request&quot;, &quot;taxon&quot;:&quot;WaterBody_checklists&quot;}&apos;
+### Will wait for another hour to check if downloads are ready
+sleep 1h
+
+### This will generate the .sh file if download is ready. 
+### The .sh file is the curl command to download.
+php gbif_download_request_for_CtryChecklists.php jenkins &apos;{&quot;task&quot;:&quot;generate_sh_file&quot;, &quot;taxon&quot;:&quot;WaterBody_checklists&quot;}&apos;
+
+
+# orig post build:
+# 02 Check if ready to start
+# 02 Check if ready to start</command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>

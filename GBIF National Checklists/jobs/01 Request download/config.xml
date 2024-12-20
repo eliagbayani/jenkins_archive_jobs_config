@@ -18,27 +18,36 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers/>
+  <triggers>
+    <hudson.triggers.TimerTrigger>
+      <spec># once a day on the 15th of Mar Jun Sep Dec - quarterly
+#H H 15 6,9,12,3 *</spec>
+    </hudson.triggers.TimerTrigger>
+  </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /var/www/html/eol_php_code/update_resources/connectors
+      <command>cd /var/www/html/eol_php_code/update_resources/connectors
+### This will overwrite any current download request. 
+### Run this once ONLY every harvest per taxon group.
 
-php wikipedia.php _ no #Norwegian
+php gbif_download_request_for_CtryChecklists.php jenkins &apos;{&quot;task&quot;:&quot;send_download_request&quot;, &quot;taxon&quot;:&quot;Country_checklists&quot;}&apos;
+### Will wait for another hour to check if downloads are ready
+sleep 1h
 
-# === STEP: fill-up missing parent entries | DOES NOT NEED ANYMORE
-#php fill_up_undefined_parents.php jenkins &apos;{&quot;resource_id&quot;: &quot;wikipedia-no&quot;, &quot;source_dwca&quot;: &quot;wikipedia-no&quot;, &quot;resource&quot;: &quot;fillup_missing_parents&quot;}&apos;
+### This will generate the .sh file if download is ready. 
+### The .sh file is the curl command to download.
+php gbif_download_request_for_CtryChecklists.php jenkins &apos;{&quot;task&quot;:&quot;generate_sh_file&quot;, &quot;taxon&quot;:&quot;Country_checklists&quot;}&apos;
 
 
-### normal is to cont to:
-### wikipedia-ka (Georgian)</command>
+# orig post build:
+# 02 Check if ready to start</command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>wikipedia-ka (Georgian)</childProjects>
+      <childProjects>02 Check if ready to start</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
