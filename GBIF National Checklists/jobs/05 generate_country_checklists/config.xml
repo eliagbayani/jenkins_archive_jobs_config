@@ -28,10 +28,26 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
-### orig
-php national_checklists_2024.php jenkins &apos;{&quot;task&quot;:&quot;generate_country_checklists&quot;}&apos;
+#php national_checklists_2024.php jenkins &apos;{&quot;task&quot;:&quot;generate_country_checklists&quot;}&apos;
+#php national_checklists_2024.php jenkins &apos;{&quot;task&quot;:&quot;major_deletion&quot;}&apos;
 
-</command>
+#php national_checklists_2024.php jenkins &apos;{&quot;task&quot;:&quot;generate_country_checklists&quot;, &quot;sought_ctry&quot;:&quot;Saint Barthelemy&quot;}&apos;
+#php national_checklists_2024.php jenkins &apos;{&quot;task&quot;:&quot;generate_country_checklists&quot;, &quot;sought_ctry&quot;:&quot;Kosovo&quot;}&apos;
+#php national_checklists_2024.php jenkins &apos;{&quot;task&quot;:&quot;generate_country_checklists&quot;, &quot;sought_ctry&quot;:&quot;Ivory Coast&quot;}&apos;
+#php national_checklists_2024.php jenkins &apos;{&quot;task&quot;:&quot;generate_country_checklists&quot;, &quot;sought_ctry&quot;:&quot;Sao Tome and Principe&quot;}&apos;
+
+#php national_checklists_2024.php jenkins &apos;{&quot;task&quot;:&quot;generate_country_checklists&quot;, &quot;sought_ctry&quot;:&quot;Myanmar&quot;}&apos;
+#php national_checklists_2024.php jenkins &apos;{&quot;task&quot;:&quot;generate_country_checklists&quot;, &quot;sought_ctry&quot;:&quot;Eswatini&quot;}&apos;
+php national_checklists_2024.php jenkins &apos;{&quot;task&quot;:&quot;generate_country_checklists&quot;, &quot;sought_ctry&quot;:&quot;Bosnia and Herzegovina&quot;}&apos;
+
+
+#php national_checklists_2024.php jenkins &apos;{&quot;task&quot;:&quot;generate_country_checklists&quot; , &quot;sought_ctry&quot;:&quot;Philippines&quot;}&apos;
+#php national_checklists_2024.php jenkins &apos;{&quot;task&quot;:&quot;generate_country_checklists&quot; , &quot;sought_ctry&quot;:&quot;Canada&quot;}&apos;
+#php national_checklists_2024.php jenkins &apos;{&quot;task&quot;:&quot;generate_country_checklists&quot; , &quot;sought_ctry&quot;:&quot;Australia&quot;}&apos;
+#php national_checklists_2024.php jenkins &apos;{&quot;task&quot;:&quot;generate_country_checklists&quot; , &quot;sought_ctry&quot;:&quot;Trinidad and Tobago&quot;}&apos;
+#php national_checklists_2024.php jenkins &apos;{&quot;task&quot;:&quot;generate_country_checklists&quot; , &quot;sought_ctry&quot;:&quot;Germany&quot;}&apos;
+
+## next Post-build Actions: 06 fill up undefined parents</command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>

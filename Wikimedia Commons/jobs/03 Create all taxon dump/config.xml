@@ -51,7 +51,7 @@ cd /extra/dumps/wikidata
 
 ### orig operation should go here: Post-build Actions
 #04_Save_all_media_filenames_(1of6),04_Save_all_media_filenames_(2of6),04_Save_all_media_filenames_(3of6),04_Save_all_media_filenames_(4of6),04_Save_all_media_filenames_(5of6),04_Save_all_media_filenames_(6of6)
-
+#04_Save_all_media_filenames_(1of6),04_Save_all_media_filenames_(2of6),04_Save_all_media_filenames_(3of6),04_Save_all_media_filenames_(4of6),04_Save_all_media_filenames_(5of6),04_Save_all_media_filenames_(6of6)
 
 ### special request to refresh: Wikimedia common names or [08.5 Wikimedia Subsets]
 #08.5 Wikimedia Subsets,../Wikipedia in different languages/Wikipedia en start
@@ -60,16 +60,6 @@ cd /extra/dumps/wikidata
       <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
-  <publishers>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>04_Save_all_media_filenames_(1of6),04_Save_all_media_filenames_(2of6),04_Save_all_media_filenames_(3of6),04_Save_all_media_filenames_(4of6),04_Save_all_media_filenames_(5of6),04_Save_all_media_filenames_(6of6)</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-        <completeBuild>true</completeBuild>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
-  </publishers>
+  <publishers/>
   <buildWrappers/>
 </project>

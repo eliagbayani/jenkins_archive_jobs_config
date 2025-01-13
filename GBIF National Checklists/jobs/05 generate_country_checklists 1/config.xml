@@ -29,10 +29,10 @@
     <hudson.tasks.Shell>
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
 ### orig
-#php national_checklists_2024.php jenkins
+#php national_checklists_2024.php jenkins &apos;{&quot;task&quot;:&quot;generate_country_checklists&quot;}&apos;
+#php national_checklists_2024.php jenkins &apos;{&quot;task&quot;:&quot;generate_country_checklists&quot; , &quot;sought_ctry&quot;:&quot;Philippines&quot;}&apos;
+php national_checklists_2024.php jenkins &apos;{&quot;task&quot;:&quot;generate_country_checklists&quot;, &quot;counter&quot;:&quot;1&quot;}&apos;
 
-### when caching:
-php national_checklists_2024.php jenkins &apos;{&quot;counter&quot;:&quot;3&quot;}&apos;
 </command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>

@@ -1,7 +1,7 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>https://eol-jira.bibalex.org/browse/DATA-1802</description>
+  <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
@@ -18,32 +18,17 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers>
-    <hudson.triggers.TimerTrigger>
-      <spec>### run quarterly:
-#H H(1-1) 10 11,2,5,8 *
-
-### run monthly: current
-#H H(1-1) 10 1-12 *
-</spec>
-    </hudson.triggers.TimerTrigger>
-  </triggers>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /var/www/html/eol_php_code/update_resources/connectors
-#php protisten.php _
-#php protisten.php _ &apos;{&quot;expire_seconds&quot;: &quot;86400&quot;}&apos;
+      <command>cd /extra/other_files/GBIF_occurrence/
+[ ! -d &quot;Continent_checklists&quot; ] &amp;&amp; mkdir Continent_checklists
+cd Continent_checklists
+[ -e Continent_checklists_DwCA.zip ] &amp;&amp; rm Continent_checklists_DwCA.zip
+bash /var/www/html/eol_php_code/update_resources/connectors/files/Continent_checklists/run_Continent_checklists.sh
 
-# -&gt; obsolete
 
-php protisten_v2.php _ &apos;{&quot;expire_seconds&quot;: &quot;172800&quot;}&apos;
-# 1 day = 86400 | 2days = 172800
-#php protisten_v2.php _ &apos;{&quot;expire_seconds&quot;: &quot;864000&quot;}&apos;
-# 10 days
-
-# php ckan_api_access.php _ &quot;84c7f07a-8b39-467b-923e-b9e9ef5fa45a&quot;
 </command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>

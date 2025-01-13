@@ -28,15 +28,34 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
-### orig
-#php national_checklists_2024.php jenkins
+### This will overwrite any current download request. 
+### Run this once ONLY every harvest per taxon group.
 
-### when caching:
-php national_checklists_2024.php jenkins &apos;{&quot;counter&quot;:&quot;4&quot;}&apos;
-</command>
+php gbif_download_request_for_CtryChecklists.php jenkins &apos;{&quot;task&quot;:&quot;send_download_request&quot;, &quot;taxon&quot;:&quot;Continent_checklists&quot;}&apos;
+### Will wait for another hour to check if downloads are ready
+sleep 1h
+
+### This will generate the .sh file if download is ready. 
+### The .sh file is the curl command to download.
+php gbif_download_request_for_CtryChecklists.php jenkins &apos;{&quot;task&quot;:&quot;generate_sh_file&quot;, &quot;taxon&quot;:&quot;Continent_checklists&quot;}&apos;
+
+
+# orig post build:
+# 02 Check if ready to start
+# 02 Check if ready to start</command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>02 Check if ready to start</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+  </publishers>
   <buildWrappers/>
 </project>

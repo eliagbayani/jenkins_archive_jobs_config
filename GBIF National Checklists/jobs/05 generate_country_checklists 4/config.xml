@@ -1,7 +1,7 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>https://eol-jira.bibalex.org/browse/DATA-1802</description>
+  <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
@@ -20,30 +20,18 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
     <hudson.triggers.TimerTrigger>
-      <spec>### run quarterly:
-#H H(1-1) 10 11,2,5,8 *
-
-### run monthly: current
-#H H(1-1) 10 1-12 *
-</spec>
+      <spec># once a day on the 15th of Mar Jun Sep Dec - quarterly
+#H H 15 6,9,12,3 *</spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /var/www/html/eol_php_code/update_resources/connectors
-#php protisten.php _
-#php protisten.php _ &apos;{&quot;expire_seconds&quot;: &quot;86400&quot;}&apos;
+      <command>cd /var/www/html/eol_php_code/update_resources/connectors
+### orig
+#php national_checklists_2024.php jenkins &apos;{&quot;task&quot;:&quot;generate_country_checklists&quot;}&apos;
+php national_checklists_2024.php jenkins &apos;{&quot;task&quot;:&quot;generate_country_checklists&quot;, &quot;counter&quot;:&quot;4&quot;}&apos;
 
-# -&gt; obsolete
-
-php protisten_v2.php _ &apos;{&quot;expire_seconds&quot;: &quot;172800&quot;}&apos;
-# 1 day = 86400 | 2days = 172800
-#php protisten_v2.php _ &apos;{&quot;expire_seconds&quot;: &quot;864000&quot;}&apos;
-# 10 days
-
-# php ckan_api_access.php _ &quot;84c7f07a-8b39-467b-923e-b9e9ef5fa45a&quot;
 </command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>

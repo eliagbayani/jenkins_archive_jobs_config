@@ -25,11 +25,11 @@
       <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
 cd /var/www/html/eol_php_code/update_resources/connectors
 
-#php wikipedia.php _ &apos;tw&apos;
+php wikipedia.php _ &apos;en&apos;
 #-&gt; is just for single connector, it will not process any 6c
 
 #php run.php _ &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:10, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;en&quot;,  &quot;cont_2next_lang&quot;:&quot;Y&quot;, &quot;six_coverage&quot;:&quot;1st&quot;}&apos;
-php run.php _ &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:10, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;en&quot;,  &quot;cont_2next_lang&quot;:&quot;N&quot;, &quot;six_coverage&quot;:&quot;1st&quot;}&apos;
+#php run.php _ &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:10, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;en&quot;,  &quot;cont_2next_lang&quot;:&quot;N&quot;, &quot;six_coverage&quot;:&quot;1st&quot;}&apos;
 
 # php run.php _ &apos;{&quot;connector&quot;:&quot;gen_wikipedia_by_lang&quot;, &quot;divisor&quot;:10, &quot;task&quot;:&quot;initial&quot;, &quot;langx&quot;:&quot;ru&quot;,  &quot;cont_2next_lang&quot;:&quot;Y&quot;, &quot;six_coverage&quot;:&quot;1st&quot;}&apos;
 #-&gt; is just for 6c connectors, works OK

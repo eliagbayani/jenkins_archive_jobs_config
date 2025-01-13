@@ -18,25 +18,32 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers>
-    <hudson.triggers.TimerTrigger>
-      <spec># once a day on the 15th of Mar Jun Sep Dec - quarterly
-#H H 15 6,9,12,3 *</spec>
-    </hudson.triggers.TimerTrigger>
-  </triggers>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
-### orig
-#php national_checklists_2024.php jenkins
 
-### when caching:
-php national_checklists_2024.php jenkins &apos;{&quot;counter&quot;:&quot;1&quot;}&apos;
+### This will check if all downloads are ready.
+### - will fail if not ready. Will not proceed to next job.
+### - will proceed with next job if ready
+php gbif_download_request_for_CtryChecklists.php jenkins &apos;{&quot;task&quot;:&quot;check_if_all_downloads_are_ready_YN&quot;, &quot;taxon&quot;:&quot;Continent_checklists&quot;}&apos;
+
+#Build other projects:
 </command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>03 Initialize and download dumps</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+  </publishers>
   <buildWrappers/>
 </project>
