@@ -33,6 +33,9 @@ H H 1,15 1-12 *
 cd /extra/
 #find eol_php_cache/     -mtime +1460 -name &apos;*.cache&apos; -type f  -ls
 find eol_php_cache/     -mtime +1460 -name &apos;*.cache&apos; -type f  -delete
+# -&gt; +1460 means files that are 4 yrs old and older
+# -&gt; +1460 means files that are 1460 days old and older
+
 
 #find &apos;eol_php_cache/13/&apos; -mtime +1825 -name &apos;*.cache&apos; -type f  -ls
 #find &apos;eol_php_cache/22/&apos; -mtime +1825 -name &apos;*.cache&apos; -type f  -ls | wc -l

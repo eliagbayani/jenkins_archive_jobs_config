@@ -28,11 +28,17 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
-### orig
 
-php waterbody_checklists_2024.php _ &apos;{&quot;task&quot;:&quot;show_waterbodies_metadata&quot;}&apos;
+php waterbody_checklists_2024.php _ &apos;{&quot;task&quot;:&quot;generate_waterbody_compiled&quot;}&apos;
+# -&gt; for just 1 aggregated waterbody resource
+# -&gt; latest
+php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;waterbody_compiled&quot;, &quot;source_dwca&quot;: &quot;waterbody_compiled&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
+# -&gt; -- ends here --
 
+#php waterbody_checklists_2024.php _ &apos;{&quot;task&quot;:&quot;show_waterbodies_metadata&quot;}&apos;
 #php waterbody_checklists_2024.php _ &apos;{&quot;task&quot;:&quot;generate_waterbody_checklists&quot;}&apos;
+# -&gt; for multiple waterbody resources
+# -&gt; now obsolete
 
 #php waterbody_checklists_2024.php _ &apos;{&quot;task&quot;:&quot;generate_waterbody_checklists&quot;, &quot;sought_waterbdy&quot;:&quot;South Pacific&quot;}&apos;
 #php waterbody_checklists_2024.php _ &apos;{&quot;task&quot;:&quot;generate_waterbody_checklists&quot;, &quot;sought_waterbdy&quot;:&quot;North Pacific&quot;}&apos;
@@ -43,11 +49,13 @@ php waterbody_checklists_2024.php _ &apos;{&quot;task&quot;:&quot;show_waterbodi
 #php waterbody_checklists_2024.php _ &apos;{&quot;task&quot;:&quot;generate_waterbody_checklists&quot;, &quot;sought_waterbdy&quot;:&quot;Irish Sea&quot;}&apos;
 #php waterbody_checklists_2024.php _ &apos;{&quot;task&quot;:&quot;generate_waterbody_checklists&quot;, &quot;sought_waterbdy&quot;:&quot;Bass Strait&quot;}&apos;
 
-php waterbody_checklists_2024.php _ &apos;{&quot;task&quot;:&quot;generate_report&quot;, &quot;report_name&quot;:&quot;waterbodies&quot;}&apos;
+#php waterbody_checklists_2024.php _ &apos;{&quot;task&quot;:&quot;generate_waterbody_checklists&quot;, &quot;sought_waterbdy&quot;:&quot;Norwegian Sea&quot;}&apos;
+#php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_norwegiansea&quot;, &quot;source_dwca&quot;: &quot;SC_norwegiansea&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
+
+#php waterbody_checklists_2024.php _ &apos;{&quot;task&quot;:&quot;generate_report&quot;, &quot;report_name&quot;:&quot;waterbodies&quot;}&apos;
 #php waterbody_checklists_2024.php _ &apos;{&quot;task&quot;:&quot;generate_report&quot;, &quot;report_name&quot;:&quot;countries&quot;}&apos;
 
-
-</command>
+#Post build: 06 fill up undefined parents WaterBody</command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
