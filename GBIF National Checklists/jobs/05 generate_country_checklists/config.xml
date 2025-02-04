@@ -28,8 +28,9 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
-php national_checklists_2024.php jenkins &apos;{&quot;task&quot;:&quot;generate_country_checklists&quot;}&apos;
+
 #php national_checklists_2024.php jenkins &apos;{&quot;task&quot;:&quot;major_deletion&quot;}&apos;
+php national_checklists_2024.php jenkins &apos;{&quot;task&quot;:&quot;generate_country_checklists&quot;}&apos;
 
 #php national_checklists_2024.php jenkins &apos;{&quot;task&quot;:&quot;generate_country_checklists&quot;, &quot;sought_ctry&quot;:&quot;Saint Barthelemy&quot;}&apos;
 #php national_checklists_2024.php jenkins &apos;{&quot;task&quot;:&quot;generate_country_checklists&quot;, &quot;sought_ctry&quot;:&quot;Kosovo&quot;}&apos;

@@ -29,6 +29,7 @@
     <hudson.tasks.Shell>
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
 
+#php waterbody_checklists_2024.php _ &apos;{&quot;task&quot;:&quot;major_deletion&quot;}&apos;
 php waterbody_checklists_2024.php _ &apos;{&quot;task&quot;:&quot;generate_waterbody_compiled&quot;}&apos;
 # -&gt; for just 1 aggregated waterbody resource
 # -&gt; latest

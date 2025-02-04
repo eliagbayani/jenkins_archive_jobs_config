@@ -35,6 +35,7 @@ php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id
 php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_northamerica&quot;, &quot;source_dwca&quot;: &quot;SC_northamerica&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
 php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_asia&quot;, &quot;source_dwca&quot;: &quot;SC_asia&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
 php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_southamerica&quot;, &quot;source_dwca&quot;: &quot;SC_southamerica&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
+php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_antarctica&quot;, &quot;source_dwca&quot;: &quot;SC_antarctica&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
 </command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>
