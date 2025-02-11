@@ -24,6 +24,9 @@
     <hudson.tasks.Shell>
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
 
+cd /opt/homebrew/var/www/eol_php_code/update_resources/connectors
+exit 1
+
 php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_andorra&quot;, &quot;source_dwca&quot;: &quot;SC_andorra&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
 php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_unitedarabemirates&quot;, &quot;source_dwca&quot;: &quot;SC_unitedarabemirates&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
 php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_afganistan&quot;, &quot;source_dwca&quot;: &quot;SC_afganistan&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
@@ -68,6 +71,16 @@ php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id
       <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>06 fill up undefined parents 02</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+  </publishers>
   <buildWrappers/>
 </project>

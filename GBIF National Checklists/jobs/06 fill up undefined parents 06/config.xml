@@ -62,6 +62,12 @@ php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id
 php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_southafrica&quot;, &quot;source_dwca&quot;: &quot;SC_southafrica&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
 php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_zambia&quot;, &quot;source_dwca&quot;: &quot;SC_zambia&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
 php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_zimbabwe&quot;, &quot;source_dwca&quot;: &quot;SC_zimbabwe&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
+
+php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_saotomeprincipe&quot;, &quot;source_dwca&quot;: &quot;SC_saotomeprincipe&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
+php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_saintbarthelemy&quot;, &quot;source_dwca&quot;: &quot;SC_saintbarthelemy&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
+php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_kosovo&quot;, &quot;source_dwca&quot;: &quot;SC_kosovo&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
+php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_ivorycoast&quot;, &quot;source_dwca&quot;: &quot;SC_ivorycoast&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
+php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_pitcairnhendersonducieandoenoislands&quot;, &quot;source_dwca&quot;: &quot;SC_pitcairnhendersonducieandoenoislands&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
 </command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>
