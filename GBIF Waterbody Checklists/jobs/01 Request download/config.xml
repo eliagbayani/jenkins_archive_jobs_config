@@ -21,7 +21,7 @@
   <triggers>
     <hudson.triggers.TimerTrigger>
       <spec># once a day on the 15th of Mar Jun Sep Dec - quarterly
-#H H 15 6,9,12,3 *</spec>
+H H 15 6,9,12,3 *</spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
@@ -38,7 +38,6 @@ sleep 1h
 ### This will generate the .sh file if download is ready. 
 ### The .sh file is the curl command to download.
 php gbif_download_request_for_CtryChecklists.php jenkins &apos;{&quot;task&quot;:&quot;generate_sh_file&quot;, &quot;taxon&quot;:&quot;WaterBody_checklists&quot;}&apos;
-
 
 # orig post build:
 # 02 Check if ready to start

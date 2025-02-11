@@ -28,7 +28,8 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
-
+exit 1
+### obsolete since we don&apos;t generate individual water bodies anymore
 php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_caribbeansea&quot;, &quot;source_dwca&quot;: &quot;SC_caribbeansea&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
 php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_southernocean&quot;, &quot;source_dwca&quot;: &quot;SC_southernocean&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
 php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_bayoffundy&quot;, &quot;source_dwca&quot;: &quot;SC_bayoffundy&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;

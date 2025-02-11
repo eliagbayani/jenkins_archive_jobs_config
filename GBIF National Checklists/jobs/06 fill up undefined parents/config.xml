@@ -24,21 +24,7 @@
     <hudson.tasks.Shell>
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
 
-#php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_myanmar&quot;, &quot;source_dwca&quot;: &quot;SC_myanmar&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
-#php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_bosniaherzegovina&quot;, &quot;source_dwca&quot;: &quot;SC_bosniaherzegovina&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
-#php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_swaziland&quot;, &quot;source_dwca&quot;: &quot;SC_swaziland&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
-
-#php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_saintbarthelemy&quot;, &quot;source_dwca&quot;: &quot;SC_saintbarthelemy&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
-#php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_kosovo&quot;, &quot;source_dwca&quot;: &quot;SC_kosovo&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
-#php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_ivorycoast&quot;, &quot;source_dwca&quot;: &quot;SC_ivorycoast&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
-#php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_saotomeprincipe&quot;, &quot;source_dwca&quot;: &quot;SC_saotomeprincipe&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
-
-#php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_germany&quot;, &quot;source_dwca&quot;: &quot;SC_germany&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
-#php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_philippines&quot;, &quot;source_dwca&quot;: &quot;SC_philippines&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
-#php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_australia&quot;, &quot;source_dwca&quot;: &quot;SC_australia&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
-#php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_trinidadtobago&quot;, &quot;source_dwca&quot;: &quot;SC_trinidadtobago&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
-#php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_canada&quot;, &quot;source_dwca&quot;: &quot;SC_canada&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
-#php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_unitedstates&quot;, &quot;source_dwca&quot;: &quot;SC_unitedstates&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
+### copy paste here the contents of [https://editors.eol.org/other_files/GBIF_occurrence/Country_checklists/run_countries.tsv]
 </command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>

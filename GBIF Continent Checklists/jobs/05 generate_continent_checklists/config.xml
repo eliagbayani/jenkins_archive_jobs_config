@@ -29,7 +29,9 @@
     <hudson.tasks.Shell>
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
 ### orig
-#php continent_checklists_2024.php _ &apos;{&quot;task&quot;:&quot;show_continents_metadata&quot;}&apos;
+#php continent_checklists_2024.php _ &apos;{&quot;task&quot;:&quot;show_continents_metadata&quot;}&apos; 
+#obsolete since we don&apos;t generate individual continents anymore
+
 php continent_checklists_2024.php _ &apos;{&quot;task&quot;:&quot;generate_continent_compiled&quot;}&apos;
 php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;continent_compiled&quot;, &quot;source_dwca&quot;: &quot;continent_compiled&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
 
@@ -57,8 +59,7 @@ php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id
 
 #php continent_checklists_2024.php _ &apos;{&quot;task&quot;:&quot;generate_continent_checklists&quot;, &quot;sought_continent&quot;:&quot;Antarctica&quot;}&apos;
 #php fill_up_undefined_parents_real_GBIFChecklists.php _ &apos;{&quot;resource_id&quot;: &quot;SC_antarctica&quot;, &quot;source_dwca&quot;: &quot;SC_antarctica&quot;, &quot;resource&quot;: &quot;fillup_missing_parents_GBIFChecklists&quot;}&apos;
-
-#build other projects: 06 fill up undefined parents Continent</command>
+</command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>

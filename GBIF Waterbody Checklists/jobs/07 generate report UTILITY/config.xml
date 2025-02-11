@@ -28,11 +28,9 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
-### orig
-#php national_checklists_2024.php jenkins
-
-### when caching:
-php national_checklists_2024.php jenkins &apos;{&quot;counter&quot;:&quot;1&quot;}&apos;
+exit 1
+# it is run in the National Checklist job
+php waterbody_checklists_2024.php _ &apos;{&quot;task&quot;:&quot;generate_report&quot;, &quot;report_name&quot;:&quot;countries&quot;}&apos;
 </command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>
