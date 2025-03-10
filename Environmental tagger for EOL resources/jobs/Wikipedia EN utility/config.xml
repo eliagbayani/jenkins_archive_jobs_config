@@ -23,13 +23,19 @@
   <builders>
     <hudson.tasks.Shell>
       <command># This is just a utility. Not part of main operaiton
-#cd /var/www/html/eol_php_code/update_resources/connectors
-#php update_Zenodo_record_using_EOL_resourceID.php _ &apos;wikipedia_en_traits&apos;
+cd /var/www/html/eol_php_code/update_resources/connectors
+
+### works OK - a utility | Run separately after manually checking if file is good.
+### php update_Zenodo_record_using_EOL_resourceID.php _ &apos;wikipedia_en_traits&apos;
+### Better yet run it here: http://160.111.248.39:8090/job/Zenodo/job/update_Zenodo_record/
+### So u don&apos;t need to comment original intructions above.
 # worked ok
 
 #php update_Zenodo_record_using_EOL_resourceID.php _ &apos;globi_assoc&apos;
 
 #rm -rf /var/www/html/Pensoft_annotator/json_partial/
+
+php gbif_map_data.php _ &apos;{&quot;task&quot;:&quot;generate_map_data_using_GBIF_csv_files&quot;}&apos;
 </command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>

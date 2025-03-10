@@ -18,14 +18,19 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers/>
+  <triggers>
+    <hudson.triggers.TimerTrigger>
+      <spec># Once a day on the 5th of every month
+H H 6 1-12 *</spec>
+    </hudson.triggers.TimerTrigger>
+  </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
-### works OK - a utility
-### php update_Zenodo_record_using_EOL_resourceID.php _ &apos;wikipedia-zh&apos;
-#php update_Zenodo_record_using_EOL_resourceID.php _ &apos;wikipedia_en_traits&apos;
+php zenodo_stats.php _ &apos;{&quot;task&quot;:&quot;generate&quot;}&apos;
+php zenodo_stats.php _ &apos;{&quot;task&quot;:&quot;show_report&quot;}&apos;
+#php zenodo_stats.php _ &apos;{&quot;task&quot;:&quot;show_stats&quot;, &quot;ZenodoID&quot;:&quot;14947779&quot;}&apos;
 
 </command>
       <configuredLocalRules/>
