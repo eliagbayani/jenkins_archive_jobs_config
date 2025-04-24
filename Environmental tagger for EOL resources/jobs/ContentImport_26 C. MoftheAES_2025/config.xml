@@ -1,0 +1,59 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>Memoirs of the American Entomological Society&#xd;
+https://zenodo.org/records/13321700</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>3</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>cd /var/www/html/eol_php_code/update_resources/connectors
+## step 1: generate XXX_ENV.tar.gz for 20 DwCAs
+#php environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MoftheAES 1st&quot;, &quot;resource_id&quot;:&quot;118935&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
+#php environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MoftheAES 1st&quot;, &quot;resource_id&quot;:&quot;120081&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
+#php environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MoftheAES 1st&quot;, &quot;resource_id&quot;:&quot;120082&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
+#php environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MoftheAES 1st&quot;, &quot;resource_id&quot;:&quot;118986&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
+#php environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MoftheAES 1st&quot;, &quot;resource_id&quot;:&quot;118920&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
+#php environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MoftheAES 1st&quot;, &quot;resource_id&quot;:&quot;120083&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
+#php environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MoftheAES 1st&quot;, &quot;resource_id&quot;:&quot;118237&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
+#php environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MoftheAES 1st&quot;, &quot;resource_id&quot;:&quot;118941&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
+#php environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MoftheAES 1st&quot;, &quot;resource_id&quot;:&quot;118950&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
+#php environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MoftheAES 1st&quot;, &quot;resource_id&quot;:&quot;118936&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
+#php environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MoftheAES 1st&quot;, &quot;resource_id&quot;:&quot;118946&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
+#php environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MoftheAES 1st&quot;, &quot;resource_id&quot;:&quot;118978&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
+#php environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MoftheAES 1st&quot;, &quot;resource_id&quot;:&quot;119035&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
+#php environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MoftheAES 1st&quot;, &quot;resource_id&quot;:&quot;119187&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
+#php environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MoftheAES 1st&quot;, &quot;resource_id&quot;:&quot;119188&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
+#php environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MoftheAES 1st&quot;, &quot;resource_id&quot;:&quot;119520&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
+#php environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MoftheAES 1st&quot;, &quot;resource_id&quot;:&quot;120602&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
+#php environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MoftheAES 1st&quot;, &quot;resource_id&quot;:&quot;27822&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
+#php environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MoftheAES 1st&quot;, &quot;resource_id&quot;:&quot;30354&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
+#php environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;MoftheAES 1st&quot;, &quot;resource_id&quot;:&quot;30355&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
+#generates 20 DwCAs XXX_ENV.tar.gz
+
+## step 2:
+php aggregate_MoftheAES.php
+# this combines: 20 DwCAs XXX_ENV.tar.gz
+# generates MoftheAES_resources.tar.gz</command>
+      <configuredLocalRules/>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

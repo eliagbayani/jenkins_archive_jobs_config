@@ -37,13 +37,13 @@ cd /var/www/html/eol_php_code/update_resources/connectors
 #php protisten.php _ &apos;{&quot;expire_seconds&quot;: &quot;86400&quot;}&apos;
 # -&gt; obsolete
 
-php protisten_v2.php _ &apos;{&quot;expire_seconds&quot;: &quot;0&quot;}&apos;
+#php protisten_v2.php _ &apos;{&quot;expire_seconds&quot;: &quot;0&quot;}&apos;
 # 1 day = 86400 | 2days = 172800
-#php protisten_v2.php _ &apos;{&quot;expire_seconds&quot;: &quot;864000&quot;}&apos;
-# 10 days
+php protisten_v2.php _ &apos;{&quot;expire_seconds&quot;: &quot;86400&quot;}&apos;
+# -&gt; working OK
 
-# php ckan_api_access.php _ &quot;84c7f07a-8b39-467b-923e-b9e9ef5fa45a&quot;
-</command>
+php ckan_api_access.php _ &quot;84c7f07a-8b39-467b-923e-b9e9ef5fa45a&quot;
+# -&gt; working OK</command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>

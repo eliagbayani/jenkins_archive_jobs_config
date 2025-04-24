@@ -1,0 +1,69 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>237,263,445 rows -&gt; 0000268-250325103851331.csv&#xd;
+as of 26 Mar 2025&#xd;
+&#xd;
+GBIF.org (23 April 2025) GBIF Occurrence Download https://doi.org/10.15468/dl.axcwgr</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>3</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>TAXA_GROUP</name>
+          <defaultValue>map_order_Passeriformes_with_3_families</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>cd /var/www/html/eol_php_code/update_resources/connectors
+
+#exit #done already
+### This will overwrite any current download request. 
+### Run this once ONLY every harvest per taxon group.
+#php gbif_download_request_for_MapData.php jenkins &apos;{&quot;task&quot;:&quot;send_download_request&quot;, &quot;taxon&quot;:&quot;&apos;$TAXA_GROUP&apos;&quot;}&apos;
+### Will wait for another hour to check if downloads are ready
+#sleep 7200 #2 hrs
+#exit 0
+
+### This will generate the .sh file if download is ready. 
+### The .sh file is the curl command to download.
+php gbif_download_request_for_MapData.php jenkins &apos;{&quot;task&quot;:&quot;generate_sh_file&quot;, &quot;taxon&quot;:&quot;&apos;$TAXA_GROUP&apos;&quot;}&apos;
+
+### This will check if all downloads are ready.
+### - will fail if not ready. Will not proceed to next job.
+### - will proceed with next job if ready
+php gbif_download_request_for_MapData.php jenkins &apos;{&quot;task&quot;:&quot;check_if_all_downloads_are_ready_YN&quot;, &quot;taxon&quot;:&quot;&apos;$TAXA_GROUP&apos;&quot;}&apos;
+
+echo &quot;Download commencing...&quot;
+cd /extra/other_files/GBIF_occurrence/
+[ ! -d $TAXA_GROUP ] &amp;&amp; mkdir $TAXA_GROUP
+cd $TAXA_GROUP
+[ -e &quot;$TAXA_GROUP&quot;_DwCA.zip ] &amp;&amp; rm &quot;$TAXA_GROUP&quot;_DwCA.zip
+bash /var/www/html/eol_php_code/update_resources/connectors/files/$TAXA_GROUP/run_$TAXA_GROUP.sh
+
+</command>
+      <configuredLocalRules/>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

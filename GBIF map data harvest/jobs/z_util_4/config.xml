@@ -22,8 +22,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>rm -rf /extra/other_files/GBIF_occurrence/GBIF_taxa_csv_dwca/e* 
-rm -rf /extra/other_files/GBIF_occurrence/GBIF_taxa_csv_dwca/f*
+      <command>rm -rf /extra/other_files/GBIF_occurrence/GBIF_taxa_csv_dwca/f*
 
 
 # rm -rf /extra/other_files/GBIF_occurrence/multimedia_gbifID/*
@@ -40,6 +39,7 @@ rm -rf /extra/other_files/GBIF_occurrence/GBIF_taxa_csv_dwca/f*
 
 ## another utility
 #rm -rf /extra/other_files/GBIF_occurrence/multimedia_gbifID/d*</command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

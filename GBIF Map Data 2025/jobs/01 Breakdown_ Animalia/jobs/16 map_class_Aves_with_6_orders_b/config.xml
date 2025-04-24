@@ -1,8 +1,7 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>Smithsonian Contributions Series: Smithsonian Contributions to Botany&#xd;
-https://zenodo.org/records/13321713</description>
+  <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
@@ -13,6 +12,15 @@ https://zenodo.org/records/13321713</description>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
     </jenkins.model.BuildDiscarderProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>TAXA_GROUP</name>
+          <defaultValue>map_class_Aves_with_6_orders</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
   </properties>
   <scm class="hudson.scm.NullSCM"/>
   <canRoam>true</canRoam>
@@ -24,14 +32,22 @@ https://zenodo.org/records/13321713</description>
   <builders>
     <hudson.tasks.Shell>
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
-
-php environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;SI Contributions to Zoology&quot;, &quot;resource_id&quot;:&quot;10088_6943&quot;, &quot;subjects&quot;:&quot;Uses|Description&quot;}&apos;
-
-#generates 10088_6943_ENV.tar.gz
+#exit ### run once only - done last 24Mar2025
+php gbif_map_data.php _ &apos;{&quot;task&quot;:&quot;breakdown_GBIF_DwCA_file&quot;, &quot;taxonGroup&quot;:&quot;&apos;$TAXA_GROUP&apos;&quot;}&apos; #run once only
 </command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>17 map_class_Aves_with_18_orders_b</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+  </publishers>
   <buildWrappers/>
 </project>

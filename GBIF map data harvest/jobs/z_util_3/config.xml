@@ -22,7 +22,9 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>### start main program ===================================
+      <command>rm -rf /extra/other_files/GBIF_occurrence/GBIF_taxa_csv_dwca/c*
+exit
+### start main program ===================================
 
 cd /var/www/html/eol_php_code/update_resources/connectors
 
@@ -31,6 +33,7 @@ cd /var/www/html/eol_php_code/update_resources/connectors
 
 rm -rf /extra/other_files/GBIF_occurrence/multimedia_gbifID/e*
 </command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

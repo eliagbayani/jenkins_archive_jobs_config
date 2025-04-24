@@ -1,0 +1,43 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>North American Flora: North American Flora - ALL&#xd;
+https://zenodo.org/records/13321696</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>3</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>cd /var/www/html/eol_php_code/update_resources/connectors
+# NorthAmericanFlora_2025.tar.gz was created locally (Mac Studio) and uploaded to eol-archive.
+## step 1:
+#php environments_2_eol.php jenkins &apos;{&quot;task&quot;: &quot;generate_eol_tags_pensoft&quot;, &quot;resource&quot;:&quot;all_BHL&quot;, &quot;resource_id&quot;:&quot;NorthAmericanFlora_2025&quot;, &quot;subjects&quot;:&quot;Description|Uses&quot;}&apos;
+#generates NorthAmericanFlora_2025_ENV.tar.gz
+## step 2:
+#php dwca_remove_MoF_records.php jenkins &apos;{&quot;resource_id&quot;:&quot;NorthAmericanFlora_All&quot;, &quot;destination_id&quot;:&quot;NorthAmericanFlora_All_subset&quot;}&apos;
+# generates NorthAmericanFlora_All_subset.tar.gz
+## step 3:
+php aggregate_NorthAF_2025.php
+# this combines: NorthAmericanFlora_2025_ENV.tar.gz + NorthAmericanFlora_All_subset.tar.gz
+# generates NorthAmericanFlora_All_2025.tar.gz</command>
+      <configuredLocalRules/>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

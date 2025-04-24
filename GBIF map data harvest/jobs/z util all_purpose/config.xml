@@ -47,18 +47,9 @@ rm -rf /extra/map_data_dwca/*
 mv /extra/tmp/final_taxon_concept_IDS*.txt /extra/map_data_dwca/
 
 </command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
-  <publishers>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>02a breakdown Animalia</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-        <completeBuild>true</completeBuild>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
-  </publishers>
+  <publishers/>
   <buildWrappers/>
 </project>
