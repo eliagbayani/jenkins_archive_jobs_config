@@ -20,7 +20,7 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
     <hudson.triggers.TimerTrigger>
-      <spec>H H 14 * *
+      <spec>#H H 14 * *
 </spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
@@ -28,12 +28,14 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
-#php brazilian_flora.php jenkins
+###php brazilian_flora.php jenkins
 # generates BF.tar.gz
-php mov_taxaRef_toMOF.php jenkins &apos;{&quot;resource_id&quot;:&quot;Brazilian_Flora&quot;}&apos;
-# generates Brazilian_Flora.tar.gz
+# run once only since the source is static file: https://editors.eol.org/other_files/GBIF_DwCA/lista_especies_flora_brasil.zip
 
-</command>
+###php mov_taxaRef_toMOF.php jenkins &apos;{&quot;resource_id&quot;:&quot;Brazilian_Flora&quot;}&apos;
+# generates Brazilian_Flora.tar.gz
+# run once also</command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

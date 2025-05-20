@@ -47,6 +47,17 @@ H(0-30) 1 15 * *
 #cd /var/www/html/eol_php_code/update_resources/connectors
 #php dwca_utility.php jenkins 24 OBSOLETE AS WELL, REPLACED BY:24_new.php
 
+#echo &quot;\n=================================\n&quot;
+#Connector needs to be updated.
+#echo &quot;\n=================================\n&quot;
+
+# Last successful harvest: 
+# 24 Fri 2024-11-15 06:40:23 AM	{&quot;agent.tab&quot;:173, &quot;measurement_or_fact_specific.tab&quot;:86893, &quot;media_resource.tab&quot;:140143, &quot;occurrence_specific.tab&quot;:57123, &quot;taxon.tab&quot;:16470, &quot;time_elapsed&quot;:{&quot;sec&quot;:18803.02, &quot;min&quot;:313.38, &quot;hr&quot;:5.22}}
+# exit 1
+
+echo &quot;API is down: https://www.antweb.org/documentation/api/apiV3_1.jsp#taxa&quot;
+exit 0 #graceful exit
+
 ### NEW CONNECTOR: OK
 cd /var/www/html/eol_php_code/update_resources/connectors
 php 24_new.php _

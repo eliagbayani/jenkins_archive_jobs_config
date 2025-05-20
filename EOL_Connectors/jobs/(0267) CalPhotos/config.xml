@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
   <description>https://opendata.eol.org/dataset/calphotos&#xd;
@@ -34,10 +34,14 @@ H 1 * * 6
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
+      <command>echo &quot;Informed partner: http://calphotos.berkeley.edu/eol.xml.gz cannot be unzipped anymore.&quot;
+
+exit 0 #graceful exit
+
 cd /var/www/html/eol_php_code/update_resources/connectors
 php 267.php jenkins
 </command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

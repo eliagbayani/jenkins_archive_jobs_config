@@ -20,17 +20,19 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
     <hudson.triggers.TimerTrigger>
-      <spec>H H 15 4,7,10,1 *
+      <spec>#H H 15 4,7,10,1 *
 # Apr Jul Oct Jan</spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
+      <command>echo &quot;API not working anymore.&quot;
+exit 0 #graceful exit
 cd /var/www/html/eol_php_code/update_resources/connectors
 php vimeo2020.php jenkins
 # generates 214.tar.gz</command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

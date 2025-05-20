@@ -22,7 +22,10 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>rm -rf /extra/other_files/GBIF_occurrence/GBIF_taxa_csv_dwca/9*
+      <command>rm -rf /extra/other_files/GBIF_occurrence/multimedia_gbifID/f*
+exit
+
+rm -rf /extra/other_files/GBIF_occurrence/GBIF_taxa_csv_dwca/9*
 exit
 ### start main program ===================================
 

@@ -32,7 +32,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
-#exit ### run once only - done last 24Mar2025
+exit ### run once only - done last 24Mar2025
 php gbif_map_data.php _ &apos;{&quot;task&quot;:&quot;breakdown_GBIF_DwCA_file&quot;, &quot;taxonGroup&quot;:&quot;&apos;$TAXA_GROUP&apos;&quot;}&apos; #run once only
 </command>
       <configuredLocalRules/>

@@ -1,0 +1,36 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>### working OK!
+cd /var/www/html/eol_php_code/update_resources/connectors
+php gbif_georeference_dwca.php jenkins &apos;{&quot;task&quot;:&quot;save_ids_to_text_from_many_folders&quot;}&apos;
+wc -l /extra/map_data_dwca/final_taxon_concept_IDS.txt
+ls -lt /extra/map_data_dwca/final_taxon_concept_IDS*.txt
+
+### start to tgz the map data folder =================================== per JRice&apos;s request
+### working OK!
+cd /extra/ # -&gt; for eol-archive
+#cd /Volumes/Crucial_4TB/google_maps/ # -&gt; for Mac Studio 
+tar -czf map_data_dwca_$(date +&quot;%Y-%m-%d&quot;).tgz map_data_dwca/
+# this will zip the entire /map_data_dwca/ folder
+# generates: e.g. map_data_dwca_2025-05-01.tgz
+ls -lt map_data_dwca_*.tgz #just to verity the tgz file is created.
+</command>
+      <configuredLocalRules/>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>
