@@ -1,14 +1,13 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>https://opendata.eol.org/dataset/comparative_cytogenetics&#xd;
-http://www.eol.org/content_partners/587/resources/833</description>
+  <description>https://eol-jira.bibalex.org/browse/DATA-1802</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>2</numToKeep>
+        <numToKeep>3</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -21,19 +20,29 @@ http://www.eol.org/content_partners/587/resources/833</description>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
     <hudson.triggers.TimerTrigger>
-      <spec>
-#or start build at midnight, every Saturday:
-#H 23 * * 6
+      <spec>### run quarterly:
+#H H(1-1) 10 11,2,5,8 *
+
+### run monthly: current
+H H(1-1) 10 1-12 *
 </spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /var/www/html/eol_php_code/update_resources/connectors
-php 833.php jenkins
-</command>
+      <command>cd /var/www/html/eol_php_code/update_resources/connectors
+#php protisten.php _
+#php protisten.php _ &apos;{&quot;expire_seconds&quot;: &quot;86400&quot;}&apos;
+# -&gt; obsolete
+
+#php protisten_v2.php _ &apos;{&quot;expire_seconds&quot;: &quot;0&quot;}&apos;
+# 1 day = 86400 | 2days = 172800
+php protisten_v2.php _ &apos;{&quot;expire_seconds&quot;: &quot;86400&quot;}&apos;
+# -&gt; working OK
+
+php ckan_api_access.php _ &quot;84c7f07a-8b39-467b-923e-b9e9ef5fa45a&quot;
+# -&gt; working OK</command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>

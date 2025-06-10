@@ -2,7 +2,6 @@
 <com.cloudbees.hudson.plugins.folder.Folder plugin="cloudbees-folder@6.858.v898218f3609d">
   <actions/>
   <description></description>
-  <displayName>01 EOL Connectors</displayName>
   <properties/>
   <folderViews class="com.cloudbees.hudson.plugins.folder.views.DefaultFolderViewHolder">
     <views>

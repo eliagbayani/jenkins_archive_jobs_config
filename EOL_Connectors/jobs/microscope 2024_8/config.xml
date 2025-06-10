@@ -1,14 +1,15 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>https://opendata.eol.org/dataset/comparative_cytogenetics&#xd;
-http://www.eol.org/content_partners/587/resources/833</description>
+  <description>https://github.com/EOL/ContentImport/issues/17&#xd;
+&#xd;
+</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>2</numToKeep>
+        <numToKeep>3</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -19,20 +20,18 @@ http://www.eol.org/content_partners/587/resources/833</description>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers>
-    <hudson.triggers.TimerTrigger>
-      <spec>
-#or start build at midnight, every Saturday:
-#H 23 * * 6
-</spec>
-    </hudson.triggers.TimerTrigger>
-  </triggers>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
+      <command>echo &quot;Connectors below are good but data is now static.&quot;
+exit 0 #graceful exit
+
 cd /var/www/html/eol_php_code/update_resources/connectors
-php 833.php jenkins
+php remove_unused_media.php _ &apos;{&quot;resource_id&quot;: &quot;microscope_2024_06_05&quot;, &quot;resource&quot;: &quot;remove_unused_media&quot;, &quot;resource_name&quot;: &quot;micro*scope&quot;}&apos;
+
+# To update respective Zenodo record
+php update_Zenodo_record_using_EOL_resourceID_directly.php _ &apos;{&quot;resource_id&quot;:&quot;microscope_2024_08_29&quot;, &quot;zenodo_id&quot;:&quot;13515043&quot;}&apos;
 </command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>

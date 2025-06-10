@@ -22,8 +22,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /var/www/html/eol_php_code/update_resources/connectors
+      <command>cd /var/www/html/eol_php_code/update_resources/connectors
 
 # This was run in command-line since pdftotext is not linked to Jenkins.
 # Worked OK in command-line. Run once only.
@@ -31,6 +30,7 @@ cd /var/www/html/eol_php_code/update_resources/connectors
 #php download_Kubitzki_PDFs.php jenkins
 
 #which pdftotext</command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

@@ -1,14 +1,14 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>https://opendata.eol.org/dataset/comparative_cytogenetics&#xd;
-http://www.eol.org/content_partners/587/resources/833</description>
+  <description>https://opendata.eol.org/dataset/moorea_biocode&#xd;
+http://eol.org/content_partners/363/resources/330</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>2</numToKeep>
+        <numToKeep>5</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -21,18 +21,21 @@ http://www.eol.org/content_partners/587/resources/833</description>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
     <hudson.triggers.TimerTrigger>
-      <spec>
+      <spec>#start build at midnight:
+#    @midnight
+#every first of every month between 2:00 a.m. - 02:30 a.m. :
+#H(0-30) 2 1 * *
+
 #or start build at midnight, every Saturday:
-#H 23 * * 6
+#H 1 * * 6
 </spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /var/www/html/eol_php_code/update_resources/connectors
-php 833.php jenkins
+      <command>cd /var/www/html/eol_php_code/update_resources/connectors
+php 330.php jenkins
 </command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>

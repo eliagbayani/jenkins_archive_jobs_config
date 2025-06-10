@@ -34,9 +34,9 @@ php gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;check_if_all
 php gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;check_if_all_downloads_are_ready_YN&quot;, &quot;taxon&quot;:&quot;GBIF_Sweden&quot;}&apos;
 php gbif_download_request.php jenkins &apos;{&quot;task&quot;:&quot;check_if_all_downloads_are_ready_YN&quot;, &quot;taxon&quot;:&quot;GBIF_UnitedKingdom&quot;}&apos;
 
-
-#Build other projects:
+#Build other projects: 03 Initialize and download dumps
 </command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

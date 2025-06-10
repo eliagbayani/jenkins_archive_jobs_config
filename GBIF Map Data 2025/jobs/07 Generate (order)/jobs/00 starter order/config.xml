@@ -14,7 +14,7 @@
   <builders/>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>01 order, 02 order, 03 order, 04 order, 05 order, 06 order, 07 order, 08 order, 09 order, 10 order, 11 order, 12 order, 13 order, 14 order, 15 order, 16 order, 17 order, 18 order, 19 order, 20 order</childProjects>
+      <childProjects>01 order,02 order,03 order,04 order,05 order,06 order,07 order,08 order,09 order,10 order,11 order,12 order,13 order,14 order,15 order,16 order,17 order,18 order,19 order,20 order</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

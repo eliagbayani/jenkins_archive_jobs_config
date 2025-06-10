@@ -22,11 +22,11 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#cd /Library/WebServer/Documents/eol_php_code/update_resources/connectors
-cd /var/www/html/eol_php_code/update_resources/connectors
+      <command>cd /var/www/html/eol_php_code/update_resources/connectors
 
 php aggregate_Kubitzki.php jenkins
 </command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
