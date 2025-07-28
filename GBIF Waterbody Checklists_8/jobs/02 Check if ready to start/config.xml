@@ -23,16 +23,20 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
-### orig
-php waterbody_checklists_2024.php _ &apos;{&quot;task&quot;:&quot;divide_into_waterbody_files&quot;}&apos;
 
+### This will check if all downloads are ready.
+### - will fail if not ready. Will not proceed to next job.
+### - will proceed with next job if ready
+php gbif_download_request_for_CtryChecklists.php jenkins &apos;{&quot;task&quot;:&quot;check_if_all_downloads_are_ready_YN&quot;, &quot;taxon&quot;:&quot;WaterBody_checklists&quot;}&apos;
+
+#Build other projects: 03 Initialize and download dumps
 </command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>05 generate_waterbody_checklists</childProjects>
+      <childProjects>03 Initialize and download dumps</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

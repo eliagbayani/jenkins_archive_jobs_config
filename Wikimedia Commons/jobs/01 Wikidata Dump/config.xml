@@ -29,7 +29,8 @@
   <builders>
     <hudson.tasks.Shell>
       <command># temporarily commented due to some reason it should not run as scheduled
-#exit 1
+#exit 1 #exit with error
+#exit 0 #graceful exit
 
 ### =========================================================================
 cd /extra/eol_php_resources/
@@ -108,7 +109,7 @@ cd /extra/dumps/wikidata
 ### =========================================================================
 
 
-## temporarily discontinued post build:
+## orig post build:
 ## 02 Wikimedia Dump
 </command>
       <configuredLocalRules/>

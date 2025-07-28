@@ -35,11 +35,12 @@
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
 $myShell
 </command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>../GBIF map data harvest/11b Generate map data for family with descendants</childProjects>
+      <childProjects>../GBIF map data harvest OBSOLETE/11b Generate map data for family with descendants</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

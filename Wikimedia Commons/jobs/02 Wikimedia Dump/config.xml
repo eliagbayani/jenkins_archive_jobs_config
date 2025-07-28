@@ -22,7 +22,8 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#exit 1
+      <command>#exit 1 #exit with error
+#exit 0 #graceful exit --- un-comment this line if file was pre downloaded already.
 
 ### copied from previous step. Just to be sure to delete un-needed files to save space
 # upon extraction -- you can delete the big .gz file (NEW: Aug 28, 2021)
@@ -50,9 +51,9 @@ bzip2 -dkf commonswiki-latest-pages-articles.xml.bz2
 cd /extra/dumps/wikidata/wikimedia
 [ -f commonswiki-latest-pages-articles.xml.bz2 ] &amp;&amp; rm -f commonswiki-latest-pages-articles.xml.bz2 || echo &quot;File does not exist&quot;
 
+#exit 1 ##force stop OK
 
-
-#exit 1 ##force stop OK</command>
+### orig build other projects: 03 Create all taxon dump</command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>

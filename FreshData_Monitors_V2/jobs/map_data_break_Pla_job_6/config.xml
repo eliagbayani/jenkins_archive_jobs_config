@@ -37,11 +37,12 @@ $myShell
 
 
 ###../GBIF map data harvest/02c breakdown Other7Groups</command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>../GBIF map data harvest/02c breakdown Other7Groups</childProjects>
+      <childProjects>../GBIF map data harvest OBSOLETE/02c breakdown Other7Groups</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

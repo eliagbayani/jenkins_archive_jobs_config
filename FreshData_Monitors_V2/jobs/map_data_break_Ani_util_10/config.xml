@@ -27,11 +27,12 @@
 php breakdown_GBIF_DwCA_file.php jenkins &apos;{&quot;group&quot;:&quot;Animalia&quot;,&quot;range&quot;:[1929500000,2013763111],&quot;ctr&quot;:10,&quot;rank&quot;:&quot;&quot;}&apos;
 
 </command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>../GBIF map data harvest/02b breakdown Plantae</childProjects>
+      <childProjects>../GBIF map data harvest OBSOLETE/02b breakdown Plantae</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

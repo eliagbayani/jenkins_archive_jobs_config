@@ -21,7 +21,7 @@
   <triggers>
     <hudson.triggers.TimerTrigger>
       <spec># once a day on the 15th of Mar Jun Sep Dec - quarterly
-H H 15 6,9,12,3 *</spec>
+#H H 15 6,9,12,3 *</spec>
     </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>

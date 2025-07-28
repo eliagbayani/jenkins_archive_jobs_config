@@ -22,27 +22,14 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /extra/other_files/GBIF_occurrence/
-[ ! -d &quot;WaterBody_checklists&quot; ] &amp;&amp; mkdir WaterBody_checklists
-cd WaterBody_checklists
-[ -e WaterBody_checklists_DwCA.zip ] &amp;&amp; rm WaterBody_checklists_DwCA.zip
-bash /var/www/html/eol_php_code/update_resources/connectors/files/WaterBody_checklists/run_WaterBody_checklists.sh
-
-
+      <command>cd /var/www/html/eol_php_code/update_resources/connectors
+exit 1
+# it is run in the National Checklist job
+php waterbody_checklists_2024.php _ &apos;{&quot;task&quot;:&quot;generate_report&quot;, &quot;report_name&quot;:&quot;countries&quot;}&apos;
 </command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
-  <publishers>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>04 divide_into_waterbody_files</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-        <completeBuild>true</completeBuild>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
-  </publishers>
+  <publishers/>
   <buildWrappers/>
 </project>

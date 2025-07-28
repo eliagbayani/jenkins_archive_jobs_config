@@ -35,11 +35,12 @@
       <command>cd /var/www/html/eol_php_code/update_resources/connectors
 $myShell
 </command>
+      <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>../GBIF map data harvest/03 multimedia breakdown</childProjects>
+      <childProjects>../GBIF map data harvest OBSOLETE/03 multimedia breakdown</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
