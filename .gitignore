@@ -6,3 +6,4 @@ nextBuildNumber
 modules/
 *.log
 
+.gitignore.swp
