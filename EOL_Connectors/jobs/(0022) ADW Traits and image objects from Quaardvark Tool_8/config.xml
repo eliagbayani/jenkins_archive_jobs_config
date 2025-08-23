@@ -30,7 +30,10 @@ http://www.eol.org/content_partners/8/resources/22</description>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /var/www/html/eol_php_code/update_resources/connectors
+      <command>echo &quot;runs in PHP 8 already&quot;
+exit
+
+cd /var/www/html/eol_php_code/update_resources/connectors
 #php 22.php jenkins --- OBSOLETE
 
 #OK

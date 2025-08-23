@@ -22,7 +22,9 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /var/www/html/eol_php_code/update_resources/connectors
+      <command>echo &quot;runs in PHP 8 already&quot;
+exit
+cd /var/www/html/eol_php_code/update_resources/connectors
 ### works OK - a utility | Run separately after manually checking if file is good: TreatmentBank_final.tar.gz (from Step 6)
 php update_Zenodo_record_using_EOL_resourceID.php _ &apos;TreatmentBank_final&apos;
 ### Better yet run it here: http://160.111.248.39:8090/job/Zenodo/job/update_Zenodo_record/

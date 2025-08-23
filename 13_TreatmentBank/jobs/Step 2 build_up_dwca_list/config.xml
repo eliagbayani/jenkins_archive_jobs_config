@@ -22,7 +22,10 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd /var/www/html/eol_php_code/update_resources/connectors
+      <command>echo &quot;runs in PHP 8 already&quot;
+exit
+
+cd /var/www/html/eol_php_code/update_resources/connectors
 
 php treatment_bank.php _ &apos;{&quot;task&quot;: &quot;build_up_dwca_list&quot;}&apos;
 </command>
